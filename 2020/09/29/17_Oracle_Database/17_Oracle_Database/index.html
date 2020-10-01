@@ -7,13 +7,15 @@
   
   <title>17_Oracle_Database | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="知识点–概念，语法，操作知识点–函数知识点–包，过程，函数知识点–SQLPLUS命令知识点–RMAN命令  第零部分 ORACLE 数据库基本介绍第00章 ORACLE 数据库介绍第一部分 SELECT 和 DML第01章 基础查询第02章 高级查询第03章 DML第04章第05章第二部分 表和对象第06章 表第07章 表的高级特性第08章 对象第09章第10章第三部分 SQL 语句元素第11章">
+<meta property="og:type" content="article">
 <meta property="og:title" content="17_Oracle_Database">
 <meta property="og:url" content="http://example.com/2020/09/29/17_Oracle_Database/17_Oracle_Database/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="知识点–概念，语法，操作知识点–函数知识点–包，过程，函数知识点–SQLPLUS命令知识点–RMAN命令  第零部分 ORACLE 数据库基本介绍第00章 ORACLE 数据库介绍第一部分 SELECT 和 DML第01章 基础查询第02章 高级查询第03章 DML第04章第05章第二部分 表和对象第06章 表第07章 表的高级特性第08章 对象第09章第10章第三部分 SQL 语句元素第11章">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-29T06:49:40.000Z">
-<meta property="article:modified_time" content="2020-09-29T06:49:40.663Z">
+<meta property="article:modified_time" content="2020-10-01T02:41:41.685Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -86,7 +88,210 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>知识点–概念，语法，操作<br>知识点–函数<br>知识点–包，过程，函数<br>知识点–SQLPLUS命令<br>知识点–RMAN命令</p>
+<hr>
+<p>第零部分 ORACLE 数据库基本介绍<br>第00章 ORACLE 数据库介绍<br>第一部分 SELECT 和 DML<br>第01章 基础查询<br>第02章 高级查询<br>第03章 DML<br>第04章<br>第05章<br>第二部分 表和对象<br>第06章 表<br>第07章 表的高级特性<br>第08章 对象<br>第09章<br>第10章<br>第三部分 SQL 语句元素<br>第11章 数据类型<br>第12章 格式化模型<br>第13章 空值和伪列和运算符和表达式和条件<br>第14章 函数<br>第15章<br>第四部分 SQLPLUS<br>第16章 SQLPLUS<br>第17章 sqlplus 运行 sql<br>第18章 sqlplus report<br>第19章 SQLPLUS 环境配置<br>第20章<br>第五部分 PL/SQL<br>第21章 PL/SQL 语句元素<br>第22章 PL/SQL 程序语句<br>第23章 PL/SQL 程序单元<br>第24章 PL/SQL 维护<br>第六部分 数据库体系<br>第26章 实例<br>第27章 内存<br>第28章 进程<br>第29章 存储<br>第30章 事务<br>第31章 网络<br>第32章 安全<br>第33章 加密<br>第34章<br>第35章<br>第七部分 数据库维护管理<br>第36章 OEM<br>第37章 审计<br>第38章 调度<br>第39章 资源管理<br>第40章 优化<br>第41章 性能<br>第42章 缓存<br>第43章 迁移<br>第44章<br>第45章<br>第八部分 备份<br>第46章 备份恢复<br>第47章 备份恢复操作<br>第48章 故障处理<br>第49章 闪回<br>第50章 镜像拷贝<br>第51章 OSB<br>第52章<br>第53章<br>第54章<br>第55章<br>第九部分 安装和建库<br>第56章 安装<br>第57章 建库<br>第58章 升级<br>第59章<br>第60章<br>第十部分 高级数据库高级管理<br>第61章 分区表，聚簇表，IOT 表<br>第62章 大对象<br>第63章 分库<br>第64章 物化视图<br>第65章<br>第十一部分 GRID<br>第71章 Grid Infrastructure<br>第72章 ASM<br>第73章<br>第74章<br>第75章<br>第十二部分 DG<br>第十三部分 RAC<br>第十四部分 数据仓库 </p>
+<hr>
+<h1 id="第00章-ORACLE-数据库介绍"><a href="#第00章-ORACLE-数据库介绍" class="headerlink" title="第00章 ORACLE 数据库介绍"></a>第00章 ORACLE 数据库介绍</h1><h2 id="0-1-数据库介绍"><a href="#0-1-数据库介绍" class="headerlink" title="0.1 数据库介绍"></a>0.1 数据库介绍</h2><h3 id="0-1-1-ORACLE-数据库发展过程"><a href="#0-1-1-ORACLE-数据库发展过程" class="headerlink" title="0.1.1 ORACLE 数据库发展过程"></a>0.1.1 ORACLE 数据库发展过程</h3><h4 id="知识点–概念：ORACLE-数据库功能演变"><a href="#知识点–概念：ORACLE-数据库功能演变" class="headerlink" title="知识点–概念：ORACLE 数据库功能演变"></a>知识点–概念：ORACLE 数据库功能演变</h4><pre><code>    1. ORACLE 10G 之前  
+        # XML Database  
+        # Data Guard  
+        # RAC  
+        # Flashback Query  
+        # Virtual Private Database  
+        # Built-in Java VM  
+        # Partitioning Support  
+        # Built-in Messaging  
+        # Object Relational Support  
+        # Multimedia Support  
+    2. ORACLE 10G  
+        # Audit Vault  
+        # Database Vault  
+        # Secure Enterprise Search  
+        # Grid Computing  
+        # Automatic Storage Mgmt  
+        # Self Managing Database  
+    3. ORACLE 11G  
+        # Oracle Grid Infrastructure  
+        # Real Application Testing  
+        # Automatic SQL Tuning  
+        # Fault Management  
+    4. ORACLE 12C  
+        # Private Database Cloud  
+        # Data Redaction  
+        # Real Application Security  
+        # Information Lifecycle Management (ILM)  
+            - hot/cold data classification  
+            - declarative compression and tiering  
+            - In-database Archiving  
+            - Valid-Time Temporal  
+        # Flex Clusters  
+        # Extreme Availability  
+            - Data Guard Far-Sync  
+            - Application Continuity  
+        # Lower Cost Migrations  
+        # Performance and Ease of Use  
+            - &quot;just-in-time&quot; optimizations  
+            - attribute clustering  
+        - zone maps for Exadata only  </code></pre>
+<h4 id="知识点–概念：Oracle-Database-Release-Numbers-新版本号规则"><a href="#知识点–概念：Oracle-Database-Release-Numbers-新版本号规则" class="headerlink" title="知识点–概念：Oracle Database Release Numbers 新版本号规则"></a>知识点–概念：Oracle Database Release Numbers 新版本号规则</h4><pre><code>1. 介绍
+    # 从 201707 开始
+    # 从 18c 开始  
+    # 之前为多年一发布
+    # 之后为每年发布一个年度发行版 Release，之后追加季度更新  
+    # 优点  
+        - 能够将更多的新功能更快的提供给用户  
+        - 大大减少了单次软件变更的数量  
+        - 避免大的版本升级对系统产生的风险  
+    # 网址
+        - https://docs.oracle.com/en/database/oracle/oracle-database/18/upgrd/oracle-database-release-numbers.html#GUID-1E2F3945-C0EE-4EB2-A933-8D1862D8ECE2
+2. 格式
+    # &lt;Major_Database_Release_version&gt;.&lt;Release_Update_version&gt;.&lt;Release_Updates_Revision_version&gt;.&lt;increment_version&gt;.&lt;reserved&gt;
+        - 对于大多数用户来说，只需要关注前 3 位  
+    # &lt;Major_Database_Release_version&gt;
+        - 表示发行年度  
+        - 每年一发布  
+    # &lt;Release_Update_version&gt;
+        - 季度更新 RU 版本
+        - 每年 1/4/7/10 月发布  
+        - 主要包含查询优化器相关 BUG 和安全漏洞的修复等  
+    # &lt;Release_Updates_Revision_version&gt;
+        - 季度更新修订 RUR 版本
+        - 对每一个 RU，概率性提供更新修订 RUR  
+        - 对 RU 的缺陷进行的修复，并包含最新的安全漏洞补丁  
+    # &lt;increment_version&gt;
+        - Oracle 数据库的增量版本，偶尔会用于 Oracle 云数据库中  
+    # &lt;reserved&gt;
+        - 保留位，预留给将来  
+3. 维护期  
+    # 每个 Release 发布后的至少两年内，都会提供 RU 的支持  
+    # 每个 RU 会提供两个独立的 RUR 支持  
+    # 每个 RUR 之间间隔 6 个月  
+    # 因此每个年度 Release 至少会有 3 年的支持周期  </code></pre>
+<h3 id="0-1-2-ORACLE-数据库的软件体系"><a href="#0-1-2-ORACLE-数据库的软件体系" class="headerlink" title="0.1.2 ORACLE 数据库的软件体系"></a>0.1.2 ORACLE 数据库的软件体系</h3><h4 id="知识点–概念：ORACLE-数据库的软件体系"><a href="#知识点–概念：ORACLE-数据库的软件体系" class="headerlink" title="知识点–概念：ORACLE 数据库的软件体系"></a>知识点–概念：ORACLE 数据库的软件体系</h4><pre><code>    1. Grid，高可用  
+        # kickrestart，数据库自动重启  
+        # ASM，存储  
+    2. RAC，集群  
+    3. DG，灾备  
+    4. EMCC，图形化管理界面  
+    5. Golden Gate，数据库同步  
+    6. Database Valut，安全  </code></pre>
+<h4 id="知识点–概念：ORACLE-数据库的-utility-实用工具"><a href="#知识点–概念：ORACLE-数据库的-utility-实用工具" class="headerlink" title="知识点–概念：ORACLE 数据库的 utility 实用工具"></a>知识点–概念：ORACLE 数据库的 utility 实用工具</h4><pre><code>    1. OUI  
+        # runinstaller  
+        # dbca  
+        # dbua  
+        # asmca  
+    2. 网络  
+        # lsnrctl  
+        # netca  
+        # netmgr  
+        # tnsping  
+    3. 备份恢复  
+        # rman  
+        # obtool        -- OSB  
+    4. 客户端  
+        # sqlplus  
+        # sqldeveloper  
+        # instant client  
+    5. 数据迁移  
+        # exp，imp  
+        # expdp，impdp    -- datapump  
+        # sqlldr  
+    6. ASM  
+        # crs_stat  
+        # crs_ctl  
+        # asmcmd  
+    7. 集群  
+        # srvctl        -- RESTART 和 RAC  
+    8. 报错  
+        # oerr  
+        # adrci  
+    9. OEM  
+        # emca  
+        # emctl  </code></pre>
+<h3 id="0-1-3-使用-ORACLE-DATABASE-的其他内容"><a href="#0-1-3-使用-ORACLE-DATABASE-的其他内容" class="headerlink" title="0.1.3 使用 ORACLE DATABASE 的其他内容"></a>0.1.3 使用 ORACLE DATABASE 的其他内容</h3><h4 id="知识点–概念：rlwrap，使-sqlplus-可以翻页"><a href="#知识点–概念：rlwrap，使-sqlplus-可以翻页" class="headerlink" title="知识点–概念：rlwrap，使 sqlplus 可以翻页"></a>知识点–概念：rlwrap，使 sqlplus 可以翻页</h4><pre><code>    1.用法  
+        # rlwrap sqlplus / as sysdba  
+    2.安装  
+        # yum -y install oracle-epel  
+        # yum -y install rlwary  </code></pre>
+<h4 id="知识点–概念：sample-schema"><a href="#知识点–概念：sample-schema" class="headerlink" title="知识点–概念：sample schema"></a>知识点–概念：sample schema</h4><pre><code>    1.创建脚本  
+        # ORACLE_HOME/demo/schema/human_resources/hr_main.sql  </code></pre>
+<h3 id="0-1-4-数据库理论"><a href="#0-1-4-数据库理论" class="headerlink" title="0.1.4 数据库理论"></a>0.1.4 数据库理论</h3><h4 id="知识点–概念：ACID"><a href="#知识点–概念：ACID" class="headerlink" title="知识点–概念：ACID"></a>知识点–概念：ACID</h4><pre><code>    1. atomicity  
+    2. consistency  
+    3. isolation  
+    4. durability  </code></pre>
+<h4 id="知识点–概念：OLTP-和-OLAP"><a href="#知识点–概念：OLTP-和-OLAP" class="headerlink" title="知识点–概念：OLTP 和 OLAP"></a>知识点–概念：OLTP 和 OLAP</h4><pre><code>    1. OLTP，online transaction process  
+        # 具有实时要求  
+        # 一般业务逻辑比较复杂  
+        # READ 和 WRITE 都有  
+        # 常用领域  
+            - 电商  
+    2. OLAP，online analytical processing  
+        # 没有实时要求  
+        # 数据量大  
+        # READ 为主，查询、统计为主  
+        # 常用领域  
+            - 数据仓库  
+            - 数据分析  
+            - 数据挖掘  </code></pre>
+<h4 id="知识点–概念：DBA-的职责"><a href="#知识点–概念：DBA-的职责" class="headerlink" title="知识点–概念：DBA 的职责"></a>知识点–概念：DBA 的职责</h4><pre><code>    1. 评估服务器硬件  
+    2. 安装 oracle 软件  
+    3. 打开、创建、迁移数据库  
+    4. 设定数据库安全策略  
+    5. 设计冗余保护  
+    6. 备份数据库  
+    7. 设置 oracle 网络  
+    8. 数据库设计，ER 图  
+    9. 性能监视  
+    10. 故障恢复  </code></pre>
+<h4 id="知识点–概念：OCP-不涉及的高级内容"><a href="#知识点–概念：OCP-不涉及的高级内容" class="headerlink" title="知识点–概念：OCP 不涉及的高级内容"></a>知识点–概念：OCP 不涉及的高级内容</h4><pre><code>    1. 分区表 partitioned table  
+    2. 物化视图 materialized view  
+    3. ASM
+    4. 索引组织表 index organized table  
+    5. DIMENSION  
+    6. LOB</code></pre>
+<h2 id="0-2-ORACLE-sql-介绍"><a href="#0-2-ORACLE-sql-介绍" class="headerlink" title="0.2 ORACLE sql 介绍"></a>0.2 ORACLE sql 介绍</h2><h3 id="0-2-1-sql-语法规则"><a href="#0-2-1-sql-语法规则" class="headerlink" title="0.2.1 sql 语法规则"></a>0.2.1 sql 语法规则</h3><h4 id="知识点–概念：SQL-语法标准"><a href="#知识点–概念：SQL-语法标准" class="headerlink" title="知识点–概念：SQL 语法标准"></a>知识点–概念：SQL 语法标准</h4><pre><code>    1.ORACLE sql  
+        # WHERE 方式的连接  
+    2.SQL1999  
+        # JOIN 方式的连接  
+        # SQL1999 compliant ANSI JOIN，SQL:1999 标准兼容  
+    3.两种语法的性能相同  </code></pre>
+<h4 id="知识点–概念：SQL-语句规则"><a href="#知识点–概念：SQL-语句规则" class="headerlink" title="知识点–概念：SQL 语句规则"></a>知识点–概念：SQL 语句规则</h4><pre><code>    1. SQL 语句不区分大小写  
+    2. SQL 语句可以写在一行或多行，使用减号作为续行符  
+    3. 关键字不可以缩写或跨行  
+    4. 字符串不可以跨行  
+    5. 使用 semicolon 表示语句结束  
+    6. sqlplus 中  
+        # 在交互界面，一次只能执行一条 sql 语句  
+        # 在脚本中，一个脚本中可以包含多条 sql 语句  </code></pre>
+<h4 id="知识点–概念：sql-良好的编写习惯"><a href="#知识点–概念：sql-良好的编写习惯" class="headerlink" title="知识点–概念：sql 良好的编写习惯"></a>知识点–概念：sql 良好的编写习惯</h4><pre><code>    1. 使用缩进增加可读性  
+    2. 子句通常单独一行  
+    3. 关键字通常大写，其他内容通常小写，如表名或列名  </code></pre>
+<h3 id="0-2-2-sql-statement"><a href="#0-2-2-sql-statement" class="headerlink" title="0.2.2 sql statement"></a>0.2.2 sql statement</h3><h4 id="知识点–概念：sql-statement-分类"><a href="#知识点–概念：sql-statement-分类" class="headerlink" title="知识点–概念：sql statement 分类"></a>知识点–概念：sql statement 分类</h4><pre><code>    1. DML，select、insert、update、delete、merge  
+    2. DDL，create、alter、drop、truncate  
+    3. DCL，grant、revoke  
+    4. TCL，commit、rollback、savepoint  </code></pre>
+<h4 id="知识点–概念：sql-statement-结束"><a href="#知识点–概念：sql-statement-结束" class="headerlink" title="知识点–概念：sql statement 结束"></a>知识点–概念：sql statement 结束</h4><pre><code>    1. sqlplus  
+        # ;        
+            - 常规的结束
+            - 结束并加载到 sql buffer 中并运行  
+        # /
+            - 单独一行上只加一个 slash 符号
+            - 结束并加载到 sql buffer 中并运行  
+        # 空行
+            - 一个空行
+            - 结束并加载到 sql buffer 中，但不运行  
+            - 空行的具体作用，还和 sqlplus 的 SQLBLANKLINES 参数有关  </code></pre>
+<h4 id="知识点–概念：sql-keyword-关键字"><a href="#知识点–概念：sql-keyword-关键字" class="headerlink" title="知识点–概念：sql keyword 关键字"></a>知识点–概念：sql keyword 关键字</h4><pre><code>    1. 字典  
+        # V$RESERVED_WORDS        -- 记录数据库中的所有关键字  </code></pre>
+<h4 id="知识点–概念：sql-注释"><a href="#知识点–概念：sql-注释" class="headerlink" title="知识点–概念：sql 注释"></a>知识点–概念：sql 注释</h4><pre><code>    1. REM，REMARK  
+    2. --   
+    3. /*...*/  
+    4. sql 注释最好放在单独一行中，并且不要嵌入在一个 sql statement 中  </code></pre>
+<h4 id="知识点–概念：sql-续行符"><a href="#知识点–概念：sql-续行符" class="headerlink" title="知识点–概念：sql 续行符"></a>知识点–概念：sql 续行符</h4><pre><code>    1. sqlplus 命令如果太长一行写不下，则在行尾加一个减号作为续行符  
+        # sqlplus 会自动删除所有的行尾减号，再将整个语句进行拼接  
+        # sql statement 中的行尾减号也会被自动删除，如果可能导致语法错误，则将行尾减号移至第二行行首  
+0.4 数据库理论  </code></pre>
+
       
     </div>
     <footer class="article-footer">

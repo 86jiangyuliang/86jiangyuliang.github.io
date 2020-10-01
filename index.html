@@ -135,7 +135,210 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>知识点–概念，语法，操作<br>知识点–函数<br>知识点–包，过程，函数<br>知识点–SQLPLUS命令<br>知识点–RMAN命令</p>
+<hr>
+<p>第零部分 ORACLE 数据库基本介绍<br>第00章 ORACLE 数据库介绍<br>第一部分 SELECT 和 DML<br>第01章 基础查询<br>第02章 高级查询<br>第03章 DML<br>第04章<br>第05章<br>第二部分 表和对象<br>第06章 表<br>第07章 表的高级特性<br>第08章 对象<br>第09章<br>第10章<br>第三部分 SQL 语句元素<br>第11章 数据类型<br>第12章 格式化模型<br>第13章 空值和伪列和运算符和表达式和条件<br>第14章 函数<br>第15章<br>第四部分 SQLPLUS<br>第16章 SQLPLUS<br>第17章 sqlplus 运行 sql<br>第18章 sqlplus report<br>第19章 SQLPLUS 环境配置<br>第20章<br>第五部分 PL/SQL<br>第21章 PL/SQL 语句元素<br>第22章 PL/SQL 程序语句<br>第23章 PL/SQL 程序单元<br>第24章 PL/SQL 维护<br>第六部分 数据库体系<br>第26章 实例<br>第27章 内存<br>第28章 进程<br>第29章 存储<br>第30章 事务<br>第31章 网络<br>第32章 安全<br>第33章 加密<br>第34章<br>第35章<br>第七部分 数据库维护管理<br>第36章 OEM<br>第37章 审计<br>第38章 调度<br>第39章 资源管理<br>第40章 优化<br>第41章 性能<br>第42章 缓存<br>第43章 迁移<br>第44章<br>第45章<br>第八部分 备份<br>第46章 备份恢复<br>第47章 备份恢复操作<br>第48章 故障处理<br>第49章 闪回<br>第50章 镜像拷贝<br>第51章 OSB<br>第52章<br>第53章<br>第54章<br>第55章<br>第九部分 安装和建库<br>第56章 安装<br>第57章 建库<br>第58章 升级<br>第59章<br>第60章<br>第十部分 高级数据库高级管理<br>第61章 分区表，聚簇表，IOT 表<br>第62章 大对象<br>第63章 分库<br>第64章 物化视图<br>第65章<br>第十一部分 GRID<br>第71章 Grid Infrastructure<br>第72章 ASM<br>第73章<br>第74章<br>第75章<br>第十二部分 DG<br>第十三部分 RAC<br>第十四部分 数据仓库 </p>
+<hr>
+<h1 id="第00章-ORACLE-数据库介绍"><a href="#第00章-ORACLE-数据库介绍" class="headerlink" title="第00章 ORACLE 数据库介绍"></a>第00章 ORACLE 数据库介绍</h1><h2 id="0-1-数据库介绍"><a href="#0-1-数据库介绍" class="headerlink" title="0.1 数据库介绍"></a>0.1 数据库介绍</h2><h3 id="0-1-1-ORACLE-数据库发展过程"><a href="#0-1-1-ORACLE-数据库发展过程" class="headerlink" title="0.1.1 ORACLE 数据库发展过程"></a>0.1.1 ORACLE 数据库发展过程</h3><h4 id="知识点–概念：ORACLE-数据库功能演变"><a href="#知识点–概念：ORACLE-数据库功能演变" class="headerlink" title="知识点–概念：ORACLE 数据库功能演变"></a>知识点–概念：ORACLE 数据库功能演变</h4><pre><code>    1. ORACLE 10G 之前  
+        # XML Database  
+        # Data Guard  
+        # RAC  
+        # Flashback Query  
+        # Virtual Private Database  
+        # Built-in Java VM  
+        # Partitioning Support  
+        # Built-in Messaging  
+        # Object Relational Support  
+        # Multimedia Support  
+    2. ORACLE 10G  
+        # Audit Vault  
+        # Database Vault  
+        # Secure Enterprise Search  
+        # Grid Computing  
+        # Automatic Storage Mgmt  
+        # Self Managing Database  
+    3. ORACLE 11G  
+        # Oracle Grid Infrastructure  
+        # Real Application Testing  
+        # Automatic SQL Tuning  
+        # Fault Management  
+    4. ORACLE 12C  
+        # Private Database Cloud  
+        # Data Redaction  
+        # Real Application Security  
+        # Information Lifecycle Management (ILM)  
+            - hot/cold data classification  
+            - declarative compression and tiering  
+            - In-database Archiving  
+            - Valid-Time Temporal  
+        # Flex Clusters  
+        # Extreme Availability  
+            - Data Guard Far-Sync  
+            - Application Continuity  
+        # Lower Cost Migrations  
+        # Performance and Ease of Use  
+            - &quot;just-in-time&quot; optimizations  
+            - attribute clustering  
+        - zone maps for Exadata only  </code></pre>
+<h4 id="知识点–概念：Oracle-Database-Release-Numbers-新版本号规则"><a href="#知识点–概念：Oracle-Database-Release-Numbers-新版本号规则" class="headerlink" title="知识点–概念：Oracle Database Release Numbers 新版本号规则"></a>知识点–概念：Oracle Database Release Numbers 新版本号规则</h4><pre><code>1. 介绍
+    # 从 201707 开始
+    # 从 18c 开始  
+    # 之前为多年一发布
+    # 之后为每年发布一个年度发行版 Release，之后追加季度更新  
+    # 优点  
+        - 能够将更多的新功能更快的提供给用户  
+        - 大大减少了单次软件变更的数量  
+        - 避免大的版本升级对系统产生的风险  
+    # 网址
+        - https://docs.oracle.com/en/database/oracle/oracle-database/18/upgrd/oracle-database-release-numbers.html#GUID-1E2F3945-C0EE-4EB2-A933-8D1862D8ECE2
+2. 格式
+    # &lt;Major_Database_Release_version&gt;.&lt;Release_Update_version&gt;.&lt;Release_Updates_Revision_version&gt;.&lt;increment_version&gt;.&lt;reserved&gt;
+        - 对于大多数用户来说，只需要关注前 3 位  
+    # &lt;Major_Database_Release_version&gt;
+        - 表示发行年度  
+        - 每年一发布  
+    # &lt;Release_Update_version&gt;
+        - 季度更新 RU 版本
+        - 每年 1/4/7/10 月发布  
+        - 主要包含查询优化器相关 BUG 和安全漏洞的修复等  
+    # &lt;Release_Updates_Revision_version&gt;
+        - 季度更新修订 RUR 版本
+        - 对每一个 RU，概率性提供更新修订 RUR  
+        - 对 RU 的缺陷进行的修复，并包含最新的安全漏洞补丁  
+    # &lt;increment_version&gt;
+        - Oracle 数据库的增量版本，偶尔会用于 Oracle 云数据库中  
+    # &lt;reserved&gt;
+        - 保留位，预留给将来  
+3. 维护期  
+    # 每个 Release 发布后的至少两年内，都会提供 RU 的支持  
+    # 每个 RU 会提供两个独立的 RUR 支持  
+    # 每个 RUR 之间间隔 6 个月  
+    # 因此每个年度 Release 至少会有 3 年的支持周期  </code></pre>
+<h3 id="0-1-2-ORACLE-数据库的软件体系"><a href="#0-1-2-ORACLE-数据库的软件体系" class="headerlink" title="0.1.2 ORACLE 数据库的软件体系"></a>0.1.2 ORACLE 数据库的软件体系</h3><h4 id="知识点–概念：ORACLE-数据库的软件体系"><a href="#知识点–概念：ORACLE-数据库的软件体系" class="headerlink" title="知识点–概念：ORACLE 数据库的软件体系"></a>知识点–概念：ORACLE 数据库的软件体系</h4><pre><code>    1. Grid，高可用  
+        # kickrestart，数据库自动重启  
+        # ASM，存储  
+    2. RAC，集群  
+    3. DG，灾备  
+    4. EMCC，图形化管理界面  
+    5. Golden Gate，数据库同步  
+    6. Database Valut，安全  </code></pre>
+<h4 id="知识点–概念：ORACLE-数据库的-utility-实用工具"><a href="#知识点–概念：ORACLE-数据库的-utility-实用工具" class="headerlink" title="知识点–概念：ORACLE 数据库的 utility 实用工具"></a>知识点–概念：ORACLE 数据库的 utility 实用工具</h4><pre><code>    1. OUI  
+        # runinstaller  
+        # dbca  
+        # dbua  
+        # asmca  
+    2. 网络  
+        # lsnrctl  
+        # netca  
+        # netmgr  
+        # tnsping  
+    3. 备份恢复  
+        # rman  
+        # obtool        -- OSB  
+    4. 客户端  
+        # sqlplus  
+        # sqldeveloper  
+        # instant client  
+    5. 数据迁移  
+        # exp，imp  
+        # expdp，impdp    -- datapump  
+        # sqlldr  
+    6. ASM  
+        # crs_stat  
+        # crs_ctl  
+        # asmcmd  
+    7. 集群  
+        # srvctl        -- RESTART 和 RAC  
+    8. 报错  
+        # oerr  
+        # adrci  
+    9. OEM  
+        # emca  
+        # emctl  </code></pre>
+<h3 id="0-1-3-使用-ORACLE-DATABASE-的其他内容"><a href="#0-1-3-使用-ORACLE-DATABASE-的其他内容" class="headerlink" title="0.1.3 使用 ORACLE DATABASE 的其他内容"></a>0.1.3 使用 ORACLE DATABASE 的其他内容</h3><h4 id="知识点–概念：rlwrap，使-sqlplus-可以翻页"><a href="#知识点–概念：rlwrap，使-sqlplus-可以翻页" class="headerlink" title="知识点–概念：rlwrap，使 sqlplus 可以翻页"></a>知识点–概念：rlwrap，使 sqlplus 可以翻页</h4><pre><code>    1.用法  
+        # rlwrap sqlplus / as sysdba  
+    2.安装  
+        # yum -y install oracle-epel  
+        # yum -y install rlwary  </code></pre>
+<h4 id="知识点–概念：sample-schema"><a href="#知识点–概念：sample-schema" class="headerlink" title="知识点–概念：sample schema"></a>知识点–概念：sample schema</h4><pre><code>    1.创建脚本  
+        # ORACLE_HOME/demo/schema/human_resources/hr_main.sql  </code></pre>
+<h3 id="0-1-4-数据库理论"><a href="#0-1-4-数据库理论" class="headerlink" title="0.1.4 数据库理论"></a>0.1.4 数据库理论</h3><h4 id="知识点–概念：ACID"><a href="#知识点–概念：ACID" class="headerlink" title="知识点–概念：ACID"></a>知识点–概念：ACID</h4><pre><code>    1. atomicity  
+    2. consistency  
+    3. isolation  
+    4. durability  </code></pre>
+<h4 id="知识点–概念：OLTP-和-OLAP"><a href="#知识点–概念：OLTP-和-OLAP" class="headerlink" title="知识点–概念：OLTP 和 OLAP"></a>知识点–概念：OLTP 和 OLAP</h4><pre><code>    1. OLTP，online transaction process  
+        # 具有实时要求  
+        # 一般业务逻辑比较复杂  
+        # READ 和 WRITE 都有  
+        # 常用领域  
+            - 电商  
+    2. OLAP，online analytical processing  
+        # 没有实时要求  
+        # 数据量大  
+        # READ 为主，查询、统计为主  
+        # 常用领域  
+            - 数据仓库  
+            - 数据分析  
+            - 数据挖掘  </code></pre>
+<h4 id="知识点–概念：DBA-的职责"><a href="#知识点–概念：DBA-的职责" class="headerlink" title="知识点–概念：DBA 的职责"></a>知识点–概念：DBA 的职责</h4><pre><code>    1. 评估服务器硬件  
+    2. 安装 oracle 软件  
+    3. 打开、创建、迁移数据库  
+    4. 设定数据库安全策略  
+    5. 设计冗余保护  
+    6. 备份数据库  
+    7. 设置 oracle 网络  
+    8. 数据库设计，ER 图  
+    9. 性能监视  
+    10. 故障恢复  </code></pre>
+<h4 id="知识点–概念：OCP-不涉及的高级内容"><a href="#知识点–概念：OCP-不涉及的高级内容" class="headerlink" title="知识点–概念：OCP 不涉及的高级内容"></a>知识点–概念：OCP 不涉及的高级内容</h4><pre><code>    1. 分区表 partitioned table  
+    2. 物化视图 materialized view  
+    3. ASM
+    4. 索引组织表 index organized table  
+    5. DIMENSION  
+    6. LOB</code></pre>
+<h2 id="0-2-ORACLE-sql-介绍"><a href="#0-2-ORACLE-sql-介绍" class="headerlink" title="0.2 ORACLE sql 介绍"></a>0.2 ORACLE sql 介绍</h2><h3 id="0-2-1-sql-语法规则"><a href="#0-2-1-sql-语法规则" class="headerlink" title="0.2.1 sql 语法规则"></a>0.2.1 sql 语法规则</h3><h4 id="知识点–概念：SQL-语法标准"><a href="#知识点–概念：SQL-语法标准" class="headerlink" title="知识点–概念：SQL 语法标准"></a>知识点–概念：SQL 语法标准</h4><pre><code>    1.ORACLE sql  
+        # WHERE 方式的连接  
+    2.SQL1999  
+        # JOIN 方式的连接  
+        # SQL1999 compliant ANSI JOIN，SQL:1999 标准兼容  
+    3.两种语法的性能相同  </code></pre>
+<h4 id="知识点–概念：SQL-语句规则"><a href="#知识点–概念：SQL-语句规则" class="headerlink" title="知识点–概念：SQL 语句规则"></a>知识点–概念：SQL 语句规则</h4><pre><code>    1. SQL 语句不区分大小写  
+    2. SQL 语句可以写在一行或多行，使用减号作为续行符  
+    3. 关键字不可以缩写或跨行  
+    4. 字符串不可以跨行  
+    5. 使用 semicolon 表示语句结束  
+    6. sqlplus 中  
+        # 在交互界面，一次只能执行一条 sql 语句  
+        # 在脚本中，一个脚本中可以包含多条 sql 语句  </code></pre>
+<h4 id="知识点–概念：sql-良好的编写习惯"><a href="#知识点–概念：sql-良好的编写习惯" class="headerlink" title="知识点–概念：sql 良好的编写习惯"></a>知识点–概念：sql 良好的编写习惯</h4><pre><code>    1. 使用缩进增加可读性  
+    2. 子句通常单独一行  
+    3. 关键字通常大写，其他内容通常小写，如表名或列名  </code></pre>
+<h3 id="0-2-2-sql-statement"><a href="#0-2-2-sql-statement" class="headerlink" title="0.2.2 sql statement"></a>0.2.2 sql statement</h3><h4 id="知识点–概念：sql-statement-分类"><a href="#知识点–概念：sql-statement-分类" class="headerlink" title="知识点–概念：sql statement 分类"></a>知识点–概念：sql statement 分类</h4><pre><code>    1. DML，select、insert、update、delete、merge  
+    2. DDL，create、alter、drop、truncate  
+    3. DCL，grant、revoke  
+    4. TCL，commit、rollback、savepoint  </code></pre>
+<h4 id="知识点–概念：sql-statement-结束"><a href="#知识点–概念：sql-statement-结束" class="headerlink" title="知识点–概念：sql statement 结束"></a>知识点–概念：sql statement 结束</h4><pre><code>    1. sqlplus  
+        # ;        
+            - 常规的结束
+            - 结束并加载到 sql buffer 中并运行  
+        # /
+            - 单独一行上只加一个 slash 符号
+            - 结束并加载到 sql buffer 中并运行  
+        # 空行
+            - 一个空行
+            - 结束并加载到 sql buffer 中，但不运行  
+            - 空行的具体作用，还和 sqlplus 的 SQLBLANKLINES 参数有关  </code></pre>
+<h4 id="知识点–概念：sql-keyword-关键字"><a href="#知识点–概念：sql-keyword-关键字" class="headerlink" title="知识点–概念：sql keyword 关键字"></a>知识点–概念：sql keyword 关键字</h4><pre><code>    1. 字典  
+        # V$RESERVED_WORDS        -- 记录数据库中的所有关键字  </code></pre>
+<h4 id="知识点–概念：sql-注释"><a href="#知识点–概念：sql-注释" class="headerlink" title="知识点–概念：sql 注释"></a>知识点–概念：sql 注释</h4><pre><code>    1. REM，REMARK  
+    2. --   
+    3. /*...*/  
+    4. sql 注释最好放在单独一行中，并且不要嵌入在一个 sql statement 中  </code></pre>
+<h4 id="知识点–概念：sql-续行符"><a href="#知识点–概念：sql-续行符" class="headerlink" title="知识点–概念：sql 续行符"></a>知识点–概念：sql 续行符</h4><pre><code>    1. sqlplus 命令如果太长一行写不下，则在行尾加一个减号作为续行符  
+        # sqlplus 会自动删除所有的行尾减号，再将整个语句进行拼接  
+        # sql statement 中的行尾减号也会被自动删除，如果可能导致语法错误，则将行尾减号移至第二行行首  
+0.4 数据库理论  </code></pre>
+
       
     </div>
     <footer class="article-footer">
@@ -456,7 +659,7 @@
 <tr>
 <td align="left">来自邮寄名单的邮件</td>
 <td align="left">list:</td>
-<td align="center">示例：list:<a href="mailto:&#105;&#x6e;&#x66;&#111;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">&#105;&#x6e;&#x66;&#111;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;</a></td>
+<td align="center">示例：list:<a href="mailto:&#x69;&#x6e;&#x66;&#111;&#x40;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#x69;&#x6e;&#x66;&#111;&#x40;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td align="left">包含特定颜色图标的邮件</td>
@@ -466,7 +669,7 @@
 <tr>
 <td align="left">按电子邮件搜索已发送的邮件</td>
 <td align="left">deliveredto:</td>
-<td align="center">示例：deliveredto:<a href="mailto:&#117;&#x73;&#101;&#114;&#x6e;&#97;&#x6d;&#101;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#117;&#x73;&#101;&#114;&#x6e;&#97;&#x6d;&#101;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></td>
+<td align="center">示例：deliveredto:<a href="mailto:&#x75;&#115;&#101;&#x72;&#x6e;&#97;&#109;&#101;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#x75;&#115;&#101;&#x72;&#x6e;&#97;&#109;&#101;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a></td>
 </tr>
 <tr>
 <td align="left">特定类别中的邮件</td>
@@ -476,7 +679,7 @@
 <tr>
 <td align="left">包含特定 message-id 标头的邮件</td>
 <td align="left">Rfc822msgid:</td>
-<td align="center">示例：rfc822msgid:<a href="mailto:&#x32;&#48;&#x30;&#53;&#x30;&#x33;&#x32;&#57;&#x32;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#x32;&#48;&#x30;&#53;&#x30;&#x33;&#x32;&#57;&#x32;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a></td>
+<td align="center">示例：rfc822msgid:<a href="mailto:&#50;&#48;&#x30;&#x35;&#x30;&#x33;&#x32;&#57;&#x32;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#50;&#48;&#x30;&#x35;&#x30;&#x33;&#x32;&#57;&#x32;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a></td>
 </tr>
 <tr>
 <td align="left">含有或不含标签的邮件</td>
@@ -625,50 +828,121 @@
             [&lt;连接文本&gt;][&lt;连接标识符&gt;]
             [&lt;连接文本&gt;] [&lt;连接标识符&gt;]
         # 链接标识符可以由字母、数字、空格和标点符号组成，不区分大小写
-    3. 自动链接</code></pre>
-<h4 id="知识点：markdown-引用本地资源"><a href="#知识点：markdown-引用本地资源" class="headerlink" title="知识点：markdown 引用本地资源"></a>知识点：markdown 引用本地资源</h4><pre><code>    1. 格式
-        # ./&lt;path&gt;/&lt;file_name&gt;
-            . 表示 md 文件的位置
-            &lt;path&gt; 表示本地资源相对于 md 文件的位置
-            省略 ./&lt;path&gt;/ 表示资源位于 md 文件相同的目录
-
-
-
-
-
-
-
-    3.自动连接
+    3. 自动链接
         # &lt;URL&gt;
     4.邮箱
         # &lt;邮箱地址&gt;
-知识点--概念：图片
-    1.行内图片
+    5. 引用本地资源
+        # ./&lt;path&gt;/&lt;file_name&gt;
+            . 表示 md 文件的位置
+            &lt;path&gt; 表示本地资源相对于 md 文件的位置
+            省略 ./&lt;path&gt;/ 表示资源位于 md 文件相同的目录</code></pre>
+<h4 id="知识点–概念：图片"><a href="#知识点–概念：图片" class="headerlink" title="知识点–概念：图片"></a>知识点–概念：图片</h4><pre><code>    1. 行内图片
         # 一个感叹号!开头
         # 其后紧跟一对方括号，方括号内存放图片的 alt 属性
         # 其后紧跟一对圆括号，圆括号内存放图片的 URL 或路径，及可选的用双引号或单引号或小括号括起来的图片标题
         # 格式范例
             ![Alt text](/path/to/img.jpg)
             ![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
-    2.引用图片
+    2. 引用图片
         # 定义图片
             [&lt;图片标识符&gt;]: &lt;图片地址&gt;  &quot;&lt;图片标题&gt;&quot;
         # 使用图片
             ![&lt;图片标识符&gt;]
-            ![Alt text][&lt;图片标识符&gt;]
-            4.图片
-                # [&lt;title&gt;](&lt;pic_link&gt;)        -- 插入图片链接
-                # [&lt;title&gt;](&lt;pic_link&gt;)        -- 插入图片
-            7.表格
-                # &lt;column_title&gt; | &lt;column_title&gt; | &lt;column_title&gt;
-                -------- | :--------: | --------:
-                &lt;text&gt; | &lt;text&gt; | &lt;text&gt;
-            8.代码块
-                # `&lt;text&gt;`
-                # ```
-                    &lt;text&gt;
-                # ```</code></pre>
-<h1 id="第06章-Latex"><a href="#第06章-Latex" class="headerlink" title="第06章 Latex"></a>第06章 Latex</h1><h1 id="第07章-hexo"><a href="#第07章-hexo" class="headerlink" title="第07章 hexo"></a>第07章 hexo</h1><h1 id="第08章-node-js"><a href="#第08章-node-js" class="headerlink" title="第08章 node.js"></a>第08章 node.js</h1><h1 id="第09章-git"><a href="#第09章-git" class="headerlink" title="第09章 git"></a>第09章 git</h1><h1 id="第10章-Anaconda"><a href="#第10章-Anaconda" class="headerlink" title="第10章 Anaconda"></a>第10章 Anaconda</h1><h1 id="第11章-Chrome"><a href="#第11章-Chrome" class="headerlink" title="第11章 Chrome"></a>第11章 Chrome</h1><h1 id="第12章-Reguler-Expression"><a href="#第12章-Reguler-Expression" class="headerlink" title="第12章 Reguler_Expression"></a>第12章 Reguler_Expression</h1><h1 id="第13章-Xshell"><a href="#第13章-Xshell" class="headerlink" title="第13章 Xshell"></a>第13章 Xshell</h1>
+            ![Alt text][&lt;图片标识符&gt;]</code></pre>
+<h1 id="第06章-Latex"><a href="#第06章-Latex" class="headerlink" title="第06章 Latex"></a>第06章 Latex</h1><h1 id="第07章-hexo"><a href="#第07章-hexo" class="headerlink" title="第07章 hexo"></a>第07章 hexo</h1><h1 id="第08章-node-js"><a href="#第08章-node-js" class="headerlink" title="第08章 node.js"></a>第08章 node.js</h1><h1 id="第09章-git"><a href="#第09章-git" class="headerlink" title="第09章 git"></a>第09章 git</h1><h1 id="第10章-Anaconda"><a href="#第10章-Anaconda" class="headerlink" title="第10章 Anaconda"></a>第10章 Anaconda</h1><h1 id="第11章-Chrome"><a href="#第11章-Chrome" class="headerlink" title="第11章 Chrome"></a>第11章 Chrome</h1><h1 id="第12章-Reguler-Expression"><a href="#第12章-Reguler-Expression" class="headerlink" title="第12章 Reguler_Expression"></a>第12章 Reguler_Expression</h1><h4 id="知识点–概念：正则表达式规则"><a href="#知识点–概念：正则表达式规则" class="headerlink" title="知识点–概念：正则表达式规则"></a>知识点–概念：正则表达式规则</h4><pre><code>    1. 正则表达式区分大小写，case-sensitive</code></pre>
+<h4 id="知识点–概念：基础元字符"><a href="#知识点–概念：基础元字符" class="headerlink" title="知识点–概念：基础元字符"></a>知识点–概念：基础元字符</h4><pre><code>    1. 点字符
+        # .            ，除了换行符外的任意单个字符
+    2. 字符集合
+        # 字符集合中，除 -、^、[ ]、\ 以外，其他所有字符都恢复为普通字符
+        # 字符集合，只能匹配单个字符，语法上也限定了其只能匹配单个字符
+        # []        ，匹配方括号中包含的字符
+        # [^]        ，匹配除了在方括号中的字符外的其他字符
+        # [a-h]        ，指定字符范围，按照 ascii
+        # [^a-h]    ，指定否定字符范围，按照 ascii
+    3. 重复次数
+        # *        ，匹配重复 0 个到无数个前字符
+        # +        ，匹配重复 1 个到无数个前字符
+        # ?        ，匹配重复 0 个或 1 个前字符
+        # &#123;n&#125;    ，匹配重复 n 个前的字符
+        # &#123;n,&#125;    ，匹配重复 n 个到无数前字符
+        # &#123;n,m&#125;    ，匹配重复 n 个到 m 个前字符
+    4. 连续特征字符串
+        # (xyz)        ，匹配与 xyz 完全相等的字符串
+        # (a|b|c)    ，匹配与 a 完全相同的字符，或与 b 完全相同的字符，或与 c 完全相同的字符
+        # (a|b|xyz)    ，匹配与 a 完全相同的字符，或与 b 完全相同的字符，或与 xyz 完全相同的字符串
+    5. 或运算
+        # |        ，或运算符，两侧可接正则表达式，匹配符合前正则表达式所指定的字符，或匹配符合后正则表达式所指定的字符
+    6. 锚点
+        # ^        ，行首
+        # $        ，行末
+    7. 转义字符
+        # \</code></pre>
+<h4 id="知识点–概念：功能字符"><a href="#知识点–概念：功能字符" class="headerlink" title="知识点–概念：功能字符"></a>知识点–概念：功能字符</h4><pre><code>    1. 字母和数字
+        # \w    ，匹配所有字母数字加下划线，等同于 [a-zA-Z0-9_]
+        # \W    ，匹配所有非字母数字和下划线，即除了下划线外的所有符号，等同于 [^\w]
+        # \d    ，匹配数字，等同于 [0-9]
+        # \D    ，匹配非数字，等同于 [^\d]
+    2. 空格字符
+        # \b    ，匹配一个单词边界，如 &lt;space&gt;、&lt;period&gt; 等
+        # \B    ，匹配一个非单词边界
+        # \f    ，匹配一个换页符
+        # \r    ，匹配一个回车符 CR
+        # \n    ，匹配一个换行符 LF
+        # \t    ，匹配一个制表符
+        # \v    ，匹配一个垂直制表符
+        # \p    ，匹配 DOS 行终止符 CR/LF，等同于 \r\n
+        # \s    ，匹配所有空格字符，等同于 [ \t\n\f\r\p]
+        # \S    ，匹配所有非空格字符，等同于 [^\s]
+    3. 向后引用 back reference
+        # (&lt;reguler_expression&gt;)\&lt;N&gt;
+            - 该子字符串与正则表达式的第 N 个用括号围起来的捕捉群 (capture group) 子表达式 (subexpression) 匹配
+            - N 是从 1 开始的十进制正整数，其上限可能是 9、31、99 甚至无限
+            - 范例
+                &#39;(.)\1&#39; 表示匹配两个连续的相同字符</code></pre>
+<h4 id="知识点–概念：POSIX-方括号表达式-POSIX-Bracket-Expressions"><a href="#知识点–概念：POSIX-方括号表达式-POSIX-Bracket-Expressions" class="headerlink" title="知识点–概念：POSIX 方括号表达式 POSIX Bracket Expressions"></a>知识点–概念：POSIX 方括号表达式 POSIX Bracket Expressions</h4><pre><code>    1. 使用方法
+        # grep &#39;[[:digit:]]&#39;
+    2. [:alnum:]    ，代表英文字母和数字        ，亦即 A-Z、a-z、0-9
+    3. [:alpha:]    ，代表英文字母                ，亦即 A-Z、a-z
+    4. [:upper:]    ，代表英文大写字母            ，亦即 A-Z
+    5. [:lower:]    ，代表英文小写字母            ，亦即 a-z
+    6. [:digit:]    ，代表数字                    ，亦即 0-9
+    7. [:xdigit:]    ，代表 16 进制会用到的字符    ，亦即 0-9、A-F、a-f
+    8. [:blank:]    ，代表空白                    ，亦即 &lt;space&gt;、&lt;tab&gt;
+    9. [:punct:]    ，代表标点符号                ，亦即 &quot;、&#39;、?、!、;、:、#、$ 等等
+    10. [:print:]    ，代表任何可打印字符
+    11. [:cntrl:]    ，代表控制键                ，亦即 CR、LF、&lt;tab&gt;、&lt;del&gt; 等等
+    12. [:graph:]    ，代表空白以外其他所有按键
+    13. [:space:]    ，代表任何会产生空白的字符    ，包括 &lt;space&gt;、&lt;tab&gt;、CR 等等</code></pre>
+<h4 id="知识点–概念：零宽度断言-lookaround"><a href="#知识点–概念：零宽度断言-lookaround" class="headerlink" title="知识点–概念：零宽度断言 lookaround"></a>知识点–概念：零宽度断言 lookaround</h4><pre><code>    1. 正先行断言 positive lookahead
+        # &lt;search_reguler_expression&gt;(?=&lt;lookaround_reguler_expression&gt;)
+            - &lt;search_reguler_expression&gt;，搜索目标字符串，返回值为搜索目标字符串的匹配项
+            - &lt;lookaround_reguler_expression&gt;，断言判断式
+            - 要求目标字符串后面紧跟符合断言判断式的字符串
+            - 范例
+                &#39;g(oo|ol)d(?=(ing|ed))&#39;，搜索 good 或 gold，并且后面均紧接着 ed 或 ing
+    2. 负先行断言 negative lookahead
+        # &lt;search_reguler_expression&gt;(?!&lt;lookaround_reguler_expression&gt;)
+        # 目标字符串后面紧跟不符合断言判断式的字符串
+    3. 正后发断言 positive lookbehind
+        # (?&lt;=&lt;lookaround_reguler_expression&gt;)&lt;search_reguler_expression&gt;
+        # 目标字符串前面为符合断言判断式的字符串
+    4. 负后发断言 negative lookbehind
+        # (?&lt;!&lt;lookaround_reguler_expression&gt;)&lt;search_reguler_expression&gt; 
+        # 目标字符串前面为不符合断言判断式的字符串</code></pre>
+<h4 id="知识点–概念：模式修正-modifiers-或者-flag"><a href="#知识点–概念：模式修正-modifiers-或者-flag" class="headerlink" title="知识点–概念：模式修正 modifiers 或者 flag"></a>知识点–概念：模式修正 modifiers 或者 flag</h4><pre><code>    1. 忽略大小写
+        # /.../i
+    2. 全局搜索
+        # /.../g，一次返回所有符合的结果
+    3. 跨行搜索
+        # /.../m
+    4. 这三个 flag 是某种场景下的应用，不在正则的标准中，在 notepad 中都不适用</code></pre>
+<h4 id="知识点–概念：贪婪匹配-Greedy-和懒惰匹配-lazy"><a href="#知识点–概念：贪婪匹配-Greedy-和懒惰匹配-lazy" class="headerlink" title="知识点–概念：贪婪匹配 Greedy 和懒惰匹配 lazy"></a>知识点–概念：贪婪匹配 Greedy 和懒惰匹配 lazy</h4><pre><code>    1. 贪婪匹配，尽可能匹配最长的字符串，默认
+    2. 懒惰匹配，尽可能匹配最短的字符串，在重复次数符号后再加一个问号
+        # *?
+        # +?
+        # &#123;n,&#125;?</code></pre>
+<h1 id="第13章-Xshell"><a href="#第13章-Xshell" class="headerlink" title="第13章 Xshell"></a>第13章 Xshell</h1>
       
     </div>
     <footer class="article-footer">
