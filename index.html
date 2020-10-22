@@ -982,8 +982,16 @@
             DBMS_OUTPUT.PUT_LINE( &#39;The name of first employee is &#39; || v_name) ;  
           END ;  
           /  </code></pre>
-<h3 id="21-1-2-PLSQL-输出"><a href="#21-1-2-PLSQL-输出" class="headerlink" title="21.1.2 PLSQL 输出"></a>21.1.2 PLSQL 输出</h3><h4 id="知识点–包：DMBS-OUTPUT"><a href="#知识点–包：DMBS-OUTPUT" class="headerlink" title="知识点–包：DMBS_OUTPUT"></a>知识点–包：DMBS_OUTPUT</h4><pre><code>    1. 介绍
-        # PLSQL 的输出只能通过调用 DMBS_OUTPUT 中的子程序来完成</code></pre>
+<h3 id="21-1-2-PLSQL-输出"><a href="#21-1-2-PLSQL-输出" class="headerlink" title="21.1.2 PLSQL 输出"></a>21.1.2 PLSQL 输出</h3><h4 id="知识点–包：DBMS-OUTPUT-包，ORACLE-的输入输出包"><a href="#知识点–包：DBMS-OUTPUT-包，ORACLE-的输入输出包" class="headerlink" title="知识点–包：DBMS_OUTPUT 包，ORACLE 的输入输出包"></a>知识点–包：DBMS_OUTPUT 包，ORACLE 的输入输出包</h4><pre><code>    1. 介绍
+        # PLSQL 的输出只能通过调用 DMBS_OUTPUT 中的子程序来完成
+    2. 子程序
+        # PROCEDURE DISABLE  
+        # PROCEDURE ENABLE  
+        # PROCEDURE GET_LINE  
+        # PROCEDURE GET_LINES  
+        # PROCEDURE NEW_LINE  
+        # PROCEDURE PUT  
+        # PROCEDURE PUT_LINE  </code></pre>
 <h4 id="知识点–过程：DBMS-OUTPUT-PUT-LINE"><a href="#知识点–过程：DBMS-OUTPUT-PUT-LINE" class="headerlink" title="知识点–过程：DBMS_OUTPUT.PUT_LINE"></a>知识点–过程：DBMS_OUTPUT.PUT_LINE</h4><pre><code>    1. 介绍
         # 用在 PLSQL 块中，进行单行输出  
     2. 格式  
@@ -1055,7 +1063,7 @@
         # &lt;v_name&gt; := &lt;expression&gt; ;  </code></pre>
 <h4 id="知识点–语法：PLSQL-变量的声明和初始化"><a href="#知识点–语法：PLSQL-变量的声明和初始化" class="headerlink" title="知识点–语法：PLSQL 变量的声明和初始化"></a>知识点–语法：PLSQL 变量的声明和初始化</h4><pre><code>    1. 语法  
         # &lt;var_name&gt; [CONSTANT] &lt;data_type&gt; [NOT NULL] [:= &lt;value&gt;| DEFAULT &lt;value&gt;] ;  
-    2. 语法格式
+    2. 语法说明
         # CONSTANT  
             - 指定变量为常量  
             - 常量定义后不可以修改其值  
@@ -1910,7 +1918,875 @@
                     RAISE_APPLICATION_ERROR( -20001, &#39;An error occered&#39;) ;  
             END ;  
             /  </code></pre>
-<h1 id="第22章-PL-SQL-程序语句"><a href="#第22章-PL-SQL-程序语句" class="headerlink" title="第22章 PL/SQL 程序语句"></a>第22章 PL/SQL 程序语句</h1><h1 id="第23章-PL-SQL-程序单元"><a href="#第23章-PL-SQL-程序单元" class="headerlink" title="第23章 PL/SQL 程序单元"></a>第23章 PL/SQL 程序单元</h1><h1 id="第24章-PL-SQL-维护"><a href="#第24章-PL-SQL-维护" class="headerlink" title="第24章 PL/SQL 维护"></a>第24章 PL/SQL 维护</h1><h1 id="第25章-预留"><a href="#第25章-预留" class="headerlink" title="第25章 (预留)"></a>第25章 (预留)</h1><h1 id="第26章-实例"><a href="#第26章-实例" class="headerlink" title="第26章 实例"></a>第26章 实例</h1><h1 id="第27章-内存"><a href="#第27章-内存" class="headerlink" title="第27章 内存"></a>第27章 内存</h1><h1 id="第28章-进程"><a href="#第28章-进程" class="headerlink" title="第28章 进程"></a>第28章 进程</h1><h1 id="第29章-存储"><a href="#第29章-存储" class="headerlink" title="第29章 存储"></a>第29章 存储</h1><h1 id="第30章-事务"><a href="#第30章-事务" class="headerlink" title="第30章 事务"></a>第30章 事务</h1><h1 id="第31章-网络"><a href="#第31章-网络" class="headerlink" title="第31章 网络"></a>第31章 网络</h1><h1 id="第32章-安全"><a href="#第32章-安全" class="headerlink" title="第32章 安全"></a>第32章 安全</h1><h1 id="第33章-加密"><a href="#第33章-加密" class="headerlink" title="第33章 加密"></a>第33章 加密</h1><h1 id="第34章-预留"><a href="#第34章-预留" class="headerlink" title="第34章 (预留)"></a>第34章 (预留)</h1><h1 id="第35章-预留"><a href="#第35章-预留" class="headerlink" title="第35章 (预留)"></a>第35章 (预留)</h1><h1 id="第36章-OEM"><a href="#第36章-OEM" class="headerlink" title="第36章 OEM"></a>第36章 OEM</h1><h1 id="第37章-审计"><a href="#第37章-审计" class="headerlink" title="第37章 审计"></a>第37章 审计</h1><h1 id="第38章-调度"><a href="#第38章-调度" class="headerlink" title="第38章 调度"></a>第38章 调度</h1><h1 id="第39章-资源管理"><a href="#第39章-资源管理" class="headerlink" title="第39章 资源管理"></a>第39章 资源管理</h1><h1 id="第40章-优化"><a href="#第40章-优化" class="headerlink" title="第40章 优化"></a>第40章 优化</h1><h1 id="第41章-性能"><a href="#第41章-性能" class="headerlink" title="第41章 性能"></a>第41章 性能</h1><h1 id="第42章-缓存"><a href="#第42章-缓存" class="headerlink" title="第42章 缓存"></a>第42章 缓存</h1><h1 id="第43章-迁移"><a href="#第43章-迁移" class="headerlink" title="第43章 迁移"></a>第43章 迁移</h1><h1 id="第44章-预留"><a href="#第44章-预留" class="headerlink" title="第44章 (预留)"></a>第44章 (预留)</h1><h1 id="第45章-预留"><a href="#第45章-预留" class="headerlink" title="第45章 (预留)"></a>第45章 (预留)</h1><h1 id="第46章-备份恢复基础"><a href="#第46章-备份恢复基础" class="headerlink" title="第46章 备份恢复基础"></a>第46章 备份恢复基础</h1><h1 id="第47章-备份"><a href="#第47章-备份" class="headerlink" title="第47章 备份"></a>第47章 备份</h1><h1 id="第48章-恢复和闪回"><a href="#第48章-恢复和闪回" class="headerlink" title="第48章 恢复和闪回"></a>第48章 恢复和闪回</h1><h1 id="第49章-RMAN-复制和移动"><a href="#第49章-RMAN-复制和移动" class="headerlink" title="第49章 RMAN 复制和移动"></a>第49章 RMAN 复制和移动</h1><h1 id="第50章-手动备份恢复"><a href="#第50章-手动备份恢复" class="headerlink" title="第50章 手动备份恢复"></a>第50章 手动备份恢复</h1><h1 id="第51章-预留"><a href="#第51章-预留" class="headerlink" title="第51章 (预留)"></a>第51章 (预留)</h1><h1 id="第52章-预留"><a href="#第52章-预留" class="headerlink" title="第52章 (预留)"></a>第52章 (预留)</h1><h1 id="第53章-预留"><a href="#第53章-预留" class="headerlink" title="第53章 (预留)"></a>第53章 (预留)</h1><h1 id="第54章-预留"><a href="#第54章-预留" class="headerlink" title="第54章 (预留)"></a>第54章 (预留)</h1><h1 id="第55章-预留"><a href="#第55章-预留" class="headerlink" title="第55章 (预留)"></a>第55章 (预留)</h1><h1 id="第56章-安装"><a href="#第56章-安装" class="headerlink" title="第56章 安装"></a>第56章 安装</h1><h1 id="第57章-建库"><a href="#第57章-建库" class="headerlink" title="第57章 建库"></a>第57章 建库</h1><h1 id="第58章-升级"><a href="#第58章-升级" class="headerlink" title="第58章 升级"></a>第58章 升级</h1><h1 id="第59章-预留"><a href="#第59章-预留" class="headerlink" title="第59章 (预留)"></a>第59章 (预留)</h1><h1 id="第60章-预留"><a href="#第60章-预留" class="headerlink" title="第60章 (预留)"></a>第60章 (预留)</h1><h1 id="第61章-分区表，聚簇表，IOT-表"><a href="#第61章-分区表，聚簇表，IOT-表" class="headerlink" title="第61章 分区表，聚簇表，IOT 表"></a>第61章 分区表，聚簇表，IOT 表</h1><h1 id="第62章-大对象"><a href="#第62章-大对象" class="headerlink" title="第62章 大对象"></a>第62章 大对象</h1><h1 id="第63章-分库"><a href="#第63章-分库" class="headerlink" title="第63章 分库"></a>第63章 分库</h1><h1 id="第64章-物化视图"><a href="#第64章-物化视图" class="headerlink" title="第64章 物化视图"></a>第64章 物化视图</h1><h1 id="第65章"><a href="#第65章" class="headerlink" title="第65章"></a>第65章</h1><h1 id="第66章"><a href="#第66章" class="headerlink" title="第66章"></a>第66章</h1><h1 id="第67章"><a href="#第67章" class="headerlink" title="第67章"></a>第67章</h1><h1 id="第68章"><a href="#第68章" class="headerlink" title="第68章"></a>第68章</h1><h1 id="第69章"><a href="#第69章" class="headerlink" title="第69章"></a>第69章</h1><h1 id="第70章"><a href="#第70章" class="headerlink" title="第70章"></a>第70章</h1><h1 id="第71章-Grid-Infrastructure"><a href="#第71章-Grid-Infrastructure" class="headerlink" title="第71章 Grid Infrastructure"></a>第71章 Grid Infrastructure</h1><h1 id="第72章-ASM"><a href="#第72章-ASM" class="headerlink" title="第72章 ASM"></a>第72章 ASM</h1><h1 id="第73章"><a href="#第73章" class="headerlink" title="第73章"></a>第73章</h1><h1 id="第74章"><a href="#第74章" class="headerlink" title="第74章"></a>第74章</h1><h1 id="第75章"><a href="#第75章" class="headerlink" title="第75章"></a>第75章</h1>
+<h2 id="21-6-动态-SQL"><a href="#21-6-动态-SQL" class="headerlink" title="21.6 动态 SQL"></a>21.6 动态 SQL</h2><h3 id="21-6-1-动态-SQL"><a href="#21-6-1-动态-SQL" class="headerlink" title="21.6.1 动态 SQL"></a>21.6.1 动态 SQL</h3><h4 id="知识点–概念：动态-SQL"><a href="#知识点–概念：动态-SQL" class="headerlink" title="知识点–概念：动态 SQL"></a>知识点–概念：动态 SQL</h4><pre><code>    1.介绍  
+        # 普通 SQL 是固定的  
+        # 动态 SQL 是在编译时 SQL statement 不确定某些元素的值，在执行时才确定 SQL statement 的内容  
+            - 如 WHERE condition 中比较条件的条件范围  
+        # 动态 SQL 也可以运行动态 PLSQL 块  
+            - 语句改为 &#39;BEGIN &lt;statements&gt;; END ;&#39; 的格式  
+    2.动态 SQL 的优点  
+        # 增加 PLSQL 程序的通用性和灵活性  
+        # PLSQL 可以执行 DDL 操作  </code></pre>
+<h4 id="知识点–语法：EXECUTE-IMMEDIATE，PLSQL-块中运行动态-SQL"><a href="#知识点–语法：EXECUTE-IMMEDIATE，PLSQL-块中运行动态-SQL" class="headerlink" title="知识点–语法：EXECUTE IMMEDIATE，PLSQL 块中运行动态 SQL"></a>知识点–语法：EXECUTE IMMEDIATE，PLSQL 块中运行动态 SQL</h4><pre><code>    1.语法  
+        # EXECUTE IMMEDIATE &lt;string_var_name&gt; [INTO &#123;&lt;defined_strings&gt; [, ...] | RECORD&#125;] [UNSING &#123;[IN|OUT|IN OUT] &lt;argument_name&gt;&#125;[, ...]] ;  
+        # EXECUTE IMMEDIATE &lt;dynamic_string&gt; [INTO &#123;&lt;defined_strings&gt; [, ...] | RECORD&#125;] [UNSING &#123;[IN|OUT|IN OUT] &lt;argument_name&gt;&#125;[, ...]] ;  
+    2. 语法说明
+        # &lt;string_var_name&gt;  
+            - 提前将需要执行的语句和动态的元素提前组合为长字符串，放在变量 &lt;string_var_name&gt; 中  
+            - 通过 &lt;string_var_name&gt; 执行语句  
+        # &lt;dynamic_string&gt;  
+            - 直接在 EXECUTE IMMEDIATE 中组合需要执行的语句  
+        # [INTO &#123;&lt;defined_strings&gt; [, ...] | RECORD&#125;]  
+            - 将查询结果保存到某处  
+            - 只能用在返回一行的查询中  
+        # [USING &#123;[IN|OUT|IN OUT] &lt;argument_name&gt;&#125;[, ...]]  
+            - 进行变量值的替换  
+            - 在 &lt;string_var_name&gt; 或 &lt;dynamic_string&gt; 中，使用 :&lt;p_name&gt; 的方式标记替换位置  
+            - 在 UNSING 中指定替换相应的 &lt;p_name&gt; 使用的 &lt;var_name&gt; 或 &lt;value&gt;  
+            - 替换只能按照位置进行  
+    3.动态 SQL 执行 DDL  
+        # 不能使用 USING 进行替换  
+    4.范例  
+        # 动态 PLSQL  
+            -    BEGIN  
+                    EXECUTE IMMEDIATE &#39;BEGIN DBMS_OUTPUT.PUT_LINE(321) ;END ;&#39; ;  
+                END ;  
+                /  
+        # 创建过程 p_create_t，可以进行建表  
+            -    CREATE OR REPLACE PROCEDURE p_create_t ( p_table_name VARCHAR2, p_col_spec VARCHAR2)  
+                    IS  
+                        v_xxxx VARCHAR2(1024) ;  
+                    BEGIN  
+                        -- v_xxxx := &#39;CREATE TABLE &#39; || p_table_name  || &#39; ( &#39; || p_col_spec || &#39; ) &#39; ;  
+                        EXECUTE IMMEDIATE &#39;CREATE TABLE &#39; || p_table_name  || &#39; ( &#39; || p_col_spec || &#39; ) &#39; ;  
+                    END p_create_t;  
+                    /  
+            -    EXEC p_create_t( &#39;t003&#39; , &#39; employee_id number PRIMARY KEY, employee_name VARCHAR(30) NOT NULL, salary NUMBER NOT NULL&#39;) ;  </code></pre>
+<h3 id="21-6-3-DBMS-SQL-包"><a href="#21-6-3-DBMS-SQL-包" class="headerlink" title="21.6.3 DBMS_SQL 包"></a>21.6.3 DBMS_SQL 包</h3><h4 id="知识点–概念：DBMS-SQL-包，可以执行动态-SQL，功能比-EXECUTE-IMMEDIATE-强大，效率比-EXECUTE-IMMEDIATE-低"><a href="#知识点–概念：DBMS-SQL-包，可以执行动态-SQL，功能比-EXECUTE-IMMEDIATE-强大，效率比-EXECUTE-IMMEDIATE-低" class="headerlink" title="知识点–概念：DBMS_SQL 包，可以执行动态 SQL，功能比 EXECUTE IMMEDIATE 强大，效率比 EXECUTE IMMEDIATE 低"></a>知识点–概念：DBMS_SQL 包，可以执行动态 SQL，功能比 EXECUTE IMMEDIATE 强大，效率比 EXECUTE IMMEDIATE 低</h4><pre><code>    1.常用子程序  
+        # OPEN_CURSOR  
+        # PARSE  
+        # BIND_VARIABLE  
+        # EXECUTE  
+        # FETCH_ROWS  
+        # CLOSE_CURSOR  </code></pre>
+<h2 id="21-7-批量绑定"><a href="#21-7-批量绑定" class="headerlink" title="21.7 批量绑定"></a>21.7 批量绑定</h2><h3 id="21-7-1-批量绑定-Bulk-Binds"><a href="#21-7-1-批量绑定-Bulk-Binds" class="headerlink" title="21.7.1 批量绑定 Bulk Binds"></a>21.7.1 批量绑定 Bulk Binds</h3><h4 id="知识点–概念：PLSQL-和-sql-之间的切换"><a href="#知识点–概念：PLSQL-和-sql-之间的切换" class="headerlink" title="知识点–概念：PLSQL 和 sql 之间的切换"></a>知识点–概念：PLSQL 和 sql 之间的切换</h4><pre><code>    1. ORACLE 处理 PLSQL 程序块需要两个引擎  
+        # PLSQL 引擎，运行 PLSQL 语句，将 sql 语句传递给 sql 引擎  
+        # sql 引擎，运行 sql 语句，将结果返回给 PLSQL 引擎  
+    2. 程序块中的每一个 sql 语句，都会引起两个引擎的环境切换，可能影响性能  
+        # 例如 FOR 循环中使用 SELECT INTO 语句进行对 collection 类型变量进行赋值，每一轮循环都要切换一次环境  
+    3. 通过使用批量绑定，可以减少引擎切换的次数  </code></pre>
+<h4 id="知识点–概念：批量绑定"><a href="#知识点–概念：批量绑定" class="headerlink" title="知识点–概念：批量绑定"></a>知识点–概念：批量绑定</h4><pre><code>    1. 批量绑定的效果，将多次切换才能进行的数据传递只用一次切换来完成  
+    2. 批量绑定的两种方式及其应用场景  
+        # FORALL 语句
+            - 增强 PLSQL 引擎到 sql 引擎
+            - 引用 collection 变量的内容来 INSERT or UPDATE or delete 表  
+        # BULK COLLECTION INTO 语句
+            - 增强 sql 引擎到 PLSQL 引擎
+            - 引用 table 的内容对 collection 变量进行大批量的赋值  </code></pre>
+<h3 id="21-7-2-SELECT-BULK-COLLECT-INTO"><a href="#21-7-2-SELECT-BULK-COLLECT-INTO" class="headerlink" title="21.7.2 SELECT BULK COLLECT INTO"></a>21.7.2 SELECT BULK COLLECT INTO</h3><h4 id="知识点–语法：SELECT-BULK-COLLECT-INTO"><a href="#知识点–语法：SELECT-BULK-COLLECT-INTO" class="headerlink" title="知识点–语法：SELECT BULK COLLECT INTO"></a>知识点–语法：SELECT BULK COLLECT INTO</h4><pre><code>    1.语法  
+        # SELECT * BULK COLLECT INTO &lt;collection_variable&gt; FROM ... ;  
+    2.范例  
+        # 将 employees 中工资小于 avg(salary) 的员工都加载到 v01 关联数组中  
+            -    DECLARE  
+                    TYPE t01 IS TABLE OF employees%ROWTYPE INDEX BY PLS_INTEGER ;  
+                    v01 t01 ;  
+                    zv01 NUMBER ;  
+                BEGIN  
+                    SELECT AVG(salary) INTO zv01 FROM EMPLOYEES ;  
+                    DBMS_OUTPUT.PUT_LINE(zv01) ;  
+                    SELECT * BULK COLLECT INTO v01 FROM employees salary &lt; zv01 ;  
+                END ;  
+                /  </code></pre>
+<h3 id="21-7-3-FETCH-BULK-COLLECT-INTO"><a href="#21-7-3-FETCH-BULK-COLLECT-INTO" class="headerlink" title="21.7.3 FETCH BULK COLLECT INTO"></a>21.7.3 FETCH BULK COLLECT INTO</h3><h4 id="知识点–语法：FETCH-BULK-COLLECT-INTO"><a href="#知识点–语法：FETCH-BULK-COLLECT-INTO" class="headerlink" title="知识点–语法：FETCH BULK COLLECT INTO"></a>知识点–语法：FETCH BULK COLLECT INTO</h4><pre><code>    1.语法  
+        # FETCH &lt;cursor_name&gt; BULK COLLECT INTO &lt;collection_variable&gt; [LIMIT &lt;N&gt;] ;  
+            - LIMIT n，限定一次的读取行数  
+    2.范例  
+        # 使用带参数的游标 C01，将 employees 中工资小于 avg(salary) 的员工都加载到 v01 关联数组中  
+            -    DECLARE  
+                    CURSOR c01 (avg_sal NUMBER) IS (SELECT * FROM employees WHERE salary &lt; avg_sal) ;  
+                    TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
+                    v01 t01 ;  
+                    zv01 NUMBER ;  
+                BEGIN  
+                    SELECT avg(salary) INTO zv01 FROM employees ;  
+                    OPEN c01( zv01) ;  
+                    DBMS_OUTPUT.PUT_LINE(zv01) ;  
+                    FETCH c01 BULK COLLECT INTO v01 ;  
+                    CLOSE c01 ;  
+                END ;  
+                /  </code></pre>
+<h3 id="21-7-4-FORALL"><a href="#21-7-4-FORALL" class="headerlink" title="21.7.4 FORALL"></a>21.7.4 FORALL</h3><h4 id="知识点–概念：FORALL-批量绑定-DML"><a href="#知识点–概念：FORALL-批量绑定-DML" class="headerlink" title="知识点–概念：FORALL 批量绑定 DML"></a>知识点–概念：FORALL 批量绑定 DML</h4><pre><code>    1.对一行 DML 语句，采用批量绑定的方式进行数据的修改  </code></pre>
+<h4 id="知识点–语法：FORALL"><a href="#知识点–语法：FORALL" class="headerlink" title="知识点–语法：FORALL"></a>知识点–语法：FORALL</h4><pre><code>    1. 语法  
+        # FORALL i IN &lt;lower&gt;..&lt;upper&gt; [SAVE EXCEPTION] &lt;dml_statement&gt; ;  
+            - SAVE EXCEPTION，将 FORALL 中的异常保存到 SQL%BULK_EXCEPTIONS 游标中  
+    2. FORALL INSERT  
+        # 可以使用数组项作为 INSERT 语句的 value 值  
+            - 例如，FORALL i IN &lt;lower&gt;..&lt;upper&gt; SAVE EXCEPTION INSERT INTO &lt;table_name&gt; VALUES V01(i) ;  
+        # 可以使用数组项中的列作为 INSERT 语句的 value 值  
+            - 例如，FORALL i IN &lt;lower&gt;..&lt;upper&gt; SAVE EXCEPTION INSERT INTO &lt;table_name&gt; VALUES (v01(i).employee_id + v01(i).department_id ,v01(i).salary) ;  
+    3.FORALL UPDATE  
+        # FORALL 的索引可以出现在 WHERE 子句中，但不能出现在 SET 子句中  
+            - 例如，FORALL i IN 1..v01.last SAVE EXCEPTIONS UPDATE testemp SET salary = salary +10000 WHERE employee_id = v01(i).employee_id ;  
+            - 语句失败，FORALL i IN 1..v01.last SAVE EXCEPTIONS UPDATE testemp SET salary = v01(i).salaey WHERE employee_id = v01(i).employee_id ;  
+    4.FORALL DELETE  
+        # FORALL 的索引用在 WHERE 子句中  </code></pre>
+<h4 id="知识点–概念：SQL-BULK-ROWCOUNT-隐式游标"><a href="#知识点–概念：SQL-BULK-ROWCOUNT-隐式游标" class="headerlink" title="知识点–概念：SQL%BULK_ROWCOUNT 隐式游标"></a>知识点–概念：SQL%BULK_ROWCOUNT 隐式游标</h4><pre><code>    1.储存 FORALL 语句中的每一次操作所影响的行数  
+        # SQL%BULK_ROWCOUNT(i) 就等于第 i 次操作所修改的行的数量  
+    2.范例  
+        # 将所有 department_id 小于 49 的部门的员工，工资上调 10000 元，然后查看 FORALL 每次修改的行数  
+            -    DECLARE  
+                    CURSOR c01 (n NUMBER) IS (SELECT DISTINCT department_id FROM employees WHERE department_id &lt; n) ;  
+                    TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
+                    v01 t01 ;  
+                    zv01 NUMBER := 49 ;  
+                BEGIN  
+                    OPEN c01(zv01) ;  
+                    FETCH c01 BULK COLLECT INTO v01 ;  
+                    CLOSE c01 ;  
+                    -- FORALL 修改  
+                    FORALL i in 1..v01.LAST SAVE EXCEPTIONS  
+                        UPDATE testemp SET salary = salary + 10000 WHERE department_id = v01(i).department_id ;  
+                    -- 查看每次修改的行数  
+                    FOR i IN 1..v01.LAST LOOP  
+                        DBMS_OUTPUT.PUT_LINE(SQL%BULK_ROWCOUNT(i)) ;  
+                    END LOOP ;  
+                END ;  
+                /  </code></pre>
+<h4 id="知识点–概念：SQL-BULK-EXCEPTIONS-隐式游标"><a href="#知识点–概念：SQL-BULK-EXCEPTIONS-隐式游标" class="headerlink" title="知识点–概念：SQL%BULK_EXCEPTIONS 隐式游标"></a>知识点–概念：SQL%BULK_EXCEPTIONS 隐式游标</h4><pre><code>    1.默认情况下，当 FORALL 语句出错，ORACLE 会中断语句的执行并抛出异常  
+        # 已执行的操作不会回退  
+        # 未执行的操作不再执行  
+    2.当指定了 SAVE EXCEPTIONS 后，FORALL 语句中出现的异常会放到 SQL%BULK_EXCEPTIONS 隐式游标中  
+        # 所有的操作全部执行  
+        # 成功的操作保存  
+        # 失败的操作，将错误信息保存到 SQL%BULK_EXCEPTIONS 中  
+    3.FORALL 语句抛出的异常为 ORA-24381  
+        # SAVE EXCEPTIONS 但不捕获异常，则 ORACLE 在 FORALL 语句执行完成后再抛出异常  
+        # SAVE EXCEPTIONS 并捕获异常，则 ORACLE 在 FORALL 语句执行完成后转到异常段执行  
+    4.SQL%BULK_EXCEPTIONS 的属性  
+        # SQL%BULK_EXCEPTIONS.COUNT                    &lt;-- 隐式游标 SQL%BULK_EXCEPTIONS 中记录的信息的个数  
+        # SQL%BULK_EXCEPTIONS(i).ERROR_INDEX        &lt;-- 第 i 个错误记录的是 FORALL 中第几次操作
+        # SQL%BULK_EXCEPTIONS(i).ERROR_CODE            &lt;-- 第 i 个错误记录的错误代码  
+    5.范例  
+        # 使用 BULK COLLECT INTO 和 FORALL，将 salary 小于平均值的员工的 employee_id 记录下来  
+            -    CREATE TABLE test (id NUMBER) ;        &lt;-- 创建结果表  
+            -    DECLARE  
+                    CURSOR c01 (avg_sal NUMBER) IS (SELECT * FROM employees WHERE salary &lt; avg_sal) ;  
+                    TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
+                    v01 t01 ;  
+                    zv01 NUMBER ;  
+                BEGIN  
+                    SELECT avg(salary) INTO zv01 FROM employees ;  
+                    -- DBMS_OUTPUT.PUT_LINE(zv01) ;  
+                    -- FETCH &lt;data&gt; FROM &lt;cursor&gt;  
+                    OPEN c01( zv01) ;  
+                    FETCH c01 BULK COLLECT INTO v01 ;  
+                    CLOSE c01 ;  
+                    -- FORALL INSERT  
+                    FORALL i IN 1..v01.LAST SAVE EXCEPTIONS  
+                        INSERT INTO test VALUES (v01(i).employee_id ) ;  
+                EXCEPTION  
+                    WHEN OTHERS THEN  
+                        FOR i IN 1..SQL%BULK_EXCEPTIONS.COUNT LOOP  
+                            DBMS_OUTPUT.PUT_LINE( &#39;ERRORS==&gt;&gt;&#39;||SQL%BULK_EXCEPTIONS(i).ERROR_INDEX||&#39; &#39;|| SQL%BULK_EXCEPTIONS(i).ERROR_CODE) ;  
+                        END LOOP ;  
+                END ;  
+                /  </code></pre>
+<h3 id="21-7-4-RETURNING-BULK-COLLECT-INTO"><a href="#21-7-4-RETURNING-BULK-COLLECT-INTO" class="headerlink" title="21.7.4 RETURNING BULK COLLECT INTO"></a>21.7.4 RETURNING BULK COLLECT INTO</h3><h4 id="知识点–语法：RETURNING-BULK-COLLECT-INTO"><a href="#知识点–语法：RETURNING-BULK-COLLECT-INTO" class="headerlink" title="知识点–语法：RETURNING BULK COLLECT INTO"></a>知识点–语法：RETURNING BULK COLLECT INTO</h4><pre><code>    1.将修改后的行的每一行的一部分内容记录下来  
+        # INSERT 和 UPDATE，记录修改后的内容  
+        # DELETE，记录修改前的内容  
+    2.范例  
+        # 使用 FETCH BULK COLLECT INTO，将 salary 小于平均值的员工的 employee_id 记录到 v01 关联数组中  
+        # 使用 FORALL，将这些员工的 salary 加 10000  
+        # 使用 RETURNING BULK COLLECT INTO，将上一步的修改的员工的 employee_id 和修改后的 salary 分别记录到 v02 和 v03 关联数组中  
+            -    CREATE TABLE testemp AS SELECT * FROM employees ;            -- 创建测试表  
+            -    DECLARE  
+                    CURSOR c01 (avg_sal NUMBER) IS (SELECT * FROM testemp WHERE salary &lt; avg_sal) ;  
+                    TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
+                    v01 t01 ;  
+                    TYPE t02 IS TABLE OF NUMBER INDEX BY PLS_INTEGER ;  
+                    v02 t02 ;  
+                    v03 t02 ;  
+                    zv01 NUMBER ;  
+                BEGIN  
+                    SELECT AVG(salary) INTO zv01 FROM employees ;  
+                    DBMS_OUTPUT.PUT_LINE(zv01) ;  
+                    -- FETCH &lt;data&gt; FROM &lt;cursor&gt;  
+                    OPEN c01( zv01) ;  
+                    FETCH c01 BULK COLLECT INTO v01 ;  
+                    CLOSE c01 ;  
+                    -- FORALL UPDATE 和 RETURNING  
+                    FORALL i IN 1..v01.last SAVE EXCEPTIONS  
+                        UPDATE testemp SET salary = salary + 10000  
+                            -- delete from testemp  
+                            WHERE employee_id = v01(i).employee_id  
+                            RETURNING employee_id, salary BULK COLLECT INTO v02,v03 ;  
+                    FOR i IN 1..v02.last LOOP  
+                        DBMS_OUTPUT.PUT_LINE(v02(i) ||&#39; &#39;|| v03(i)) ;  
+                    END LOOP ;  
+                EXCEPTION  
+                    WHEN OTHERS THEN  
+                        FOR i IN 1..SQL%BULK_EXCEPTIONS.COUNT LOOP  
+                            DBMS_OUTPUT.PUT_LINE( &#39;ERRORS==&gt;&gt;&#39;||SQL%BULK_EXCEPTIONS(i).ERROR_INDEX||&#39; &#39;|| SQL%BULK_EXCEPTIONS(i).ERROR_CODE) ;  
+                        END LOOP ;  
+                END ;  
+                /  </code></pre>
+<h1 id="第22章-PLSQL-程序"><a href="#第22章-PLSQL-程序" class="headerlink" title="第22章 PLSQL 程序"></a>第22章 PLSQL 程序</h1><h2 id="22-1-参数"><a href="#22-1-参数" class="headerlink" title="22.1 参数"></a>22.1 参数</h2><h3 id="22-1-1-参数介绍"><a href="#22-1-1-参数介绍" class="headerlink" title="22.1.1 参数介绍"></a>22.1.1 参数介绍</h3><h4 id="知识点–概念：PLSQL-程序参数"><a href="#知识点–概念：PLSQL-程序参数" class="headerlink" title="知识点–概念：PLSQL 程序参数"></a>知识点–概念：PLSQL 程序参数</h4><pre><code>    1.介绍  
+        # 用来在程序和调用环境之间传递数据  
+        # 字符型函数不能使用 VARCHAR2(&lt;n&gt;)，只能使用 VARCHAR2  
+    2.形参 formal parameter  
+    3.实参 actual parameter  </code></pre>
+<h4 id="知识点–概念：参数的三种模式，IN，OUT，IN-OUT"><a href="#知识点–概念：参数的三种模式，IN，OUT，IN-OUT" class="headerlink" title="知识点–概念：参数的三种模式，IN，OUT，IN OUT"></a>知识点–概念：参数的三种模式，IN，OUT，IN OUT</h4><pre><code>    1.IN 参数  
+        # 从调用环境传递一个数值给程序  
+        # 在执行中不能进行赋值  
+        # 在执行段中，IN 参数作为一个只读的常数而存在  
+    2.OUT 参数  
+        # 从程序传递一个数值给调用环境  
+        # 必须传递实参  
+        # 实参必须是一个变量  
+        # 不能设置默认值  
+        # sqlplus 环境通过绑定变量获得参数值  
+        # PLSQL 程序块中将父块中的变量作为实参，继而获得参数值  
+    3.IN OUT 参数  
+        # 程序执行前从调用环境传递一个数值给程序，程序执行结束后又从程序传递一个数值给调用环境  
+        # 必须传递实参  
+        # 实参必须是一个变量  
+        # 不能设置默认值  </code></pre>
+<h3 id="22-1-2-传递参数值"><a href="#22-1-2-传递参数值" class="headerlink" title="22.1.2 传递参数值"></a>22.1.2 传递参数值</h3><h4 id="知识点–概念：传递参数的方法"><a href="#知识点–概念：传递参数的方法" class="headerlink" title="知识点–概念：传递参数的方法"></a>知识点–概念：传递参数的方法</h4><pre><code>    1.按位置传递 positional  
+        # 按照过程的定义中的形参顺序填写实参  
+        # 要求实参所对应的要连续  
+        # 如果实参数量少于形参数量，则实参按顺序赋予前半部分的形参，后半部分的形参使用默认值  
+        # EXEC &lt;procedure_name&gt;( &lt;value_1&gt;, &lt;value_2&gt;, ...) ;  
+    2.按名称传递 named  
+        # 按照 &lt;parameter_name&gt; =&gt; &lt;value&gt; 的形式传递实参，不需要注意顺序  
+        # 未指定实参的形参使用默认值  
+        # EXEC &lt;procedure_name&gt;( &lt;parameter_name_x&gt; =&gt; &lt;value_x&gt;, &lt;parameter_name_y&gt; =&gt; &lt;value_y&gt;, ...) ;  
+    3.组合方式 combination  
+        # 某些参数按位置传递，某些参数按名称传递  
+        # 按位置传递要放在前，按名称传递放在后并且最好有默认值  
+        # EXEC &lt;procedure_name&gt;( &lt;value_1&gt;, &lt;value2&gt;, &lt;parameter_name_x&gt; =&gt; &lt;value_x&gt;, &lt;parameter_name_y&gt; =&gt; &lt;value_y&gt;, ...)  </code></pre>
+<h4 id="知识点–概念：定义过程时参数的推荐先后顺序"><a href="#知识点–概念：定义过程时参数的推荐先后顺序" class="headerlink" title="知识点–概念：定义过程时参数的推荐先后顺序"></a>知识点–概念：定义过程时参数的推荐先后顺序</h4><pre><code>    1.OUT 和 IN OUT 参数放在前，较常修改的 IN 参数放在前  
+        # OUT 和 IN OUT 参数必须指定实参，故放在前，可以使用按位置传递  
+        # 较常修改的 IN 参数放在前，可以使用按位置传递  
+    2.不常用的 IN 参数放在后，并指定默认值  
+        # 当没有指定时，使用默认值  
+        # 当需要指定时，写在按位置实参之后，使用按名称方式传递  </code></pre>
+<h2 id="22-2-过程"><a href="#22-2-过程" class="headerlink" title="22.2 过程"></a>22.2 过程</h2><h3 id="22-2-1-PLSQL-子程序"><a href="#22-2-1-PLSQL-子程序" class="headerlink" title="22.2.1 PLSQL 子程序"></a>22.2.1 PLSQL 子程序</h3><h4 id="知识点–概念：子程序-subprogram"><a href="#知识点–概念：子程序-subprogram" class="headerlink" title="知识点–概念：子程序 subprogram"></a>知识点–概念：子程序 subprogram</h4><pre><code>    1.一个命名的 PLSQL 程序块，可以是过程，也可以是函数  
+    2.子程序包含，一个声明段，一个执行段，一个异常段  
+    3.子程序创建后，作为对象保存在数据库中，然后自动进行编译，编译后，保存在数据库中  
+        # 未编译或编译失败的子程序，在 DBA_OBJECTS 中，STATUS 列的状态为 INVALID，在 DBA_ERRORS 中记录了相关的编译错误  
+    4.字典  
+        # DBA_PROCEDURES            &lt;-- 记录所有的过程  
+        # DBA_TRIGGERS                &lt;-- 记录所有的触发器  
+        # DBA_SOURCE                &lt;-- 记录所有的存储的对象的源码  
+        # DBA_ERRORS                &lt;-- 记录当前数据库中储存过程的编译错误  </code></pre>
+<h4 id="知识点–概念：模块化编程"><a href="#知识点–概念：模块化编程" class="headerlink" title="知识点–概念：模块化编程"></a>知识点–概念：模块化编程</h4><pre><code>    1.将大的程序代码块转换成小的称之为模块的程序块  
+    2.分层的程序设计  
+        # 数据访问层 data access layer，使用 SQL 语句访问数据的子程序  
+        # 业务逻辑层 business logic layer  </code></pre>
+<h3 id="22-2-2-过程-Procedure"><a href="#22-2-2-过程-Procedure" class="headerlink" title="22.2.2 过程 Procedure"></a>22.2.2 过程 Procedure</h3><h4 id="知识点–概念：过程-Procedure"><a href="#知识点–概念：过程-Procedure" class="headerlink" title="知识点–概念：过程 Procedure"></a>知识点–概念：过程 Procedure</h4><pre><code>    1.过程通常只进行操作  
+    2.调用过程的方式  
+        # sqlplus 环境中，可以使用 EXEC 语句调用过程  
+        # sqlplus 环境中，可以使用匿名块调用过程  
+        # 其他 PLSQL 子程序中，可以直接使用 &lt;procedure_name&gt; 调用过程  
+            - 在过程的声明段中，可以定义过程  
+            - 在过程的执行段中，调用其他过程，需要保证其他过程已经被编译并保存  </code></pre>
+<h4 id="知识点–语法：CREATE-PROCEDURE-创建过程"><a href="#知识点–语法：CREATE-PROCEDURE-创建过程" class="headerlink" title="知识点–语法：CREATE PROCEDURE 创建过程"></a>知识点–语法：CREATE PROCEDURE 创建过程</h4><pre><code>    1.语法  
+        # CREATE [OR REPLACE] PROCEDURE &lt;procedure_name&gt;  
+            [(&#123;&lt;parameter_name&gt; [IN|OUT|IN OUT] &lt;data_type&gt; [DEFAULT &lt;default_value&gt;] [:= &lt;value&gt;]&#125;[, ...] )]  
+            IS|AS  
+                [&lt;locat_variable_declearations&gt; ;]  
+            BEGIN  
+                &lt;statements&gt; ;  
+            END [&lt;procedure_name&gt;] ;  
+            /  </code></pre>
+<h4 id="知识点–语法：ALTER-PROCEDURE-COMPILE-重新编译过程"><a href="#知识点–语法：ALTER-PROCEDURE-COMPILE-重新编译过程" class="headerlink" title="知识点–语法：ALTER PROCEDURE COMPILE 重新编译过程"></a>知识点–语法：ALTER PROCEDURE COMPILE 重新编译过程</h4><pre><code>    1.语法  
+        # ALTER PROCEDURE &lt;procedure_name&gt; COMPILE ;  </code></pre>
+<h4 id="知识点–语法：DROP-PROCEDURE-删除过程"><a href="#知识点–语法：DROP-PROCEDURE-删除过程" class="headerlink" title="知识点–语法：DROP PROCEDURE 删除过程"></a>知识点–语法：DROP PROCEDURE 删除过程</h4><pre><code>    1.语法  
+        # DROP PROCEDURE &lt;procedure_name&gt; ;  </code></pre>
+<h3 id="22-2-3-过程和异常"><a href="#22-2-3-过程和异常" class="headerlink" title="22.2.3 过程和异常"></a>22.2.3 过程和异常</h3><h4 id="知识点–概念：过程中的异常处理"><a href="#知识点–概念：过程中的异常处理" class="headerlink" title="知识点–概念：过程中的异常处理"></a>知识点–概念：过程中的异常处理</h4><pre><code>    1.过程中抛出异常  
+        # 未提交的事务被回退  
+        # 对绑定变量的修改被回退  
+    2.过程中抛出异常并被捕获  
+        # 未提交的事务保持不变  
+        # 对绑定变量的修改保存  </code></pre>
+<h4 id="知识点–概念：父过程调用子过程时的异常处理"><a href="#知识点–概念：父过程调用子过程时的异常处理" class="headerlink" title="知识点–概念：父过程调用子过程时的异常处理"></a>知识点–概念：父过程调用子过程时的异常处理</h4><pre><code>    1.父过程调用子过程，子过程抛出异常  
+        # 父过程和子过程中所有未提交的事务都回退  
+        # 父过程和子过程中所有对绑定变量的修改全部回退  
+    2.父过程调用子过程，子过程捕获异常  
+        # 子过程中异常发生后的操作不再进行  
+        # 父过程中异常发生后的操作正常进行  
+        # 父过程和子过程中所有未提交的事务都以未提交状态保持不变  
+        # 父过程和子过程中所有对绑定变量的修改都保存  
+    3.父过程调用子过程，子过程抛出异常，父过程捕获异常  
+        # 父过程中在子过程之后的操作不再进行  
+        # 子过程中未提交的事务全部回退  
+        # 父过程中未提交的事务保持不变  
+        # 子过程中涉及到的绑定变量被清空  
+        # 父过程中对绑定变量的修改保存  </code></pre>
+<h2 id="22-3-函数"><a href="#22-3-函数" class="headerlink" title="22.3 函数"></a>22.3 函数</h2><h3 id="22-3-1-函数"><a href="#22-3-1-函数" class="headerlink" title="22.3.1 函数"></a>22.3.1 函数</h3><h4 id="知识点–概念：函数-Function"><a href="#知识点–概念：函数-Function" class="headerlink" title="知识点–概念：函数 Function"></a>知识点–概念：函数 Function</h4><pre><code>    1.函数主要用来进行计算，返回一个值  
+        # 很少用函数进行操作  
+    2.函数只能有一个返回值  
+        # 在执行块中，可以有多个 RETURN，但有且只能有一个 RETURN 子句被执行  
+        # 函数最好不要有 OUT 和 IN OUT 的参数，因为这样的函数有多个出口，不利于维护  
+        # 如果必须获得多个出口，可以使用 PLSQL 的组合数据类型  
+    3.函数接收参数，可以是按位置，也可以是按名称  
+        # 在 11g 之前，不接受按名称  
+    4.函数中最好添加异常块，防止因为没有返回值而抛出异常  </code></pre>
+<h4 id="知识点–语法：CREATE-FUNCTION-创建函数"><a href="#知识点–语法：CREATE-FUNCTION-创建函数" class="headerlink" title="知识点–语法：CREATE FUNCTION 创建函数"></a>知识点–语法：CREATE FUNCTION 创建函数</h4><pre><code>    1.语法  
+        # CREATE [OR REPLACE] FUNCTION &lt;function_name&gt;  
+            [(&#123;&lt;parameter&gt; [IN|OUT|IN OUT] &lt;datatype&gt; [DEFAULT &lt;default_value&gt;] [:= &lt;value&gt;]&#125;[, ...] )]  
+            RETURN &lt;datatype&gt;  
+            IS|AS  
+                [&lt;local_variable_declearations&gt; ;]  
+            BEGIN  
+                &lt;statements&gt; ;  
+                RETURN &lt;expression&gt; ;  
+            END [&lt;function_name&gt;] ;  
+            /  
+    2.范例  
+        # 输入两个数，输出较大的那个数  
+            -    CREATE OR REPLACE FUNCTION f1 ( p1 NUMBER, p2 NUMBER)  
+                    RETURN NUMBER  
+                    IS  
+                        p3 NUMBER ;  
+                    BEGIN  
+                        IF p1 &gt;= p2 THEN p3 := p1 ;  
+                            ELSE p3 := p2 ;  
+                        END if ;  
+                        RETURN p3 ;  
+                    END f1 ;  </code></pre>
+<h4 id="知识点–语法：DROP-FUNCTION-删除函数"><a href="#知识点–语法：DROP-FUNCTION-删除函数" class="headerlink" title="知识点–语法：DROP FUNCTION 删除函数"></a>知识点–语法：DROP FUNCTION 删除函数</h4><pre><code>    1.语法  
+        # DROP FUNCTION &lt;function_name&gt; ;  </code></pre>
+<h3 id="22-3-2-函数的使用"><a href="#22-3-2-函数的使用" class="headerlink" title="22.3.2 函数的使用"></a>22.3.2 函数的使用</h3><h4 id="知识点–概念：调用函数所需要的权限"><a href="#知识点–概念：调用函数所需要的权限" class="headerlink" title="知识点–概念：调用函数所需要的权限"></a>知识点–概念：调用函数所需要的权限</h4><pre><code>    1.OWNER of the function  
+    2.EXECUTE on the function  </code></pre>
+<h4 id="知识点–概念：调用函数的方法"><a href="#知识点–概念：调用函数的方法" class="headerlink" title="知识点–概念：调用函数的方法"></a>知识点–概念：调用函数的方法</h4><pre><code>    1.放在 SELECT 等 SQL 语句中  
+        # 例子  
+            - SELECT function_1(n) FROM ... ;  
+    2.在 sqlplus 环境使用 EXECUTE 调用，使用绑定变量获得函数的结果  
+        # 例子  
+            - VARIABLE var_1 NUMBER ;  
+            - EXECUTE :var_1= funcation_1( n) ;  
+    3.在 sqlplus 环境使用匿名块调用，使用绑定变量获得函数的结果  
+    4.由 PLSQL 父环境调用，使用父环境 PLSQL 变量获得函数的结果  
+        # 例子  
+            - DECLARE  
+                v_1 NUMBER ;  
+            BEGIN  
+                v_1 := function_1( n) ;  
+                DBMS_OUTPUT.PUT_LINE( v_1) ;  
+            END ;  
+            /  
+    5.放在其他子程序中调用，作为 IN 实参  
+        # 例子  
+            - DECLARE  
+                v_1 NUMBER ;  
+            BEGIN  
+                v_1 := &lt;sub_program_x&gt;(&lt;function_1&gt;(&lt;n&gt;)) ;  
+                DBMS_OUTPUT.PUT_LINE( v_1) ;  
+            END ;  
+            /  </code></pre>
+<h4 id="知识点–概念：函数在-SQL-语句中可以出现的位置"><a href="#知识点–概念：函数在-SQL-语句中可以出现的位置" class="headerlink" title="知识点–概念：函数在 SQL 语句中可以出现的位置"></a>知识点–概念：函数在 SQL 语句中可以出现的位置</h4><pre><code>    1.select_list  
+    2.where_condition，having_condition  
+    3.GROUP BY 和 ORDER BY 和 CONNECT BY 和 START WITH  
+    4.INSERT VALUES  
+    5.UPDATE SET  </code></pre>
+<h4 id="知识点–概念：SQL-调用函数的限制"><a href="#知识点–概念：SQL-调用函数的限制" class="headerlink" title="知识点–概念：SQL 调用函数的限制"></a>知识点–概念：SQL 调用函数的限制</h4><pre><code>    1.函数的参数只能有 IN 参数，参数的数据类型必须是 SQL 支持的数据类型，返回值也必须是 SQL 支持的数据类型  
+    2.函数中不能包含 COMMIT 和 ROLLBACK  
+    3.函数不可以用在 CREATE TABLE 和 ALTER TABLE 的 CHECK 约束上  
+    4.函数不可以用在 CREATE TABLE 和 ALTER TABLE 的 DEFAULT 上  
+    5.函数不能包含 DML  
+    6.在 UPDATE 和 DELETE 中，函数不能对基表进行查询或修改  </code></pre>
+<h3 id="22-3-3-RETURN-语句"><a href="#22-3-3-RETURN-语句" class="headerlink" title="22.3.3 RETURN 语句"></a>22.3.3 RETURN 语句</h3><h4 id="知识点–语法：RETURN-语句"><a href="#知识点–语法：RETURN-语句" class="headerlink" title="知识点–语法：RETURN 语句"></a>知识点–语法：RETURN 语句</h4><pre><code>    1.用来退出程序块的执行并将控制权返回给调用环境  
+        # 函数中，RETURN 同时将计算结果返回给调用环境  
+        # 匿名块和过程中，RETURN 只是将控制权返回给调用环境  
+        # 循环中，RETURN 退出循环并且退出程序块，因而会跳过循环块之后的所有语句  
+    2.一个程序块中可以包含多个 RETURN 语句  
+    3.语法  
+        # RETURN ;  
+        # RETURN &lt;expression&gt; ;  </code></pre>
+<h2 id="22-4-包"><a href="#22-4-包" class="headerlink" title="22.4 包"></a>22.4 包</h2><h3 id="22-4-1-包"><a href="#22-4-1-包" class="headerlink" title="22.4.1 包"></a>22.4.1 包</h3><h4 id="知识点–概念：包-Package"><a href="#知识点–概念：包-Package" class="headerlink" title="知识点–概念：包 Package"></a>知识点–概念：包 Package</h4><pre><code>    1.包中包含 PLSQL 类型，变量，异常，子程序  
+    2.包包括两个部分  
+        # 包头 specification  
+        # 包体 body  
+        # 包头和包体必须名字相同  
+    3.空间换时间  
+        # 一个包中的一个内容被引用时，整个包都会加载到内存中  
+        # 内存中的软件包被所有用户所共享  
+        # 无体包  
+            - 即没有包体的包  
+            - 通常是用来声明常用的数据类型或常量或变量或异常，使这些内容常驻内存  
+    4.子程序重载 overload  
+        # 包中的子程序可以同名  
+    5.包的公共组件和私有组件  
+        # 公共组件可以调用公共组件和私有组件  
+        # 私有组件可以调用公共组件和私有组件  
+        # 外部程序可以调用公共组件，无法调用私有组件  
+    6.包头 package specification  
+        # 包头中的内容都是公共组件，作为应用程序的接口  
+        # 可包含内容  
+            - 数据类型，变量，常量，异常，游标  
+            - 公共子程序的说明 sub_programs specifications  
+            - 编译器指令 PRAGMAs  
+    7.包体 package body  
+        # 包体中的内容都是私有组件  
+        # 可包含内容  
+            - 数据类型，变量，常量，异常，游标  
+            - 公共子程序的代码  
+            - 私有子程序  
+        # 必须先创建包头，再创建包体  
+        # 改变包体，不需要重新编译包头  
+        # 包体中，一个组件应该先定义，再被调用  
+            - 通常，首先定义私有变量和私有子程序，最后定义公共子程序  </code></pre>
+<h3 id="22-4-2-创建包"><a href="#22-4-2-创建包" class="headerlink" title="22.4.2 创建包"></a>22.4.2 创建包</h3><h4 id="知识点–语法：CREATE-PACKAGE-创建包头"><a href="#知识点–语法：CREATE-PACKAGE-创建包头" class="headerlink" title="知识点–语法：CREATE PACKAGE 创建包头"></a>知识点–语法：CREATE PACKAGE 创建包头</h4><pre><code>    1.语法  
+        # CREATE [OR REPLACE] PACKAGE &lt;package_name&gt;  
+            IS|AS  
+                &lt;public_type_and_variable_declarations&gt; ;  
+                &lt;sub_programs_specification&gt;[ ... ]
+            END [&lt;package_name&gt;] ;  
+            /  
+        # &lt;sub_programs_specification&gt;  
+            - 过程，PROCEDURE &lt;procedure_name&gt;(&lt;parameters&gt;) ;  
+            - 函数，FUNCTION &lt;function_name&gt;(&lt;parameters&gt;) RETURN &lt;data_type&gt; ;  </code></pre>
+<h4 id="知识点–语法：CREATE-PACKAGE-BODY-创建包体"><a href="#知识点–语法：CREATE-PACKAGE-BODY-创建包体" class="headerlink" title="知识点–语法：CREATE PACKAGE BODY 创建包体"></a>知识点–语法：CREATE PACKAGE BODY 创建包体</h4><pre><code>    1. 语法  
+        # CREATE [OR REPLACE] PACKAGE BODY &lt;package_name&gt;  
+            IS|AS  
+                &lt;privite_type_and_variable_declarations&gt; ;  
+                &lt;sub_program body&gt;[ ... ] 
+                [BEGIN &lt;initialization_statements&gt; END ;]  
+            END [package_name] ;  
+            /  
+        # &lt;sub_program bodys&gt;  
+            - 过程  
+                PROCEDURE &lt;procedure_name&gt;(&lt;parameters&gt;)   
+                    IS   
+                        &lt;local_var_declarations&gt; ;  
+                    BEGIN  
+                        &lt;STATEMENTS&gt; ;  
+                    END &lt;procedure_name&gt; ;  
+            - 函数  
+                FUNCTION &lt;function_name&gt;(&lt;parameters&gt;) RETURN &lt;data_type&gt;   
+                    IS  
+                        &lt;local_var_declarations&gt; ;  
+                    BEGIN  
+                        &lt;STATEMENTS&gt; ;  
+                    END &lt;function_name&gt; ;  
+    2. 范例
+        # 创建一个 salary_pkg 包  
+            - 一个公共过程 reset_salary，输入员工的工资和职位，查看工资是否合规  
+            - 一个私有函数 validate_salary，用以检查工资是否合规  
+            - 公共过程 reset_salary 中需要调用私有函数 validate_salary  
+        # 代码
+            - CREATE OR REPLACE PACKAGE salary_pkg  
+                IS  
+                    v_std_salary NUMBER := 1000 ;                                                        &lt;-- 初始化工资为 1000  
+                    PROCEDURE reset_salary( emp_salary NUMBER, emp_job_id VARCHAR2 ) ;                    &lt;-- 公共过程 reset_salary，检查工资是否处于工资范围  
+                END salary_pkg ;                                                                          &lt;-- 包头中不包含私有组件 validate_salary
+                /  
+            - CREATE OR REPLACE PACLAGE BODY salary_pkg  
+                IS  
+                    FUNCTION validate_salary( p_sal NUMBER, p_job_id VARCHAR2(20)) RETURN BOOLEAN        &lt;-- 私有子程序 validate_salary，进行工资合规的判断  
+                        IS  
+                            v_min_sal jobs.min_salary%type ;  
+                            v_max_sal jobs.max_salary%type ;  
+                        BEGIN  
+                            SELECT min_salary, max_salary INTO v_min_sal, v_max_sal FROM jobs WHERE job_id = p_job_id ;  
+                            RETURN( p_sal BETWEEN v_min_sal AND v_max_sal ) ;  
+                        END validate_salary ;  
+                    PROCEDURE reset_salary( emp_salary NUMBER, emp_job_id VARCHAR2(20))  
+                        IS  
+                        BEGIN  
+                            IF validate_salary( emp_salary, emp_job_id) THEN  
+                                DMBS_OUTPUT.PUT_LINE(&#39; Salary Allowed.&#39;) ;  
+                            ELSE  
+                                DMBS_OUTPUT.PUT_LINE(&#39; Salary Not Allowed.&#39;) ;  
+                            END IF ;  
+                        END reset_salary ;  
+                END salary_pkg ;  
+                /  </code></pre>
+<h4 id="知识点–语法：ALTER-PACKAGE-COMPILE，重新编译包"><a href="#知识点–语法：ALTER-PACKAGE-COMPILE，重新编译包" class="headerlink" title="知识点–语法：ALTER PACKAGE COMPILE，重新编译包"></a>知识点–语法：ALTER PACKAGE COMPILE，重新编译包</h4><pre><code>    1.语法  
+        # ALTER PACKAGE &lt;package_name&gt; COMPILE PACKAGE ;  
+        # ALTER PACKAGE &lt;package_name&gt; COMPILE SPECIFICATION ;  
+        # ALTER PACKAGE &lt;package_name&gt; COMPILE BODY ;  </code></pre>
+<h4 id="知识点–语法：DROP-PACKAGE-BODY-删除包"><a href="#知识点–语法：DROP-PACKAGE-BODY-删除包" class="headerlink" title="知识点–语法：DROP PACKAGE [BODY] 删除包"></a>知识点–语法：DROP PACKAGE [BODY] 删除包</h4><pre><code>    1.语法  
+        # DROP PACKAGE &lt;package_name&gt; ;             &lt;-- 删除包，包括包头和包体  
+        # DROP PACKAGE BODY &lt;package_name&gt; ;         &lt;-- 仅删除包体  </code></pre>
+<h3 id="22-4-3-包的其他特性"><a href="#22-4-3-包的其他特性" class="headerlink" title="22.4.3 包的其他特性"></a>22.4.3 包的其他特性</h3><h4 id="知识点–概念：子程序重载-overload"><a href="#知识点–概念：子程序重载-overload" class="headerlink" title="知识点–概念：子程序重载 overload"></a>知识点–概念：子程序重载 overload</h4><pre><code>    1.一个包下的子程序可以重名，叫做子程序的重载  
+        # 没有放在包含在包中的独立的过程和函数还是不能重名  
+    2.子程序的重载优点  
+        # 子程序可以接收不同数据类型和数量的形参  
+        # 在不改变源代码的情况下扩展子程序的功能  
+    3.不可重载的情况  
+        # 两个子程序的参数，只有数据类型不同，并且数据类型属于同一大类如都是数值型，或属于同一子类型例如 VARCHAR 和 STRING  
+        # 两个子程序的参数相同，只有返回值的类型不同  
+    4.字典
+        # DBA_PROCEDURES.overload                    &lt;-- 记录了重载的子程序在包中的重载的编号  </code></pre>
+<h4 id="知识点–概念：向前声明-Forward-Declarations"><a href="#知识点–概念：向前声明-Forward-Declarations" class="headerlink" title="知识点–概念：向前声明 Forward Declarations"></a>知识点–概念：向前声明 Forward Declarations</h4><pre><code>    1.向前声明为了解决私有子程序的先声明后引用的问题  
+        # 一般子程序的声明顺序是按照字母排列  
+        # 如果前面的子程序用到了之后声明的子程序，就会报错  
+    2.常用到向前声明的情况  
+        # 按照逻辑或字母顺序定义子程序  
+        # 两个子程序相互递归调用  
+    3.向前声明的方式
+        # 在包体的最前方添加子程序的说明 specifications  
+        # 范例
+            - procedure_2 调用到了 procedure_1，但是 procedure_1 的定义在 procedure_2 之后  
+            - CREATE OR REPLACE PACKAGE BODY package_name  
+                IS  
+                    PROCEDURE procedure_1 ( parameters ) ;  
+                    ... ;  
+                    PRECEDURE procedure_2 ( parameters ) IS  
+                        BEGIN  
+                            statements ;  
+                            exec_procedure_1_statements ;  
+                            statements ;  
+                        END procedure_2 ;  
+                    ... ;  
+                    PROCEDURE procedure_1 ( parameters ) IS  
+                        BEGIN  
+                            statements ;  
+                        END [procedure_1] ;  
+                    ... ;  
+                END package_name ;  
+                /  </code></pre>
+<h4 id="知识点–概念：包的初始化变量"><a href="#知识点–概念：包的初始化变量" class="headerlink" title="知识点–概念：包的初始化变量"></a>知识点–概念：包的初始化变量</h4><pre><code>    1.加载包时，未初始化的变量自动为 null  
+    2.对于简单的情况，可以变量的声明中使用 DEFAULT 或 := 进行赋值  
+    3.对于复杂的情况，可以在 PACKAGE BODY 的末尾追加初始化代码块 &lt;initialization_statements&gt;，称之为一次性过程  
+        # 如果对一个变量多次初始化，则以最后一次初始化为准  
+        # 范例  
+            - CREATE OR REPLACE PACKAGE BODY &lt;package_name&gt;  
+                IS  
+                    ... ;  
+                BEGIN  
+                    var_1 := value_1 ;  
+                    SELECT value_2 INTO var_2 FROM table ;  
+                    ... ;  
+                END &lt;package_name&gt; ;  
+                /  </code></pre>
+<h4 id="知识点–概念：在-SQL-中使用包中的函数的限制"><a href="#知识点–概念：在-SQL-中使用包中的函数的限制" class="headerlink" title="知识点–概念：在 SQL 中使用包中的函数的限制"></a>知识点–概念：在 SQL 中使用包中的函数的限制</h4><pre><code>    1.在 SQL 中使用 package.function，需要评价函数的纯净度 purity level，即考察函数的副作用 side effect  
+        # 所谓副作用，就是对数据库中数据的修改，对公共变量的修改  
+        # 副作用越少，则 SQL 越容易优化，特别是指定的 PARALLEL_ENABLE 和 DETERMINISTIC 时  
+    2.纯净度的要求  
+        # 在一个 SELECT 或并行 DML 中，函数不能修改数据库中任何表的数据  
+        # 在一个 DML 中，函数不能查询也不能修改当前基表  
+        # 在一个 SELECT 或 DML 中，函数不能执行 transaction control 或 session control 或 system control 语句  
+    3.任何违反纯净度的 SQL 语句，都会报错  </code></pre>
+<h3 id="22-4-4-包的持续状态"><a href="#22-4-4-包的持续状态" class="headerlink" title="22.4.4 包的持续状态"></a>22.4.4 包的持续状态</h3><h4 id="知识点–概念：包的持续状态-persistent-state"><a href="#知识点–概念：包的持续状态-persistent-state" class="headerlink" title="知识点–概念：包的持续状态 persistent state"></a>知识点–概念：包的持续状态 persistent state</h4><pre><code>    1.包中所有公共变量和私有变量的值，代表包的状态  
+    2.默认情况下，包的状态与用户会话期相关联，包的状态是连续的  
+        # 包的公共变量和私有变量的值保存在 UGA 中  
+        # 每一个会话的包的状态都由自己所私享，不同会话之间互不干扰  
+        # 每一个会话的变量，保存的是上一次调用的结果  
+        # 在整个会话期，包的状态是连续的  
+        # 对于游标，整个会话期若没有显式关闭游标，则游标一直处于打开状态并记录上次调用结束的位置  
+    3.串行可重用包  
+        # 对于串行可重用包，包的状态是不连续的  
+        # 包的状态保存在 SGA 中  
+        # 每次调用包，变量便被初始化  
+        # 调用期间，包的变量仅保存此次调用的上一个执行周期的结果  
+        # 调用结束，则包的变量值清空  
+        # 对于游标，一次调用结束就会自动关闭游标  
+    4.串行可重用的优点  
+        # 对于包的运行需要大量临时工作区和临时变量，但都是只用一次，指定串行可重用可以节省内存空间  </code></pre>
+<h4 id="知识点–语法：PRAGMA-SERIALLY-REUSABLE，创建串行可重用包"><a href="#知识点–语法：PRAGMA-SERIALLY-REUSABLE，创建串行可重用包" class="headerlink" title="知识点–语法：PRAGMA SERIALLY_REUSABLE，创建串行可重用包"></a>知识点–语法：PRAGMA SERIALLY_REUSABLE，创建串行可重用包</h4><pre><code>    1.在包的代码中，指定 PRAGMA SERIALLY_REUSABLE，表示包为串行可重用包  
+        # 无体包，只需在包头中指定  
+        # 有体包，要同时在包头和包体中指定  
+    2.范例  
+        # 有体包  
+            - CREATE OR REPLACE PACKAGE funtest  
+                IS  
+                    PRAGMA SERIALLY_REUSABLE ;  
+                    var_test NUMBER DEFAULT 1 ;  
+                    PROCEDURE p_test ;  
+                END funtest ;  
+                /  
+            - CREATE OR REPLACE PACKAGE BODY funtest  
+                IS  
+                    PRAGMA SERIALLY_REUSABLE ;  
+                    PROCEDURE p_test IS  
+                        BEGIN  
+                            v_test := v_test +1 ;  
+                            DBMS_OUTPUT.PUT_LINE( v_test) ;  
+                        END p_test ;  
+                END funtest ;  
+                /  </code></pre>
+<h2 id="22-5-常用包"><a href="#22-5-常用包" class="headerlink" title="22.5 常用包"></a>22.5 常用包</h2><h3 id="22-5-1-STANDARD-包"><a href="#22-5-1-STANDARD-包" class="headerlink" title="22.5.1 STANDARD 包"></a>22.5.1 STANDARD 包</h3><h4 id="知识点–概念：ORACLE-中比较重要的几个包"><a href="#知识点–概念：ORACLE-中比较重要的几个包" class="headerlink" title="知识点–概念：ORACLE 中比较重要的几个包"></a>知识点–概念：ORACLE 中比较重要的几个包</h4><pre><code>    1.DBMS_OUTPUT  
+    2.UTL_FILE  
+    3.UTL_MAIL  
+    4.DBMS_ALERT  
+    5.DBMS_LOCK  
+    6.DBMS_SESSION  
+    7.DBMS_APPLICATION_INFO  
+    8.HTP  
+    9.DBMS_SCHEDULER  </code></pre>
+<h4 id="知识点–包：STANDARD-包，包含-ORACLE-数据库预提供的所有标准-SQL-函数"><a href="#知识点–包：STANDARD-包，包含-ORACLE-数据库预提供的所有标准-SQL-函数" class="headerlink" title="知识点–包：STANDARD 包，包含 ORACLE 数据库预提供的所有标准 SQL 函数"></a>知识点–包：STANDARD 包，包含 ORACLE 数据库预提供的所有标准 SQL 函数</h4><h3 id="22-5-2-UTL-FILE-包"><a href="#22-5-2-UTL-FILE-包" class="headerlink" title="22.5.2 UTL_FILE 包"></a>22.5.2 UTL_FILE 包</h3><h4 id="知识点–包：UTL-FILE，根据-DIRECTORY-对象，读写操作系统的文件"><a href="#知识点–包：UTL-FILE，根据-DIRECTORY-对象，读写操作系统的文件" class="headerlink" title="知识点–包：UTL_FILE，根据 DIRECTORY 对象，读写操作系统的文件"></a>知识点–包：UTL_FILE，根据 DIRECTORY 对象，读写操作系统的文件</h4><pre><code>    1.包中定义的类型  
+        # FILE_TYPE  
+    2.包中主要的函数和过程  
+        # PROCEDURE FCLOSE  
+        # PROCEDURE FCOPY  
+        # PROCEDURE FGETATTR  
+        # FUNCTION FOPEN RETURNS FILE_TYPE  
+        # PROCEDURE FREMOVE  
+        # PROCEDURE FRENAME  
+        # PROCEDURE GET_LINE  
+        # FUNCTION IS_OPEN RETURNS BOOLEAN  
+        # PROCEDURE PUTF  
+        # PROCEDURE PUT_LINE  
+        # PROCEDURE PUT_LINE_NCHAR  
+    3.包中定义的异常  
+        # INVALID_PATH  
+        # INVALID_MODE  
+        # INVALID_FILEHANDLE  
+        # INVALID_OPERATION  
+        # READ_ERROR  
+        # WRITE_ERROR  
+        # INTERVAL_ERROR，其他未定义的 PLSQL 错误  
+    4.使用流程  
+        # 声明 UTL_FILE.FILE_TYPE 变量  
+        # FUNCTION IS_OPEN RETURNS BOOLEAN，判断文件是否被打开  
+        # FUNCTION FOPEN RETURNS FILE_TYPE，以读或写或读写方式打开文件，将  
+        # PROCEDURE GET_LINE，从文件中读取内容到内存中  
+        # PROCEDURE PUT_LINE，将内存中的文件写入到文件中  
+        # PROCEDURE FCLOSE，关闭文件  
+    5.范例  
+        # 将 employees 表中的部分列内容输出到 /home/oracle/100.txt 中  
+            *    CREATE OR REPLACE DIRECTORY d_01 AS &#39;/home/oracle&#39; ;  
+            *    GRANT READ, WRITE ON DIRECTORY d_01 TO hr ;  
+            *    DECLARE  
+                    f_01 UTL_FILE.FILE_TYPE ;  
+                BEGIN  
+                    f_01 := UTL_FILE.FOPEN(&#39;D_01&#39;,&#39;100.txt&#39;,&#39;W&#39;) ;  
+                    UTL_FILE.PUT_LINE(f_01,&#39;test one&#39;) ;  
+                    UTL_FILE.NEW_LINE(f_01) ;  
+                    FOR i IN (SELECT * FROM employees) LOOP  
+                        IF i.department_id IS NULL THEN  
+                            i.department_id := -999 ;  
+                        END IF ;  
+                        UTL_FILE.PUTF(f_01, &#39;%s,%s,%s\n&#39;, RPAD(i.department_id,10,&#39; &#39;), i.employee_id, i.first_name) ;  
+                    END LOOP ;  
+                    UTL_FILE.FCLOSE(f_01) ;  
+                END ;  
+                /  </code></pre>
+<h3 id="22-5-3-UTL-MAIL-包"><a href="#22-5-3-UTL-MAIL-包" class="headerlink" title="22.5.3 UTL_MAIL 包"></a>22.5.3 UTL_MAIL 包</h3><h4 id="知识点–概念：UTL-MAIL-包"><a href="#知识点–概念：UTL-MAIL-包" class="headerlink" title="知识点–概念：UTL_MAIL 包"></a>知识点–概念：UTL_MAIL 包</h4><pre><code>    1.使用 UTL_MAIL 包要首先执行安装脚本，并设定参数 SMTP_OUT_SERVER 确定发件服务器  
+        # @ ?/rdbms/admin/utlmail.sql  
+        # @ ?/rdbms/admin/prvtmail.sql  
+        # ALTER SYSTEM SET SMTP_OUT_SERVER = ... SCOPE = SPFILE ;  
+    2.包中子程序  
+        # PROCEDURE SEND  
+        # PROCEDURE SEND_ATTACH_RAW，发送附件  
+        # ROCEDURE SEND_ATTACH_VARCHAR2，以 VARCHAR2 形式发送附件  </code></pre>
+<h2 id="22-6-触发器"><a href="#22-6-触发器" class="headerlink" title="22.6 触发器"></a>22.6 触发器</h2><h3 id="22-6-1-触发器-Trigger"><a href="#22-6-1-触发器-Trigger" class="headerlink" title="22.6.1 触发器 Trigger"></a>22.6.1 触发器 Trigger</h3><h4 id="知识点–概念：触发器-trigger"><a href="#知识点–概念：触发器-trigger" class="headerlink" title="知识点–概念：触发器 trigger"></a>知识点–概念：触发器 trigger</h4><pre><code>    1.触发一个触发器 fire a trigger  
+    2.触发器的级别  
+        # ON &lt;table_name&gt;  
+        # ON &lt;view_name&gt;  
+        # ON &lt;user&gt;.&lt;schema&gt;  
+        # ON DATABASE  
+    3.触发事件  
+        # DML 事件  
+            - INSERT  
+            - UPDATE  
+            - UPDATE OF &lt;column_name&gt;  
+            - DELETE  
+        # DDL 事件，CREATE，ALTER，DROP  
+        # 数据库事件，SERVERERROR，LOGON，LOGOFF，STARTUP，SHUTDOWN  
+    4.触发器的类型  
+        # DML 触发器  
+            - BEFORE  
+            - AFTER，必须要在 COMMIT 之后，才算作触发  
+            - INSTEAD OF，通常用于对视图的修改  
+        # 复合触发器 Compound Trigger  
+        # DDL 触发器  
+        # Database event 触发器  
+    5.触发器的级别  
+        # 行级触发器 row-level trigger  
+            - 使用 FOR EACH ROW 表示行级触发器  
+            - 针对受语句语句影响的每一行都触发一次，如果没有行受到影响就不会触发  
+        # 语句级触发器 statement-level trigger  
+            - 只针对语句触发一次，即使无返回行也会触发  
+        # 事件级触发器 event-level trigger  
+            - 针对数据库触发一次  
+    6.数据库触发器和应用触发器  
+        # database trigger，数据库范围内只要发生相关事件，就触发  
+        # application trigger，只在应用范围内进行触发  
+    7.触发器常用的作用  
+        # 安全 Security  
+        # 审计 Auditing  
+        # 数据完整性 Data integrity  
+        # 引用完整性 Referential integrity  
+        # 表复制 replication  
+        # 导出数据 Computing derived data automatically  
+        # 事件记录 Event logging  
+    8.触发器的限制  
+        # 触发器中不可以进行 COMMIT 和 ROLLBACK  
+    9.字典  
+        # DBA_TRIGGERS                &lt;-- 记录所有的触发器</code></pre>
+<h4 id="知识点–概念：创建触发器所需要的权限"><a href="#知识点–概念：创建触发器所需要的权限" class="headerlink" title="知识点–概念：创建触发器所需要的权限"></a>知识点–概念：创建触发器所需要的权限</h4><pre><code>    1.CREATE TRIGGER 系统权限  
+    2.ALTER TABLE 对象权限，或者 ALTER ANY TABLE 系统权限  
+    3.对于数据库级别的触发器，需要 ADMINISTER DATABASE TRIGGER 系统权限  </code></pre>
+<h4 id="知识点–操作：创建-pdb-自动启动触发器"><a href="#知识点–操作：创建-pdb-自动启动触发器" class="headerlink" title="知识点–操作：创建 pdb 自动启动触发器"></a>知识点–操作：创建 pdb 自动启动触发器</h4><pre><code>    1. 代码
+        #    CREATE OR REPLACE TRIGGER sys.&lt;trigger_name&gt; AFTER STARTUP ON DATABASE  
+                BEGIN  
+                    EXECUTE IMMEDIATE &#39;ALTER PLUGGABLE DATABASE ALL OPEN&#39; ;  
+                END sys.&lt;trigger_name&gt; ;  
+                /  </code></pre>
+<h3 id="22-6-2-DML-触发器"><a href="#22-6-2-DML-触发器" class="headerlink" title="22.6.2 DML 触发器"></a>22.6.2 DML 触发器</h3><h4 id="知识点–概念：各种-DML-触发器的触发时间点"><a href="#知识点–概念：各种-DML-触发器的触发时间点" class="headerlink" title="知识点–概念：各种 DML 触发器的触发时间点"></a>知识点–概念：各种 DML 触发器的触发时间点</h4><pre><code>    1.触发时间点  
+        # DML 语句级触发器 BEFORE 型  
+        # DML 行级触发器 BEFORE 型  
+        # 执行 DML 操作  
+        # DML 行级触发器 AFTER 型  
+        # DML 语句级触发器 AFTER 型  
+        # COMMIT | ROLLBACK  
+    2.如果 DML 语句执行失败，或触发器抛出异常并没有被捕获，则回退此条语句，之前的未提交的修改保持不变  </code></pre>
+<h4 id="知识点–语法：CREATE-TRIGGER-创建-DML-行级触发器和语句级触发器"><a href="#知识点–语法：CREATE-TRIGGER-创建-DML-行级触发器和语句级触发器" class="headerlink" title="知识点–语法：CREATE TRIGGER 创建 DML 行级触发器和语句级触发器"></a>知识点–语法：CREATE TRIGGER 创建 DML 行级触发器和语句级触发器</h4><pre><code>    1.语法  
+        # CREATE [OR REPLACE] TRIGGER &lt;trigger_name&gt;  
+            &lt;timing&gt; &lt;event&gt; [ OR &lt;event&gt; OR &lt;event&gt; ...]  
+            ON &lt;object_name&gt;  
+            [REFERENCING [OLD AS &lt;old_val_name&gt;] [NEW AS &lt;new_val_name&gt;]]  
+            [FOR EACH ROW [WHEN (&lt;condition&gt;)]]  
+            [DISABLE]  
+            [DECLARE]  
+            BEGIN  
+                &lt;trigger_body&gt; ;  
+            [EXCEPTION WHEN...THEN WHEN...THEN]  
+            END [&lt;trigger_name&gt;] ;  
+            /  
+        # FOR EACH ROW [WHEN (&lt;condition&gt;)]   
+            - 指定则为行级触发器  
+            - 省略则为语句级触发器  
+            - WHEN (&lt;condition&gt;)，对行级触发器，检查每一行是否执行 trigger body，括号是必须的  
+        # &lt;timing&gt;  
+            - 触发器的触发时机  
+            - BEFORE  
+            - AFTER  
+            - INSTEAD OF  
+        # &lt;event&gt;  
+            - 触发器的触发事件  
+            - INSERT  
+            - DELETE  
+            - UPDATE  
+            - UPDATE OF &lt;column_name&gt;  </code></pre>
+<h4 id="知识点–概念：trigger-body-中-IF-语句使用触发事件作为条件"><a href="#知识点–概念：trigger-body-中-IF-语句使用触发事件作为条件" class="headerlink" title="知识点–概念：trigger body 中 IF 语句使用触发事件作为条件"></a>知识点–概念：trigger body 中 IF 语句使用触发事件作为条件</h4><pre><code>    1.触发器的触发事件可以用在 trigger body 中的 IF 语句中作为判断条件  
+        # IF  
+            INSERTING THEN ... ;  
+            ELSIF UPDATING THEN ... ;  
+            ELSIF DELETING THEN ... ;  
+            ELSE ... ;  
+        END IF ;  
+    2.对于 IF UPDATING，可将其拆分为多个 IF UPDATING (&#39;&lt;column_name&gt;&#39;)  
+        # 此时 IF UPDATING 便不可用  </code></pre>
+<h4 id="知识点–概念：OLD-NEW-qualifier，old-限定符和-new-限定符"><a href="#知识点–概念：OLD-NEW-qualifier，old-限定符和-new-限定符" class="headerlink" title="知识点–概念：OLD NEW qualifier，old 限定符和 new 限定符"></a>知识点–概念：OLD NEW qualifier，old 限定符和 new 限定符</h4><pre><code>    1.在 DML FOR EACH ROW 触发器中，在 trigger body 中，在 INSERT 和 UPDATE 和 DELETE 事件中，可以用两个限定符来表示每一次操作的操作行的旧值和新值  
+        # :OLD 代表旧值  
+        # :NEW 代表新值  
+        # 若没有则自动置 null  
+    2.两个变量由 oracle 隐式声明，类型为 RECORD，并且以触发器的基表为准  
+    3.REFERENCING [OLD AS &lt;old_val_name&gt;] [NEW AS &lt;new_val_name&gt;]  
+        # 将 :OLD 改名为 &lt;old_val_name&gt;  
+        # 将 :new 改名为 &lt;new_val_name&gt;  
+    4.范例  
+        # tri_salary 的作用，如果员工的职位不是 AD_VP 或 AD_PRES，则不允许将员工工资调整到 15000 元以上  
+            - CREATE OR REPLACE TRIGGER tri_salary  
+                BEFORE INSERT OR UPDATE OF salary ON employees  
+                REFERENCING OLD AS old_record NEW AS new_record  
+                FOR EACH ROW  
+                BEGIN  
+                    IF NOT ( :old_record.job_id IN (&#39;AD_VP&#39;,&#39;AD_PRES&#39;) ) AND :new_record.salary &gt; 15000 THEN  
+                        RAISE_APPLICATION_ERROR( -20001, &#39;Employee cant earn more than $15000.&#39;) ;  
+                    END IF ;  
+                END tri_salary ;  
+                /  </code></pre>
+<h3 id="22-6-3-修改触发器"><a href="#22-6-3-修改触发器" class="headerlink" title="22.6.3 修改触发器"></a>22.6.3 修改触发器</h3><h4 id="知识点–概念：触发器的状态"><a href="#知识点–概念：触发器的状态" class="headerlink" title="知识点–概念：触发器的状态"></a>知识点–概念：触发器的状态</h4><pre><code>    1.Enable  
+    2.Disable  </code></pre>
+<h4 id="知识点–语法：ALTER-TRIGGER-修改触发器"><a href="#知识点–语法：ALTER-TRIGGER-修改触发器" class="headerlink" title="知识点–语法：ALTER TRIGGER 修改触发器"></a>知识点–语法：ALTER TRIGGER 修改触发器</h4><pre><code>    1.语法  
+        # ALTER TRIGGER &lt;trigger_name&gt; ENABLE ;                &lt;-- 启用触发器  
+        # ALTER TRIGGER &lt;trigger_name&gt; DISABLE ;            &lt;-- 禁用触发器  
+        # ALTER TRIGGER &lt;trigger_name&gt; COMPILE ;  
+    2.ALTER TABLE TRIGGER 语法  
+        # ALTER TABLE &lt;table_name&gt; ENABLE ALL TRIGGERS ;    &lt;-- 启用一个表的所有触发器  
+        # ALTER TABLE &lt;table_name&gt; DISABLE ALL TRIGGERS ;    &lt;-- 禁用一个表的所有触发器  </code></pre>
+<h4 id="知识点–语法：DROP-TRIGGER，删除触发器"><a href="#知识点–语法：DROP-TRIGGER，删除触发器" class="headerlink" title="知识点–语法：DROP TRIGGER，删除触发器"></a>知识点–语法：DROP TRIGGER，删除触发器</h4><pre><code>    1.语法  
+        # DROP TRIGGER &lt;trigger_name&gt; ;  </code></pre>
+<h3 id="22-6-4-复合触发器-Compound-Trigger"><a href="#22-6-4-复合触发器-Compound-Trigger" class="headerlink" title="22.6.4 复合触发器 Compound Trigger"></a>22.6.4 复合触发器 Compound Trigger</h3><h4 id="知识点–概念：变异表-mutating-table"><a href="#知识点–概念：变异表-mutating-table" class="headerlink" title="知识点–概念：变异表 mutating table"></a>知识点–概念：变异表 mutating table</h4><pre><code>    1.变异表，也就是处于变化中的表，如正在被 DML 的表  
+    2.行级触发器禁止访问变异表  
+        # 一条 DML 语句 statement_1，操作表 table_1  
+        # statement_1 触发了触发器 trigger_1，则 trigger_1 禁止访问 table_1  
+        # 因为此时 table_1 处于变化中，这样的限制防止触发器看到一个不一致的数据集合  
+    3.变异表错误，ORA-04901  
+    4.解决变异表问题的方式  
+        # 将表中的数据，或者汇总数据，储存到另一个专门的汇总表中，并且实时更新  
+        # 将汇总数据储存到一个 PLSQL 包中  
+        # 使用复合触发器  
+    5.解决变异表问题的方式，与业务有很大关系，可能在某些业务中，某些解决方法会很复杂，尽量不要用触发器来实现过于复杂的业务规则  </code></pre>
+<h4 id="知识点–概念：复合触发器-Compound-Trigger"><a href="#知识点–概念：复合触发器-Compound-Trigger" class="headerlink" title="知识点–概念：复合触发器 Compound Trigger"></a>知识点–概念：复合触发器 Compound Trigger</h4><pre><code>    1.复合触发器只适用于 DML 触发器  
+    2.复合触发器中的时间点  
+        # 建立在表上的触发器  
+            - BEFORE STATEMENT  
+            - AFTER STATEMENT  
+            - BEFORE EACH ROW  
+            - AFTER EACH ROW  
+        # 建立在视图上的触发器  
+            - INSTEAD OF EACH ROW  </code></pre>
+<h3 id="22-6-5-基于事件的触发器"><a href="#22-6-5-基于事件的触发器" class="headerlink" title="22.6.5 基于事件的触发器"></a>22.6.5 基于事件的触发器</h3><h4 id="知识点–概念：基于事件的触发器"><a href="#知识点–概念：基于事件的触发器" class="headerlink" title="知识点–概念：基于事件的触发器"></a>知识点–概念：基于事件的触发器</h4><pre><code>    1.基于事件的触发器的时机  
+        # BEFORE event  
+        # AFTER event  
+    2.DDL 事件  
+        # DDL 事件，针对的对象类型包括，表，索引，视图，序列，同义词，cluster，类型，过程，函数，包，触发器，角色，用户  
+        # CREATE  
+        # ALTER  
+        # DROP  
+        # TRUNCATE  
+        # RENAME  
+        # AUDIT  
+        # NOAUDIT  
+        # ANALYZE  
+        # COMMENT  
+        # GRANT  
+        # REVOKE  
+        # ASSOCIATE STATISTICS  
+        # DISASSOCIATE STATISTICS  
+        # DDL  
+            - 所有类型的 DDL 语句  
+    3.数据库事件  
+        # AFTER STARTUP  
+        # BEFORE SHUTDOWN  
+        # AFTER SERVERERROR  
+        # AFTER LOGON  
+        # BEFORE LOGOFF  
+        # AFTER CLONE            &lt;-- PLUGGABLE DATABASE 事件  
+        # BEFORE UNPLUG            &lt;-- PLUGGABLE DATABASE 事件  
+    4.触发器的范围  
+        # DATABASE 对所有用户都生效  
+            - 普通用户需要 ADMINISTER DATABASE TRIGGER 系统权限才能创建 database 范围的触发器  
+        # user_name.SCHEMA 仅对某一个用户生效  
+    5.事件触发器的属性函数  
+        # 编写触发器时，可以像变量一样使用触发器的属性  
+        # 属性函数并不是所有类型的事件都适用，具体查看 PLSQL_language 的 9.15 章  
+            * ora_sysevent                    &lt;-- 返回激发触发器的事件的类型  
+            * ora_instance_num                &lt;-- 返回实例的 instance_id  
+            * ora_database_name                &lt;-- 返回数据库的品牌，通常就是 Oracle  
+            * ora_login_user                &lt;-- 返回激发触发器的用户名  
+            * ora_dict_obj_type                &lt;-- 返回触发器操作的对象类型  
+            * ora_dict_obj_name                &lt;-- 返回触发器操作的对象名  </code></pre>
+<h4 id="知识点–语法：CREATE-TRIGGER-创建基于事件的触发器"><a href="#知识点–语法：CREATE-TRIGGER-创建基于事件的触发器" class="headerlink" title="知识点–语法：CREATE TRIGGER 创建基于事件的触发器"></a>知识点–语法：CREATE TRIGGER 创建基于事件的触发器</h4><pre><code>    1.语法  
+        # CREATE [OR REPLACE] TRIGGER &lt;trigger_name&gt;  
+            &#123;BEFORE|AFTER&#125; &lt;event_1&gt; [OR &lt;event_2&gt; OR &lt;event_3&gt; ...]  
+            ON &#123;DATABASE|[&lt;user_name&gt;.]SCHEMA&#125;  
+            BEGIN  
+                .... ;  
+            EDN &lt;trigger_name&gt; ;  
+            /  </code></pre>
+<h3 id="22-6-6-CALL-statement"><a href="#22-6-6-CALL-statement" class="headerlink" title="22.6.6 CALL statement"></a>22.6.6 CALL statement</h3><h4 id="知识点–语法：CREATE-TRIGGER-CALL，触发器调用过程"><a href="#知识点–语法：CREATE-TRIGGER-CALL，触发器调用过程" class="headerlink" title="知识点–语法：CREATE TRIGGER CALL，触发器调用过程"></a>知识点–语法：CREATE TRIGGER CALL，触发器调用过程</h4><pre><code>    1.可以在触发器中使用 call 语句，调用其他过程，或者 c 程序，java 程序  
+        # 注意 call 语句只能出现一次  
+        # 注意 call 语句没有分号  
+    2.范例  
+        # 创建子过程 p1  
+            - CREATE OR REPLACE PROCEDURE p1(xx1 NUMBER) IS  
+                BEGIN  
+                    DBMS_OUTPUT.PUT_LINE(xx1/30) ;  
+                END p1 ;  
+                /  
+        # 创建触发器 t1  
+            - CREATE OR REPLACE TRIGGER t1 BEFORE CREATE ON SCHEMA  
+                CALL p2(9000);  
+                / </code></pre>
+<h1 id="第23章-PL-SQL-程序单元"><a href="#第23章-PL-SQL-程序单元" class="headerlink" title="第23章 PL/SQL 程序单元"></a>第23章 PL/SQL 程序单元</h1><h1 id="第24章-PL-SQL-维护"><a href="#第24章-PL-SQL-维护" class="headerlink" title="第24章 PL/SQL 维护"></a>第24章 PL/SQL 维护</h1><h1 id="第25章-预留"><a href="#第25章-预留" class="headerlink" title="第25章 (预留)"></a>第25章 (预留)</h1><h1 id="第26章-实例"><a href="#第26章-实例" class="headerlink" title="第26章 实例"></a>第26章 实例</h1><h1 id="第27章-内存"><a href="#第27章-内存" class="headerlink" title="第27章 内存"></a>第27章 内存</h1><h1 id="第28章-进程"><a href="#第28章-进程" class="headerlink" title="第28章 进程"></a>第28章 进程</h1><h1 id="第29章-存储"><a href="#第29章-存储" class="headerlink" title="第29章 存储"></a>第29章 存储</h1><h1 id="第30章-事务"><a href="#第30章-事务" class="headerlink" title="第30章 事务"></a>第30章 事务</h1><h1 id="第31章-网络"><a href="#第31章-网络" class="headerlink" title="第31章 网络"></a>第31章 网络</h1><h1 id="第32章-安全"><a href="#第32章-安全" class="headerlink" title="第32章 安全"></a>第32章 安全</h1><h1 id="第33章-加密"><a href="#第33章-加密" class="headerlink" title="第33章 加密"></a>第33章 加密</h1><h1 id="第34章-预留"><a href="#第34章-预留" class="headerlink" title="第34章 (预留)"></a>第34章 (预留)</h1><h1 id="第35章-预留"><a href="#第35章-预留" class="headerlink" title="第35章 (预留)"></a>第35章 (预留)</h1><h1 id="第36章-OEM"><a href="#第36章-OEM" class="headerlink" title="第36章 OEM"></a>第36章 OEM</h1><h1 id="第37章-审计"><a href="#第37章-审计" class="headerlink" title="第37章 审计"></a>第37章 审计</h1><h1 id="第38章-调度"><a href="#第38章-调度" class="headerlink" title="第38章 调度"></a>第38章 调度</h1><h1 id="第39章-资源管理"><a href="#第39章-资源管理" class="headerlink" title="第39章 资源管理"></a>第39章 资源管理</h1><h1 id="第40章-优化"><a href="#第40章-优化" class="headerlink" title="第40章 优化"></a>第40章 优化</h1><h1 id="第41章-性能"><a href="#第41章-性能" class="headerlink" title="第41章 性能"></a>第41章 性能</h1><h1 id="第42章-缓存"><a href="#第42章-缓存" class="headerlink" title="第42章 缓存"></a>第42章 缓存</h1><h1 id="第43章-迁移"><a href="#第43章-迁移" class="headerlink" title="第43章 迁移"></a>第43章 迁移</h1><h1 id="第44章-预留"><a href="#第44章-预留" class="headerlink" title="第44章 (预留)"></a>第44章 (预留)</h1><h1 id="第45章-预留"><a href="#第45章-预留" class="headerlink" title="第45章 (预留)"></a>第45章 (预留)</h1><h1 id="第46章-备份恢复基础"><a href="#第46章-备份恢复基础" class="headerlink" title="第46章 备份恢复基础"></a>第46章 备份恢复基础</h1><h1 id="第47章-备份"><a href="#第47章-备份" class="headerlink" title="第47章 备份"></a>第47章 备份</h1><h1 id="第48章-恢复和闪回"><a href="#第48章-恢复和闪回" class="headerlink" title="第48章 恢复和闪回"></a>第48章 恢复和闪回</h1><h1 id="第49章-RMAN-复制和移动"><a href="#第49章-RMAN-复制和移动" class="headerlink" title="第49章 RMAN 复制和移动"></a>第49章 RMAN 复制和移动</h1><h1 id="第50章-手动备份恢复"><a href="#第50章-手动备份恢复" class="headerlink" title="第50章 手动备份恢复"></a>第50章 手动备份恢复</h1><h1 id="第51章-预留"><a href="#第51章-预留" class="headerlink" title="第51章 (预留)"></a>第51章 (预留)</h1><h1 id="第52章-预留"><a href="#第52章-预留" class="headerlink" title="第52章 (预留)"></a>第52章 (预留)</h1><h1 id="第53章-预留"><a href="#第53章-预留" class="headerlink" title="第53章 (预留)"></a>第53章 (预留)</h1><h1 id="第54章-预留"><a href="#第54章-预留" class="headerlink" title="第54章 (预留)"></a>第54章 (预留)</h1><h1 id="第55章-预留"><a href="#第55章-预留" class="headerlink" title="第55章 (预留)"></a>第55章 (预留)</h1><h1 id="第56章-安装"><a href="#第56章-安装" class="headerlink" title="第56章 安装"></a>第56章 安装</h1><h1 id="第57章-建库"><a href="#第57章-建库" class="headerlink" title="第57章 建库"></a>第57章 建库</h1><h1 id="第58章-升级"><a href="#第58章-升级" class="headerlink" title="第58章 升级"></a>第58章 升级</h1><h1 id="第59章-预留"><a href="#第59章-预留" class="headerlink" title="第59章 (预留)"></a>第59章 (预留)</h1><h1 id="第60章-预留"><a href="#第60章-预留" class="headerlink" title="第60章 (预留)"></a>第60章 (预留)</h1><h1 id="第61章-分区表，聚簇表，IOT-表"><a href="#第61章-分区表，聚簇表，IOT-表" class="headerlink" title="第61章 分区表，聚簇表，IOT 表"></a>第61章 分区表，聚簇表，IOT 表</h1><h1 id="第62章-大对象"><a href="#第62章-大对象" class="headerlink" title="第62章 大对象"></a>第62章 大对象</h1><h1 id="第63章-分库"><a href="#第63章-分库" class="headerlink" title="第63章 分库"></a>第63章 分库</h1><h1 id="第64章-物化视图"><a href="#第64章-物化视图" class="headerlink" title="第64章 物化视图"></a>第64章 物化视图</h1><h1 id="第65章"><a href="#第65章" class="headerlink" title="第65章"></a>第65章</h1><h1 id="第66章"><a href="#第66章" class="headerlink" title="第66章"></a>第66章</h1><h1 id="第67章"><a href="#第67章" class="headerlink" title="第67章"></a>第67章</h1><h1 id="第68章"><a href="#第68章" class="headerlink" title="第68章"></a>第68章</h1><h1 id="第69章"><a href="#第69章" class="headerlink" title="第69章"></a>第69章</h1><h1 id="第70章"><a href="#第70章" class="headerlink" title="第70章"></a>第70章</h1><h1 id="第71章-Grid-Infrastructure"><a href="#第71章-Grid-Infrastructure" class="headerlink" title="第71章 Grid Infrastructure"></a>第71章 Grid Infrastructure</h1><h1 id="第72章-ASM"><a href="#第72章-ASM" class="headerlink" title="第72章 ASM"></a>第72章 ASM</h1><h1 id="第73章"><a href="#第73章" class="headerlink" title="第73章"></a>第73章</h1><h1 id="第74章"><a href="#第74章" class="headerlink" title="第74章"></a>第74章</h1><h1 id="第75章"><a href="#第75章" class="headerlink" title="第75章"></a>第75章</h1>
       
     </div>
     <footer class="article-footer">
