@@ -1,348 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword" content="">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
-    <link rel="alternate" type="application/atom+xml" title="86jiangyuliang_PKM" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        Blog_18_MySql_Database｜undefined
-        
-    </title>
+  <meta charset="utf-8">
+  
 
-    <link rel="canonical" href="http://example.com/2020/11/01/Blog_18_MySql_Database/">
-
-    <!-- Bootstrap Core CSS -->
-    
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-
-
-    <!-- Custom CSS -->
-    
-<link rel="stylesheet" href="/css/blog-style.css">
-
-
-    <!-- Pygments Github CSS -->
-    
-<link rel="stylesheet" href="/css/syntax.css">
+  
+  <title>Blog_18_MySql_Database | 86jiangyuliang_PKM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="知识点–概念 第一部分 SQL第01章 SELECT第02章 表第03章 索引第04章 视图第05章 （预留）第06章 数据类型第07章 SQL 语句元素第二部分 存储过程第11章 （预留）第11章 （预留）第13章 触发器第三部分 数据库体系第21章 （预留）第27章 用户和权限第四部分 数据库管理第31章 安装和使用 mysql第五部分 数据库实用工具第41章 mysql第42章 mysqld">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog_18_MySql_Database">
+<meta property="og:url" content="http://example.com/2020/11/01/Blog_18_MySql_Database/index.html">
+<meta property="og:site_name" content="86jiangyuliang_PKM">
+<meta property="og:description" content="知识点–概念 第一部分 SQL第01章 SELECT第02章 表第03章 索引第04章 视图第05章 （预留）第06章 数据类型第07章 SQL 语句元素第二部分 存储过程第11章 （预留）第11章 （预留）第13章 触发器第三部分 数据库体系第21章 （预留）第27章 用户和权限第四部分 数据库管理第31章 安装和使用 mysql第五部分 数据库实用工具第41章 mysql第42章 mysqld">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-31T17:18:00.000Z">
+<meta property="article:modified_time" content="2020-10-31T23:34:56.821Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="86jiangyuliang_PKM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 5.2.0"></head>
 
-<style>
-
-    header.intro-header {
-        background-image: url('')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
-" data-ishome = "false" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    86jiangyuliang_PKM
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-					
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">86jiangyuliang_PKM</a>
+      </h1>
+      
     </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
-
-<!--only post-->
-
-
-<img class="wechat-title-img"
-     src="">
-
-
-<style>
-    
-    header.intro-header {
-        background-image: url('')
-    }
-
-    
-</style>
-
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>Blog_18_MySql_Database</h1>
-                    
-                    <span class="meta">
-                         作者 John Doe
-                        <span>
-                          日期 2020-11-01
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
     </div>
-    <div class="post-title-haojen">
-        <span>
-            Blog_18_MySql_Database
-        </span>
-    </div>
+  </div>
 </header>
+      <div class="outer">
+        <section id="main"><article id="post-Blog_18_MySql_Database" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/01/Blog_18_MySql_Database/" class="article-date">
+  <time datetime="2020-10-31T17:18:00.000Z" itemprop="datePublished">2020-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Blog_18_MySql_Database
+    </h1>
+  
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="知识点–概念"><a href="#知识点–概念" class="headerlink" title="知识点–概念"></a>知识点–概念</h3><hr>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="知识点–概念"><a href="#知识点–概念" class="headerlink" title="知识点–概念"></a>知识点–概念</h3><hr>
 <p>第一部分 SQL<br><del>第01章 SELECT</del><br><del>第02章 表</del><br><del>第03章 索引</del><br><del>第04章 视图</del><br><del>第05章 （预留）</del><br><del>第06章 数据类型</del><br><del>第07章 SQL 语句元素</del><br>第二部分 存储过程<br><del>第11章 （预留）</del><br><del>第11章 （预留）</del><br><del>第13章 触发器</del><br>第三部分 数据库体系<br><del>第21章 （预留）</del><br><del>第27章 用户和权限</del><br>第四部分 数据库管理<br>第31章 安装和使用 mysql<br>第五部分 数据库实用工具<br><del>第41章 mysql</del><br><del>第42章 mysqldump</del><br><del>第43章 mysqlhot copy</del><br><del>第44章 mysqlimport</del><br><del>第45章 mysqlbinlog</del><br><del>第46章 mysqladmin</del><br><del>第47章 mysqld_multi</del><br><del>第48章 myslqWorkbench</del>  </p>
 <hr>
 <h1 id="第01章-SELECT"><a href="#第01章-SELECT" class="headerlink" title="第01章 SELECT"></a>第01章 SELECT</h1><h1 id="第02章-表"><a href="#第02章-表" class="headerlink" title="第02章 表"></a>第02章 表</h1><h1 id="第03章-索引"><a href="#第03章-索引" class="headerlink" title="第03章 索引"></a>第03章 索引</h1><h1 id="第04章-视图"><a href="#第04章-视图" class="headerlink" title="第04章 视图"></a>第04章 视图</h1><h1 id="第05章-（预留）"><a href="#第05章-（预留）" class="headerlink" title="第05章 （预留）"></a>第05章 （预留）</h1><h1 id="第06章-数据类型"><a href="#第06章-数据类型" class="headerlink" title="第06章 数据类型"></a>第06章 数据类型</h1><h1 id="第07章-SQL-语句元素"><a href="#第07章-SQL-语句元素" class="headerlink" title="第07章 SQL 语句元素"></a>第07章 SQL 语句元素</h1><h1 id="第11章-（预留）"><a href="#第11章-（预留）" class="headerlink" title="第11章 （预留）"></a>第11章 （预留）</h1><h1 id="第11章-（预留）-1"><a href="#第11章-（预留）-1" class="headerlink" title="第11章 （预留）"></a>第11章 （预留）</h1><h1 id="第13章-触发器"><a href="#第13章-触发器" class="headerlink" title="第13章 触发器"></a>第13章 触发器</h1><h1 id="第21章-（预留）"><a href="#第21章-（预留）" class="headerlink" title="第21章 （预留）"></a>第21章 （预留）</h1><h1 id="第27章-用户和权限"><a href="#第27章-用户和权限" class="headerlink" title="第27章 用户和权限"></a>第27章 用户和权限</h1><h1 id="第31章-安装和使用-mysql"><a href="#第31章-安装和使用-mysql" class="headerlink" title="第31章 安装和使用 mysql"></a>第31章 安装和使用 mysql</h1><h1 id="第41章-mysql"><a href="#第41章-mysql" class="headerlink" title="第41章 mysql"></a>第41章 mysql</h1><h1 id="第42章-mysqldump"><a href="#第42章-mysqldump" class="headerlink" title="第42章 mysqldump"></a>第42章 mysqldump</h1><h1 id="第43章-mysqlhot-copy"><a href="#第43章-mysqlhot-copy" class="headerlink" title="第43章 mysqlhot copy"></a>第43章 mysqlhot copy</h1><h1 id="第44章-mysqlimport"><a href="#第44章-mysqlimport" class="headerlink" title="第44章 mysqlimport"></a>第44章 mysqlimport</h1><h1 id="第45章-mysqlbinlog"><a href="#第45章-mysqlbinlog" class="headerlink" title="第45章 mysqlbinlog"></a>第45章 mysqlbinlog</h1><h1 id="第46章-mysqladmin"><a href="#第46章-mysqladmin" class="headerlink" title="第46章 mysqladmin"></a>第46章 mysqladmin</h1><h1 id="第47章-mysqld-multi"><a href="#第47章-mysqld-multi" class="headerlink" title="第47章 mysqld_multi"></a>第47章 mysqld_multi</h1><h1 id="第48章-myslqWorkbench"><a href="#第48章-myslqWorkbench" class="headerlink" title="第48章 myslqWorkbench"></a>第48章 myslqWorkbench</h1>
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2020/11/01/Blog_99_Test/" data-toggle="tooltip" data-placement="top"
-                           title="Blog_99_test">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2020/11/01/Blog_17_Oracle_Database/" data-toggle="tooltip" data-placement="top"
-                           title="Blog_17_Oracle_Database">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-                
-
-
-                <!--加入新的评论系统-->
-                
-
-                
-
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%93%E6%A6%82%E5%BF%B5"><span class="toc-text">知识点–概念</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC01%E7%AB%A0-SELECT"><span class="toc-text">第01章 SELECT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC02%E7%AB%A0-%E8%A1%A8"><span class="toc-text">第02章 表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC03%E7%AB%A0-%E7%B4%A2%E5%BC%95"><span class="toc-text">第03章 索引</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC04%E7%AB%A0-%E8%A7%86%E5%9B%BE"><span class="toc-text">第04章 视图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC05%E7%AB%A0-%EF%BC%88%E9%A2%84%E7%95%99%EF%BC%89"><span class="toc-text">第05章 （预留）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC06%E7%AB%A0-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">第06章 数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC07%E7%AB%A0-SQL-%E8%AF%AD%E5%8F%A5%E5%85%83%E7%B4%A0"><span class="toc-text">第07章 SQL 语句元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC11%E7%AB%A0-%EF%BC%88%E9%A2%84%E7%95%99%EF%BC%89"><span class="toc-text">第11章 （预留）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC11%E7%AB%A0-%EF%BC%88%E9%A2%84%E7%95%99%EF%BC%89-1"><span class="toc-text">第11章 （预留）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC13%E7%AB%A0-%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-text">第13章 触发器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC21%E7%AB%A0-%EF%BC%88%E9%A2%84%E7%95%99%EF%BC%89"><span class="toc-text">第21章 （预留）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC27%E7%AB%A0-%E7%94%A8%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90"><span class="toc-text">第27章 用户和权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC31%E7%AB%A0-%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8-mysql"><span class="toc-text">第31章 安装和使用 mysql</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC41%E7%AB%A0-mysql"><span class="toc-text">第41章 mysql</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC42%E7%AB%A0-mysqldump"><span class="toc-text">第42章 mysqldump</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC43%E7%AB%A0-mysqlhot-copy"><span class="toc-text">第43章 mysqlhot copy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC44%E7%AB%A0-mysqlimport"><span class="toc-text">第44章 mysqlimport</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC45%E7%AB%A0-mysqlbinlog"><span class="toc-text">第45章 mysqlbinlog</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC46%E7%AB%A0-mysqladmin"><span class="toc-text">第46章 mysqladmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC47%E7%AB%A0-mysqld-multi"><span class="toc-text">第47章 mysqld_multi</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC48%E7%AB%A0-myslqWorkbench"><span class="toc-text">第48章 myslqWorkbench</span></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-        </div>
-
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/01/Blog_18_MySql_Database/" data-id="ckgqg9rlh0002ccvx7dsh8gid" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/01/Blog_99_Test/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Blog_99_test
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/01/Blog_17_Oracle_Database/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Blog_17_Oracle_Database</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+</section>
+        
+          <aside id="sidebar">
+  
+    
 
+  
+    
 
-
-
-
-
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; 86jiangyuliang_PKM 2020
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
-                    <br>
-                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
-                </p>
-
-            </div>
-        </div>
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/01/Blog_99_Test/">Blog_99_test</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_18_MySql_Database/">Blog_18_MySql_Database</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_17_Oracle_Database/">Blog_17_Oracle_Database</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_01_Linux/">Blog_01_Linux</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_00_Miscellaneous/">Blog_00_Miscellaneous</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
-<!-- jQuery -->
-
-<script src="/js/jquery.min.js"></script>
-
-
-<!-- Bootstrap Core JavaScript -->
-
-<script src="/js/bootstrap.min.js"></script>
-
-
-<!-- Custom Theme JavaScript -->
-
-<script src="/js/blog.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://example.com/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
-<!-- Google Analytics -->
+
+<script src="/js/script.js"></script>
 
 
 
-<!-- Baidu Tongji -->
 
-
-<!-- swiftype -->
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install','','2.0.0');
-</script>
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<!--wechat title img-->
-<img class="wechat-title-img" src="">
+  </div>
 </body>
-
 </html>
