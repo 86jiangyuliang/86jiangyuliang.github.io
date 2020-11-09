@@ -15,7 +15,7 @@
 <meta property="og:description" content="知识点–概念，语法，操作知识点–函数知识点–包，过程，函数知识点–SQLPLUS命令知识点–RMAN命令    第零部分 ORACLE 数据库基本介绍第00章 ORACLE 数据库介绍第一部分 SELECT 和 DML第01章 SELECT第02章第03章 DML第04章第05章第二部分 表和对象第06章 表第07章 表的高级特性第08章 索引第09章 其他对象第10章第三部分 SQL 语句元素第">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-31T16:17:00.000Z">
-<meta property="article:modified_time" content="2020-11-01T09:59:10.667Z">
+<meta property="article:modified_time" content="2020-11-03T13:10:23.277Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -194,7 +194,7 @@
         # instant client  
     5. 数据迁移  
         # exp，imp  
-        # expdp，impdp    -- datapump  
+        # expdp，impdp   -- datapump  
         # sqlldr  
     6. ASM  
         # crs_stat  
@@ -271,7 +271,7 @@
     3. DCL，grant、revoke  
     4. TCL，commit、rollback、savepoint  </code></pre>
 <h4 id="知识点–概念：sql-statement-结束"><a href="#知识点–概念：sql-statement-结束" class="headerlink" title="知识点–概念：sql statement 结束"></a>知识点–概念：sql statement 结束</h4><pre><code>    1. sqlplus  
-        # ;        
+        # ;     
             - 常规的结束
             - 结束并加载到 sql buffer 中并运行  
         # /
@@ -282,7 +282,7 @@
             - 结束并加载到 sql buffer 中，但不运行  
             - 空行的具体作用，还和 sqlplus 的 SQLBLANKLINES 参数有关  </code></pre>
 <h4 id="知识点–概念：sql-keyword-关键字"><a href="#知识点–概念：sql-keyword-关键字" class="headerlink" title="知识点–概念：sql keyword 关键字"></a>知识点–概念：sql keyword 关键字</h4><pre><code>    1. 字典  
-        # V$RESERVED_WORDS        -- 记录数据库中的所有关键字  </code></pre>
+        # V$RESERVED_WORDS      -- 记录数据库中的所有关键字  </code></pre>
 <h4 id="知识点–概念：sql-注释"><a href="#知识点–概念：sql-注释" class="headerlink" title="知识点–概念：sql 注释"></a>知识点–概念：sql 注释</h4><pre><code>    1. REM，REMARK  
     2. --  
     3. /*...*/  
@@ -388,9 +388,9 @@
         # HAVING 是对 GROUP BY 之后的虚拟表进行筛选，&lt;having_condition&gt; 中可以使用聚合函数  </code></pre>
 <h3 id="1-1-7-ORDER-BY"><a href="#1-1-7-ORDER-BY" class="headerlink" title="1.1.7 ORDER BY"></a>1.1.7 ORDER BY</h3><h4 id="知识点–语法：ORDER-BY"><a href="#知识点–语法：ORDER-BY" class="headerlink" title="知识点–语法：ORDER BY"></a>知识点–语法：ORDER BY</h4><pre><code>    1. 语法  
         # ORDER BY &#123;&lt;order_by_item&gt; [ASC|DESC] [NULLS FIRST|NULLS LAST]&#125;[, ...]  
-            - ASC                &lt;-- 升序  
-            - DESC                &lt;-- 降序  
-            - NULLS FIRST        &lt;-- 空值放在最前  
+            - ASC               &lt;-- 升序  
+            - DESC              &lt;-- 降序  
+            - NULLS FIRST       &lt;-- 空值放在最前  
             - NULLS LAST        &lt;-- 空值放在最后  
     2. &lt;ordey_by_item&gt;  
         # 可以是没有出现在 &lt;select_list&gt; 中的项  
@@ -404,7 +404,7 @@
         # 处理的是 ORDER BY 之后的虚拟表
     2. 语法  
         # OFFSET &lt;N&gt; &#123;ROW | ROWS&#125;  
-            - ROW、ROWS            &lt;-- 语法提示词，无功能意义，但不能缺少</code></pre>
+            - ROW、ROWS          &lt;-- 语法提示词，无功能意义，但不能缺少</code></pre>
 <h4 id="知识点–语法：FETCH"><a href="#知识点–语法：FETCH" class="headerlink" title="知识点–语法：FETCH"></a>知识点–语法：FETCH</h4><pre><code>    1. 功能  
         # 只返回接下来的前 N 行  
         # 可以不和 OFFSET 一起使用  
@@ -413,9 +413,9 @@
     2. 语法  
         # [&lt;offset_clause&gt;] FETCH &#123;FIRST|NEXT&#125; &#123;&lt;N&gt;| &lt;percent&gt; PERCENT&#125; &#123;ROW|ROWS&#125; &#123;ONLY | WITH TIES&#125;  
             - FIRST、NEXT        &lt;-- 语法提示词  
-            - ROW、ROWS            &lt;-- 语法提示词  
-            - ONLY                &lt;-- 指定了多少行，就返回多少行  
-            - WITH TIES            &lt;-- 必须配合 ORDER BY 子句使用，对排序的最后一个值将相同的行都取出，即使超出了 &#123;&lt;N&gt;| &lt;percent&gt; PERCENT&#125; 的限制  </code></pre>
+            - ROW、ROWS          &lt;-- 语法提示词  
+            - ONLY              &lt;-- 指定了多少行，就返回多少行  
+            - WITH TIES         &lt;-- 必须配合 ORDER BY 子句使用，对排序的最后一个值将相同的行都取出，即使超出了 &#123;&lt;N&gt;| &lt;percent&gt; PERCENT&#125; 的限制  </code></pre>
 <h3 id="1-1-9-连接-JOIN"><a href="#1-1-9-连接-JOIN" class="headerlink" title="1.1.9 连接 JOIN"></a>1.1.9 连接 JOIN</h3><h4 id="知识点–概念：连接"><a href="#知识点–概念：连接" class="headerlink" title="知识点–概念：连接"></a>知识点–概念：连接</h4><pre><code>    1. 连接的意义  
         # 将数据分散储存，避免产生冗余数据  
     2. 等值连接、非等值连接  
@@ -532,10 +532,10 @@
                 ;  </code></pre>
 <h3 id="1-1-11-组合查询"><a href="#1-1-11-组合查询" class="headerlink" title="1.1.11 组合查询"></a>1.1.11 组合查询</h3><h4 id="知识点–概念：集合运算符，组合查询"><a href="#知识点–概念：集合运算符，组合查询" class="headerlink" title="知识点–概念：集合运算符，组合查询"></a>知识点–概念：集合运算符，组合查询</h4><pre><code>    1. 集合运算符 Set Operators  
         # 实现数学上的集合运算  
-            - UNION                &lt;-- 并集  
-            - UNION ALL            &lt;-- 并集，不去重，不排序  
-            - INTERSECT            &lt;-- 交集  
-            - MINUS                &lt;-- 差集  
+            - UNION             &lt;-- 并集  
+            - UNION ALL         &lt;-- 并集，不去重，不排序  
+            - INTERSECT         &lt;-- 交集  
+            - MINUS             &lt;-- 差集  
     2. 集合运算符的去重、保留 NULL、自动排序  
         # UNION ALL  
             - 不去重  
@@ -721,7 +721,7 @@
                 PRIOR &lt;parent_item&gt; = &lt;child_item&gt;  
                 &lt;child_item&gt; = PRIOR &lt;parent_item&gt;  
             - 范例  
-                PRIOR employee_id = manager_id            -- 子节点的 manager_id 指向父节点的 employee_id  
+                PRIOR employee_id = manager_id          -- 子节点的 manager_id 指向父节点的 employee_id  
     4. &lt;connect_by_condition&gt; 和 &lt;where_condition&gt;  
         # &lt;connect_by_condition&gt; 先于 &lt;where_condition&gt;  
         # &lt;connect_by_condition&gt; 是在树的产生之前进行筛选，不满足条件的节点，连同其子孙，整个树枝都会被减掉  
@@ -746,7 +746,7 @@
         # 对每一个节点，创建其到根节点的路径  
     2. 语法  
         # SYS_CONNECT_BY_PATH ( &lt;column_name&gt;, &lt;sep_char&gt; )  
-            - &lt;column_name&gt;        -- 放在路径中的值  
+            - &lt;column_name&gt;     -- 放在路径中的值  
             - &lt;sep_char&gt;        -- 指定分隔符  </code></pre>
 <h4 id="知识点–概念：CONNECT-BY-ISCYCLE，层级查询伪列，检查是否出现环回"><a href="#知识点–概念：CONNECT-BY-ISCYCLE，层级查询伪列，检查是否出现环回" class="headerlink" title="知识点–概念：CONNECT_BY_ISCYCLE，层级查询伪列，检查是否出现环回"></a>知识点–概念：CONNECT_BY_ISCYCLE，层级查询伪列，检查是否出现环回</h4><pre><code>    1. 介绍  
         # 必须配合 NOCYCLE 一起使用  
@@ -819,8 +819,8 @@
         # 之后所有的查询和 DML 自动进行对有效时间的基于时间点的查询  
         # 注意参数 ASOF 和 CURRENT 要大写，否则过程不会生效，并且不会给出错误提示  </code></pre>
 <h3 id="1-4-2-时间有效性查询语法"><a href="#1-4-2-时间有效性查询语法" class="headerlink" title="1.4.2 时间有效性查询语法"></a>1.4.2 时间有效性查询语法</h3><h4 id="知识点–语法：时间有效性查询语法"><a href="#知识点–语法：时间有效性查询语法" class="headerlink" title="知识点–语法：时间有效性查询语法"></a>知识点–语法：时间有效性查询语法</h4><pre><code>    1. CREATE TABLE 指定时间有效性字段  
-        # CREATE TABLE &lt;table_name&gt; ( ..., PERIOD FOR &lt;valid_time_column_name&gt; ) ;    -- 隐式方式  
-        # CREATE TABLE &lt;table_name&gt; ( ...,                                            -- 显示方式  
+        # CREATE TABLE &lt;table_name&gt; ( ..., PERIOD FOR &lt;valid_time_column_name&gt; ) ;  -- 隐式方式  
+        # CREATE TABLE &lt;table_name&gt; ( ...,                                          -- 显示方式  
             &lt;valid_time_column_name&gt;_START DATE,  
             &lt;valid_time_column_name&gt;_END DATE,  
             PERIOD FOR &lt;valid_time_column_name&gt; (&lt;valid_time_column_name&gt;_START, &lt;valid_time_column_name&gt;_END))  
@@ -831,11 +831,11 @@
     2. INSERT 插入数据到表  
         # INSERT INTO &lt;table_name&gt; (..., &lt;column_name&gt;_START , &lt;column_name&gt;_END ) VALUES (...) ;  
     3. SELECT 进行时间有效性查询  
-        # SELECT ... FROM ...         -- 基于时间点的查询  
+        # SELECT ... FROM ...       -- 基于时间点的查询  
             AS OF PERIOD FOR &lt;valid_time_column&gt; &lt;datetime&gt;  
             WHERE ...  
-            ;                                                      
-        # SELECT ... FROM ...        -- 基于时间段的查询  
+            ;                                                     
+        # SELECT ... FROM ...       -- 基于时间段的查询  
             VERSIONS PERIOD FOR &lt;valid_time_column&gt; BETWEEN &#123;&lt;datetime&gt;|MINVALUM&#125; AND &#123;&lt;datetime&gt;|MAXVALUM&#125;  
             WHERE ...  
             ;  </code></pre>
@@ -914,7 +914,7 @@
     2. 格式  
         # DBMS_OUTPUT.PUT_LINE(&lt;expression&gt;) ;  
     3.范例  
-        # DBMS_OUTPUT.PUT_LINE(CHR(10)) ;                        &lt;-- 输出一个空行，DBMS_OUTPUT.PUT_LINE 没法直接输出空行或空白字符  
+        # DBMS_OUTPUT.PUT_LINE(CHR(10)) ;                       &lt;-- 输出一个空行，DBMS_OUTPUT.PUT_LINE 没法直接输出空行或空白字符  
         # DBMS_OUTPUT.PUT_LINE(&lt;var_name&gt;) ;  
         # DBMS_OUTPUT.PUT_LINE(&lt;bind_var_name&gt;) ;  
         # DBMS_OUTPUT.PUT_LINE(&#39;The name of first employee is&#39; ||&lt;var_name&gt;) ;  
@@ -940,15 +940,15 @@
         # 不区分大小写  
         # 不能包含关键字  
     5. PLSQL 变量习惯命名法
-        # v_&lt;variable_name&gt;            &lt;-- 普通变量
-        # c_&lt;constant_name&gt;            &lt;-- 常量
+        # v_&lt;variable_name&gt;         &lt;-- 普通变量
+        # c_&lt;constant_name&gt;         &lt;-- 常量
         # p_&lt;parameter_name&gt;        &lt;-- 子程序参数
-        # b_&lt;bind_name&gt;                &lt;-- 绑定变量
-        # cur_&lt;cursor_name&gt;            &lt;-- 游标
-        # rec_&lt;record_name&gt;            &lt;-- 记录
-        # &lt;type_name&gt;_type            &lt;-- 类型
+        # b_&lt;bind_name&gt;             &lt;-- 绑定变量
+        # cur_&lt;cursor_name&gt;         &lt;-- 游标
+        # rec_&lt;record_name&gt;         &lt;-- 记录
+        # &lt;type_name&gt;_type          &lt;-- 类型
         # e_&lt;exception_name&gt;        &lt;-- 异常
-        # f_&lt;file_handle_name&gt;        &lt;-- 句柄
+        # f_&lt;file_handle_name&gt;      &lt;-- 句柄
     6. PLSQL 变量的声明习惯  
         # 一行只声明一个变量  
         # 变量命名最好带标识符，如 v_，var_ 等  
@@ -1015,14 +1015,14 @@
 <h4 id="知识点–SQLPLUS命令：variable，声明绑定变量"><a href="#知识点–SQLPLUS命令：variable，声明绑定变量" class="headerlink" title="知识点–SQLPLUS命令：variable，声明绑定变量"></a>知识点–SQLPLUS命令：variable，声明绑定变量</h4><pre><code>    1. 说明
         # 绑定变量的声明只能在 sqlplus 环境，不能在 PLSQL 中声明绑定变量
     2. 格式  
-        # VARIABLE                                            &lt;-- 列出所有的绑定变量的数据类型  
-        # VARIABLE &lt;variable_name&gt;                            &lt;-- 查看绑定变量的信息的数据类型，不显示绑定变量的值
-        # VARIABLE &lt;variable_name&gt; &lt;data_type&gt;                &lt;-- 声明绑定变量
-        # VARIABLE &lt;variable_name&gt; &lt;data_type&gt;=&lt;value&gt;        &lt;-- 声明绑定变量并赋值
+        # VARIABLE                                          &lt;-- 列出所有的绑定变量的数据类型  
+        # VARIABLE &lt;variable_name&gt;                          &lt;-- 查看绑定变量的信息的数据类型，不显示绑定变量的值
+        # VARIABLE &lt;variable_name&gt; &lt;data_type&gt;              &lt;-- 声明绑定变量
+        # VARIABLE &lt;variable_name&gt; &lt;data_type&gt;=&lt;value&gt;      &lt;-- 声明绑定变量并赋值
         # VARIABLE &lt;variable_name&gt; = &lt;value&gt;                &lt;-- 已声明的绑定变量赋新值
         # VARIABLE &lt;variable_name&gt; REFCURSOR  </code></pre>
 <h4 id="知识点–SQLPLUS命令：print，查看绑定变量的值"><a href="#知识点–SQLPLUS命令：print，查看绑定变量的值" class="headerlink" title="知识点–SQLPLUS命令：print，查看绑定变量的值"></a>知识点–SQLPLUS命令：print，查看绑定变量的值</h4><pre><code>    1.格式  
-        # PRINT                                                &lt;-- 打印所有的绑定变量  
+        # PRINT                                             &lt;-- 打印所有的绑定变量  
         # PRINT &lt;var_1&gt; &lt;var_2&gt;[ ...]  </code></pre>
 <h4 id="知识点–语法：绑定变量的使用"><a href="#知识点–语法：绑定变量的使用" class="headerlink" title="知识点–语法：绑定变量的使用"></a>知识点–语法：绑定变量的使用</h4><pre><code>    1. 调用绑定变量  
         # 使用 : 冒号前缀进行调用  
@@ -1036,12 +1036,12 @@
             * EXEC :&lt;var_name&gt;:=&lt;value&gt; ;  
             * SELECT &lt;column_name&gt; INTO :&lt;var_name&gt; FROM ... WHERE ... ;  
     3. 范例  
-        #    VARIABLE v_1 varchar(20)=&#39;john&#39; ;            &lt;-- v_1 为绑定变量  
+        #   VARIABLE v_1 varchar(20)=&#39;john&#39; ;           &lt;-- v_1 为绑定变量  
             DECLARE  
-                v_2 varchar(20) := &#39;bush&#39; ;                &lt;-- v_2 为 PLSQL 变量  
+                v_2 varchar(20) := &#39;bush&#39; ;             &lt;-- v_2 为 PLSQL 变量  
             BEGIN  
-                DBMS_OUTPUT.PUT_LINE( LENGTH(:v_1)) ;    &lt;-- 使用绑定变量要加 :  
-                DBMS_OUTPUT.PUT_LINE( LENGTH( v_2)) ;    &lt;-- 使用 PLSQL 变量可以直接使用  
+                DBMS_OUTPUT.PUT_LINE( LENGTH(:v_1)) ;   &lt;-- 使用绑定变量要加 :  
+                DBMS_OUTPUT.PUT_LINE( LENGTH( v_2)) ;   &lt;-- 使用 PLSQL 变量可以直接使用  
             END ;  
             /  </code></pre>
 <h3 id="21-1-5-PLSQL-变量的基本数据类型"><a href="#21-1-5-PLSQL-变量的基本数据类型" class="headerlink" title="21.1.5 PLSQL 变量的基本数据类型"></a>21.1.5 PLSQL 变量的基本数据类型</h3><h4 id="知识点–概念：PLSQL-变量的基本数据类型"><a href="#知识点–概念：PLSQL-变量的基本数据类型" class="headerlink" title="知识点–概念：PLSQL 变量的基本数据类型"></a>知识点–概念：PLSQL 变量的基本数据类型</h4><pre><code>    1. 字符型  
@@ -1094,7 +1094,7 @@
         # 调用  
             - DBMS_OUTPUT.PUT_LINE(&lt;var_name&gt;.&lt;column_name&gt;) ;  
     4.范例  
-        #    DECLARE  
+        #   DECLARE  
                 v_1 employee%ROWTYPE ;  
             BEGIN  
                 SELECT * INTO v_1 FROM employees WHERE employee_id = 100 ;  
@@ -1116,12 +1116,12 @@
         # 声明 RECORD 型变量  
             - &lt;var_name&gt; &lt;type_name&gt; ;  
         # 调用 RECORD 型变量  
-            - SELECT &lt;column_name&gt; INTO &lt;var_name&gt;.&lt;field_name&gt; FROM ... ;                &lt;-- FILED 为普通数据类型  
-            - DBMS_OUTPUT.PUT_LINE(&lt;var_name&gt;.&lt;field_name&gt;) ;                            &lt;-- FILED 为普通数据类型  
-            - SELECT * INTO &lt;var_name&gt;.&lt;field_name&gt; FROM ... ;                            &lt;-- FIELD 为 %ROWTYPE 型  
-            - DBMS_OUTPUT.PUT_LINE(&lt;var_name&gt;.&lt;field_name&gt;.&lt;column_name&gt;) ;                &lt;-- FIELD 为 %ROWTYPE 型  
+            - SELECT &lt;column_name&gt; INTO &lt;var_name&gt;.&lt;field_name&gt; FROM ... ;              &lt;-- FILED 为普通数据类型  
+            - DBMS_OUTPUT.PUT_LINE(&lt;var_name&gt;.&lt;field_name&gt;) ;                           &lt;-- FILED 为普通数据类型  
+            - SELECT * INTO &lt;var_name&gt;.&lt;field_name&gt; FROM ... ;                          &lt;-- FIELD 为 %ROWTYPE 型  
+            - DBMS_OUTPUT.PUT_LINE(&lt;var_name&gt;.&lt;field_name&gt;.&lt;column_name&gt;) ;             &lt;-- FIELD 为 %ROWTYPE 型  
     4.范例  
-        #     DECLARE  
+        #   DECLARE  
                 TYPE t_1 IS RECORD ( f_1 employees%ROWTYPE, f_2 departments%ROWTYPE, f_3 employees.salary%TYPE) ;  
                 v_1 t_1 ;  
             BEGIN  
@@ -1140,16 +1140,16 @@
     2. COLLECTION 的方法  
         # 原地操作  
             - &lt;var_name&gt;.DELETE(&lt;n&gt;)            &lt;-- 删除索引为 &lt;n&gt; 的元素  
-            - &lt;var_name&gt;.TRIM(&lt;n&gt;)                &lt;-- 删除末尾的 &lt;n&gt; 个元素  
+            - &lt;var_name&gt;.TRIM(&lt;n&gt;)              &lt;-- 删除末尾的 &lt;n&gt; 个元素  
             - &lt;var_name&gt;.EXTEND(&lt;n&gt;)            &lt;-- 扩展空间  
         # 非原地操作  
             - &lt;var_name&gt;.EXISTS(&lt;n&gt;)            &lt;-- 查看第 &lt;n&gt; 个元素是否存在  
             - &lt;var_name&gt;.FIRST()                &lt;-- 返回第一个元素的 index  
-            - &lt;var_name&gt;.LAST()                    &lt;-- 返回最后一个元素的 index  
+            - &lt;var_name&gt;.LAST()                 &lt;-- 返回最后一个元素的 index  
             - &lt;var_name&gt;.COUNT()                &lt;-- 计算关联数组中的元素的数量  
-            - &lt;var_name&gt;.LIMIT                    &lt;-- 查询 collection 的最大元素个数  
-            - &lt;var_name&gt;.PRIOR(&lt;n&gt;)                &lt;-- 返回 &lt;n&gt; 的上一个有效元素的 index，&lt;n&gt; 可以是未定义的位置，如果结果超出数组则返回 null  
-            - &lt;var_name&gt;.NEXT(&lt;n&gt;)                &lt;-- 返回 &lt;n&gt; 的下一个有效元素的 index，&lt;n&gt; 可以是未定义的位置，如果结果超出数组则返回 null  
+            - &lt;var_name&gt;.LIMIT                  &lt;-- 查询 collection 的最大元素个数  
+            - &lt;var_name&gt;.PRIOR(&lt;n&gt;)             &lt;-- 返回 &lt;n&gt; 的上一个有效元素的 index，&lt;n&gt; 可以是未定义的位置，如果结果超出数组则返回 null  
+            - &lt;var_name&gt;.NEXT(&lt;n&gt;)              &lt;-- 返回 &lt;n&gt; 的下一个有效元素的 index，&lt;n&gt; 可以是未定义的位置，如果结果超出数组则返回 null  
         # 适用情况  
             - LIMIT 只对 VARRAY 可用  
             - EXTEND 对 ASSOCIATIVE ARRAY 不可用  
@@ -1168,19 +1168,19 @@
             - &lt;data_type&gt;  
                 &lt;data_type&gt;  
                 &lt;table.column&gt;%TYPE  
-                &lt;var_name&gt;%TYPE                                            &lt;-- 通过变量匹配数据类型  
+                &lt;var_name&gt;%TYPE                                         &lt;-- 通过变量匹配数据类型  
                 &lt;table_name&gt;%ROWTYPE  
-            - INDEX BY &#123;PLS_INTEGER|BINARY_INTEGER|VARCHAR2(&lt;n&gt;)&#125;        &lt;-- 指定关联数组的索引类型  
-                INDEX BY VARCHAR2                                             &lt;-- index 是字符串  
-                INDEX BY PLS_INTEGER                                         &lt;-- index 为整数，顺序为升序小到大，溢出了会报错，性能较好  
-                INDEX BY BINARY_INTEGER                                        &lt;-- index 为整数，顺序为升序小到大，溢出了不会报错，性能差些  
+            - INDEX BY &#123;PLS_INTEGER|BINARY_INTEGER|VARCHAR2(&lt;n&gt;)&#125;       &lt;-- 指定关联数组的索引类型  
+                INDEX BY VARCHAR2                                           &lt;-- index 是字符串  
+                INDEX BY PLS_INTEGER                                        &lt;-- index 为整数，顺序为升序小到大，溢出了会报错，性能较好  
+                INDEX BY BINARY_INTEGER                                     &lt;-- index 为整数，顺序为升序小到大，溢出了不会报错，性能差些  
     2.声明 ASSOCIATIVE ARRAYS 变量  
         # &lt;var_name&gt; &lt;type_name&gt; ;  
     3.使用 ASSOCIATIVE ARRAYS 变量  
         # &lt;var_name&gt;(&lt;index&gt;) := &lt;value&gt; ;  
         # &lt;var_name&gt;(&lt;index&gt;).&lt;column_name&gt; := &lt;value&gt; ;                &lt;-- %ROWTYPE 型的关联数组，使用时还需要指定列名  
     4.范例  
-        #    DECLARE  
+        #   DECLARE  
                 TYPE t_1 IS TABLE OF NUMBER INDEX BY PLS_INTEGER ;  
                 v_1 t_1 ;  
                 v_num NUMBER :=100 ;  
@@ -1197,13 +1197,13 @@
         # TYPE &lt;type_name&gt; IS TABLE OF &lt;data_type&gt; ;  
     2. 声明 NESTED TABLE 变量  
         # &lt;var_name&gt; &lt;type_name&gt; := &lt;type_name&gt;() ;  
-        # &lt;var_name&gt; &lt;type_name&gt; := &lt;type_name&gt;(&lt;val&gt;[, ...]) ;            &lt;-- 在声明变量时就为嵌套表赋值  
+        # &lt;var_name&gt; &lt;type_name&gt; := &lt;type_name&gt;(&lt;val&gt;[, ...]) ;         &lt;-- 在声明变量时就为嵌套表赋值  
     3. 使用 NESTED TABLE 变量  
         # &lt;var_name&gt;.EXTEND(&lt;n&gt;) ;                                      &lt;-- 声明空间
         # &lt;var_name&gt;(&lt;index&gt;) := &lt;value&gt; ;  
-        # &lt;var_name&gt; := &lt;type_name&gt;(&lt;val&gt;[, ...]) ;                        &lt;-- 修改整个嵌套表  
+        # &lt;var_name&gt; := &lt;type_name&gt;(&lt;val&gt;[, ...]) ;                     &lt;-- 修改整个嵌套表  
     4.范例  
-        #    DECLARE  
+        #   DECLARE  
                 TYPE t_1 IS TABLE OF VARCHAR(20) ;  
                 v_1 t_1 := t_1() ;  
             BEGIN  
@@ -1213,7 +1213,7 @@
             END ;  
             /  </code></pre>
 <h3 id="21-5-4-变长数组-VARRAY"><a href="#21-5-4-变长数组-VARRAY" class="headerlink" title="21.5.4 变长数组 VARRAY"></a>21.5.4 变长数组 VARRAY</h3><h4 id="知识点–概念：VARRAY-变长数组"><a href="#知识点–概念：VARRAY-变长数组" class="headerlink" title="知识点–概念：VARRAY 变长数组"></a>知识点–概念：VARRAY 变长数组</h4><pre><code>X.字典
-    # DBA_VARRAYS                    &lt;-- 记录表中使用 VARRAY 的情况  </code></pre>
+    # DBA_VARRAYS                   &lt;-- 记录表中使用 VARRAY 的情况  </code></pre>
 <h4 id="知识点–语法：使用-VARRAY-变长数组"><a href="#知识点–语法：使用-VARRAY-变长数组" class="headerlink" title="知识点–语法：使用 VARRAY 变长数组"></a>知识点–语法：使用 VARRAY 变长数组</h4><pre><code>    1. 定义 VARRAY 类型  
         # TYPE &lt;type_name&gt; IS VARRAY(&lt;n&gt;) OF &lt;data_type&gt; ;  
     2. 声明 VARRAY 变量  
@@ -1274,42 +1274,42 @@
 <h4 id="知识点–概念：PLSQL-块打标签"><a href="#知识点–概念：PLSQL-块打标签" class="headerlink" title="知识点–概念：PLSQL 块打标签"></a>知识点–概念：PLSQL 块打标签</h4><pre><code>    1. 介绍
         # 子块中的重名变量，可以通过对父块加标签的方式，在子块中同时调用父块中的值和子块中的值  
         # 范例  
-            -    &lt;&lt;O&gt;&gt;                                            &lt;-- 父块打标签
+            -   &lt;&lt;O&gt;&gt;                                           &lt;-- 父块打标签
                 DECLARE  
                     V1 NUMBER := 100 ;  
                 BEGIN  
                     DECLARE  
                         V1 VARCHAR2(20) := &#39;TOM&#39; ;  
                     BEGIN  
-                        DBMS_OUTPUT.PUT_LINE( V1 || &#39; JOHN&#39;) ;    &lt;-- 子块中调用子块 V1 变量  
-                        DBMS_OUTPUT.PUT_LINE( O.V1**2 ) ;        &lt;-- 子块中调用父块 V1 变量  
+                        DBMS_OUTPUT.PUT_LINE( V1 || &#39; JOHN&#39;) ;  &lt;-- 子块中调用子块 V1 变量  
+                        DBMS_OUTPUT.PUT_LINE( O.V1**2 ) ;       &lt;-- 子块中调用父块 V1 变量  
                     END ;  
-                    DBMS_OUTPUT.PUT_LINE( V1 + 300) ;            &lt;-- 父块中调用父块 V1 变量  
-                END O ;                                          &lt;-- END 中指明结束标价签 O 的块
+                    DBMS_OUTPUT.PUT_LINE( V1 + 300) ;           &lt;-- 父块中调用父块 V1 变量  
+                END O ;                                         &lt;-- END 中指明结束标价签 O 的块
                 /  </code></pre>
 <h3 id="21-3-3-PLSQL-判断"><a href="#21-3-3-PLSQL-判断" class="headerlink" title="21.3.3 PLSQL 判断"></a>21.3.3 PLSQL 判断</h3><h4 id="知识点–语法：PLSQL-IF-THEN-语句"><a href="#知识点–语法：PLSQL-IF-THEN-语句" class="headerlink" title="知识点–语法：PLSQL IF THEN 语句"></a>知识点–语法：PLSQL IF THEN 语句</h4><pre><code>    1. 语法  
-        #    IF &lt;condition&gt; THEN &lt;statements&gt; ;  
+        #   IF &lt;condition&gt; THEN &lt;statements&gt; ;  
                 [ELSIF &lt;condition&gt; THEN &lt;statements&gt; ;]  
                 [ELSE &lt;statement&gt; ;]  
             END IF ;  
         # &lt;condition&gt; 可以是布尔型变量</code></pre>
 <h4 id="知识点–语法：PLSQL-CASE-语句"><a href="#知识点–语法：PLSQL-CASE-语句" class="headerlink" title="知识点–语法：PLSQL CASE 语句"></a>知识点–语法：PLSQL CASE 语句</h4><pre><code>    1. CASE 语句必定有返回值  
     2. CASE 语法  
-        #    CASE &lt;selector&gt;  
+        #   CASE &lt;selector&gt;  
                 WHEN &lt;value_1&gt; THEN &lt;result_value_1&gt;  
                 WHER &lt;value_2&gt; THEN &lt;result_value_2&gt;  
                 ...  
                 [ELSE &lt;result_n&gt;]  
             END ;  
     3. SEARCHED CASE 语法  
-        #    CASE  
+        #   CASE  
                 WHEN &lt;condition_1&gt; THEN &lt;result_value_1&gt;  
                 WHER &lt;condition_2&gt; THEN &lt;result_value_2&gt;  
                 ...  
                 [ELSE &lt;result_n&gt;]  
             END ;  </code></pre>
 <h3 id="21-3-4-PLSQL-循环"><a href="#21-3-4-PLSQL-循环" class="headerlink" title="21.3.4 PLSQL 循环"></a>21.3.4 PLSQL 循环</h3><h4 id="知识点–语法：PLSQL-嵌套循环，打标签"><a href="#知识点–语法：PLSQL-嵌套循环，打标签" class="headerlink" title="知识点–语法：PLSQL 嵌套循环，打标签"></a>知识点–语法：PLSQL 嵌套循环，打标签</h4><pre><code>    1. 语法  
-        #    &lt;&lt;outer_loop_name&gt;&gt;  
+        #   &lt;&lt;outer_loop_name&gt;&gt;  
                 &lt;outer_loop&gt;  
                 &lt;&lt;inner_loop_name&gt;&gt;  
                     &lt;inner_loop&gt;  
@@ -1317,27 +1317,27 @@
                 ...  
             END [LOOP] &lt;outer_loop_name&gt; ;  </code></pre>
 <h4 id="知识点–语法：PLSQL-LOOG-循环"><a href="#知识点–语法：PLSQL-LOOG-循环" class="headerlink" title="知识点–语法：PLSQL LOOG 循环"></a>知识点–语法：PLSQL LOOG 循环</h4><pre><code>    1. 语法  
-        #    LOOP  
+        #   LOOP  
                 &lt;statements&gt; ;  
                 EXIT [WHEN contidion] ;  
             END LOOP ;  </code></pre>
 <h4 id="知识点–语法：PLSQL-WHILE-循环"><a href="#知识点–语法：PLSQL-WHILE-循环" class="headerlink" title="知识点–语法：PLSQL WHILE 循环"></a>知识点–语法：PLSQL WHILE 循环</h4><pre><code>    1. 语法  
-        #    WHILE &lt;condition&gt; LOOP  
+        #   WHILE &lt;condition&gt; LOOP  
                 &lt;statements&gt; ;  
             END LOOP ;  </code></pre>
 <h4 id="知识点–语法：PLSQL-FOR-循环"><a href="#知识点–语法：PLSQL-FOR-循环" class="headerlink" title="知识点–语法：PLSQL FOR 循环"></a>知识点–语法：PLSQL FOR 循环</h4><pre><code>    1. 介绍  
         # PLSQL 中 FOR 循环不能定义步长，步长默认为 1  
         # &lt;upper_bound&gt; 必须大于 &lt;lower_bound&gt;  
     2. 语法  
-        #    FOR &lt;counter&gt; IN [REVERSE] &lt;lower_bound&gt;..&lt;upper_bound&gt; LOOP  
+        #   FOR &lt;counter&gt; IN [REVERSE] &lt;lower_bound&gt;..&lt;upper_bound&gt; LOOP  
                 &lt;statements&gt; ;  
             END LOOP ;  
-        #    FOR &lt;counter&gt; IN (SELECT &lt;column_name&gt; FROM ...) LOOP                            &lt;-- 游标方式
+        #   FOR &lt;counter&gt; IN (SELECT &lt;column_name&gt; FROM ...) LOOP                           &lt;-- 游标方式
                 &lt;statements&gt; ;  
             END LOOP ;  
     3. 范例
         # 使用 FOR 循环和关联数组取出整张表  
-            -     DECLARE  
+            -   DECLARE  
                     TYPE t_1 IS TABLE OF employees%ROWTYPE INDEX BY PLS_INTEGER ;  
                     v_1 t_1 ;  
                     v_c NUMBER ;  
@@ -1346,7 +1346,7 @@
                     FOR i IN 1..v_c LOOP  
                         SELECT * INTO v_1(i) FROM employees OFFSET i-1 ROWS FETCH NEXT 1 ROW ONLY ;  
                     END LOOP ;  
-                    FOR i IN v_1.FIRST()..v_1.LAST() LOOP                                    &lt;-- 这种写法，如果 v_1 是稀疏的就会报错  
+                    FOR i IN v_1.FIRST()..v_1.LAST() LOOP                                   &lt;-- 这种写法，如果 v_1 是稀疏的就会报错  
                         IF v_1.EXISTS(i) THEN  
                             DBMS_OUTPUT.PUT_LINE( v_1(i).employee_id || &#39; &#39;|| v_1(i).first_name || &#39; &#39; || v_1(i).last_name || &#39; &#39; || v_1(i).salary) ;  
                         END IF ;  
@@ -1369,14 +1369,14 @@
     2. 隐式游标  
         # SELECT 语句自动使用游标，称为隐式游标  
     3. 隐式游标的三个属性 attribute  
-        # SQL%FOUND            &lt;-- 布尔值，如果最近一次 SQL 语句有返回行则为 ture  
-        # SQL%NOTFOUND        &lt;-- 布尔值，如果最近一次 SQL 语句没有返回行则为 true  
-        # SQL%ROWCOUNT        &lt;-- 整型，最近一次 SQL 语句返回的行的数量  
+        # SQL%FOUND         &lt;-- 布尔值，如果最近一次 SQL 语句有返回行则为 ture  
+        # SQL%NOTFOUND      &lt;-- 布尔值，如果最近一次 SQL 语句没有返回行则为 true  
+        # SQL%ROWCOUNT      &lt;-- 整型，最近一次 SQL 语句返回的行的数量  
     4. 字典  
         # V$OPEN_CURSOR  
     5. 范例  
         # SQL%NOTFOUND 范例
-            -    BEGIN  
+            -   BEGIN  
                     DELETE FROM employees WHERE salary &lt; 5000 ;  
                     IF SQL%NOTFOUND THEN  
                         DBMS_OUTPUT.PUT_LINE(&#39; No salary lower than 5000 .&#39;) ;  
@@ -1386,7 +1386,7 @@
                 END ;  
                 /  
         # SQL%ROWCOUNT 范例
-            -    BEGIN  
+            -   BEGIN  
                     DELETE FROM employees WHERE salary &lt; 5000 ;  
                     DBMS_OUTPUT.PUT_LINE( SQL%ROWCOUNT||&#39; rows deleted&#39;) ;  
                 END ;  
@@ -1402,10 +1402,10 @@
             - &lt;var_name&gt; &lt;cursor_name&gt;%ROWTYPE ;  
         # 显式游标推荐用在 FOR 循环和 LOOP 循环中，不推荐用在 WHILE 循环中  
     3. 显式游标的属性  
-        # %ISOPEN            &lt;-- 布尔值 
-        # %ISFOUND            &lt;-- 布尔值，最近一次 FETCH 行为是否找到行  
-        # %ISNOTFOUND        &lt;-- 布尔值，最近一次 FETCH 行为是否没有找到行  
-        # %ROWCOUNT            &lt;-- 整型，游标中已经使用的行的数量  </code></pre>
+        # %ISOPEN           &lt;-- 布尔值 
+        # %ISFOUND          &lt;-- 布尔值，最近一次 FETCH 行为是否找到行  
+        # %ISNOTFOUND       &lt;-- 布尔值，最近一次 FETCH 行为是否没有找到行  
+        # %ROWCOUNT         &lt;-- 整型，游标中已经使用的行的数量  </code></pre>
 <h4 id="知识点–语法：CURSOR-声明显式游标"><a href="#知识点–语法：CURSOR-声明显式游标" class="headerlink" title="知识点–语法：CURSOR 声明显式游标"></a>知识点–语法：CURSOR 声明显式游标</h4><pre><code>    1. 语法  
         # CURSOR &lt;cursor_name&gt; IS &lt;select_statement&gt; ;  
     2. 范例  
@@ -1428,7 +1428,7 @@
     2. 语法  
         # FETCH &lt;cursor_name&gt; INTO ... ;  </code></pre>
 <h4 id="知识点–操作：使用显示游标"><a href="#知识点–操作：使用显示游标" class="headerlink" title="知识点–操作：使用显示游标"></a>知识点–操作：使用显示游标</h4><pre><code>    1. 操作，打印 employees 所有的员工的 first_name 和 salary  
-        #    DECLARE  
+        #   DECLARE  
                 v_sal NUMBER ;  
                 v_name VARCHAR2(20) ;  
                 CURSOR v_emp_cursor IS SELECT first_name, salary FROM employees ;  
@@ -1443,7 +1443,7 @@
             END ;  
             /  
     2. 操作，取出所有 salary 大于 10000 的员工，存放在关联数组中  
-        #    DECLARE  
+        #   DECLARE  
                 CURSOR c_sal_cursor IS SELECT * FROM employees WHERE salary &gt; 10000 ;  
                 type t_1 IS TABLE OF employees%ROWTYPE INDEX BY PLS_INTEGER ;  
                 v_1 t_1 ;  
@@ -1459,7 +1459,7 @@
             END ;  
             /  
     3. 操作，打印 employees 所有的员工的 employee_id，使用 &lt;cursor&gt;%ROWTYPE 确定变量类型  
-        #    DECLARE  
+        #   DECLARE  
                 CURSOR v_emp_cursor IS SELECT * FROM EMPLOYEES ;  
                 v_emp v_emp_cursor%ROWTYPE  
             BEGIN  
@@ -1487,7 +1487,7 @@
             CLOSE &lt;cursor_name&gt; ;  
     3. 范例  
         # 取出工资超过 10000 的员工的 employee_id，OPEN CLOSE 方式  
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR v_emp_cursor (a NUMBER) IS SELECT * FROM employees WHERE salary &gt; a ;  
                     v_emp v_emp_cursor%ROWTYPE ;  
                 BEGIN  
@@ -1501,7 +1501,7 @@
                 END;  
                 /  
         #  取出工资在 3000 到 5000 的员工，和工资在 10000 到 15000 的员工，其中游标被 OPEN CLOSE 了两次  
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR v_emp_cursor (a NUMBER, b NUMBER) IS SELECT * FROM employees WHERE salary BETWEEN a AND b order by salary ;  
                     v_emp v_emp_cursor%ROWTYPE ;  
                 BEGIN  
@@ -1524,7 +1524,7 @@
                 END;  
                 /  
         # 取出工资超过 10000 的员工的 employee_id，FOR 方式  
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR v_emp_cursor (a NUMBER) IS SELECT * FROM employees WHERE salary &gt; a ;  
                 BEGIN  
                     FOR i IN v_emp_cursor(10000) LOOP  
@@ -1538,14 +1538,14 @@
         # FOR 循环如果使用子查询，自动以显式游标方式运行，不需要声明游标  
     2. 格式
         # 显示游标方式
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR &lt;cursor_name&gt; IS &lt;select_statement&gt; ;  
                 BEGIN  
                     FOR i IN &lt;cursor_name&gt; LOOP  
                         &lt;statements&gt; ;  
                     END LOOP ;  
         # 子查询方式
-            -     BEGIN  
+            -    BEGIN  
                 FOR i IN (&lt;sub_query&gt;) LOOP  
                     &lt;statements&gt; ;  
                 END LOOP ;</code></pre>
@@ -1558,7 +1558,7 @@
             - 使用游标更新基表，指定基表的行为当前游标的行  
     2.范例  
         # 使用游标更新 emp 表  
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR c1 IS SELECT * FROM emp FOR UPDATE ;  
                     v_dept VARCHAR(20) ;  
                 BEGIN  
@@ -1706,7 +1706,7 @@
         # 被捕获的异常不会影响到其他程序段的运行  
         # 可以在异常段的子句中添加 ROLLBACK，以防止异常影响数据的完整性  
         # 以下代码，虽然子块中发生了 too_many_rows 的异常，但子块中的异常被捕获，所以父块中的数据可以正常被打印  
-            -    &lt;&lt;main_block&gt;&gt;  
+            -   &lt;&lt;main_block&gt;&gt;  
                 DECLARE  
                     v1 NUMBER ;  
                 BEGIN  
@@ -1865,12 +1865,12 @@
         # 不能使用 USING 进行替换  
     4.范例  
         # 动态 PLSQL  
-            -    BEGIN  
+            -   BEGIN  
                     EXECUTE IMMEDIATE &#39;BEGIN DBMS_OUTPUT.PUT_LINE(321) ;END ;&#39; ;  
                 END ;  
                 /  
         # 创建过程 p_create_t，可以进行建表  
-            -    CREATE OR REPLACE PROCEDURE p_create_t ( p_table_name VARCHAR2, p_col_spec VARCHAR2)  
+            -   CREATE OR REPLACE PROCEDURE p_create_t ( p_table_name VARCHAR2, p_col_spec VARCHAR2)  
                     IS  
                         v_xxxx VARCHAR2(1024) ;  
                     BEGIN  
@@ -1878,7 +1878,7 @@
                         EXECUTE IMMEDIATE &#39;CREATE TABLE &#39; || p_table_name  || &#39; ( &#39; || p_col_spec || &#39; ) &#39; ;  
                     END p_create_t;  
                     /  
-            -    EXEC p_create_t( &#39;t003&#39; , &#39; employee_id number PRIMARY KEY, employee_name VARCHAR(30) NOT NULL, salary NUMBER NOT NULL&#39;) ;  </code></pre>
+            -   EXEC p_create_t( &#39;t003&#39; , &#39; employee_id number PRIMARY KEY, employee_name VARCHAR(30) NOT NULL, salary NUMBER NOT NULL&#39;) ;  </code></pre>
 <h3 id="21-6-3-DBMS-SQL-包"><a href="#21-6-3-DBMS-SQL-包" class="headerlink" title="21.6.3 DBMS_SQL 包"></a>21.6.3 DBMS_SQL 包</h3><h4 id="知识点–概念：DBMS-SQL-包，可以执行动态-SQL，功能比-EXECUTE-IMMEDIATE-强大，效率比-EXECUTE-IMMEDIATE-低"><a href="#知识点–概念：DBMS-SQL-包，可以执行动态-SQL，功能比-EXECUTE-IMMEDIATE-强大，效率比-EXECUTE-IMMEDIATE-低" class="headerlink" title="知识点–概念：DBMS_SQL 包，可以执行动态 SQL，功能比 EXECUTE IMMEDIATE 强大，效率比 EXECUTE IMMEDIATE 低"></a>知识点–概念：DBMS_SQL 包，可以执行动态 SQL，功能比 EXECUTE IMMEDIATE 强大，效率比 EXECUTE IMMEDIATE 低</h4><pre><code>    1.常用子程序  
         # OPEN_CURSOR  
         # PARSE  
@@ -1904,7 +1904,7 @@
         # SELECT * BULK COLLECT INTO &lt;collection_variable&gt; FROM ... ;  
     2.范例  
         # 将 employees 中工资小于 avg(salary) 的员工都加载到 v01 关联数组中  
-            -    DECLARE  
+            -   DECLARE  
                     TYPE t01 IS TABLE OF employees%ROWTYPE INDEX BY PLS_INTEGER ;  
                     v01 t01 ;  
                     zv01 NUMBER ;  
@@ -1919,7 +1919,7 @@
             - LIMIT n，限定一次的读取行数  
     2.范例  
         # 使用带参数的游标 C01，将 employees 中工资小于 avg(salary) 的员工都加载到 v01 关联数组中  
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR c01 (avg_sal NUMBER) IS (SELECT * FROM employees WHERE salary &lt; avg_sal) ;  
                     TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
                     v01 t01 ;  
@@ -1951,7 +1951,7 @@
         # SQL%BULK_ROWCOUNT(i) 就等于第 i 次操作所修改的行的数量  
     2.范例  
         # 将所有 department_id 小于 49 的部门的员工，工资上调 10000 元，然后查看 FORALL 每次修改的行数  
-            -    DECLARE  
+            -   DECLARE  
                     CURSOR c01 (n NUMBER) IS (SELECT DISTINCT department_id FROM employees WHERE department_id &lt; n) ;  
                     TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
                     v01 t01 ;  
@@ -1980,13 +1980,13 @@
         # SAVE EXCEPTIONS 但不捕获异常，则 ORACLE 在 FORALL 语句执行完成后再抛出异常  
         # SAVE EXCEPTIONS 并捕获异常，则 ORACLE 在 FORALL 语句执行完成后转到异常段执行  
     4.SQL%BULK_EXCEPTIONS 的属性  
-        # SQL%BULK_EXCEPTIONS.COUNT                    &lt;-- 隐式游标 SQL%BULK_EXCEPTIONS 中记录的信息的个数  
+        # SQL%BULK_EXCEPTIONS.COUNT                 &lt;-- 隐式游标 SQL%BULK_EXCEPTIONS 中记录的信息的个数  
         # SQL%BULK_EXCEPTIONS(i).ERROR_INDEX        &lt;-- 第 i 个错误记录的是 FORALL 中第几次操作
-        # SQL%BULK_EXCEPTIONS(i).ERROR_CODE            &lt;-- 第 i 个错误记录的错误代码  
+        # SQL%BULK_EXCEPTIONS(i).ERROR_CODE         &lt;-- 第 i 个错误记录的错误代码  
     5.范例  
         # 使用 BULK COLLECT INTO 和 FORALL，将 salary 小于平均值的员工的 employee_id 记录下来  
-            -    CREATE TABLE test (id NUMBER) ;        &lt;-- 创建结果表  
-            -    DECLARE  
+            -   CREATE TABLE test (id NUMBER) ;     &lt;-- 创建结果表  
+            -   DECLARE  
                     CURSOR c01 (avg_sal NUMBER) IS (SELECT * FROM employees WHERE salary &lt; avg_sal) ;  
                     TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
                     v01 t01 ;  
@@ -2015,8 +2015,8 @@
         # 使用 FETCH BULK COLLECT INTO，将 salary 小于平均值的员工的 employee_id 记录到 v01 关联数组中  
         # 使用 FORALL，将这些员工的 salary 加 10000  
         # 使用 RETURNING BULK COLLECT INTO，将上一步的修改的员工的 employee_id 和修改后的 salary 分别记录到 v02 和 v03 关联数组中  
-            -    CREATE TABLE testemp AS SELECT * FROM employees ;            -- 创建测试表  
-            -    DECLARE  
+            -   CREATE TABLE testemp AS SELECT * FROM employees ;           -- 创建测试表  
+            -   DECLARE  
                     CURSOR c01 (avg_sal NUMBER) IS (SELECT * FROM testemp WHERE salary &lt; avg_sal) ;  
                     TYPE t01 IS TABLE OF c01%ROWTYPE INDEX BY PLS_INTEGER ;  
                     v01 t01 ;  
@@ -2093,7 +2093,7 @@
         # 未编译或编译失败的子程序，在 DBA_OBJECTS 中，STATUS 列的状态为 INVALID，在 DBA_ERRORS 中记录了相关的编译错误  
     4.字典  
         # DBA_PROCEDURES            &lt;-- 记录所有的过程  
-        # DBA_TRIGGERS                &lt;-- 记录所有的触发器  
+        # DBA_TRIGGERS              &lt;-- 记录所有的触发器  
         # DBA_SOURCE                &lt;-- 记录所有的存储的对象的源码  
         # DBA_ERRORS                &lt;-- 记录当前数据库中储存过程的编译错误  </code></pre>
 <h4 id="知识点–概念：模块化编程"><a href="#知识点–概念：模块化编程" class="headerlink" title="知识点–概念：模块化编程"></a>知识点–概念：模块化编程</h4><pre><code>    1.将大的程序代码块转换成小的称之为模块的程序块  
@@ -2162,7 +2162,7 @@
             /  
     2.范例  
         # 输入两个数，输出较大的那个数  
-            -    CREATE OR REPLACE FUNCTION f1 ( p1 NUMBER, p2 NUMBER)  
+            -   CREATE OR REPLACE FUNCTION f1 ( p1 NUMBER, p2 NUMBER)  
                     RETURN NUMBER  
                     IS  
                         p3 NUMBER ;  
@@ -2295,13 +2295,13 @@
         # 代码
             - CREATE OR REPLACE PACKAGE salary_pkg  
                 IS  
-                    v_std_salary NUMBER := 1000 ;                                                        &lt;-- 初始化工资为 1000  
-                    PROCEDURE reset_salary( emp_salary NUMBER, emp_job_id VARCHAR2 ) ;                    &lt;-- 公共过程 reset_salary，检查工资是否处于工资范围  
-                END salary_pkg ;                                                                          &lt;-- 包头中不包含私有组件 validate_salary
+                    v_std_salary NUMBER := 1000 ;                                                       &lt;-- 初始化工资为 1000  
+                    PROCEDURE reset_salary( emp_salary NUMBER, emp_job_id VARCHAR2 ) ;                  &lt;-- 公共过程 reset_salary，检查工资是否处于工资范围  
+                END salary_pkg ;                                                                        &lt;-- 包头中不包含私有组件 validate_salary
                 /  
             - CREATE OR REPLACE PACLAGE BODY salary_pkg  
                 IS  
-                    FUNCTION validate_salary( p_sal NUMBER, p_job_id VARCHAR2(20)) RETURN BOOLEAN        &lt;-- 私有子程序 validate_salary，进行工资合规的判断  
+                    FUNCTION validate_salary( p_sal NUMBER, p_job_id VARCHAR2(20)) RETURN BOOLEAN       &lt;-- 私有子程序 validate_salary，进行工资合规的判断  
                         IS  
                             v_min_sal jobs.min_salary%type ;  
                             v_max_sal jobs.max_salary%type ;  
@@ -2326,7 +2326,7 @@
         # ALTER PACKAGE &lt;package_name&gt; COMPILE BODY ;  </code></pre>
 <h4 id="知识点–语法：DROP-PACKAGE-BODY-删除包"><a href="#知识点–语法：DROP-PACKAGE-BODY-删除包" class="headerlink" title="知识点–语法：DROP PACKAGE [BODY] 删除包"></a>知识点–语法：DROP PACKAGE [BODY] 删除包</h4><pre><code>    1.语法  
         # DROP PACKAGE &lt;package_name&gt; ;             &lt;-- 删除包，包括包头和包体  
-        # DROP PACKAGE BODY &lt;package_name&gt; ;         &lt;-- 仅删除包体  </code></pre>
+        # DROP PACKAGE BODY &lt;package_name&gt; ;        &lt;-- 仅删除包体  </code></pre>
 <h3 id="22-4-3-包的其他特性"><a href="#22-4-3-包的其他特性" class="headerlink" title="22.4.3 包的其他特性"></a>22.4.3 包的其他特性</h3><h4 id="知识点–概念：子程序重载-overload"><a href="#知识点–概念：子程序重载-overload" class="headerlink" title="知识点–概念：子程序重载 overload"></a>知识点–概念：子程序重载 overload</h4><pre><code>    1.一个包下的子程序可以重名，叫做子程序的重载  
         # 没有放在包含在包中的独立的过程和函数还是不能重名  
     2.子程序的重载优点  
@@ -2336,7 +2336,7 @@
         # 两个子程序的参数，只有数据类型不同，并且数据类型属于同一大类如都是数值型，或属于同一子类型例如 VARCHAR 和 STRING  
         # 两个子程序的参数相同，只有返回值的类型不同  
     4.字典
-        # DBA_PROCEDURES.overload                    &lt;-- 记录了重载的子程序在包中的重载的编号  </code></pre>
+        # DBA_PROCEDURES.overload                   &lt;-- 记录了重载的子程序在包中的重载的编号  </code></pre>
 <h4 id="知识点–概念：向前声明-Forward-Declarations"><a href="#知识点–概念：向前声明-Forward-Declarations" class="headerlink" title="知识点–概念：向前声明 Forward Declarations"></a>知识点–概念：向前声明 Forward Declarations</h4><pre><code>    1.向前声明为了解决私有子程序的先声明后引用的问题  
         # 一般子程序的声明顺序是按照字母排列  
         # 如果前面的子程序用到了之后声明的子程序，就会报错  
@@ -2465,9 +2465,9 @@
         # PROCEDURE FCLOSE，关闭文件  
     5.范例  
         # 将 employees 表中的部分列内容输出到 /home/oracle/100.txt 中  
-            *    CREATE OR REPLACE DIRECTORY d_01 AS &#39;/home/oracle&#39; ;  
-            *    GRANT READ, WRITE ON DIRECTORY d_01 TO hr ;  
-            *    DECLARE  
+            *   CREATE OR REPLACE DIRECTORY d_01 AS &#39;/home/oracle&#39; ;  
+            *   GRANT READ, WRITE ON DIRECTORY d_01 TO hr ;  
+            *   DECLARE  
                     f_01 UTL_FILE.FILE_TYPE ;  
                 BEGIN  
                     f_01 := UTL_FILE.FOPEN(&#39;D_01&#39;,&#39;100.txt&#39;,&#39;W&#39;) ;  
@@ -2534,12 +2534,12 @@
     8.触发器的限制  
         # 触发器中不可以进行 COMMIT 和 ROLLBACK  
     9.字典  
-        # DBA_TRIGGERS                &lt;-- 记录所有的触发器</code></pre>
+        # DBA_TRIGGERS              &lt;-- 记录所有的触发器</code></pre>
 <h4 id="知识点–概念：创建触发器所需要的权限"><a href="#知识点–概念：创建触发器所需要的权限" class="headerlink" title="知识点–概念：创建触发器所需要的权限"></a>知识点–概念：创建触发器所需要的权限</h4><pre><code>    1.CREATE TRIGGER 系统权限  
     2.ALTER TABLE 对象权限，或者 ALTER ANY TABLE 系统权限  
     3.对于数据库级别的触发器，需要 ADMINISTER DATABASE TRIGGER 系统权限  </code></pre>
 <h4 id="知识点–操作：创建-pdb-自动启动触发器"><a href="#知识点–操作：创建-pdb-自动启动触发器" class="headerlink" title="知识点–操作：创建 pdb 自动启动触发器"></a>知识点–操作：创建 pdb 自动启动触发器</h4><pre><code>    1. 代码
-        #    CREATE OR REPLACE TRIGGER sys.&lt;trigger_name&gt; AFTER STARTUP ON DATABASE  
+        #   CREATE OR REPLACE TRIGGER sys.&lt;trigger_name&gt; AFTER STARTUP ON DATABASE  
                 BEGIN  
                     EXECUTE IMMEDIATE &#39;ALTER PLUGGABLE DATABASE ALL OPEN&#39; ;  
                 END sys.&lt;trigger_name&gt; ;  
@@ -2612,12 +2612,12 @@
 <h3 id="22-6-3-修改触发器"><a href="#22-6-3-修改触发器" class="headerlink" title="22.6.3 修改触发器"></a>22.6.3 修改触发器</h3><h4 id="知识点–概念：触发器的状态"><a href="#知识点–概念：触发器的状态" class="headerlink" title="知识点–概念：触发器的状态"></a>知识点–概念：触发器的状态</h4><pre><code>    1.Enable  
     2.Disable  </code></pre>
 <h4 id="知识点–语法：ALTER-TRIGGER-修改触发器"><a href="#知识点–语法：ALTER-TRIGGER-修改触发器" class="headerlink" title="知识点–语法：ALTER TRIGGER 修改触发器"></a>知识点–语法：ALTER TRIGGER 修改触发器</h4><pre><code>    1.语法  
-        # ALTER TRIGGER &lt;trigger_name&gt; ENABLE ;                &lt;-- 启用触发器  
+        # ALTER TRIGGER &lt;trigger_name&gt; ENABLE ;             &lt;-- 启用触发器  
         # ALTER TRIGGER &lt;trigger_name&gt; DISABLE ;            &lt;-- 禁用触发器  
         # ALTER TRIGGER &lt;trigger_name&gt; COMPILE ;  
     2.ALTER TABLE TRIGGER 语法  
         # ALTER TABLE &lt;table_name&gt; ENABLE ALL TRIGGERS ;    &lt;-- 启用一个表的所有触发器  
-        # ALTER TABLE &lt;table_name&gt; DISABLE ALL TRIGGERS ;    &lt;-- 禁用一个表的所有触发器  </code></pre>
+        # ALTER TABLE &lt;table_name&gt; DISABLE ALL TRIGGERS ;   &lt;-- 禁用一个表的所有触发器  </code></pre>
 <h4 id="知识点–语法：DROP-TRIGGER，删除触发器"><a href="#知识点–语法：DROP-TRIGGER，删除触发器" class="headerlink" title="知识点–语法：DROP TRIGGER，删除触发器"></a>知识点–语法：DROP TRIGGER，删除触发器</h4><pre><code>    1.语法  
         # DROP TRIGGER &lt;trigger_name&gt; ;  </code></pre>
 <h3 id="22-6-4-复合触发器-Compound-Trigger"><a href="#22-6-4-复合触发器-Compound-Trigger" class="headerlink" title="22.6.4 复合触发器 Compound Trigger"></a>22.6.4 复合触发器 Compound Trigger</h3><h4 id="知识点–概念：变异表-mutating-table"><a href="#知识点–概念：变异表-mutating-table" class="headerlink" title="知识点–概念：变异表 mutating table"></a>知识点–概念：变异表 mutating table</h4><pre><code>    1.变异表，也就是处于变化中的表，如正在被 DML 的表  
@@ -2666,8 +2666,8 @@
         # AFTER SERVERERROR  
         # AFTER LOGON  
         # BEFORE LOGOFF  
-        # AFTER CLONE            &lt;-- PLUGGABLE DATABASE 事件  
-        # BEFORE UNPLUG            &lt;-- PLUGGABLE DATABASE 事件  
+        # AFTER CLONE           &lt;-- PLUGGABLE DATABASE 事件  
+        # BEFORE UNPLUG         &lt;-- PLUGGABLE DATABASE 事件  
     4.触发器的范围  
         # DATABASE 对所有用户都生效  
             - 普通用户需要 ADMINISTER DATABASE TRIGGER 系统权限才能创建 database 范围的触发器  
@@ -2675,12 +2675,12 @@
     5.事件触发器的属性函数  
         # 编写触发器时，可以像变量一样使用触发器的属性  
         # 属性函数并不是所有类型的事件都适用，具体查看 PLSQL_language 的 9.15 章  
-            * ora_sysevent                    &lt;-- 返回激发触发器的事件的类型  
-            * ora_instance_num                &lt;-- 返回实例的 instance_id  
-            * ora_database_name                &lt;-- 返回数据库的品牌，通常就是 Oracle  
+            * ora_sysevent                  &lt;-- 返回激发触发器的事件的类型  
+            * ora_instance_num              &lt;-- 返回实例的 instance_id  
+            * ora_database_name             &lt;-- 返回数据库的品牌，通常就是 Oracle  
             * ora_login_user                &lt;-- 返回激发触发器的用户名  
-            * ora_dict_obj_type                &lt;-- 返回触发器操作的对象类型  
-            * ora_dict_obj_name                &lt;-- 返回触发器操作的对象名  </code></pre>
+            * ora_dict_obj_type             &lt;-- 返回触发器操作的对象类型  
+            * ora_dict_obj_name             &lt;-- 返回触发器操作的对象名  </code></pre>
 <h4 id="知识点–语法：CREATE-TRIGGER-创建基于事件的触发器"><a href="#知识点–语法：CREATE-TRIGGER-创建基于事件的触发器" class="headerlink" title="知识点–语法：CREATE TRIGGER 创建基于事件的触发器"></a>知识点–语法：CREATE TRIGGER 创建基于事件的触发器</h4><pre><code>    1.语法  
         # CREATE [OR REPLACE] TRIGGER &lt;trigger_name&gt;  
             &#123;BEFORE|AFTER&#125; &lt;event_1&gt; [OR &lt;event_2&gt; OR &lt;event_3&gt; ...]  
