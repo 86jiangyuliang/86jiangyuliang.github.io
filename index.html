@@ -209,7 +209,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="知识点：windows-hosts-文件"><a href="#知识点：windows-hosts-文件" class="headerlink" title="知识点：windows hosts 文件"></a>知识点：windows hosts 文件</h4><pre><code>    1. C:\Windows\System32\drivers\etc\hosts</code></pre>
+<h4 id="知识点：windows-scp"><a href="#知识点：windows-scp" class="headerlink" title="知识点：windows scp"></a>知识点：windows scp</h4><pre><code>    1. 介绍
+        # 都只能在 windows 上执行命令
+        # 推荐使用 cmd 而不是 powershell，因为可以使用 windows 变量
+    1. windows to linux
+        # scp %HOMEPATH%\Desktop\1.txt root@&lt;hostname&gt;:~
+    2. linux to windows
+        # scp root@~/1.txt %HOMEPATH%\Desktop
+            - 复制到桌面</code></pre>
+<h4 id="知识点：windows-常用变量"><a href="#知识点：windows-常用变量" class="headerlink" title="知识点：windows 常用变量"></a>知识点：windows 常用变量</h4><pre><code>    1. 介绍
+        # 网址
+            - http://www.wilsonmar.com/1envvars.htm    
+        # 使用和查看
+            - 只能在 cmd 中使用，不能在 powershell 中使用
+            - 使用 echo 查看变量的值</code></pre>
+
       
     </div>
     <footer class="article-footer">
