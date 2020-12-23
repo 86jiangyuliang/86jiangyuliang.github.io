@@ -14,12 +14,10 @@
 <meta property="og:site_name" content="86jiangyuliang_PKM">
 <meta property="og:description" content="杂，各种内容">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/path/to/image">
 <meta property="article:published_time" content="2020-10-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-23T15:15:47.311Z">
+<meta property="article:modified_time" content="2020-12-23T15:22:13.703Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/path/to/image">
   
     <link rel="alternate" href="/atom.xml" title="86jiangyuliang_PKM" type="application/atom+xml">
   
@@ -760,7 +758,7 @@
 <tr>
 <td align="left">来自邮寄名单的邮件</td>
 <td align="left">list:</td>
-<td align="center">示例：list:<a href="mailto:&#x69;&#110;&#x66;&#x6f;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x69;&#110;&#x66;&#x6f;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a></td>
+<td align="center">示例：list:<a href="mailto:&#x69;&#x6e;&#x66;&#111;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;">&#x69;&#x6e;&#x66;&#111;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td align="left">包含特定颜色图标的邮件</td>
@@ -770,7 +768,7 @@
 <tr>
 <td align="left">按电子邮件搜索已发送的邮件</td>
 <td align="left">deliveredto:</td>
-<td align="center">示例：deliveredto:<a href="mailto:&#x75;&#x73;&#101;&#114;&#x6e;&#97;&#109;&#x65;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x75;&#x73;&#101;&#114;&#x6e;&#97;&#109;&#x65;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a></td>
+<td align="center">示例：deliveredto:<a href="mailto:&#117;&#115;&#101;&#114;&#110;&#x61;&#x6d;&#101;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#117;&#115;&#101;&#114;&#110;&#x61;&#x6d;&#101;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></td>
 </tr>
 <tr>
 <td align="left">特定类别中的邮件</td>
@@ -780,7 +778,7 @@
 <tr>
 <td align="left">包含特定 message-id 标头的邮件</td>
 <td align="left">Rfc822msgid:</td>
-<td align="center">示例：rfc822msgid:<a href="mailto:&#50;&#x30;&#48;&#53;&#x30;&#x33;&#50;&#x39;&#50;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#50;&#x30;&#48;&#53;&#x30;&#x33;&#50;&#x39;&#50;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></td>
+<td align="center">示例：rfc822msgid:<a href="mailto:&#50;&#48;&#x30;&#53;&#48;&#51;&#x32;&#x39;&#50;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#50;&#48;&#x30;&#53;&#48;&#51;&#x32;&#x39;&#50;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></td>
 </tr>
 <tr>
 <td align="left">含有或不含标签的邮件</td>
@@ -1306,37 +1304,57 @@
             - Page excerpt in plain text. Use this plugin to format the text
         # disableNunjucks
             - Disable rendering of Nunjucks tag &#123;&#123; &#125;&#125;/&#123;% %&#125; and tag plugins when enabled</code></pre>
-<h4 id="知识点：Hexo-标签插件-Tag-Plugins"><a href="#知识点：Hexo-标签插件-Tag-Plugins" class="headerlink" title="知识点：Hexo 标签插件 Tag Plugins"></a>知识点：Hexo 标签插件 Tag Plugins</h4><pre><code>    1. 介绍
+<h4 id="知识点：Hexo-标签插件-Tag-Plugins"><a href="#知识点：Hexo-标签插件-Tag-Plugins" class="headerlink" title="知识点：Hexo 标签插件 Tag Plugins"></a>知识点：Hexo 标签插件 Tag Plugins</h4><pre><code>    0. 注意
+        # 实际上的符号为 &#123; 和 % 连在一起作为开始，中间不加 \ 也不加空格，以 % 和 &#125; 连在一起作为结尾，中间不加 \ 也不加空格
+        # 为了避免对 blog 页面产生影响，添加了 \ 作为跳脱
+    1. 介绍
         # 标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
         # 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
-        # Tag plugins should not be wrapped inside Markdown syntax, e.g. []() is not supported.
+        # Tag plugins should not be wrapped inside Markdown syntax, e.g. [](&#123;% post_path lorem-ipsum %&#125;) is not supported.
         # Tag plugins 应该单独使用，不能被包裹在 markdown 语法中
             - 本知识点有部分内容无法在网页页面中显示，具体查看源码
     2. 引用块 Block Quote
         # 在文章中插入引言，可包含作者、来源和标题。
         # 别名 quote
         # 格式
-            <blockquote><content><footer><strong>[<author>[</strong><cite><source>]] [<link>] [<source_link_title>]</cite></footer></blockquote>
+            &#123;\% blockquote [&lt;author&gt;[, &lt;source&gt;]] [&lt;link&gt;] [&lt;source_link_title&gt;] %\&#125;
+            &lt;content&gt;
+            &#123;\% endblockquote %\&#125;
         # 样例
             - 不加任何形式的引用
-            <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Pellentesque hendrerit lacus ut purus iaculis feugiat.<br>Sed nec tempor elit, quis aliquam neque.<br>Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote>
+            &#123;\% blockquote %\&#125;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Pellentesque hendrerit lacus ut purus iaculis feugiat. 
+                Sed nec tempor elit, quis aliquam neque. 
+                Curabitur sed diam eget dolor fermentum semper at eu lorem.
+            &#123;\% endblockquote %\&#125;
         # 样例
             - 注明作者
-            <blockquote><p>Do not just seek happiness for yourself.<br>Seek happiness for all.<br>Through kindness.<br>Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+            &#123;\% blockquote David Levithan, Wide Awake %\&#125;
+                Do not just seek happiness for yourself.
+                Seek happiness for all.
+                Through kindness.
+                Through mercy.
+            &#123;\% endblockquote %\&#125;
         # 样例
             - 引用 Twitter
-            <blockquote><p>NEW: DevDocs now comes with syntax highlighting.<br><a target="_blank" rel="noopener" href="http://devdocs.io/">http://devdocs.io</a></p>
-<footer><strong>@DevDocs</strong><cite><a target="_blank" rel="noopener" href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+            &#123;\% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %\&#125;
+                NEW: DevDocs now comes with syntax highlighting.
+                http://devdocs.io
+            &#123;\% endblockquote %\&#125;
         # 样例
             - 引用网络上的文章
-            <blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
-<footer><strong>Seth Godin</strong><cite><a target="_blank" rel="noopener" href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>
+            &#123;\% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %\&#125;
+                Every interaction is both precious and an opportunity to delight.
+            &#123;\% endblockquote %\&#125;
     3. 代码块 Code Block
         # 在文章中插入代码。
         # 别名 code
         # 格式
+            &#123;\% codeblock [&lt;title&gt;] [lang:&lt;language&gt;] [&lt;url&gt;] [&lt;link_text&gt;] [&lt;additional_option&gt;[ ...]] %\&#125;
+                &lt;code_snippet&gt;
+            &#123;\% endcodeblock %\&#125;
+
 
         # &lt;additional_option&gt;
             - 格式
@@ -1349,99 +1367,109 @@
                 wrap:true                   &lt;== 将代码块包裹在 &lt;table&gt; html 标签中
         # 样例
             - 普通的代码块
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(&#39;Hello World!&#39;);</span><br><span class="line">                </span><br></pre></td></tr></table></figure>
+            &#123;\% codeblock %\&#125;
+                alert(&#39;Hello World!&#39;);
+            &#123;\% endcodeblock %\&#125;
         # 样例
             - 指定语言
-            <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br><span class="line">                </span><br></pre></td></tr></table></figure>
+            &#123;\% codeblock lang:objc %\&#125;
+                [rectangle setX: 10 y: 10 width: 20 height: 20];
+            &#123;\% endcodeblock %\&#125;
         # 样例
             - 带有 title
-            <figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br><span class="line">                </span><br></pre></td></tr></table></figure>
+            &#123;\% codeblock Array.map %\&#125;
+                array.map(callback[, thisArg])
+            &#123;\% endcodeblock %\&#125;
         # 样例
             - 带有 title 和 url
-            <figure class="highlight plain"><figcaption><span>_.compact</span><a target="_blank" rel="noopener" href="http://underscorejs.org/#compact">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_.compact([0, 1, false, 2, &#39;&#39;, 3]);</span><br><span class="line">&#x3D;&gt; [1, 2, 3]</span><br><span class="line">                </span><br></pre></td></tr></table></figure>
+            &#123;\% codeblock _.compact http://underscorejs.org/#compact Underscore.js %\&#125;
+                _.compact([0, 1, false, 2, &#39;&#39;, 3]);
+                =&gt; [1, 2, 3]
+            &#123;\% endcodeblock %\&#125;
     4. 反引号代码块 Backtick Code Block
         # 另一种形式的代码块，不同的是它使用三个反引号来包裹。
         # 格式
             ``` [&lt;language&gt;] [&lt;title&gt;] [&lt;url&gt;] [&lt;link_text&gt;] &lt;code_snippet&gt; ```
     5. Tag Plugins 其他高级语法
         # 在文章中插入 Pull quote
-            <blockquote class="pullquote [<class>]"><content>
-</blockquote>
+            &#123;\% pullquote [&lt;class&gt;] %\&#125;
+                &lt;content&gt;
+            &#123;\% endpullquote %\&#125;
         # 在文章中嵌入 jsFiddle
-            <iframe scrolling="no" width="[&lt;width&gt;]" height="[&lt;height&gt;]" src="https://jsfiddle.net/shorttag/embedded/[%3Ctabs%3E]/[%3Cskin%3E]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+            &#123;\% jsfiddle shorttag [&lt;tabs&gt;] [&lt;skin&gt;] [&lt;width&gt;] [&lt;height&gt;] %\&#125;
         # 在文章中嵌入 Gist
-            <script src="//gist.github.com/gist_id.js?file=[<filename>]"></script>
+            &#123;\% gist gist_id [&lt;filename&gt;] %\&#125;
         # 在文章中插入 iframe
-            <iframe src="%3Curl%3E" width="[&lt;width&gt;]" height="[&lt;height&gt;]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+            &#123;\% iframe &lt;url&gt; [&lt;width&gt;] [&lt;height&gt;] %\&#125;
         # 在文章中插入指定大小的图片
-            <img src="/path/to/image" class="[class names]" title="[&lt;width&gt;] [&lt;height&gt;] " alt="title text">
+            &#123;\% img [class names] /path/to/image [&lt;width&gt;] [&lt;height&gt;] &#39;&quot;title text&quot; &quot;alt text&quot;&#39; %\&#125;
         # 在文章中插入链接，并自动给外部链接添加 target=&quot;_blank&quot; 属性
-            <a href="" title="" target="">text url [external] [title]</a>
+            &#123;\% link text url [external] [title] %\&#125;
     6. 嵌入外部代码文件内容 Include Code
         # 插入 source/downloads/code 文件夹内的代码文件
             - source/downloads/code 不是固定的，取决于你在配置文件中 code_dir 的配置
         # 格式
-            
+            &#123;\% include_code [&lt;title&gt;] [lang:&lt;language&gt;] [from:&lt;line_number&gt;] [to:&lt;line_number&gt;] &lt;file_path&gt; %\&#125;
         # 样例
             - 嵌入 test.js 文件全文
-                
+                &#123;\% include_code lang:javascript test.js %\&#125;
             - 嵌入 test.js 文件全文
-                
+                &#123;\% include_code lang:javascript test.js %\&#125;
             - 只嵌入第 3 行
-                
+                &#123;\% include_code lang:javascript from:3 to:3 test.js %\&#125;
             - 嵌入第 5 行至第 8 行
-                
+                &#123;\% include_code lang:javascript from:5 to:8 test.js %\&#125;
             - 嵌入第 5 行至文件结束
-                
+                &#123;\% include_code lang:javascript from:5 test.js %\&#125;
             - 嵌入第 1 行至第 8 行
-                
+                &#123;\% include_code lang:javascript to:8 test.js %\&#125;
     7. 嵌入 Youtube 视频
         # 嵌入 Youtube 视频、视频列表
         # 格式
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/videoseries?list=%3Cvideo_id%3E" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+            &#123;\% youtube &lt;video_id&gt; [[&#39;]&lt;type&gt;[&#39;]] [&lt;cookie&gt;] %\&#125;
         # 样例
             - 嵌入普通视频
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/lJIrF4YjHfQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+                &#123;\% youtube lJIrF4YjHfQ %\&#125;
             - 嵌入播放列表
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/videoseries?list=PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+                &#123;\% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#39;playlist&#39; %\&#125;
             - 隐私模式，此模式不使用 YouTube cookie
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/videoseries?list=lJIrF4YjHfQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/videoseries?list=PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+                &#123;\% youtube lJIrF4YjHfQ false %\&#125;
+                &#123;\% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#39;playlist&#39; false %\&#125;
     8. 嵌入 Vimeo 视频
         # 格式
-            <div class="video-container"><iframe src="https://player.vimeo.com/video//%3Cvideo_id/%3E" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+            &#123;\% vimeo &lt;video_id&gt; %\&#125;
     9. 添加其他文章链接
         # 引用其他文章的链接
         # 文章的 md 文件需要放在当前站点的文件夹中
             - 不一定是 source 文件夹，其他文件夹也可
         # 在使用此标签时可以忽略文章文件所在的路径或者文章的永久链接信息、如语言、日期。
         # 格式
-            
-            <a href="#">Post not found: <filename> [<title>] [<escape>]</a>
+            &#123;\% post_path &lt;filename&gt; %\&#125;
+            &#123;\% post_link &lt;filename&gt; [&lt;title&gt;] [&lt;escape&gt;] %\&#125;
             - &lt;filename&gt;            &lt;== md 文件的文件名
             - &lt;title&gt;               &lt;== 链接标题，默认为文章的标题
             - &lt;escape&gt;
                 false                   &lt;== 解析 title 中的功能字符
         # 样例
             - 简单文章链接
-                <a href="#">Post not found: hexo-3-8-released</a>
+                &#123;\% post_link hexo-3-8-released %\&#125;
             - 指定 title
-                <a href="#">Post not found: hexo-3-8-released 通往文章的链接</a>
+                &#123;\% post_link hexo-3-8-released &#39;通往文章的链接&#39; %\&#125;
             - 不解析 title 中的功能字符
-                <a href="#">Post not found: hexo-4-released How to use <b> tag in title</a>
+                &#123;\% post_link hexo-4-released &#39;How to use &lt;b&gt; tag in title&#39; %\&#125;
             - 解析 title 中的功能字符
-                <a href="#">Post not found: hexo-4-released <b>bold</b> custom title false</a>
+                &#123;\% post_link hexo-4-released &#39;&lt;b&gt;bold&lt;/b&gt; custom title&#39; false %\&#125;
     10. 引用资源 Include Assets
         # 格式
-                   &lt;== 引用图片
-                                                                         &lt;== 不懂
-                                                        &lt;== 不懂
+            &#123;\% asset_img [&lt;class&gt;] &lt;slug&gt; [&lt;width&gt;] [&lt;height&gt;] [&lt;title_text&gt; [&lt;alt_text&gt;]] %\&#125;       &lt;== 引用图片
+            &#123;\% asset_path &lt;filename&gt; %\&#125;                                                             &lt;== 不懂
+            &#123;\% asset_link &lt;filename&gt; [title] [escape] %\&#125;                                            &lt;== 不懂
     11. Raw
         # 如果您想在文章中插入 Swig 标签，可以尝试使用 Raw 标签，以免发生解析异常。
         # 格式
-            
-                <content>
-                
+            &#123;\% raw %\&#125;
+            &lt;content&gt;
+            &#123;\% endraw %\&#125;
     12. 摘要 Post Excerpt
         # &lt;!-- more --&gt; 之前的文字将会被视为摘要，会在首页中显示，并显示在正文中
         # &lt;!-- more --&gt; 之后的文字不会被视为摘要，会正常显示在正文中
@@ -1465,9 +1493,9 @@
             - source/&lt;filename&gt;
         # 引用
             - Hexo 3.0 开始，默认只能使用 Tag Plugins 在文章中进行引用，仅指定 filename 即可
-            &#123;% asset_img [<class>] <slug> [<width>] [<height>] [<title_text> [<alt_text>]] %&#125;
-            &#123;% asset_path <filename> %&#125;
-            &#123;% asset_link <filename> [title] [escape] %&#125;
+            &#123;\% asset_img [&lt;class&gt;] &lt;slug&gt; [&lt;width&gt;] [&lt;height&gt;] [&lt;title_text&gt; [&lt;alt_text&gt;]] %\&#125;
+            &#123;\% asset_path &lt;filename&gt; %\&#125;
+            &#123;\% asset_link &lt;filename&gt; [title] [escape] %\&#125;
         # markdown 引用
             - hexo-renderer-marked 3.1.0 开始，可以通过 markdown 来引用 Post Asset Folder
             - _config.yml 配置项
