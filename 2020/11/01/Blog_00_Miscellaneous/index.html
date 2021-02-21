@@ -15,7 +15,7 @@
 <meta property="og:description" content="杂，各种内容">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-23T15:25:27.682Z">
+<meta property="article:modified_time" content="2021-02-21T10:53:16.159Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -88,25 +88,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点  "></a>知识点  </h2><p><strong>Chapter_01 杂</strong><br><strong>Chapter_02 GOOGLE 搜索</strong><br><strong>Chapter_03 GMail</strong><br><strong>Chapter_04 YOUTUBE</strong><br>Chapter_05<br>Chapter_06<br>Chapter_07<br><strong>Chapter_08 Markdown</strong><br>Chapter_09 Latex<br><strong>Chapter_10 hexo</strong><br>Chapter_11 node.js<br>Chapter_12 Git<br>Chapter_13 Anaconda<br>Chapter_14 Chrome<br><strong>Chapter_15 Reguler_Expression</strong><br>Chapter_16 Xshell  </p>
+        <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点  "></a>知识点  </h2><p><strong>Chapter_01_笔记格式</strong><br><strong>Chapter_02_杂</strong><br><strong>Chapter_03_GOOGLE</strong><br><strong>Chapter_04_YOUTUBE</strong><br>Chapter_05<br>Chapter_06<br>Chapter_07<br><strong>Chapter_08_Markdown</strong><br>Chapter_09_Latex<br><strong>Chapter_10_Hexo</strong><br>Chapter_11_node.js<br>Chapter_12_Git<br>Chapter_13_Anaconda<br>Chapter_14_Chrome<br><strong>Chapter_15_Reguler_Expression</strong><br>Chapter_16_Xshell  </p>
 <hr>
-<h1 id="Chapter-01-杂"><a href="#Chapter-01-杂" class="headerlink" title="Chapter_01 杂"></a>Chapter_01 杂</h1><h4 id="知识点：笔记语法"><a href="#知识点：笔记语法" class="headerlink" title="知识点：笔记语法"></a>知识点：笔记语法</h4><pre><code>    1. 中括号 []  
+<h1 id="Chapter-01-笔记格式"><a href="#Chapter-01-笔记格式" class="headerlink" title="Chapter_01_笔记格式"></a>Chapter_01_笔记格式</h1><h4 id="知识点：笔记规则"><a href="#知识点：笔记规则" class="headerlink" title="知识点：笔记规则"></a>知识点：笔记规则</h4><pre><code>    1. 目录
+        # 目录加粗表示已整理完成
+        # 目录未加粗表示还没有开始整理
+    2. 章标题
+        # 标题中不能带空格
+        # 标题遵守格式 Chapter_NN_&lt;chapter_name&gt;
+        # 
+    3. 章分文本
+        # 章分文本全部为 txt 格式
+        # 章分文本文件名遵守格式 Chapter_NN_&lt;chapter_name&gt;.txt
+        # 第一行必须是 --- 及两个空格  
+        # 最后一行必须是空行  
+    4. 文本行
+        # 每一行结尾必须为两个空格
+        # 所有 tab 需转换为空格，需使用新版本的 notepad
+    5. 合并命令
+        # for %f in (*.txt) do type &quot;%f&quot; &gt;&gt; Blog_00_Miscellaneous.md</code></pre>
+<h4 id="知识点：笔记语法"><a href="#知识点：笔记语法" class="headerlink" title="知识点：笔记语法"></a>知识点：笔记语法</h4><pre><code>    1. 中括号 []  
         # 表示可选内容  
     2. 尖括号 &lt;&gt;  
         # 表示手动输入内容  
-    3. 箭头 &lt;--  
-        # 表示行级说明  
-    4. 序号  
+    3. 箭头 &lt;==  
+        # 表示行级注释说明  
+    4. 序号 N.  
         # 表示知识点第一层级  
+        # 与内容之间应间隔一个空格  
     5. 井号  
         # 表示知识点第二层级  
+        # 与内容之间应间隔一个空格  
     6. 减号  
-        # 表示知识点第三层级，上一项与下一项之间为顺序关系  
+        # 表示知识点第三层级
+        # 上一项与下一项之间为顺序关系  
+        # 与内容之间应间隔一个空格  
     7. 星号  
-        # 表示知识点第三层级，上一项与下一项之间为平等关系  
-    8. 知识点最多到第四层级  </code></pre>
-<h4 id="知识点：希腊字母"><a href="#知识点：希腊字母" class="headerlink" title="知识点：希腊字母"></a>知识点：希腊字母</h4><hr>
-<table>
+        # 表示知识点第三层级
+        # 上一项与下一项之间为平等关系  
+        # 与内容之间应间隔一个空格  
+    8. 知识点最多到第四层级  
+    9. 表格
+        # 使用 &lt;p&gt; &lt;/p&gt; 实现表格内换行</code></pre>
+<hr>
+<h1 id="Chapter-02-杂"><a href="#Chapter-02-杂" class="headerlink" title="Chapter_02_杂"></a>Chapter_02_杂</h1><h4 id="知识点：希腊字母"><a href="#知识点：希腊字母" class="headerlink" title="知识点：希腊字母"></a>知识点：希腊字母</h4><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -515,7 +540,8 @@
 <td align="center">quadrillionth</td>
 </tr>
 </tbody></table>
-<h1 id="Chapter-02-GOOGLE-搜索"><a href="#Chapter-02-GOOGLE-搜索" class="headerlink" title="Chapter_02 GOOGLE 搜索"></a>Chapter_02 GOOGLE 搜索</h1><h4 id="知识点：Google-搜索技巧"><a href="#知识点：Google-搜索技巧" class="headerlink" title="知识点：Google 搜索技巧"></a>知识点：Google 搜索技巧</h4><pre><code>    1. 双引号 &quot;&quot;  
+<hr>
+<h1 id="Chapter-03-GOOGLE"><a href="#Chapter-03-GOOGLE" class="headerlink" title="Chapter_03 GOOGLE"></a>Chapter_03 GOOGLE</h1><h4 id="知识点：Google-搜索技巧"><a href="#知识点：Google-搜索技巧" class="headerlink" title="知识点：Google 搜索技巧"></a>知识点：Google 搜索技巧</h4><pre><code>    1. 双引号 &quot;&quot;  
         # 进行精确匹配  
     2. 加号 +  
         # 必须包含内容  
@@ -546,8 +572,7 @@
         # 查询英文单词的意思  
     14. &lt;N&gt;美元=？人民币  
         # 汇率换算  </code></pre>
-<h1 id="Chapter-03-GMail"><a href="#Chapter-03-GMail" class="headerlink" title="Chapter_03 GMail"></a>Chapter_03 GMail</h1><h4 id="知识点：Gmail-搜索技巧"><a href="#知识点：Gmail-搜索技巧" class="headerlink" title="知识点：Gmail 搜索技巧"></a>知识点：Gmail 搜索技巧</h4><hr>
-<table>
+<h4 id="知识点：Gmail-搜索技巧"><a href="#知识点：Gmail-搜索技巧" class="headerlink" title="知识点：Gmail 搜索技巧"></a>知识点：Gmail 搜索技巧</h4><table>
 <thead>
 <tr>
 <th align="left">搜索条件</th>
@@ -758,7 +783,7 @@
 <tr>
 <td align="left">来自邮寄名单的邮件</td>
 <td align="left">list:</td>
-<td align="center">示例：list:<a href="mailto:&#x69;&#110;&#x66;&#111;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x69;&#110;&#x66;&#111;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></td>
+<td align="center">示例：list:<a href="mailto:&#x69;&#x6e;&#102;&#x6f;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#109;">&#x69;&#x6e;&#102;&#x6f;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td align="left">包含特定颜色图标的邮件</td>
@@ -768,7 +793,7 @@
 <tr>
 <td align="left">按电子邮件搜索已发送的邮件</td>
 <td align="left">deliveredto:</td>
-<td align="center">示例：deliveredto:<a href="mailto:&#117;&#115;&#x65;&#114;&#110;&#x61;&#x6d;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#117;&#115;&#x65;&#114;&#110;&#x61;&#x6d;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></td>
+<td align="center">示例：deliveredto:<a href="mailto:&#x75;&#x73;&#x65;&#x72;&#110;&#x61;&#109;&#101;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x75;&#x73;&#x65;&#x72;&#110;&#x61;&#109;&#101;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td align="left">特定类别中的邮件</td>
@@ -778,7 +803,7 @@
 <tr>
 <td align="left">包含特定 message-id 标头的邮件</td>
 <td align="left">Rfc822msgid:</td>
-<td align="center">示例：rfc822msgid:<a href="mailto:&#50;&#48;&#48;&#53;&#48;&#51;&#x32;&#x39;&#x32;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#109;">&#50;&#48;&#48;&#53;&#48;&#51;&#x32;&#x39;&#x32;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#109;</a></td>
+<td align="center">示例：rfc822msgid:<a href="mailto:&#x32;&#x30;&#x30;&#x35;&#48;&#x33;&#x32;&#57;&#x32;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#46;&#99;&#x6f;&#109;">&#x32;&#x30;&#x30;&#x35;&#48;&#x33;&#x32;&#57;&#x32;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#46;&#99;&#x6f;&#109;</a></td>
 </tr>
 <tr>
 <td align="left">含有或不含标签的邮件</td>
@@ -791,7 +816,8 @@
 <td align="center">示例：holiday AROUND 10 vacation <p> 示例：”secret AROUND 25 birthday” </p></td>
 </tr>
 </tbody></table>
-<h1 id="Chapter-04-YOUTUBE"><a href="#Chapter-04-YOUTUBE" class="headerlink" title="Chapter_04 YOUTUBE"></a>Chapter_04 YOUTUBE</h1><h4 id="知识点–概念：YOUTUBE-播放器快捷键"><a href="#知识点–概念：YOUTUBE-播放器快捷键" class="headerlink" title="知识点–概念：YOUTUBE 播放器快捷键"></a>知识点–概念：YOUTUBE 播放器快捷键</h4><table>
+<hr>
+<h1 id="Chapter-04-YOUTUBE"><a href="#Chapter-04-YOUTUBE" class="headerlink" title="Chapter_04_YOUTUBE"></a>Chapter_04_YOUTUBE</h1><h4 id="知识点–概念：YOUTUBE-播放器快捷键"><a href="#知识点–概念：YOUTUBE-播放器快捷键" class="headerlink" title="知识点–概念：YOUTUBE 播放器快捷键"></a>知识点–概念：YOUTUBE 播放器快捷键</h4><table>
 <thead>
 <tr>
 <th align="center">键盘快捷键</th>
@@ -899,7 +925,8 @@
 <td align="center">打开迷你播放器</td>
 </tr>
 </tbody></table>
-<h1 id="Chapter-05"><a href="#Chapter-05" class="headerlink" title="Chapter_05"></a>Chapter_05</h1><h1 id="Chapter-06"><a href="#Chapter-06" class="headerlink" title="Chapter_06"></a>Chapter_06</h1><h1 id="Chapter-07"><a href="#Chapter-07" class="headerlink" title="Chapter_07"></a>Chapter_07</h1><h1 id="Chapter-08-Markdown"><a href="#Chapter-08-Markdown" class="headerlink" title="Chapter_08 Markdown"></a>Chapter_08 Markdown</h1><h4 id="知识点：markdown-介绍"><a href="#知识点：markdown-介绍" class="headerlink" title="知识点：markdown 介绍"></a>知识点：markdown 介绍</h4><pre><code>    1.官网  
+<hr>
+<h1 id="Chapter-08-Markdown"><a href="#Chapter-08-Markdown" class="headerlink" title="Chapter_08_Markdown"></a>Chapter_08_Markdown</h1><h4 id="知识点：markdown-介绍"><a href="#知识点：markdown-介绍" class="headerlink" title="知识点：markdown 介绍"></a>知识点：markdown 介绍</h4><pre><code>    1.官网  
         # https://daringfireball.net/projects/markdown/  </code></pre>
 <h4 id="知识点：Markdown-中需要转义的字符"><a href="#知识点：Markdown-中需要转义的字符" class="headerlink" title="知识点：Markdown 中需要转义的字符"></a>知识点：Markdown 中需要转义的字符</h4><pre><code>    1.转义字符 \  
         # \     反斜线  
@@ -1093,7 +1120,8 @@
                     &lt;comment&gt;
                     ...
                 &quot;</code></pre>
-<h1 id="Chapter-09-Latex"><a href="#Chapter-09-Latex" class="headerlink" title="Chapter_09 Latex"></a>Chapter_09 Latex</h1><h1 id="Chapter-10-hexo"><a href="#Chapter-10-hexo" class="headerlink" title="Chapter_10 hexo"></a>Chapter_10 hexo</h1><h4 id="知识点：Hexo-介绍"><a href="#知识点：Hexo-介绍" class="headerlink" title="知识点：Hexo 介绍"></a>知识点：Hexo 介绍</h4><pre><code>    1. Hexo 默认使用 highlight.js 引擎进行代码块的渲染
+<hr>
+<h1 id="Chapter-10-Hexo"><a href="#Chapter-10-Hexo" class="headerlink" title="Chapter_10_Hexo"></a>Chapter_10_Hexo</h1><h4 id="知识点：Hexo-介绍"><a href="#知识点：Hexo-介绍" class="headerlink" title="知识点：Hexo 介绍"></a>知识点：Hexo 介绍</h4><pre><code>    1. Hexo 默认使用 highlight.js 引擎进行代码块的渲染
     2. Hexo 默认安装了 hexo-renderer-marked 和 hexo-renderer-ejs，因而可以使用 markdown 或 ejs 写文章
     3. Hexo 配置文件支持 yml 和 json 格式
     4. Hexo 文件夹目录
@@ -1306,7 +1334,7 @@
             - Disable rendering of Nunjucks tag &#123;&#123; &#125;&#125;/&#123;% %&#125; and tag plugins when enabled</code></pre>
 <h4 id="知识点：Hexo-标签插件-Tag-Plugins"><a href="#知识点：Hexo-标签插件-Tag-Plugins" class="headerlink" title="知识点：Hexo 标签插件 Tag Plugins"></a>知识点：Hexo 标签插件 Tag Plugins</h4><pre><code>    0. 注意
         # 实际上的符号为 &#123; 和 % 连在一起作为开始，中间不加 \ 也不加空格，以 % 和 &#125; 连在一起作为结尾，中间不加 \ 也不加空格
-        # 为了避免对 blog 页面产生影响，添加了 \ 作为跳脱
+        # 为了避免对 Blog 页面产生影响，添加了 \ 作为跳脱
     1. 介绍
         # 标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
         # 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
@@ -1520,7 +1548,8 @@
         # 辅助函数 Helper https://hexo.io/zh-cn/docs/helpers
         # 国际化 https://hexo.io/zh-cn/docs/internationalization
         # 代码高亮 https://hexo.io/zh-cn/docs/syntax-highlight</code></pre>
-<h1 id="Chapter-11-node-js"><a href="#Chapter-11-node-js" class="headerlink" title="Chapter_11 node.js"></a>Chapter_11 node.js</h1><h1 id="Chapter-12-git"><a href="#Chapter-12-git" class="headerlink" title="Chapter_12 git"></a>Chapter_12 git</h1><h1 id="Chapter-13-Anaconda"><a href="#Chapter-13-Anaconda" class="headerlink" title="Chapter_13 Anaconda"></a>Chapter_13 Anaconda</h1><h1 id="Chapter-14-Chrome"><a href="#Chapter-14-Chrome" class="headerlink" title="Chapter_14 Chrome"></a>Chapter_14 Chrome</h1><h1 id="Chapter-15-Reguler-Expression"><a href="#Chapter-15-Reguler-Expression" class="headerlink" title="Chapter_15 Reguler_Expression"></a>Chapter_15 Reguler_Expression</h1><h4 id="知识点：正则表达式介绍"><a href="#知识点：正则表达式介绍" class="headerlink" title="知识点：正则表达式介绍"></a>知识点：正则表达式介绍</h4><pre><code>    1. 网址  
+<hr>
+<h1 id="Chapter-15-Reguler-Expression"><a href="#Chapter-15-Reguler-Expression" class="headerlink" title="Chapter_15_Reguler_Expression"></a>Chapter_15_Reguler_Expression</h1><h4 id="知识点：正则表达式介绍"><a href="#知识点：正则表达式介绍" class="headerlink" title="知识点：正则表达式介绍"></a>知识点：正则表达式介绍</h4><pre><code>    1. 网址  
         # https://www.regular-expressions.info/reference.html  
     2. 正则表达式区分大小写，case-sensitive  </code></pre>
 <h4 id="知识点：正则表达式基础字符"><a href="#知识点：正则表达式基础字符" class="headerlink" title="知识点：正则表达式基础字符"></a>知识点：正则表达式基础字符</h4><pre><code>    1. 点  
@@ -1646,7 +1675,22 @@
     3. 跨行搜索  
         # /.../m  
     4. 这三个 flag 是某种场景下的应用，不在正则的标准中，在 notepad 中都不适用  </code></pre>
-<h1 id="Chapter-16-Xshell"><a href="#Chapter-16-Xshell" class="headerlink" title="Chapter_16 Xshell"></a>Chapter_16 Xshell</h1>
+<hr>
+<h1 id="知识点：Xshell-快捷键"><a href="#知识点：Xshell-快捷键" class="headerlink" title="知识点：Xshell 快捷键"></a>知识点：Xshell 快捷键</h1><pre><code>    1.查看
+        # Ctrl+Alt+Shift+[  &lt;== 减小字号
+        # Ctrl+Alt+Shift+]  &lt;== 增大字号
+        # Alt+Enter         &lt;== 全屏
+    2.连接
+        # Shift+Alt+N       &lt;== 新建空白选项卡
+        # Shift+Alt+T       &lt;== 复制会话选项卡
+        # Ctrl+Alt+]        &lt;== 返回 local shell
+        # Alt+C             &lt;== 断开连接
+    3.文件
+        # Alt+O             &lt;== 打开
+        # Alt+P             &lt;== 会话属性
+        # Alt+N             &lt;== 新建会话
+        # Ctrl+W            &lt;== 关闭选项卡（手动设置）</code></pre>
+
       
     </div>
     <footer class="article-footer">
@@ -1659,11 +1703,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/01/Blog_01_Linux/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/01/Blog_17_Oracle_Database/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Blog_01_Linux
+          Blog_17_Oracle_Database
         
       </div>
     </a>
@@ -1707,27 +1751,11 @@
           </li>
         
           <li>
-            <a href="/2020/11/01/Blog_61_Hexo/">Blog_61_Hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/01/Blog_23_notepad/">Blog_23_notepad</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/01/Blog_22_Windows/">Blog_22_Windows</a>
-          </li>
-        
-          <li>
             <a href="/2020/11/01/Blog_18_MySql_Database/">Blog_18_MySql_Database</a>
           </li>
         
           <li>
             <a href="/2020/11/01/Blog_17_Oracle_Database/">Blog_17_Oracle_Database</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/01/Blog_01_Linux/">Blog_01_Linux</a>
           </li>
         
           <li>
@@ -1746,7 +1774,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
+      &copy; 2021 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
