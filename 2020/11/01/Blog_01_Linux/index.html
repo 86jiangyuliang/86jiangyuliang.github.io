@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Blog_01_Linux | 86jiangyuliang_PKM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Linux 笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog_01_Linux">
+<meta property="og:url" content="http://example.com/2020/11/01/Blog_01_Linux/index.html">
+<meta property="og:site_name" content="86jiangyuliang_PKM">
+<meta property="og:description" content="Linux 笔记">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-31T16:01:00.000Z">
+<meta property="article:modified_time" content="2021-02-27T13:38:50.766Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="86jiangyuliang_PKM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">86jiangyuliang_PKM</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Blog_01_Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/01/Blog_01_Linux/" class="article-date">
+  <time datetime="2020-10-31T16:01:00.000Z" itemprop="datePublished">2020-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Blog_01_Linux
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>知识点–概念，指令，配置<br>知识点–脚本  </p>
+<hr>
+<p>Chapter_01_MAN<br>Chapter_02_SSH<br>Chapter_03_软件管理<br>Chapter_04_Service_和_Deamon<br>Chapter_05_Linux_Booting_和_Driver<br>Chapter_06_VIM<br>Chapter_07_Bash<br>Chapter_08_Bash_Sript<br>Chapter_09_文本处理<br>Chapter_10_用户和组<br>Chapter_11_进程<br>Chapter_12_网络<br>Chapter_13_目录和文件<br>Chapter_14_磁盘和分区<br>Chapter_15_文件系统<br>Chapter_16_LVM<br>Chapter_17_定时任务<br>Chapter_18_压缩和解压缩<br>Chapter_19_基本操作命令<br>Chapter_20_SELinux<br>Chapter_21_图形化界面<br>Chapter_22_光盘  </p>
+<hr>
+<h1 id="Chapter-01-MAN"><a href="#Chapter-01-MAN" class="headerlink" title="Chapter-01-MAN"></a>Chapter-01-MAN</h1><h2 id="1-1-MAN"><a href="#1-1-MAN" class="headerlink" title="1.1 MAN"></a>1.1 MAN</h2><h3 id="1-1-1-MAN"><a href="#1-1-1-MAN" class="headerlink" title="1.1.1 MAN"></a>1.1.1 MAN</h3><h4 id="知识点–概念：man"><a href="#知识点–概念：man" class="headerlink" title="知识点–概念：man"></a>知识点–概念：man</h4><pre><code>    1.man 相关软件包
+        # man-db，包括 man(1)、mandb(8)
+        # man-pages</code></pre>
+<h4 id="知识点–指令：man"><a href="#知识点–指令：man" class="headerlink" title="知识点–指令：man"></a>知识点–指令：man</h4><pre><code>    1.介绍
+    2.常用
+    3.格式
+        # man [&lt;options&gt;] [&lt;section&gt;] &lt;string&gt;
+    4.&lt;section&gt;
+        # 1     -- Executable programs or shell commands
+        # 2     -- System calls (functions provided by the kernel)
+        # 3     -- Library calls (functions within program libraries)
+        # 4     -- Special files (usually found in /dev)
+        # 5     -- File formats and conventions eg /etc/passwd
+        # 6     -- Games
+        # 7     -- Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+        # 8     -- System administration commands (usually only for root)
+        # 9     -- Kernel routines [Non standard]
+    5.选项
+        # &lt;Getting_help&gt;
+            - -?, --help                    -- 查看帮助
+            -   , --usage                   -- 查看 usage
+            - -V, --version                 -- 查看 version
+        # &lt;General_options&gt;
+            - -C, --config-file=&lt;file&gt;      -- 使用指定的配置文件
+            - -d, --debug                   -- debug
+            - -D, --default                 -- 使用默认权限
+            -   , --warnings[=WARNINGS]
+        # &lt;Main_modes_of_operation&gt;
+            - -f, --whatis                      -- whatis
+            - -k, --apropos                     -- apropos
+            - -K, --global-apropos              -- 全局搜索
+            - -l, --local-file                  -- 查看指定的文件
+            - -w, --where, --path, --location       -- 查看 manpage 文件的位置
+            - -W, --where-cat, --location-cat       -- 查看 manpage 文件的位置，cat file 格式
+            - -c, --catman
+            - -R, --recode=&lt;encoding&gt;
+        # &lt;Finding_manual_pages&gt;
+            - -i, --ignore-case             -- 忽略大小写，默认
+            - -I, --match-case              -- 匹配大小写
+            -   , --regex                   -- 使用 regex
+            -   , --wildcard                -- 使用 wildcard
+            - -L, --locale=LOCALE
+            - -m, --systems=SYSTEM
+            - -M, --manpath=PATH
+            - -S, -s, --sections=LIST
+            - -e, --extension=EXTENSION
+            -   , --names-only
+            - -a, --all
+            - -u, --update
+            -   , --no-subpages
+        # &lt;Controlling_formatted_output&gt;
+            - -P, --pager=PAGER
+            - -r, --prompt=STRING
+            - -7, --ascii
+            - -E, --encoding=ENCODING
+            -   , --no-hyphenation, --nh 
+            -   ，--no-justification, --nj 
+            - -p, --preprocessor=STRING
+            - -t, --troff
+            - -T, --troff-device[=DEVICE]
+            - -H, --html[=BROWSER]
+            - -X, --gxditview[=RESOLUTION]
+            - -Z, --ditroff</code></pre>
+<h3 id="1-1-2-help"><a href="#1-1-2-help" class="headerlink" title="1.1.2 help"></a>1.1.2 help</h3><h4 id="知识点–指令：help，查看-bash-build-in-命令的帮助"><a href="#知识点–指令：help，查看-bash-build-in-命令的帮助" class="headerlink" title="知识点–指令：help，查看 bash build-in 命令的帮助"></a>知识点–指令：help，查看 bash build-in 命令的帮助</h4><pre><code>    1.格式
+        # help                              -- 返回 bash bulid-in 命令的列表
+        # help [-dms] &lt;pattern&gt;[ ...]
+    2.选项
+        # -d        -- 返回简略信息
+        # -m        -- 返回 pseudo-manpage 格式
+        # -s        -- 返回命令格式</code></pre>
+<h2 id="1-2-INFO"><a href="#1-2-INFO" class="headerlink" title="1.2 INFO"></a>1.2 INFO</h2><hr>
+<h1 id="Chapter-02-SSH"><a href="#Chapter-02-SSH" class="headerlink" title="Chapter_02_SSH"></a>Chapter_02_SSH</h1><h2 id="2-1-SSH"><a href="#2-1-SSH" class="headerlink" title="2.1 SSH"></a>2.1 SSH</h2><h3 id="2-1-1-SSH-介绍"><a href="#2-1-1-SSH-介绍" class="headerlink" title="2.1.1 SSH 介绍"></a>2.1.1 SSH 介绍</h3><h4 id="知识点–概念：ssh"><a href="#知识点–概念：ssh" class="headerlink" title="知识点–概念：ssh"></a>知识点–概念：ssh</h4><pre><code>    1.相关软件包
+        # openssh-clients，包括 ssh(1)、scp(1)、ssh_config(5)、ssh-keyscan(1) 等
+        # openssh-server，包括 sshd(8)、sshd_config(5)
+        # openssh，包括 ssh-keygen(1)
+    2.相关 MAN
+        # man 1 ssh
+        # man 5 ssh_config
+        # man 8 sshd
+        # man 5 sshd_config
+        # man 1 ssh-keygen</code></pre>
+<h3 id="2-1-2-SSH-工作原理"><a href="#2-1-2-SSH-工作原理" class="headerlink" title="2.1.2 SSH 工作原理"></a>2.1.2 SSH 工作原理</h3><h3 id="2-1-2-SSH-指令"><a href="#2-1-2-SSH-指令" class="headerlink" title="2.1.2 SSH 指令"></a>2.1.2 SSH 指令</h3><h4 id="知识点–指令：ssh"><a href="#知识点–指令：ssh" class="headerlink" title="知识点–指令：ssh"></a>知识点–指令：ssh</h4><hr>
+<h1 id="Chapter-03-软件管理"><a href="#Chapter-03-软件管理" class="headerlink" title="Chapter_03_软件管理"></a>Chapter_03_软件管理</h1><h2 id="3-1-which"><a href="#3-1-which" class="headerlink" title="3.1 which"></a>3.1 which</h2><h3 id="3-1-1-which"><a href="#3-1-1-which" class="headerlink" title="3.1.1 which"></a>3.1.1 which</h3><h4 id="知识点–指令：which，搜索指令的程序文件，根据-PATH-搜索"><a href="#知识点–指令：which，搜索指令的程序文件，根据-PATH-搜索" class="headerlink" title="知识点–指令：which，搜索指令的程序文件，根据 PATH 搜索"></a>知识点–指令：which，搜索指令的程序文件，根据 PATH 搜索</h4><pre><code>    1.介绍
+        # 只搜索程序文件，不搜索其他如 shell build-in
+    2.格式
+        # which [-a] &lt;command&gt;
+    3.选项
+        # -a，返回所有的匹配项</code></pre>
+<h4 id="知识点–指令：whereis，搜索指令的程序文件，从特定的目录进行搜索"><a href="#知识点–指令：whereis，搜索指令的程序文件，从特定的目录进行搜索" class="headerlink" title="知识点–指令：whereis，搜索指令的程序文件，从特定的目录进行搜索"></a>知识点–指令：whereis，搜索指令的程序文件，从特定的目录进行搜索</h4><pre><code>    1.介绍
+        # 只能用于查找二进制文件、源代码文件、man 手册页
+        # whereis 从特定的目录搜索指令的程序文件
+        # 主要是针对 /bin /sbin 的程序文件，和 /usr/share/man 的 man 手册页
+    2.格式
+        # whereis -l
+        # whereis [-bmsu] [-BMS &lt;directory&gt;[ ...]] [-f] &lt;name&gt;[ ...]
+    3.选项
+        # -l                    -- 列出 whereis 默认的搜索目录
+        # -b                    -- 只搜索二进制文件
+        # -B &lt;directory&gt;[ ...]  -- 只在指定的目录下搜索二进制文件
+        # -m                    -- 只搜索 man 手册页
+        # -M &lt;directory&gt;[ ...]  -- 只在指定的目录下搜索 man 手册页
+        # -s                    -- 只搜索原始代码文件
+        # -S &lt;directory&gt;[ ...]  -- 只在指定的目录下搜索原始代码文件
+        # -u                    -- 搜索不是二进制文件、说明文件、原始代码文件的其他类型的文件
+        # -f                    -- 不显示文件名前的路径名</code></pre>
+<h3 id="3-1-2-type"><a href="#3-1-2-type" class="headerlink" title="3.1.2 type"></a>3.1.2 type</h3><h4 id="知识点–指令：type，查看指令或其他对象的类型"><a href="#知识点–指令：type，查看指令或其他对象的类型" class="headerlink" title="知识点–指令：type，查看指令或其他对象的类型"></a>知识点–指令：type，查看指令或其他对象的类型</h4><pre><code>    1.常用
+        # type -a &lt;name&gt;[ ...]
+    2.格式
+        # type [-afpPt] &lt;name&gt;[ ...]
+    3.选项
+        # -a，返回所有匹配项
+        # -f，不搜索 function
+        # -p，只返回程序文件
+        # -P，只进行 PATH 的搜索
+        # -t，返回指令的类型
+            - alias         -- 指令为别名
+            - builtin
+            - file          -- 指令为程序文件
+            - function
+            - keyword
+            - shell word
+            - shell function
+            - shell builtin
+            - disk file
+    4.范例
+        # type -a ls while ls ll if while sqlplus</code></pre>
+<h2 id="3-2-rpm"><a href="#3-2-rpm" class="headerlink" title="3.2 rpm"></a>3.2 rpm</h2><h3 id="3-2-1-rpm"><a href="#3-2-1-rpm" class="headerlink" title="3.2.1 rpm"></a>3.2.1 rpm</h3><h4 id="知识点–软件包：rpm-包"><a href="#知识点–软件包：rpm-包" class="headerlink" title="知识点–软件包：rpm 包"></a>知识点–软件包：rpm 包</h4><pre><code>    1.rpm(8)
+    2.rpmdb(8)</code></pre>
+<h2 id="3-3-yum"><a href="#3-3-yum" class="headerlink" title="3.3 yum"></a>3.3 yum</h2><h3 id="3-3-1-yum"><a href="#3-3-1-yum" class="headerlink" title="3.3.1 yum"></a>3.3.1 yum</h3><h4 id="知识点–软件包：yum-包"><a href="#知识点–软件包：yum-包" class="headerlink" title="知识点–软件包：yum 包"></a>知识点–软件包：yum 包</h4><pre><code>    1.yum(8)
+    2.yum.conf(5)</code></pre>
+<h4 id="知识点–软件包：yum-utils-包"><a href="#知识点–软件包：yum-utils-包" class="headerlink" title="知识点–软件包：yum-utils 包"></a>知识点–软件包：yum-utils 包</h4><pre><code>    1.yumdb</code></pre>
+<h4 id="知识点–指令：yum"><a href="#知识点–指令：yum" class="headerlink" title="知识点–指令：yum"></a>知识点–指令：yum</h4><pre><code>    1.格式
+        # yum [&lt;operations&gt;] [&lt;command&gt;] [&lt;package&gt;[ ...]]
+    2.&lt;command&gt;
+        # install           -- 安装
+        # reinstall         -- 重新安装
+        # update | upgrade  -- 升级
+        # check-update      -- 检查是否有可升级的包
+        # remove | erase    -- 卸载
+        # list              -- 查看软件包列表
+        # info              -- 查看软件包信息
+        # search            -- 搜索软件包
+        # provides | whatprovides       -- 搜索文件的软件包，相当于 rpm -qf
+        # makecache                     -- 重建 yum 缓存
+        # clean
+            - clean all                 -- 清除全部 yum 缓存
+        # groups
+            - groups list
+            - groups install
+            - groups remove
+        # repolist                  -- 查看 repo 列表
+            - repolist all
+            - repolist enabled
+            - repolist disabled
+        # repoinfo                  -- 查看 repo 信息
+            - repoinfo all
+            - repoinfo enabled
+            - repoinfo disabled
+        # repo-pkgs | repository-packages
+            - repository-packages &lt;repo&gt; list               -- 查看某一个 repo 中的包的列表
+            - repository-packages &lt;repo&gt; info &lt;package&gt;     -- 查看某一个 repo 中的包的信息
+            - repository-packages &lt;repo&gt; check-update       -- 仅根据某一个 repo 进行检查是否有可升级的包
+            - repository-packages &lt;repo&gt; install &lt;package&gt;  -- 仅从某一个 repo 中安装软件包
+            - repository-packages &lt;repo&gt; upgrade &lt;package&gt;  -- 仅从某一个 repo 中升级软件包
+    3.&lt;operations&gt;
+        # -y, --assumeyes       -- 统一回答 yes
+        # --assumeno            -- 统一回答 no
+        # -q, --quiet           -- 安静模式
+        # -v, --verbose         -- 繁冗模式，显示 debug 信息
+        # --showduplicates      -- 显示包的更多版本</code></pre>
+<h2 id="3-4-dnf"><a href="#3-4-dnf" class="headerlink" title="3.4 dnf"></a>3.4 dnf</h2><h3 id="3-5-1-dnf"><a href="#3-5-1-dnf" class="headerlink" title="3.5.1 dnf"></a>3.5.1 dnf</h3><h4 id="知识点–指令：dnf"><a href="#知识点–指令：dnf" class="headerlink" title="知识点–指令：dnf"></a>知识点–指令：dnf</h4><h4 id="知识点–配置：dnfconf"><a href="#知识点–配置：dnfconf" class="headerlink" title="知识点–配置：dnfconf"></a>知识点–配置：dnfconf</h4><hr>
+<h1 id="Chapter-04-Service-和-Deamon"><a href="#Chapter-04-Service-和-Deamon" class="headerlink" title="Chapter_04_Service_和_Deamon"></a>Chapter_04_Service_和_Deamon</h1><hr>
+<h1 id="Chapter-05-Linux-Booting-和-Driver"><a href="#Chapter-05-Linux-Booting-和-Driver" class="headerlink" title="Chapter_05_Linux_Booting_和_Driver"></a>Chapter_05_Linux_Booting_和_Driver</h1><hr>
+<h1 id="第06章-VIM"><a href="#第06章-VIM" class="headerlink" title="第06章 VIM"></a>第06章 VIM</h1><h2 id="6-1-VIM"><a href="#6-1-VIM" class="headerlink" title="6.1 VIM"></a>6.1 VIM</h2><h3 id="6-1-1-VIM-介绍"><a href="#6-1-1-VIM-介绍" class="headerlink" title="6.1.1 VIM 介绍"></a>6.1.1 VIM 介绍</h3><h4 id="知识点–概念：VIM-帮助来源"><a href="#知识点–概念：VIM-帮助来源" class="headerlink" title="知识点–概念：VIM 帮助来源"></a>知识点–概念：VIM 帮助来源</h4><pre><code>    1. man vim
+    2. vim 实用技巧
+    3. :help
+    4. https://vimhelp.org/</code></pre>
+<h4 id="知识点–概念：VIM-相关文件"><a href="#知识点–概念：VIM-相关文件" class="headerlink" title="知识点–概念：VIM 相关文件"></a>知识点–概念：VIM 相关文件</h4><pre><code>    1. ~/.viminfo
+        # 记录在 vim 中的历史操作
+    2. /etc/vimrc
+        # 全局 vim 配置文件
+    3. ~/.vimrc
+        # 用户 vim 配置文件
+    4. &lt;file_dir&gt;/.&lt;file_name&gt;.swp
+        # vim 的临时文件
+        # 位于文件的目录下
+        # 实际对文件所做的修改，都是在修改临时文件，并没有动原始文件
+        # 正常退出 vim，则将修改写入到原始文件中，再删除临时文件
+        # 非正常情况下，即使导入了临时文件，也不会自动删除，需要之后手动删除临时文件
+        # 多次非正常情况，会保留多个版本的临时文件，后缀名为 swp、swo、swn 以此类推</code></pre>
+<h4 id="知识点–概念：VIM-的三种模式"><a href="#知识点–概念：VIM-的三种模式" class="headerlink" title="知识点–概念：VIM 的三种模式"></a>知识点–概念：VIM 的三种模式</h4><pre><code>    1. VIM 的模式
+        # command mode          &lt;== 操作模式
+        # insert mode           &lt;== 编辑模式
+        # command-line mode     &lt;== 命令行模式
+    2. 从操作模式进入编辑模式
+        # i，&lt;Insert&gt;            &lt;== 从光标处开始编辑
+        # a                     &lt;== 从光标下一个字符开始编辑
+        # I                     &lt;== 从行首开始编辑
+        # A                     &lt;== 从行尾开始编辑
+        # o                     &lt;== 在上一行插入新行开始编辑
+        # O                     &lt;== 在下一行插入新行开始编辑
+        # R                     &lt;== 进入替换模式
+        # r                     &lt;== 进入替换模式，只替换一个字符
+        # &lt;Esc&gt;                 &lt;== 退出编辑模式
+    3.从操作模式进入命令行模式
+        # :</code></pre>
+<h3 id="6-1-2-VIM-操作模式"><a href="#6-1-2-VIM-操作模式" class="headerlink" title="6.1.2 VIM 操作模式"></a>6.1.2 VIM 操作模式</h3><h4 id="知识点–概念：VIM-操作模式的操作键"><a href="#知识点–概念：VIM-操作模式的操作键" class="headerlink" title="知识点–概念：VIM 操作模式的操作键"></a>知识点–概念：VIM 操作模式的操作键</h4><pre><code>    1. 移动光标到行
+        # 上方向键，k            &lt;== 移动到上一行
+        # 下方向键，j            &lt;== 移动到下一行
+        # 左方向键，h            &lt;== 向左移动一个字符
+        # 右方向键，l            &lt;== 向右移动一个字符
+        # -                     &lt;== 移动到上一行的第一个非空白字符
+        # +                     &lt;== 移动到下一行的第一个非空白字符
+        # gg                    &lt;== 移动到文件的第一行
+        # G                     &lt;== 移动到文件的最后一行
+        # &lt;n&gt;G                  &lt;== 移动到文件的第 n 行
+        # H                     &lt;== 移动到屏幕的第一行
+        # M                     &lt;== 移动到屏幕的中央行
+        # L                     &lt;== 移动到屏幕的最后一行
+        # &#123;                     &lt;== 移动到段落前的空行
+        # &#125;                     &lt;== 移动到段落后的空行
+        # &lt;n&gt;&lt;Enter&gt;            &lt;== 向下移动 n 行
+    2. 横向移动光标
+        # Home，0                &lt;== 移动到行首
+        # End，$             &lt;== 移动到行尾
+        # W                     &lt;== 移动到下一个单词的开头
+        # &lt;n&gt;&lt;Space&gt;            &lt;== 向右移动 n 个字符
+    3. 翻页
+        # Ctrl+b，PageUp     &lt;== 向上翻页
+        # Ctrl+f，PageDown       &lt;== 向下翻页
+        # Ctrl+u                &lt;== 向上翻半页
+        # Ctrl+d                &lt;== 向下翻半页
+        # Ctrl+y                &lt;== 向上滚屏一行
+        # Ctrl+e                &lt;== 向下滚屏一行
+    4. 内容选择
+        # v                     &lt;== 字符选择
+        # V                     &lt;== 整行选择
+        # Ctrl+v                &lt;== 区块选择 visual block
+    5. 搜索和替换
+        # 使用正则表达式
+            - 不需要加 &#39; &#39; 
+            - &#123; &#125; 需要跳脱才能具有正则表达式的功能
+        # ?&lt;word&gt;               &lt;== 向上搜索
+        # /&lt;word&gt;               &lt;== 向下搜索
+        # n                     &lt;== 下一个匹配项
+        # N                     &lt;== 上一个匹配项
+        # \                     &lt;== 跳脱字符，中括号、斜线等字符需要进行跳脱
+        # :1,$ s/&lt;word_1&gt;/&lt;word_2&gt;/g                &lt;== 全文替换
+        # :&lt;n1&gt;,&lt;n2&gt; s/&lt;word_1&gt;/&lt;word_2&gt;/g          &lt;== 在第 n1 行和第 n2 行之间进行替换
+        # :&lt;n1&gt;,&lt;n2&gt; s/&lt;word_1&gt;/&lt;word_2&gt;/gc         &lt;== 在第 n1 行和第 n2 行之间进行替换，每次替换前都需要用户确认
+    6. 删除行
+        # d                     &lt;== 删除选择的内容
+        # dd                    &lt;== 删除当前行
+        # d+上方向键            &lt;== 删除当前行与上一行
+        # d+下方向键            &lt;== 删除当前行与下一行
+        # d1G                   &lt;== 删除从第一行到当前行
+        # dG                    &lt;== 删除从当前行到最后一行
+        # &lt;n&gt;dd                 &lt;== 向下删除 n 行
+    7. 删除字符
+        # X，BackSpace           &lt;== 向前删除一个字符
+        # x，Del             &lt;== 向后删除一个字符
+        # &lt;n&gt;X                  &lt;== 向前删除 n 个字符
+        # &lt;n&gt;x                  &lt;== 向后删除 n 个字符
+        # d0                    &lt;== 删除从行首到光标之间的字符
+        # d$                    &lt;== 删除从光标到行尾之间的字符
+    8. 复制行
+        # y                     &lt;== 
+        # Y，yy                  &lt;== 复制当前行
+        # &lt;n&gt;yy                 &lt;== 复制向下 n 行
+        # y1G                   &lt;== 复制从文件第一行到当前行
+        # yG                    &lt;== 复制从当前行到最后一行
+    9. 复制字符
+        # y0                    &lt;== 复制从行首到光标之间的字符
+        # y$                    &lt;== 复制从光标到行尾之间的字符
+    10. 粘贴
+        # P                     &lt;== 将复制的行粘贴到当前行之前，将复制的字符粘贴到光标前
+        # p                     &lt;== 将复制的行粘贴到当前行之后，将复制的字符粘贴到光标后
+    11. 其他
+        # u                     &lt;== 撤销上一个动作
+        # .                     &lt;== 重复上一个动作
+        # J                     &lt;== 将当前行与下一行合并为一行，相当于删除断行符
+        # &lt;n&gt;c&lt;...&gt;             &lt;== 重复进行动作，例如 10cj 合并下方 10 行</code></pre>
+<h3 id="6-1-3-VIM-命令行模式"><a href="#6-1-3-VIM-命令行模式" class="headerlink" title="6.1.3 VIM 命令行模式"></a>6.1.3 VIM 命令行模式</h3><h4 id="知识点–概念：VIM-命令行模式命令"><a href="#知识点–概念：VIM-命令行模式命令" class="headerlink" title="知识点–概念：VIM 命令行模式命令"></a>知识点–概念：VIM 命令行模式命令</h4><pre><code>    1. 命令行模式支持 tab 补全
+        # 补全路径
+        # 补全命令
+    2. 保存和退出
+        # :w                        &lt;== 保存
+        # :w!                       &lt;== 强制保存，强制保存只读文件，需要 w 权限
+        # :w &lt;filename&gt;             &lt;== 另存为另一个文件
+        # :&lt;n1&gt;,&lt;n2&gt; w &lt;filename&gt;   &lt;== 将第 n1 行到第 n2 行的内容另存为另一个文件
+        # :q                        &lt;== 不保存退出
+        # :q!                       &lt;== 强制不保存退出
+        # ZZ                        &lt;== 保存并退出
+        # :wq                       &lt;== 保存并退出
+        # :wq!                      &lt;== 强制保存并退出
+    3. 读取
+        # :r &lt;filename&gt;             &lt;== 将另一个文件的内容读取到当前文件并插入到下一行
+    4. 其他
+        # :!                        &lt;== 暂时离开 vim，回到 bash 环境
+        # :! &lt;command&gt;              &lt;== 暂时离开 vim，回到 bash 环境并执行 command
+        # :nohl                     &lt;== 停止高亮当前高亮内容</code></pre>
+<h3 id="6-1-4-VIM-设置"><a href="#6-1-4-VIM-设置" class="headerlink" title="6.1.4 VIM 设置"></a>6.1.4 VIM 设置</h3><h4 id="知识点–概念：VIM-设置项"><a href="#知识点–概念：VIM-设置项" class="headerlink" title="知识点–概念：VIM 设置项"></a>知识点–概念：VIM 设置项</h4><pre><code>    1. 查看设置
+        # :set                      &lt;== 查看与默认值不同的 VIM 设置，通常就是用户手动变更后的设置
+        # :set all                  &lt;== 查看当前所有 VIM 设置
+        # :set &lt;config_name&gt;        &lt;== 查看某项设置的当前值
+        # :set no&lt;config_name&gt;      &lt;== 关闭某项设置
+    2. XXXX
+        # :set nu                   &lt;== 显示行号
+        # :set hlsearch             &lt;== 高亮搜索
+    3. 自动备份
+        # :set backup               &lt;== 自动备份，修改并保存后，自动将原始文件另存为一个文件名为 filename~ 的文件
+    4. 显示状态
+        # :set ruler                &lt;== 右下角显示状态，如行号、字符号
+        # :set showmode             &lt;== 左下角显示当前模式
+    5. 颜色
+        # :syntax &lt;on|off&gt;          &lt;== 依据语法显示不同颜色
+        # :set bg=&lt;theme&gt;           &lt;== 设置主题，如背景色为黑色则可设置为 bg=dark，背景色为鲜艳色则和设置为 bg=light
+    6. 缩进
+        # :set ts=&lt;N&gt;               &lt;== 设置制表符等于多少个空格
+        # :set autoindent           &lt;== 自动缩排
+    7.其他
+        # :set magic                &lt;== 允许使用正则表达式进行搜索
+        # :set backspace=&lt;0|1|2&gt;    &lt;== 设定 BackSpace 键的功能
+            - 0，1                       &lt;== 仅可删除刚刚输入的字符，无法删除原本就已经存在的字符
+            - 2                         &lt;== 可以删除任意字符</code></pre>
+<h3 id="6-1-5-VIM-其他功能"><a href="#6-1-5-VIM-其他功能" class="headerlink" title="6.1.5 VIM 其他功能"></a>6.1.5 VIM 其他功能</h3><h4 id="知识点–概念：VIM-其他功能"><a href="#知识点–概念：VIM-其他功能" class="headerlink" title="知识点–概念：VIM 其他功能"></a>知识点–概念：VIM 其他功能</h4><pre><code>    1.多文件编辑
+        # vim &lt;file_1&gt; &lt;file_2&gt; ... ，同时编辑多个文件
+            - :n            -- 编辑下一个文件
+            - :N            -- 编辑上一个文件
+            - :files        -- 列出目前这个 vim 的开启的所有文件
+    2.多窗口编辑
+        # 同时打开多个 VIM 窗口，窗口上下分布
+            - :sp &lt;filename&gt;    -- 在新窗口打开新文件，如果没有 filename ，则会重复打开当前文件
+            - ctrl+w+w          -- 切换窗口
+    3.内容补全</code></pre>
+<hr>
+<h1 id="Chapter-07-Bash"><a href="#Chapter-07-Bash" class="headerlink" title="Chapter_07_Bash"></a>Chapter_07_Bash</h1><h2 id="7-1-BASH-介绍"><a href="#7-1-BASH-介绍" class="headerlink" title="7.1 BASH 介绍"></a>7.1 BASH 介绍</h2><h3 id="7-1-1-SHELL"><a href="#7-1-1-SHELL" class="headerlink" title="7.1.1 SHELL"></a>7.1.1 SHELL</h3><h4 id="知识点–概念：SHELL"><a href="#知识点–概念：SHELL" class="headerlink" title="知识点–概念：SHELL"></a>知识点–概念：SHELL</h4><pre><code>    1.SHELL 的意义
+        # Kernel 在内存中是受保护的，不应该让用户直接控制 Kernel
+        # 通过 Shell 将用户输入的指令与 Kernel 沟通，继而让 Kernel 控制硬件来正确的工作
+    2.SHELL 的发展历史
+        # 第一个流行的 shell，Bourne shell，简称 sh，纪念其创作者 Steven Bourne
+        # 另一个流行的 shell，cshell，简称为 csh 
+            - 由伯克利大学的 Bill Joy 设计依附于 BSD 版的 Unix 系统中的 shell
+            - 这个 shell 的语法有点类似 C 语言，所以才得名为 C shell
+            - 由于在学术界 Sun 主机势力相当的庞大，而 Sun 主要是 BSD 的分支之一，所以 C shell 也是另一个很重要的 shell
+        # BASH，Bourne Again Shell
+        # TCSH，CSHELL 的增强版
+    2./etc/shells
+        # 记录 Linux 支持的所有 shell
+        # 用户能使用的 shell 必须能在 /etc/shells 中查询到
+        # 某些服务在运作过程中，会检查用户的 shell 是否支持，就是查询 /etc/shells
+        # 用户使用的 shell，记录在 /etc/passwd 中
+    3./sbin/nologin
+        # linux 默认的非法 shell
+        # 比如 FTP 主机拒绝用户使用除 FTP 以外的资源，就可以给客户分配一些奇怪的 shell
+        # 这些奇怪的 shell 需要写入到 /etc/shells 中
+    4.login_shell 和 nologin_shell
+        # login_shell
+            - 进行完整的登录流程
+            - 获得完整的环境设定
+            - 例如，正常的从 tty1 登录或远程 ssh 登录
+        # nologin_shell
+            - 进行不完整的登录流程
+            - 部分环境设定通过继承获得
+            - 例如从 X window 中启动 terminal
+            - 例如子 shell</code></pre>
+<h3 id="7-1-2-alias"><a href="#7-1-2-alias" class="headerlink" title="7.1.2 alias"></a>7.1.2 alias</h3><h4 id="知识点–指令：alias，设置命令别名"><a href="#知识点–指令：alias，设置命令别名" class="headerlink" title="知识点–指令：alias，设置命令别名"></a>知识点–指令：alias，设置命令别名</h4><pre><code>    1.格式
+        # alias &lt;string&gt;=&#39;&lt;command_string&gt;&#39;
+        # unalias &lt;string&gt;</code></pre>
+<h3 id="7-1-3-set"><a href="#7-1-3-set" class="headerlink" title="7.1.3 set"></a>7.1.3 set</h3><pre><code>知识点--指令：set，设置 BASH 的属性
+    1.格式
+        # echo $-                   -- 显示当前的 set 设定值
+        # set                       -- 查看当前所有的变量
+        # set [+-][uvCHhmBx]
+    2.选项
+        # +/-       -- + 表示撤销设置，- 表示追加设置
+        # -h        -- 默认启用
+        # -m        -- 默认启用，允许作业管理
+        # -B        -- 默认启用，允许使用中括号判断式
+        # -H        -- 默认启用，允许使用 ! 调用历史命令
+        # -u        -- 默认不启用，当使用未声明的变量时，会显示错误信息
+        # -v        -- 默认不启用，在信息被输出前，会先显示信息的原始内容
+        # -x        -- 默认不启用，在指令被执行前，会显示指令内容，显示的指令前面有 ++ 符号
+        # -C        -- 默认不启用，若使用输入重定向时，若文件存在，则不进行覆盖</code></pre>
+<h3 id="7-1-4-特殊字符"><a href="#7-1-4-特殊字符" class="headerlink" title="7.1.4 特殊字符"></a>7.1.4 特殊字符</h3><h4 id="知识点–概念：BASH-的万用字符-WILDCARD"><a href="#知识点–概念：BASH-的万用字符-WILDCARD" class="headerlink" title="知识点–概念：BASH 的万用字符 WILDCARD"></a>知识点–概念：BASH 的万用字符 WILDCARD</h4><pre><code>    1.*，任意数量的任意字符
+    2.?，一个任意字符
+    3.[&lt;char&gt;[...]]，一个括号内的字符
+    4.[&lt;char&gt;-&lt;char&gt;]，一个括号内的字符，按编码选取字符范围
+        - A 65，Z 90
+        - a 97，z 122
+        - 0 48，1 49，9 57
+    5.[^&lt;char&gt;[...]]，一个非括号内的字符</code></pre>
+<h4 id="知识点–概念：BASH-的特殊字符"><a href="#知识点–概念：BASH-的特殊字符" class="headerlink" title="知识点–概念：BASH 的特殊字符"></a>知识点–概念：BASH 的特殊字符</h4><pre><code>    1.#，注释
+    2.\，跳脱
+    4.;，指令分隔符
+    5.~，家目录
+    6.$，使用变量
+    7.&amp;，工作控制 job control，将指令扔到后台运行
+    8.!，逻辑运算非
+    9./，目录符号
+    10.&quot; &quot; 双引号，字符标记，保留特殊字符和万用字符的功能
+    11.&#39; &#39; 单引号，字符标记，将特殊符号和万用字符变为普通字符
+    12.` ` 反引号，先执行指令
+    13.$( )，先执行指令
+    14.&#123; &#125;，区块指令，例如 ll -d redo&#123;1,2,3&#125;.log
+    16.$&#123; &#125;，使用变量</code></pre>
+<h3 id="7-1-5-标准输出和重定向"><a href="#7-1-5-标准输出和重定向" class="headerlink" title="7.1.5 标准输出和重定向"></a>7.1.5 标准输出和重定向</h3><h4 id="知识点–概念：标准输出"><a href="#知识点–概念：标准输出" class="headerlink" title="知识点–概念：标准输出"></a>知识点–概念：标准输出</h4><pre><code>    1.标准输出
+        # 标准输出，STDOUT，standard output
+        # 标准错误，STDERR，standard error output
+        # 标准输入，STDIN，standard input</code></pre>
+<h4 id="知识点–概念：重定向"><a href="#知识点–概念：重定向" class="headerlink" title="知识点–概念：重定向"></a>知识点–概念：重定向</h4><pre><code>    1.&gt;，&gt;&gt;，标准输出重定向
+    2.&lt;，&lt;&lt;，标准输入重定向
+    3.2&gt;，2&gt;&gt;，标准错误重定向
+    4.&amp;&gt;，2&gt;&amp;1，合并重定向，将 STDOUT 和 STDERR 合并重定向
+        # 合并重定向到文件适合用 &amp;&gt;
+        # 合并重定向到管道只能用 2&gt;&amp;1
+        # &lt;command&gt; &amp;&gt; &lt;file&gt;
+        # &lt;command&gt; &gt; &lt;file&gt; 2&gt;&amp;1
+    5.分别重定向
+        # 将 STDOUT 和 STDERR 重定向到不同的文件里
+        # &lt;command&gt; &gt; &lt;file_1&gt; 2&gt; &lt;flie_2&gt;</code></pre>
+<h4 id="知识点–概念：管道"><a href="#知识点–概念：管道" class="headerlink" title="知识点–概念：管道"></a>知识点–概念：管道</h4><pre><code>    1.| ，管道符
+        # 将前一个命令的 STDOUT，作为后一个命令的 STDIN
+        # 管道仅会处理 STDOUT，STDERR 则会正常输出到屏幕上
+    2.- ，减号，用来代表管道传来的 STDOUT
+        # 范例
+            - ls -al / | split -l 10 - lsroot
+            - tar -cvf - /home | tar -xvf - -C /tmp/homeback
+                两个减号，两个减号都代表 tar 指令的 stdout
+                当管道前后都有减号时，前一个减号的目的主要是为了将本来要输出到文件的数据流输出到 stdout 中</code></pre>
+<h4 id="知识点–指令：tee-双向重定向"><a href="#知识点–指令：tee-双向重定向" class="headerlink" title="知识点–指令：tee 双向重定向"></a>知识点–指令：tee 双向重定向</h4><pre><code>    1.介绍
+        # 将 STDOUT 复制一份发送到文件中
+    2.格式
+        # tee [-a] &lt;file&gt;
+    3.选项
+        # -a        -- 以 append 方式写入到文件</code></pre>
+<h4 id="知识点–指令：xargs，强制指令接收-STDOUT-作为输入"><a href="#知识点–指令：xargs，强制指令接收-STDOUT-作为输入" class="headerlink" title="知识点–指令：xargs，强制指令接收 STDOUT 作为输入"></a>知识点–指令：xargs，强制指令接收 STDOUT 作为输入</h4><pre><code>    1.介绍
+    2.格式
+        # xargs                     -- 相当于 echo
+        # xargs [-0Epn] &lt;command&gt;
+    2.选项
+        # -0            -- 将输入的 STDOUT 中的特殊字还原为一般字符，如 `、\、&lt;space&gt; 等等
+        # -E &lt;string&gt;   -- EOF，将指定的字符串识别为 EOF
+        # -p            -- 每次执行前都询问用户
+        # -n &lt;N&gt;        -- 每次传输给后方指令的 STDOUT 行数，有些执行一次无法接收太多 STDOUT 行
+    4.范例
+        # cut -d &#39;:&#39; -f 1 /etc/passwd | xargs -n 1 id                   -- id 指令一次只能处理一个号码，需要加 -n
+        # cut -d &#39;:&#39; -f 1 /etc/passwd | xargs -E &#39;sync&#39; -n 1 id         -- EOF
+        # find /usr/sbin -perm /7000 | xargs ls -l                      -- 相当于 ls -l $(find /usr/sbin -perm /7000)</code></pre>
+<h3 id="7-1-6-BASH-数学运算"><a href="#7-1-6-BASH-数学运算" class="headerlink" title="7.1.6 BASH 数学运算"></a>7.1.6 BASH 数学运算</h3><h4 id="知识点–问题：bash-中的数学运算"><a href="#知识点–问题：bash-中的数学运算" class="headerlink" title="知识点–问题：bash 中的数学运算"></a>知识点–问题：bash 中的数学运算</h4><pre><code>    1.可以进行 +, -, *, /, % 的计算，默认支持到整数
+    2.语法
+        # $((计算式))
+    4.范例
+        # $((10+20))            -- 直接使用数值计算
+        # $(($&#123;var1&#125;+$&#123;var2&#125;))  -- 使用变量</code></pre>
+<h4 id="知识点–概念：echo-bc-进行数学运算"><a href="#知识点–概念：echo-bc-进行数学运算" class="headerlink" title="知识点–概念：echo bc 进行数学运算"></a>知识点–概念：echo bc 进行数学运算</h4><pre><code>    1.可以进行 +, -, *, /, % 的计算
+    2.语法
+        # echo &quot;计算式&quot; | bc
+        # echo &quot;$&#123;var1&#125;计算符$&#123;var2&#125;...&quot; | bc</code></pre>
+<h3 id="7-1-7-BASH-特殊设备"><a href="#7-1-7-BASH-特殊设备" class="headerlink" title="7.1.7 BASH 特殊设备"></a>7.1.7 BASH 特殊设备</h3><h4 id="知识点–文件：-dev-random，Linux-自带的随机数生成器"><a href="#知识点–文件：-dev-random，Linux-自带的随机数生成器" class="headerlink" title="知识点–文件：/dev/random，Linux 自带的随机数生成器"></a>知识点–文件：/dev/random，Linux 自带的随机数生成器</h4><h4 id="知识点–文件：-dev-null，黑洞设备"><a href="#知识点–文件：-dev-null，黑洞设备" class="headerlink" title="知识点–文件：/dev/null，黑洞设备"></a>知识点–文件：/dev/null，黑洞设备</h4><h4 id="知识点–文件：-dev-zero，输出零文件"><a href="#知识点–文件：-dev-zero，输出零文件" class="headerlink" title="知识点–文件：/dev/zero，输出零文件"></a>知识点–文件：/dev/zero，输出零文件</h4><h2 id="7-2-BASH-变量"><a href="#7-2-BASH-变量" class="headerlink" title="7.2 BASH 变量"></a>7.2 BASH 变量</h2><h3 id="7-2-1-BASH-变量"><a href="#7-2-1-BASH-变量" class="headerlink" title="7.2.1 BASH 变量"></a>7.2.1 BASH 变量</h3><h4 id="知识点–概念：BASH-变量"><a href="#知识点–概念：BASH-变量" class="headerlink" title="知识点–概念：BASH 变量"></a>知识点–概念：BASH 变量</h4><pre><code>    1.变量的命名
+        # 以英文开头
+        # 包含英文和数字
+        # 区分大小写
+        # 命名习惯
+            - 环境变量使用全大写字母
+            - 用户自定义变量使用全小写字母
+    2.变量的值
+        # 变量的值中包含特殊字符，需要用单引号或双引号将值括起来
+            - 单引号，功能性的特殊字符被是被为纯文本
+            - 双引号，功能性的特殊字符依然具有功能，如 $
+        # 跳脱字符可以跳脱特殊字符
+    3.变量的类型
+        # 默认为字符型</code></pre>
+<h4 id="知识点–概念：BASH-的功能性特殊字符"><a href="#知识点–概念：BASH-的功能性特殊字符" class="headerlink" title="知识点–概念：BASH 的功能性特殊字符"></a>知识点–概念：BASH 的功能性特殊字符</h4><pre><code>    1.$&lt;var_name&gt;，返回变量的值
+    2.$&#123;&lt;var_name&gt;&#125;，返回变量的值
+    3.$(&lt;value&gt;)，将 &lt;value&gt; 当做指令进行执行，返回执行后的结果
+    4.`&lt;value&gt;`，将 &lt;value&gt; 当做指令进行执行，返回执行后的结果</code></pre>
+<h4 id="知识点–操作：BASH-变量的使用"><a href="#知识点–操作：BASH-变量的使用" class="headerlink" title="知识点–操作：BASH 变量的使用"></a>知识点–操作：BASH 变量的使用</h4><pre><code>    1.声明变量
+        # DECLARE &lt;var_name&gt;
+    2.变量赋值
+        # &lt;var_name&gt;=&lt;value&gt;
+        # &lt;var_name&gt;=$&lt;var_name&gt;
+            - PATH=$PATH:&lt;path&gt;
+        # &lt;var_name&gt;=$(echo ...)
+        # &lt;var_name&gt;=`echo ...`
+    2.使用变量
+        # $&lt;var_name&gt;
+        # $&#123;&lt;var_name&gt;&#125;
+        # echo $&lt;var_name&gt;
+        # echo $&#123;&lt;var_name&gt;&#125;
+    3.撤销变量
+        # unset &lt;var_name&gt;</code></pre>
+<h3 id="7-2-2-数组变量"><a href="#7-2-2-数组变量" class="headerlink" title="7.2.2 数组变量"></a>7.2.2 数组变量</h3><h4 id="知识点–概念：数组变量-Arrays"><a href="#知识点–概念：数组变量-Arrays" class="headerlink" title="知识点–概念：数组变量 Arrays"></a>知识点–概念：数组变量 Arrays</h4><pre><code>    1.格式
+        # 赋值，&lt;var_name&gt;[&lt;index&gt;]=&lt;value&gt;
+        # 调用，&lt;var_name&gt;[&lt;index&gt;]=&lt;value&gt;
+        # &lt;index&gt; 可以用过其他变量调用
+    2.范例
+        # var[1]=&#39;a&#39;; var[2]=&#39;b&#39;;var[3]=&#39;c&#39;
+        # x=3; echo var[$&#123;x&#125;];</code></pre>
+<h3 id="7-2-3-DECLARE"><a href="#7-2-3-DECLARE" class="headerlink" title="7.2.3 DECLARE"></a>7.2.3 DECLARE</h3><h4 id="知识点–指令：DECLARE，声明变量"><a href="#知识点–指令：DECLARE，声明变量" class="headerlink" title="知识点–指令：DECLARE，声明变量"></a>知识点–指令：DECLARE，声明变量</h4><pre><code>    1.介绍
+    2.格式
+        # declare                                       -- 查看所有的变量和函数
+        # declare -f                                    -- 查看所有的函数
+        # declare [-aixr] &lt;var_name&gt;[=&lt;value&gt;]
+        # declare [+aixr] &lt;var_name&gt;
+    3.选项
+        # 
+        # +/-       -- + 表示取消某项属性，- 表示追加某项属性
+        # -a        -- 声明数组型变量
+        # -i        -- 声明整型变量
+        # -x        -- 将变量转换为环境变量
+        # -r        -- 将变量转换为只读变量</code></pre>
+<h3 id="7-2-X-变量操作"><a href="#7-2-X-变量操作" class="headerlink" title="7.2.X 变量操作"></a>7.2.X 变量操作</h3><h4 id="知识点–概念：变量内容的删除、替换"><a href="#知识点–概念：变量内容的删除、替换" class="headerlink" title="知识点–概念：变量内容的删除、替换"></a>知识点–概念：变量内容的删除、替换</h4><pre><code>    1.经常在标记字符串中使用 wildcard
+    2.变量值不变，返回值为变量值删除后的内容
+    3.格式
+        # $&#123;&lt;old_var&gt;#&lt;key_string&gt;&#125;         -- 从前往后删除，删除符合条件的最短的那个
+        # $&#123;&lt;old_var&gt;##&lt;key_string&gt;&#125;        -- 从前往后删除，删除符合条件的最长的那个
+        # $&#123;&lt;old_var&gt;%&lt;key_string&gt;&#125;         -- 从后往前删除，删除符合条件的最短的那个
+        # $&#123;&lt;old_var&gt;%%&lt;key_string&gt;&#125;        -- 从后往前删除，删除符合条件的最长的那个
+        # $&#123;&lt;old_var&gt;/&lt;old_string&gt;/&lt;new_string&gt;&#125;        -- 变量内容替换，替换从前往后的第一个旧字符串
+        # $&#123;&lt;old_var&gt;//&lt;old_string&gt;/&lt;new_string&gt;&#125;       -- 变量内容替换，替换全部的旧字符串
+    4.范例
+        # xxxx=$&#123;PATH#/*local/bin:&#125;
+            - 对 PATH 变量的值进行删除，删除从开始到第一个 local/bin: 字符串
+            - 操作后的值，赋给 xxxx 变量</code></pre>
+<h4 id="知识点–概念：变量测试"><a href="#知识点–概念：变量测试" class="headerlink" title="知识点–概念：变量测试"></a>知识点–概念：变量测试</h4><pre><code>    1.介绍
+        # 通常在程序设计中容易常见
+        # 相当于 if then 判断，但更节省计算时间
+        # 根据 &lt;old_var&gt; 的值来决定 &lt;new_var&gt; 的值
+        # 有时也会改变 &lt;old_&gt;var 的值
+        # 具体作用查看图片
+    2.格式
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;-&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;:-&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;+&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;:+&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;=&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;:=&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;?&lt;value&gt;&#125;
+        # &lt;new_var&gt;=$&#123;&lt;old_var&gt;:?&lt;value&gt;&#125;</code></pre>
+<h2 id="7-3-BASH-环境"><a href="#7-3-BASH-环境" class="headerlink" title="7.3 BASH 环境"></a>7.3 BASH 环境</h2><h3 id="7-3-1-BASH-环境变量"><a href="#7-3-1-BASH-环境变量" class="headerlink" title="7.3.1 BASH 环境变量"></a>7.3.1 BASH 环境变量</h3><h4 id="知识点–概念：BASH-环境变量"><a href="#知识点–概念：BASH-环境变量" class="headerlink" title="知识点–概念：BASH 环境变量"></a>知识点–概念：BASH 环境变量</h4><pre><code>    X.常见的 BASH 环境变量
+        # HOME          -- 代表用户的家目录
+        # PATH          -- 搜索命令的路径，目录与目录之间以 : 分隔，搜索的循序依照 PATH 变量的内容依次进行搜索
+        # SHELL         -- 当前环境使用的 SHELL 程序
+        # LANG          -- 当前环境使用的语言字符集
+        # $             -- 当前环境的 SHELL 的 PID
+        # -             -- 当前输入输出境的设定，实际上是目前在使用的 set 指令的选项
+        # ?             -- 上一个命令的状态码返回值，习惯上 0 为成功，非 0 为不成功，而且不随重定向的情况而改变，即只要错误，即使 stderr 被转走或合并了，$? 依然是非0
+        # _             -- 上一条命令的选项或参数
+        # PS1           -- 命令提示字，语法参考 man bash
+        # MAIL          -- mailbox 的路径
+        # RANDOM        -- 随机数，范围在 0~32767，平均方式
+        # OLDPWD</code></pre>
+<h4 id="知识点–指令：export，将普通变量转换为环境变量"><a href="#知识点–指令：export，将普通变量转换为环境变量" class="headerlink" title="知识点–指令：export，将普通变量转换为环境变量"></a>知识点–指令：export，将普通变量转换为环境变量</h4><pre><code>    1.格式
+        # export [-p]                           -- 查看当前的环境变量
+        # export [-fn] &lt;var_name&gt;[=&lt;value&gt;]
+    2.格式
+        # -f        -- &lt;var_name&gt; 指向函数
+        # -n        -- 将环境变量转换为普通变量</code></pre>
+<h4 id="知识点–指令：env，以指定的环境变量来运行命令"><a href="#知识点–指令：env，以指定的环境变量来运行命令" class="headerlink" title="知识点–指令：env，以指定的环境变量来运行命令"></a>知识点–指令：env，以指定的环境变量来运行命令</h4><pre><code>    1.格式
+        # env                   -- 查看当前的环境变量
+        # env -0                -- 查看当前的环境变量，没有换行符
+        # env [&lt;options&gt;] [&lt;var_name&gt;=&lt;value&gt;][ ...] [&lt;command&gt; [&lt;argument&gt;[...]]]
+    2.选项
+        # -i                    -- 开启一个空环境
+        # -u &lt;var_name&gt;[ ...]           -- 在子环境中删除某些环境变量的设置
+        # [&lt;var_name&gt;=&lt;value&gt;][ ...]    -- 在子环境中添加某些环境变量的设置</code></pre>
+<h3 id="7-3-2-BASH-环境设置"><a href="#7-3-2-BASH-环境设置" class="headerlink" title="7.3.2 BASH 环境设置"></a>7.3.2 BASH 环境设置</h3><h4 id="知识点–概念：BASH-环境设置文件"><a href="#知识点–概念：BASH-环境设置文件" class="headerlink" title="知识点–概念：BASH 环境设置文件"></a>知识点–概念：BASH 环境设置文件</h4><pre><code>    1.提示信息设置文件
+        # /etc/issue            -- bash 的进站与欢迎信息，语法可以 man agetty 或 man issue
+        # /etc/issue.net        -- 远端登录的欢迎信息
+        # /etc/motd             -- bash 的登录通告，让用户登入后会接收到的通知 
+    2.环境配置文件
+        # /etc/profile          -- 全局 login_shell 环境配置文件，其中会根据用户的 UID 来决定很多重要的变量的内容
+        # /etc/profile.d        -- /etc/profile 的外部文件目录，其中所有的 *.sh 文件都会被 /etc/profile 呼叫执行
+        # /etc/bashrc           -- 全局 nologin_shell 环境配置文件
+        # ~/.bash_profile       -- 用户个人 login_shell 环境配置文件
+        # ~/.bashrc             -- 用户个人 nologin_shell 环境配置文件
+    3.操作
+        # ~/.bash_logout        -- 用户退出时自动执行的操作</code></pre>
+<h4 id="知识点–概念：子-shell"><a href="#知识点–概念：子-shell" class="headerlink" title="知识点–概念：子 shell"></a>知识点–概念：子 shell</h4><pre><code>    1.介绍
+        # 执行脚本，默认方式为开启一个子 shell，在子 shell 环境中执行脚本的各个命令
+        # 当脚本结束时，子 shell 中的各项变量将会消失，不会传回到父环境
+        # 子 shell 会继承父环境的全部环境变量
+        # 子 shell 不会继承父环境的普通变量
+    2.利用 source 来执行脚本，是在父环境中执行
+        # 这也是 source .bashrc 的意义</code></pre>
+<h4 id="知识点–指令：source，在当前-shell-环境执行脚本文件中的命令"><a href="#知识点–指令：source，在当前-shell-环境执行脚本文件中的命令" class="headerlink" title="知识点–指令：source，在当前 shell 环境执行脚本文件中的命令"></a>知识点–指令：source，在当前 shell 环境执行脚本文件中的命令</h4><pre><code>    1.介绍
+        # 多用于进行操作环境的切换
+    2.格式
+        # source &lt;filename&gt;
+        # . &lt;filename&gt;          -- 点命令方式                </code></pre>
+<h3 id="7-3-3-BASH-历史命令"><a href="#7-3-3-BASH-历史命令" class="headerlink" title="7.3.3 BASH 历史命令"></a>7.3.3 BASH 历史命令</h3><h4 id="知识点–概念：历史命令"><a href="#知识点–概念：历史命令" class="headerlink" title="知识点–概念：历史命令"></a>知识点–概念：历史命令</h4><pre><code>    1.历史命令的记录
+        # 历史命令记录在内存中
+        # 退出 shell 时，将历史命令保存到 HISTFILE 中
+        # 登录 shell 时，自动从 HISTFILE 中读取历史命令到内存中
+    2.环境变量
+        # HISTSIZE      -- 历史命令的在内存中的最大数量
+        # HISTFILE      -- 历史命令的记录文件，默认 ~/.bash_history
+        # HISTFILESIZE  -- 历史命令的记录文件中的最大数量</code></pre>
+<h4 id="知识点–指令：history，查看内存中记录的历史命令"><a href="#知识点–指令：history，查看内存中记录的历史命令" class="headerlink" title="知识点–指令：history，查看内存中记录的历史命令"></a>知识点–指令：history，查看内存中记录的历史命令</h4><pre><code>    1.介绍
+    2.格式
+        # history                       -- 查看内存中记录的历史命令
+        # history &lt;n&gt;                   -- 查看内存中记录的最近 n 个历史命令
+        # history -c                    -- 清除内存中记录的历史命令
+        # history [-raw] [&lt;file&gt;]
+    3.选项
+        # -a            -- 将内存中的历史命令追加到文件中，默认文件为 HISTFILE
+        # -r            -- 将文件中记录的历史命令读到内存中，默认文件为 HISTFILE
+        # -w            -- 将目前内存中 history 内容写入 histfiles 中</code></pre>
+<h4 id="知识点–指令：！，通过命令历史来执行指令"><a href="#知识点–指令：！，通过命令历史来执行指令" class="headerlink" title="知识点–指令：！，通过命令历史来执行指令"></a>知识点–指令：！，通过命令历史来执行指令</h4><pre><code>    1.格式
+        # !&lt;n&gt;          -- 执行编号为 n 的历史命令
+        # !&lt;string&gt;     -- 执行最近一次以 &lt;string&gt; 开头的历史命令
+        # !!            -- 执行上一条指令</code></pre>
+<h3 id="7-3-4-BASH-语言环境"><a href="#7-3-4-BASH-语言环境" class="headerlink" title="7.3.4 BASH 语言环境"></a>7.3.4 BASH 语言环境</h3><h4 id="知识点–概念：BASH-locale"><a href="#知识点–概念：BASH-locale" class="headerlink" title="知识点–概念：BASH locale"></a>知识点–概念：BASH locale</h4><pre><code>    1.locale 
+        # &lt;language&gt;[_&lt;region&gt;[.&lt;character_set&gt;]][@&lt;modify&gt;]
+    2.文件
+        # /usr/lib/locale           -- 目前 Linux 主机内保有的语系文件
+        # /usr/share/i18n/charmaps  -- 系统保存的字符集
+        # /usr/share/i18n/localee   -- 每一项 locale 的定义文件
+        # /etc/locale.conf          -- 系统默认 locale
+    3.环境变量
+        # 优先级，LC_ALL &gt; LC_* &gt; LANG
+        # LANG              -- 主语言的环境
+        # LC_ALL            -- 体语系的环境，修改系统的语系一般就改这个变量
+        # LC_*
+            - LC_CTYPE          -- 语言符号及其分类
+            - LC_NUMERIC        -- 数字
+            - LC_COLLATE        -- 比较和排序方式
+            - LC_TIME           -- 时间显示格式
+            - LC_MONETARY       -- 货币单位
+            - LC_MESSAGES       -- 提示信息、错误信息、状态信息、标题、标签、按钮、菜单等
+            - LC_NAME           -- 姓名书写方式
+            - LC_ADDRESS        -- 地址书写方式
+            - LC_TELEPHONE      -- 电话号码书写方式
+            - LC_MEASUREMENT    -- 度量衡表达方式
+            - LC_PAPER          -- 默认纸张尺寸大小
+            - LC_IDENTIFICATION -- 对 locale 自身包含信息的概述
+    4.相关命令
+        # localedef         -- 创建 locale 定义</code></pre>
+<h4 id="知识点–指令：locale，查看语言环境变量"><a href="#知识点–指令：locale，查看语言环境变量" class="headerlink" title="知识点–指令：locale，查看语言环境变量"></a>知识点–指令：locale，查看语言环境变量</h4><pre><code>    1.格式
+        # locale                -- 查看当前的语言环境变量
+        # locale -a             -- 查看所有支持的语言环境变量值</code></pre>
+<h3 id="7-3-5-BASH-快捷键"><a href="#7-3-5-BASH-快捷键" class="headerlink" title="7.3.5 BASH 快捷键"></a>7.3.5 BASH 快捷键</h3><h4 id="知识点–概念：BASH-默认快捷键"><a href="#知识点–概念：BASH-默认快捷键" class="headerlink" title="知识点–概念：BASH 默认快捷键"></a>知识点–概念：BASH 默认快捷键</h4><pre><code>    1.命令行编辑
+        # Ctrl+U        -- 从光标处向前删除命令行
+        # Ctrl+K        -- 从光标处向后删除命令行
+        # Ctrl+A        -- 移动光标到命令行的开头
+        # Ctrl+E        -- 移动光标到命令行的末尾
+        # Ctrl+Y        -- 粘贴刚才删除的字符
+    2.命令执行
+        # Ctrl+M        -- 发出 Enter 
+        # Ctrl+C        -- 发出中断
+        # Ctrl+D        -- 发出 EOF
+        # Ctrl+Z        -- 将前台的作业扔到后台并暂停它的执行
+    3.屏幕显示
+        # Ctrl+L        -- 清屏
+        # Ctrl+S        -- 暂停屏幕的输出
+        # Ctrl+Q        -- 恢复屏幕的输出
+    7.历史
+        # ESC+.         -- 返回上一个命令使用的参数
+        # Ctrl+R        -- 搜索历史命令</code></pre>
+<h4 id="知识点–指令：stty，设置-BASH-环境中按键的功能"><a href="#知识点–指令：stty，设置-BASH-环境中按键的功能" class="headerlink" title="知识点–指令：stty，设置 BASH 环境中按键的功能"></a>知识点–指令：stty，设置 BASH 环境中按键的功能</h4><pre><code>    1.介绍
+    2.格式
+        # stty -a       -- 查看当前的设置，^ 表示 [Ctrl] 键
+            - intr          -- 中断
+            - quit          -- 退出
+            - erase         -- 删除命令行全部字符
+            - kill          -- 向前删除命令行的字符
+            - eof   
+            - start         -- 恢复屏幕的输出
+            - stop          -- 暂停屏幕的输出
+            - susp          -- terminal stop 信号</code></pre>
+<h2 id="7-4-函数-function"><a href="#7-4-函数-function" class="headerlink" title="7.4 函数 function"></a>7.4 函数 function</h2><h3 id="7-4-1-BASH-函数"><a href="#7-4-1-BASH-函数" class="headerlink" title="7.4.1 BASH 函数"></a>7.4.1 BASH 函数</h3><h4 id="知识点–概念：BASH-函数"><a href="#知识点–概念：BASH-函数" class="headerlink" title="知识点–概念：BASH 函数"></a>知识点–概念：BASH 函数</h4><pre><code>    1.使用函数
+        # 像指令</code></pre>
+<h4 id="知识点–概念：function-语句，定义函数"><a href="#知识点–概念：function-语句，定义函数" class="headerlink" title="知识点–概念：function 语句，定义函数"></a>知识点–概念：function 语句，定义函数</h4><pre><code>    1.语法
+        function &lt;function_name&gt;()&#123;
+            &lt;commands&gt;[;]
+        &#125;
+    2.范例
+        # 定义函数 printit
+            - function printit()&#123; echo &quot;Your choice is :&quot;; echo &quot;321&quot;;&#125;</code></pre>
+<h4 id="知识点–概念：函数的内建变量"><a href="#知识点–概念：函数的内建变量" class="headerlink" title="知识点–概念：函数的内建变量"></a>知识点–概念：函数的内建变量</h4><pre><code>    1.函数的内建变量与脚本的内建变量代表不同的内容
+    2.$&#123;0&#125;，代表调用函数的程序
+        # 在 BASH 中直接调用函数，则 $&#123;0&#125; 为 bash
+        # 在脚本中调用函数，则 $&#123;0&#125; 为脚本名
+        # 在父脚本中调用子脚本中的函数，则 $&#123;0&#125; 为父脚本名
+    3.$&#123;1&#125;、$&#123;2&#125;、$&#123;3&#125; 等，代表调用函数时的参数值
+    4.范例
+        # $&#123;1&#125; 的使用
+            - function printit()&#123; echo &quot;Your choice is $&#123;1&#125;&quot; ; &#125; ;
+            - read -p &quot; Please input your choice : &quot; choice ;
+            - case $&#123;choice&#125; in
+                &quot;one&quot;) printit 1 ;;
+                &quot;two&quot;) printit 2 ;;
+                &quot;three&quot;) printit 3 ;;
+                *) echo &quot;Please input &#123;one|two|three&#125;. &quot; ;;
+              esac</code></pre>
+<hr>
+<h1 id="Chapter-08-Bash-Sript"><a href="#Chapter-08-Bash-Sript" class="headerlink" title="Chapter_08_Bash_Sript"></a>Chapter_08_Bash_Sript</h1><h2 id="8-1-shell-script-介绍"><a href="#8-1-shell-script-介绍" class="headerlink" title="8.1 shell script 介绍"></a>8.1 shell script 介绍</h2><h3 id="8-1-1-shell-script-介绍"><a href="#8-1-1-shell-script-介绍" class="headerlink" title="8.1.1 shell script 介绍"></a>8.1.1 shell script 介绍</h3><h4 id="知识点–概念：shell-scrpit-特点"><a href="#知识点–概念：shell-scrpit-特点" class="headerlink" title="知识点–概念：shell scrpit 特点"></a>知识点–概念：shell scrpit 特点</h4><pre><code>    1.适合用在系统管理
+    2.不适合用于开发
+        # 不适合处理大量数值运算
+        # Shell scripts 的速度较慢，使用的 CPU 资源较多，造成资源不足
+    3.文法
+        # 从上而下执行，从左而右执行
+        # 多个空白都会被识别成一空白，制表符被视为空白
+        # 自动忽略空行
+        # 自动忽略注释
+        # 一个 Enter 符号 CR，作为执行命令的标志
+        # 跳脱 Enter 的方式可以跨行编写指令
+        # 当在脚本内进行重定向到文件时，如果使用相对路径，则自动在执行命令的目录新建文件</code></pre>
+<h4 id="知识点–概念：shebang"><a href="#知识点–概念：shebang" class="headerlink" title="知识点–概念：shebang"></a>知识点–概念：shebang</h4><pre><code>    1.#!/bin/bash
+        # 指定执行脚本文件的默认解释程序，以及需要的参数
+        # 使用绝对路径
+    2.用法
+        # 如果显示指定了解释程序，则忽略 shebang
+        # 如果没有显式指定解释程序，则使用 shebang
+        # 如果没有 shebang，或 shebang 无效，则使用当时环境的 shell 
+        # 如果 shebang 不存在，或没有可执行权限，则报错 &quot;bad interpreter&quot;</code></pre>
+<h4 id="知识点–概念：运行-shell-script"><a href="#知识点–概念：运行-shell-script" class="headerlink" title="知识点–概念：运行 shell script"></a>知识点–概念：运行 shell script</h4><pre><code>    1.直接指令下达，script 文件必须要具备 rx 权限，可以有三种直接指令执行的方式
+        # 绝对路径
+        # 相对路径，进入 script 的目录并使用 ./&lt;script&gt;
+        # PATH 方式，将脚本文件放在 PATH 目录中
+    2.以 bash 程序来执行，script 文件必须要具备 r 权限
+        # bash &lt;script&gt;
+        # sh &lt;script&gt;</code></pre>
+<h3 id="8-1-2-shell-script-编写习惯"><a href="#8-1-2-shell-script-编写习惯" class="headerlink" title="8.1.2 shell script 编写习惯"></a>8.1.2 shell script 编写习惯</h3><h4 id="知识点–概念：shell-script-好的编写习惯"><a href="#知识点–概念：shell-script-好的编写习惯" class="headerlink" title="知识点–概念：shell script 好的编写习惯"></a>知识点–概念：shell script 好的编写习惯</h4><pre><code>    1.开头申明 shebang
+    2.开头注释简单的脚本说用
+        # 脚本的功能
+        # 脚本的版本信息
+        # 脚本的作者与联络方式
+        # 脚本的版权宣告方式
+        # 脚本的 History 历史纪录
+        # 脚本运作时需要的环境变量
+        # 脚本的状态值的含义
+    3.开头手动设置一下需要用到的环境变量，如 PATH LANG 等
+    4.引用变量使用 $&#123; &#125; 的方式
+    5.使用制表符进行缩进
+    6.较特殊的指令，使用绝对路径运行
+    7.在程序运行过程中，设定好程序的回传状态值 $?，便于脚本的纠错</code></pre>
+<h3 id="8-1-3-shell-script-的内建变量"><a href="#8-1-3-shell-script-的内建变量" class="headerlink" title="8.1.3 shell script 的内建变量"></a>8.1.3 shell script 的内建变量</h3><h4 id="知识点–概念：shell-script-的内建变量"><a href="#知识点–概念：shell-script-的内建变量" class="headerlink" title="知识点–概念：shell script 的内建变量 $"></a>知识点–概念：shell script 的内建变量 $<N></h4><pre><code>    1.$0 代表 script 的文件名，具体值也和执行指令的方式有关
+        # ./相对路径&gt;，则 $0 是 ./相对路径
+        # sh &lt;绝对路径&gt;，则 $0 是绝对路径
+        # sh &lt;相对路径&gt;，则 $0 是相对路径
+        # PARH + 文件名，则 $0 是绝对路径
+        # 目录下直接文件名操作，则 $0 是文件的文件名
+    2.$1 $2 等，代表脚本的输入参数
+    3.$#，代表脚本的输入参数的个数
+    4.$@，记录所有的脚本输入参数，使用空格间隔
+    5.$*，记录所有的脚本输入参数，使用其他分隔符间隔，默认是空格，所以默认情况下与 $@ 一样
+    6.范例
+        # /path/to/scriptname 
+            - $0 为 /path/to/scriptname
+            - $1 为 opt1
+            - $2 为 opt2
+            - $3 为 opt3
+            - $4 为 opt4 
+            - $# 为 4
+            - $@ 为 op1 op2 op3 op4
+            - $* 为 op1 op2 op3 op4</code></pre>
+<h4 id="知识点–指令：shift，对脚本的输入参数进行偏移"><a href="#知识点–指令：shift，对脚本的输入参数进行偏移" class="headerlink" title="知识点–指令：shift，对脚本的输入参数进行偏移"></a>知识点–指令：shift，对脚本的输入参数进行偏移</h4><pre><code>    1.介绍
+        # 所谓参数的偏移
+            - 有 3 个参数，$1=one，$2=two，$3=three
+            - 一次 shift 进行参数偏移，偏移后，$1=tow，$2=three，参数值 one 消失了，参数 $3 也不用了
+    2.用法
+        # shift [&lt;N&gt;]           -- 偏移 N 个参数，默认 N 为 1</code></pre>
+<h3 id="8-1-4-shell-script-的输入和输出"><a href="#8-1-4-shell-script-的输入和输出" class="headerlink" title="8.1.4 shell script 的输入和输出"></a>8.1.4 shell script 的输入和输出</h3><h4 id="知识点–指令：read，读取来自键盘的输入并保存到变量中"><a href="#知识点–指令：read，读取来自键盘的输入并保存到变量中" class="headerlink" title="知识点–指令：read，读取来自键盘的输入并保存到变量中"></a>知识点–指令：read，读取来自键盘的输入并保存到变量中</h4><pre><code>    1.介绍
+        # 常用于 script 中，让用户输入变量值
+        # 变量不用提前声明
+    2.格式
+        # read [-t &lt;N&gt;] [-p &#39;&lt;prompt&gt;&#39;] &lt;var_name&gt;
+    3.选项
+        # -t &lt;N&gt;            -- 等待的秒数，默认为永远等下去
+        # -p &#39;&lt;prompt&gt;&#39;     -- 添加提示符，不能使用 printf 的格式字符，可以使用双引号来通过变量引用内容
+    4.范例
+        # read -p &quot;input a number : &quot; -t 30 choice      -- 让用户输入一个数字，将值保存在变量 choice 中，30 秒不输入则中断执行</code></pre>
+<h4 id="知识点–指令：exit，退出脚本的执行，并返回-状态值"><a href="#知识点–指令：exit，退出脚本的执行，并返回-状态值" class="headerlink" title="知识点–指令：exit，退出脚本的执行，并返回 $? 状态值"></a>知识点–指令：exit，退出脚本的执行，并返回 $? 状态值</h4><pre><code>    1.格式
+        # exit &lt;N&gt;
+        # exit &quot;$&lt;var&gt;&quot;</code></pre>
+<h3 id="8-1-X-简单脚本范例"><a href="#8-1-X-简单脚本范例" class="headerlink" title="8.1.X 简单脚本范例"></a>8.1.X 简单脚本范例</h3><h4 id="知识点–脚本：使用-bc-计算-pi"><a href="#知识点–脚本：使用-bc-计算-pi" class="headerlink" title="知识点–脚本：使用 bc 计算 pi"></a>知识点–脚本：使用 bc 计算 pi</h4><pre><code>    1.涉及知识
+        # echo &quot;计算式&quot; | bc，利用 bc 来进行计算的方式
+        # 4*a(1)，是 bc 提供的一个计算 pi 的函数
+        # scale 来指定计算结果是小数点后几位
+    2.脚本功能
+        # 用户指定的 pi 的精度
+    3.脚本范例
+        #!/bin/bash
+        # Program:
+        # User input a scale number to calculate pi number.
+        # History:
+        # 2015/07/16 VBird First release
+        export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+        echo -e &quot;This program will calculate pi value. \n&quot;
+        echo -e &quot;You should input a float number to calculate pi value.\n&quot;
+        read -p &quot;The scale number (10~10000) ? &quot; checking
+        num=$&#123;checking:-&quot;10&quot;&#125;                                                   # 判断有否有输入数值，若没有则自动设置精度为 10 位
+        echo -e &quot;Starting calculate pi value. Be patient.&quot;
+        time echo &quot;scale=$&#123;num&#125;; 4*a(1)&quot; | bc -lq</code></pre>
+<h2 id="8-2-选择结构"><a href="#8-2-选择结构" class="headerlink" title="8.2 选择结构"></a>8.2 选择结构</h2><h3 id="8-2-1-指令控制"><a href="#8-2-1-指令控制" class="headerlink" title="8.2.1 指令控制"></a>8.2.1 指令控制</h3><h4 id="知识点–概念：指令执行控制，-amp-amp-，"><a href="#知识点–概念：指令执行控制，-amp-amp-，" class="headerlink" title="知识点–概念：指令执行控制，&amp;&amp;，||"></a>知识点–概念：指令执行控制，&amp;&amp;，||</h4><pre><code>    1.&lt;cmd1&gt; &amp;&amp; &lt;cmd2&gt;
+        # cmd1 的 $? 为 0，则执行 cmd2
+        # cmd1 的 $?非 0，则不执行 cmd2
+    2.&lt;cmd1&gt; || &lt;cmd2&gt;
+        # cmd1 的 $? 为 0，则不执行 cmd2
+        # cmd1 的 $? 非 0，则执行 cmd2
+    3.&lt;cmd1&gt; &amp;&amp; &lt;cmd2&gt; || &lt;cmd3&gt;
+        # cmd1 的 $? 为 0，则执行 cmd2
+        # cmd1 的 $? 非 0，则执行 cmd3</code></pre>
+<h3 id="8-2-2-test-判断式"><a href="#8-2-2-test-判断式" class="headerlink" title="8.2.2 test 判断式"></a>8.2.2 test 判断式</h3><h4 id="知识点–指令：test-条件判断"><a href="#知识点–指令：test-条件判断" class="headerlink" title="知识点–指令：test 条件判断"></a>知识点–指令：test 条件判断</h4><pre><code>    1.介绍
+        # 结果写入 $?
+            - 0 为 true
+            - 非 0 为 false
+        # 常用于 if 语句
+        # test 一个选项只能指定一个参数，判断多个条件需要使用 -a 或 -o
+    2.对文件的文件名或文件类型进行判断，用法例如 test -e &lt;filename&gt;，判断文件是否存在，存在则回传 0 给 $?
+        # -e，查看文件是否存在
+        # -f，该&#39;文件名&#39;是否存在且为文件 file
+        # -d，该&#39;文件名&#39;是否存在且为目录 directory
+        # -b，该&#39;文件名&#39;是否存在且为一个 block device 设备
+        # -c，该&#39;文件名&#39;是否存在且为一个 character device 设备
+        # -S，该&#39;文件名&#39;是否存在且为一个 Socket 文件
+        # -p，该&#39;文件名&#39;是否存在且为一个 FIFO（pipe）文件
+        # -s，该&#39;文件名&#39;是否存在且为一个 &#39;非空&#39; 文件
+        # -L，该&#39;文件名&#39;是否存在且为一个连接
+    3.对文件的权限进行判断，用法例如 test -r &lt;filename&gt;，判断文件是否有读权限，有则回传 0 给 $?
+        # -r，侦测该文件名是否存在且具有&#39;可读&#39;的权限
+        # -w，侦测该文件名是否存在且具有&#39;可写&#39;的权限
+        # -x，侦测该文件名是否存在且具有&#39;可执行&#39;的权限
+        # -u，侦测该文件名是否存在且具有&#39;SUID&#39;的属性
+        # -g，侦测该文件名是否存在且具有&#39;SGID&#39;的属性
+        # -k，侦测该文件名是否存在且具有&#39;Sticky bit&#39;的属性
+    4.两个文件之间的比较，用法例如 test &lt;file1&gt; -nt &lt;file2&gt;
+        # -nt，newer than，判断 file1 是否比 file2 新
+        # -ot，older than，判断 file1 是否比 file2 旧
+        # -ef，判断 file1 与 file2 是否为同一文件，常用在 hard link 的判定，实际为查看两个文件是否均指向同一个 inode
+    5.判断两个整数的大小，用法例如 test &lt;n1&gt; -eq &lt;n2&gt;
+        # -eq，判断两数是否相等，equal
+        # -ne，判断两数是否不等，not equal
+        # -gt，greater than，判断 n1 是否大于 n2
+        # -lt，less than，判断 n1 是否小于 n2
+        # -ge，greater than or equal，判断 n1 是否大于等于 n2
+        # -le，less than or equal，判断 n1 是否小于等于 n2
+    6.判断字符串
+        # test -z &lt;string&gt;，判断字符串是否为空，若 string 为空则为 true
+        # test [-n] &lt;string&gt;，判断字符串是否为非空，若 string 非空则为 true，其中 -n 可以省略，通常 &lt;string&gt; 使用变量引用
+        # test &lt;str1&gt; == &lt;str2&gt;，判断 str1 是否等于 str2，若相等则为 true
+        # test &lt;str1&gt; != &lt;str2&gt;，判断 str1 是否不等于 str2，若不相等则为 true
+    7.逻辑条件
+        # -a，and 判断
+            - 例如 test -r file_1 -a -r file_2
+        # -o，or 判断
+            - 例如 test -r file_1 -o -r file_2
+        # !，not 判断
+            - 例如 test ! -r file ，当 file 不具有 x 时，回传 true                     
+    8.test 判断式配合指令控制
+        # test 判断式可以作为一条指令放在指令控制中
+            - 例如，test -f $&#123;filename&#125; &amp;&amp; echo &#39;yes&#39;
+        # 实现多重判断
+            - 例如，test -e &lt;file_1&gt; -a -e &lt;file_2&gt; &amp;&amp; test -e &lt;file_3&gt; -o -e &lt;file_4&gt;</code></pre>
+<h4 id="知识点–概念：中括号判断式，test-的简略写法"><a href="#知识点–概念：中括号判断式，test-的简略写法" class="headerlink" title="知识点–概念：中括号判断式，test 的简略写法"></a>知识点–概念：中括号判断式，test 的简略写法</h4><pre><code>    1.中括号判断式
+        # 例如 [ -z &quot;$&#123;HOME&#125;&quot; ]，相当于 test -z $&#123;HOME&#125;
+    2.语法
+        # 中括号与元素之间，元素与元素之间，都需要有空格来分隔
+            - [&lt;space&gt;-z&lt;space&gt;$HOME&lt;space&gt;]
+            - [&lt;space&gt;$&#123;HOME&#125;&lt;space&gt;==&lt;space&gt;$MAIL&lt;space&gt;]
+    3.中括号判断式配合指令控制
+        # &amp;&amp;，and 判断，[ 判断式1 ] &amp;&amp; [ 判断式2 ]
+        # ||，or 判断，[ 判断式1 ] || [ 判断式2 ]</code></pre>
+<h3 id="8-2-3-IF-语句"><a href="#8-2-3-IF-语句" class="headerlink" title="8.2.3 IF 语句"></a>8.2.3 IF 语句</h3><h4 id="知识点–概念：if-选择结构，根据判断式的-进行选择"><a href="#知识点–概念：if-选择结构，根据判断式的-进行选择" class="headerlink" title="知识点–概念：if 选择结构，根据判断式的 $? 进行选择"></a>知识点–概念：if 选择结构，根据判断式的 $? 进行选择</h4><pre><code>    1.介绍
+        # 建议使用制表符进行缩进
+        # 条件部分必须使用判断式
+            - test 判断式
+            - 中括号判断式
+            - 其他指令，只要能获得 $? 即可，建议将 STDOUT STDERR 都送到 /dev/null，否则会影响输出
+        # 如果需要写在一行，if、then、elif、else、fi 每一个部分都需要加 ; 分号
+    2.语法
+        # 单层选择
+            if &#123;&lt;test_判断式&gt;|&lt;中括号判断式&gt;|&lt;其他指令&gt;&#125; [;]
+            then
+                &lt;operations&gt;[;]
+            fi [;]
+        # 双层选择
+            if &#123;&lt;test_判断式&gt;|&lt;中括号判断式&gt;|&lt;其他指令&gt;&#125; [;]
+            then
+                &lt;operations&gt;[;]
+            else
+                &lt;operations&gt;[;]
+            fi [;]
+        # 多层选择
+            if &#123;&lt;test_判断式&gt;|&lt;中括号判断式&gt;|&lt;其他指令&gt;&#125; [;]
+            then
+                &lt;operations&gt;[;]
+            elif &#123;&lt;test_判断式&gt;|&lt;中括号判断式&gt;|&lt;其他指令&gt;&#125; [;]
+            then
+                &lt;operations&gt;[;]
+            ...
+            else
+                &lt;operations&gt;[;]
+            fi [;]
+    3.范例
+        # 使用其他指令用作 if 的条件判断
+            - if ls -al /home &amp;&gt; /dev/null ; then echo 321 ; fi ;</code></pre>
+<h3 id="8-1-4-if-脚本范例"><a href="#8-1-4-if-脚本范例" class="headerlink" title="8.1.4 if 脚本范例"></a>8.1.4 if 脚本范例</h3><h4 id="知识点–脚本：if-单层判断用户输入是否合法"><a href="#知识点–脚本：if-单层判断用户输入是否合法" class="headerlink" title="知识点–脚本：if 单层判断用户输入是否合法"></a>知识点–脚本：if 单层判断用户输入是否合法</h4><pre><code>    1.涉及知识
+        # if 的条件判断式，使用多个中括号判断式配合指令控制方式一起使用
+    2.脚本功能
+        # 判断用户输入的是 y 还是 n，不区分大小写
+        # 如果不是 y 或 n，则报错
+    3.脚本案例
+        #!/bin/bash
+        # Program:
+        # This program shows the user&#39;s choice
+        # History:
+        # 2015/07/16    VBird   First release
+        export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+        read -p &quot;Please input (Y/N): &quot; yn
+        if [ &quot;$&#123;yn&#125;&quot; == &quot;Y&quot; ] || [ &quot;$&#123;yn&#125;&quot; == &quot;y&quot; ] ; 
+            then  echo &quot;OK, continue&quot; ; exit 0 ;
+        fi
+        if [ &quot;$&#123;yn&#125;&quot; == &quot;N&quot; ] || [ &quot;$&#123;yn&#125;&quot; == &quot;n&quot; ]
+            then echo &quot;Oh, interrupt!&quot; ; ;exit 0
+        fi
+        echo &quot;I don&#39;t know what your choice is&quot; &amp;&amp; exit 0</code></pre>
+<h4 id="知识点–脚本：if-多层判断用户输入是否合法"><a href="#知识点–脚本：if-多层判断用户输入是否合法" class="headerlink" title="知识点–脚本：if 多层判断用户输入是否合法"></a>知识点–脚本：if 多层判断用户输入是否合法</h4><pre><code>    1.涉及知识
+        # if 语句多层判断语法
+    2.脚本功能
+        # 判断用户输入的是 y 还是 n，不区分大小写
+        # 如果不是 y 或 n，则报错
+    3.脚本范例
+        #!/bin/bash
+        # Program:
+        # This program shows the user&#39;s choice
+        # History:
+        # 2015/07/16    VBird   First release
+        export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+        read -p &quot;Please input (Y/N): &quot; yn
+        if [ &quot;$&#123;yn&#125;&quot; == &quot;Y&quot; ] || [ &quot;$&#123;yn&#125;&quot; == &quot;y&quot; ]
+            then  echo &quot;OK, continue&quot; ;
+        elif [ &quot;$&#123;yn&#125;&quot; == &quot;N&quot; ] || [ &quot;$&#123;yn&#125;&quot; == &quot;n&quot; ]
+            then  echo &quot;Oh, interrupt!&quot; ;
+        else
+            echo &quot;I don&#39;t know what your choice is&quot;
+        fi</code></pre>
+<h4 id="知识点–脚本：侦测正在使用的端口"><a href="#知识点–脚本：侦测正在使用的端口" class="headerlink" title="知识点–脚本：侦测正在使用的端口"></a>知识点–脚本：侦测正在使用的端口</h4><pre><code>    1.涉及知识点
+    2.脚本功能
+    3.脚本范例
+        #!/bin/bash
+        # Program:
+        # Using netstat and grep to detect WWW,SSH,FTP and Mail services.
+        # History:
+        # 2015/07/16 VBird First release
+        export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+        # 
+        # 首先发出一些通知
+        echo &quot;Now, I will detect your Linux server&#39;s services!&quot;
+        echo -e &quot;The www, ftp, ssh, and mail(smtp) will be detected! \n&quot;
+        # 
+        # 开始进行测试的工作，并且输出结果
+        testfile=/dev/shm/netstat_checking.txt
+        netstat -tuln &gt; $&#123;testfile&#125;                             # 将 netstat 的信息到内存中，不用一直执行 netstat 
+        if grep 80 $&#123;testfile&#125; 2&gt; /dev/null                     # 检查 80 端口
+            then echo &quot;WWW is running in your system.&quot; ; fi ;
+        if grep 22 $&#123;testfile&#125; 2&gt; /dev/null                     # 检查 22 端口
+            then echo &quot;SSH is running in your system.&quot; ; fi ;
+        if grep 21 $&#123;testfile&#125; 2&gt; /dev/null                     # 检查 21 端口
+            then echo &quot;FTP is running in your system.&quot; ; fi ;
+        if grep 25 $&#123;testfile&#125; 2&gt; /dev/null                     # 侦测 25 端口
+            then echo &quot;Mail is running in your system.&quot; ; fi ;</code></pre>
+<h3 id="8-1-5-CASE-语句"><a href="#8-1-5-CASE-语句" class="headerlink" title="8.1.5 CASE 语句"></a>8.1.5 CASE 语句</h3><h4 id="知识点–概念：case-选择结构，利用变量值进行选择"><a href="#知识点–概念：case-选择结构，利用变量值进行选择" class="headerlink" title="知识点–概念：case 选择结构，利用变量值进行选择"></a>知识点–概念：case 选择结构，利用变量值进行选择</h4><pre><code>    1.介绍
+        # 指定变量，通过变量的值进行选择
+        # case 选择结构，变量的值通常由两种获得方式
+            - 直接指定，在运行脚本时通过 $1 等变量直接指定
+            - 互动输入，在脚本中加入 read 指令，让用户输入变量的内容
+        # 
+    2.语法
+        # case $&lt;var_name&gt; in
+            &quot;&lt;value_1&gt;&quot;)            -- 关键字右括号，每个值建议用双引号括起来
+                &lt;operations&gt;
+                ;;                  -- 每个类别使用两个连续的分号作为结尾
+            &quot;&lt;value_2&gt;&quot;)
+                &lt;operations&gt;
+                ;;
+            *)                      -- * 来代表所有其他值
+                &lt;operations&gt;
+                &lt;exit&gt;              -- 建议最后一个程序段回传一个错误代码
+                ;;
+          esac
+    3.范例
+        # case $&#123;choice&#125; in
+            &quot;one&quot;) echo &quot;Your choice is ONE&quot; ;;
+            &quot;two&quot;) echo &quot;Your choice is TWO&quot; ;;
+            &quot;three&quot;) echo &quot;Your choice is THREE&quot; ;;
+            *) echo &quot;Usage $&#123;0&#125; &#123;one|two|three&#125;&quot; ; exit 1 ;;
+        esac</code></pre>
+<h2 id="8-3-循环"><a href="#8-3-循环" class="headerlink" title="8.3 循环"></a>8.3 循环</h2><h3 id="8-3-1-while-do-循环"><a href="#8-3-1-while-do-循环" class="headerlink" title="8.3.1 while do 循环"></a>8.3.1 while do 循环</h3><h4 id="知识点–概念：while-do-循环，满足条件则循环"><a href="#知识点–概念：while-do-循环，满足条件则循环" class="headerlink" title="知识点–概念：while do 循环，满足条件则循环"></a>知识点–概念：while do 循环，满足条件则循环</h4><pre><code>    1.介绍
+        # 使用判断式进行条件判断，读取判断式的 $?
+        # 死循环
+            - while true
+            - while &lt;command&gt;，command 是肯定能返回 0 的指令
+    2.语法
+        # while &#123;&lt;test_判断式&gt;|&lt;中括号判断式&gt;|&lt;其他指令&gt;&#125; [;]
+            do
+            &lt;operations&gt; [;]
+          done [;]</code></pre>
+<h3 id="8-3-2-untile-do-循环"><a href="#8-3-2-untile-do-循环" class="headerlink" title="8.3.2 untile do 循环"></a>8.3.2 untile do 循环</h3><h4 id="知识点–概念：until-循环，不满足条件则循环"><a href="#知识点–概念：until-循环，不满足条件则循环" class="headerlink" title="知识点–概念：until 循环，不满足条件则循环"></a>知识点–概念：until 循环，不满足条件则循环</h4><pre><code>    1.介绍
+        # 使用判断式进行条件判断，读取判断式的 $?
+        # 死循环
+            - until false
+            - until &lt;command&gt;，command 是肯定能返回非 0 的指令
+    2.语法
+        # until &#123;&lt;test_判断式&gt;|&lt;中括号判断式&gt;|&lt;其他指令&gt;&#125; [;]
+            do
+                &lt;operations&gt; [;]
+          done [;]</code></pre>
+<h3 id="8-3-3-for-循环"><a href="#8-3-3-for-循环" class="headerlink" title="8.3.3 for 循环"></a>8.3.3 for 循环</h3><h4 id="知识点–概念：bash-列表"><a href="#知识点–概念：bash-列表" class="headerlink" title="知识点–概念：bash 列表"></a>知识点–概念：bash 列表</h4><pre><code>    1.普通列表
+        # 生成以用空格间隔的连续字符
+        # 自动判断正序或倒序
+            - &lt;start&gt; 和 &lt;end&gt; 不能使用变量，必须手动指定
+            - &lt;start&gt; 和 &lt;end&gt; 可以是小写字母、大写字母、整数，
+            - &lt;start&gt; 和 &lt;end&gt; 必须具有相同的性质
+        # 格式
+            - &#123;&lt;start&gt;..&lt;end&gt;&#125;
+        # 范例
+            - &#123;A..B&#125;        -- 结果为 A B C ... Z 这 26 个字母
+            - &#123;z..b&#125;        -- 结果为 z x y ... b 这 25 个字母
+            - &#123;1..10&#125;       -- 结果为 1 2 3 ... 10 这 10 个整数
+            - &#123;9..-10&#125;      -- 结果为 9 8 ... -9 -10 这样递减的 20 个整数
+    2.seq 列表
+        # 生成以 \n 间隔的连续数字，可以是整数、浮点数
+        # &lt;first&gt;、&lt;increment&gt;、&lt;last&gt; 可以使用变量指定
+        # &lt;first&gt; 默认为 1
+        # &lt;increment&gt; 默认为 1，可以为负，可以为浮点数
+        # 格式
+            - seq [&lt;options&gt;] [&lt;first&gt; [&lt;increment&gt;]] &lt;last&gt;
+            - &lt;operations&gt;
+                -f &lt;format&gt;     -- 指定浮点数的格式，格式采用 printf style
+                -s &lt;strings&gt;    -- 指定其他的分隔字符串
+                -w              -- 进行宽度对齐，不足则补足 leading zeroes
+        # 范例
+            - seq -s &#39; &#39; 1 0.5 5        -- 结果为 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0
+            - seq -s &#39;, &#39; 0 -0.05 -0.6  -- 结果为 0.00, -0.05, -0.10, -0.15, -0.20, -0.25, -0.30, -0.35, -0.40, -0.45, -0.50, -0.55, -0.60</code></pre>
+<h4 id="知识点–概念：for-循环，固定循环，循环的次数被提前设定好"><a href="#知识点–概念：for-循环，固定循环，循环的次数被提前设定好" class="headerlink" title="知识点–概念：for 循环，固定循环，循环的次数被提前设定好"></a>知识点–概念：for 循环，固定循环，循环的次数被提前设定好</h4><pre><code>    1.介绍
+        # for 循环语句有三种，主要区别就是循环变量的取值方式
+            - 列举内容方式
+            - 列表方式
+            - 计步方式
+    2.列举内容方式语法
+        # 循环变量的值提前手动写好
+        # for &lt;var&gt; in &lt;value_1&gt; &lt;value_2&gt; ... [;]
+            do
+                &lt;operations&gt; [;]
+            done [;]
+        # 范例
+            - for animal in dog cat elephant ; do echo &quot;There are one $&#123;animal&#125; in the zoo &quot; ; done ;
+    3.列表方式语法
+        # 循环变量的值通过普通 bash 列表或 seq 列表或数组
+        # 可以使用多个列表，循环变量依次从列表中取值
+        # seq 列表需要放在 $( ) 或 ` ` 中
+        # for &lt;var&gt; in &lt;list&gt;[ ...] [;]
+            do
+                &lt;operations&gt; [;]
+            done [;]
+        # 范例
+            - users=$(cut -d &#39;:&#39; -f1 /etc/passwd); for username in $&#123;users&#125; ;  do id $&#123;username&#125; ; done;    -- 查看所有用户的 id 信息
+    4.计步方式语法
+        # &lt;start&gt;、&lt;end&gt;、&lt;increment&gt; 缺一不可
+        # 语法
+            for (( &lt;start&gt;; &lt;end&gt;; &lt;increment&gt; )) [;]
+            do
+                &lt;operations&gt; [;]
+            done [;]
+        # &lt;start&gt;
+            - 指定循环变量和循环变量的初始值
+            - 格式，例如 i=&lt;value&gt;
+        # &lt;end&gt;
+            - 指定结束循环的条件
+            - 格式，例如 i&lt;=100 或 mod(i,100)=15
+        # &lt;increment&gt;
+            - 指定故常
+            - 格式，例如 i=i+1 或 i++、i--
+        # 范例
+            - for (( k=1; k&lt;=10; k++)) ; do echo $&#123;k&#125; ; done ;
+            - s=0 ; for (( i=1; i&lt;=100; i=i+1 )) ; do s=$(($&#123;s&#125;+$&#123;i&#125;)) ; done echo &quot;The result is ==&gt; $&#123;s&#125;&quot; ;   -- 计算 1 到 100 的累计和</code></pre>
+<hr>
+<h1 id="Chapter-09-文本处理"><a href="#Chapter-09-文本处理" class="headerlink" title="Chapter_09_文本处理"></a>Chapter_09_文本处理</h1><h2 id="9-1-文本数据流处理"><a href="#9-1-文本数据流处理" class="headerlink" title="9.1 文本数据流处理"></a>9.1 文本数据流处理</h2><h3 id="9-1-1-阅读文本"><a href="#9-1-1-阅读文本" class="headerlink" title="9.1.1 阅读文本"></a>9.1.1 阅读文本</h3><h4 id="知识点–指令：cat"><a href="#知识点–指令：cat" class="headerlink" title="知识点–指令：cat"></a>知识点–指令：cat</h4><pre><code>    1.介绍
+        # 查阅文件内容，Concatenate 的缩写    
+        # tac，反向 cat，选项与 cat 相同
+    2.格式
+        # cat [-AbEnTv] &lt;input&gt;
+    3.选项
+        # -A        -- 相当于 -ETv 的整合选项，显示出一些格式字符，但空格还是会正常显示
+        # -E        -- 显示断行符 $
+        # -T        -- 显示制表符 ^I
+        # -v        -- 显示一些隐藏的特殊字符
+        # -b        -- 列出行号，空白行没有行号
+        # -n        -- 列出行号，空白行也会有行号</code></pre>
+<h4 id="知识点–指令：more，less"><a href="#知识点–指令：more，less" class="headerlink" title="知识点–指令：more，less"></a>知识点–指令：more，less</h4><pre><code>    1.介绍
+        # 一页一页的显示文件内容
+    2.格式
+        # less [-N] &lt;input&gt;
+    3.选项
+        # -N    -- 显示行号
+    4.less page 的操作
+        # h     -- 打开帮助页面
+        # q     -- 离开 less page
+        # Enter     -- 向下翻一行
+        # 上方向键  -- 向上翻一行
+        # 下方向键  -- 向下翻一行
+        # 空格            -- 向下翻一页
+        # PageUp        -- 上翻页
+        # PageDown      -- 下翻页
+        # b 或 [ctrl]-b  -- 向上翻页，不过这动作只对文件有用，对 STDIN 无用
+        # ?&lt;pattern&gt;        -- 向上搜索
+        # /&lt;pattern&gt;        -- 向下搜索
+        # n                 -- 重复上一个动作
+        # N                 -- 反向的重复上一个动作
+        # :f            -- 显示出文件名以及目前的行数    
+        # g         -- 定位到第一行
+        # G         -- 定位到最后一行
+        # &lt;N&gt;g      -- 定位到某一行</code></pre>
+<h4 id="知识点–指令：head，tail"><a href="#知识点–指令：head，tail" class="headerlink" title="知识点–指令：head，tail"></a>知识点–指令：head，tail</h4><pre><code>    1.介绍
+    2.格式
+        # head [-n [-]&lt;N&gt;] &lt;input&gt;
+        # tail [-n [+]&lt;N&gt;] &lt;input&gt;
+        # tail [-n [+]&lt;N&gt;] [-f] &lt;input&gt;
+    3.选项
+        # -n [-/+]&lt;N&gt;   -- 设定显示的行数，默认只显示 10 行
+            -n &lt;N&gt;          -- 只显示指定的行
+            -n -/+&lt;N&gt;       -- 除了指定的行，其他行都显示
+        # -f            -- 持续侦测，Ctrl+c 会结束</code></pre>
+<h4 id="知识点–指令：nl，查阅文件内容，显示的时候会直接带上行号"><a href="#知识点–指令：nl，查阅文件内容，显示的时候会直接带上行号" class="headerlink" title="知识点–指令：nl，查阅文件内容，显示的时候会直接带上行号"></a>知识点–指令：nl，查阅文件内容，显示的时候会直接带上行号</h4><pre><code>    1.用法
+        # nl [-bnw] &lt;input&gt;
+    2.选项
+        # -b        -- 指定行号指定的方式，主要有两种
+            -b t        -- 空行不要列出行号，默认方式
+            -b a        -- 不论是否为空行，也同样列出行号
+        # -n        -- 列出行号表示的方法，主要有三种
+            -n ln       -- 行号在行号栏位向左对齐
+            -n rn       -- 行号在行号栏位向右对齐，且不加 0
+            -n rz       -- 行号在行号栏位向右对齐，且加 0
+        # -w &lt;N&gt;    -- 设定行号栏位的占用的字符数
+    3.范例
+        # nl -b a /etc/issue
+        # nl -b a -n rz /etc/issue
+        # nl -b a -n rz -w 10 /etc/issue</code></pre>
+<h4 id="知识点–指令：od，二进制阅读"><a href="#知识点–指令：od，二进制阅读" class="headerlink" title="知识点–指令：od，二进制阅读"></a>知识点–指令：od，二进制阅读</h4><pre><code>    1.用法
+        # od [-t &lt;type&gt;] &lt;input&gt;
+    2.选项
+        # -t &lt;type&gt;     -- 指定输出类型 TYPE
+            a               -- 利用默认的字符来输出
+            c               -- 使用 ASCII 字符来输出
+            d[&lt;size&gt;]       -- 利用十进制 decimal 来输出，每个字符占用 size bytes 
+            o[&lt;size&gt;]       -- 利用八进制 octal 来输出，每个字符占用 size bytes
+            x[&lt;size&gt;]       -- 利用十六进制 hexadecimal 来输出，每个字符占用 size bytes
+            f[&lt;size&gt;]       -- 利用浮点数 floating 来输出，每个字符占用 size bytes
+    3.范例
+        # echo password | od -t d1c     -- 快速得到 &quot;password&quot; 这几个字符的 ASCII 码十进制号</code></pre>
+<h3 id="9-1-2-行处理"><a href="#9-1-2-行处理" class="headerlink" title="9.1.2 行处理"></a>9.1.2 行处理</h3><h4 id="知识点–指令：grep-行截取"><a href="#知识点–指令：grep-行截取" class="headerlink" title="知识点–指令：grep 行截取"></a>知识点–指令：grep 行截取</h4><pre><code>    1.介绍
+    2.常用
+        # grep &lt;string&gt; &lt;directory&gt;/*
+        # &lt;command&gt; | &lt;grep&gt;
+    3.格式
+        # grep [-ABCacilnv] [--color=auto] &lt;pattern&gt; &lt;input&gt;[ ...]
+    4.选项
+        # -A &lt;n&gt;    -- after，后 n 行也一起截取
+        # -B &lt;n&gt;    -- before，前 n 行也一起截取
+        # -C &lt;n&gt;    -- 前后 n 行也一起截取
+        # -i        -- 忽略大小写
+        # -n        -- 输出行号
+        # -v        -- 反向选择
+        # -a        -- 将 binary 文件以 text 文件的方式搜索资料
+        # -c        -- 不返回匹配行，而是返回匹配的行的数量
+        # -l        -- 不返回匹配行，而是返回存在匹配行的文件的文件名，常用于直接 grep 大量文件
+        #--color=auto   -- 对返回的匹配行中的关键字进行颜色标记，默认选项
+    5.正则表达式
+        # grep -G，默认选项，支持 basic regular expression
+        # grep -E，支持 extended regular expression
+        # grep -P，支持 Perl regular expression，其中包括零宽度断言
+        # egrep，相当于 grep -E</code></pre>
+<h4 id="知识点–指令：wc-统计行数"><a href="#知识点–指令：wc-统计行数" class="headerlink" title="知识点–指令：wc 统计行数"></a>知识点–指令：wc 统计行数</h4><pre><code>    1.介绍
+    2.格式
+        # wc [-lwm] &lt;file&gt;[ ...]
+    3.选项
+        # -l            -- 统计行数
+        # -w            -- 统计英文单词数
+        # -m            -- 统计字符数</code></pre>
+<h3 id="9-1-3-列处理"><a href="#9-1-3-列处理" class="headerlink" title="9.1.3 列处理"></a>9.1.3 列处理</h3><h4 id="知识点–指令：cut，整列截取"><a href="#知识点–指令：cut，整列截取" class="headerlink" title="知识点–指令：cut，整列截取"></a>知识点–指令：cut，整列截取</h4><pre><code>    1.介绍
+        # -b，-c，-f 三个选项只能使用一个
+        # -f 默认使用制表符为列分隔符，以空格为列分隔符需要指定 -d &#39; &#39;
+        # 对连续空格的情况不太好
+        # 返回结果不会包含重复列，cut 会自动进行去重
+    2.格式
+        # cut -b &lt;list&gt; [&lt;file&gt;[ ...]]
+        # cut -c &lt;list&gt; [&lt;file&gt;[ ...]]
+        # cut -f &lt;list&gt; [&lt;file&gt;[ ...]]
+        # &lt;list&gt;
+            - 1,2,3
+            - 3-
+            - -3
+            - 1-3,7-9
+    3.选项
+        # -b，-c，-f      -- 只能选择一种方式
+            -b                  -- 按字节截取
+            -c                  -- 按字符截取
+            -f                  -- 按照 field 进行截取，默认列分隔符为制表符
+        # -n                            -- 配合 -b 使用，不要分隔多字节的字符
+        # -d &#39;&lt;column_sep_char&gt;&#39;        -- 配合 -f 使用，指定列分隔符，列分隔符只能是单字符
+        # -s                            -- 配合 -f 使用，不返回不包含列分隔符的列
+        # --complement                  -- 反向选择
+        # --output-delimiter=&lt;string&gt;   -- 指定返回结果的列分隔符，取代输入时的列分隔符</code></pre>
+<h4 id="知识点–指令：sort-排序"><a href="#知识点–指令：sort-排序" class="headerlink" title="知识点–指令：sort 排序"></a>知识点–指令：sort 排序</h4><pre><code>    1.介绍
+        # 默认排序方式为按字符顺序从小到大
+        # 使用前最好统一语系变量
+        # 默认列分隔符为制表符
+        # 且如果要删除空行，最好先用 sed 删除空行
+    2.格式
+        # sort [-fbMnru] [&lt;file&gt;]
+        # sort -t &#39;&lt;column_sep_char&gt;&#39; -k &lt;field_list&gt;
+    3.选项
+        # -f        -- 忽略大小写
+        # -b        -- 忽略开头的全部空白字符
+        # -M        -- 以月份的名字来排序，如 JAN、FEB
+        # -n        -- 使用数字大小进行排序
+        # -r        -- 反向排序
+        # -u        -- 同时去重
+        # -k &lt;field_list&gt;           -- 指定排序依据的范围
+        # -t &#39;&lt;column_sep_char&gt;&#39;    -- 指定列分隔符，列分隔符只能是单字符</code></pre>
+<h4 id="知识点–指令：uniq-去连续重"><a href="#知识点–指令：uniq-去连续重" class="headerlink" title="知识点–指令：uniq 去连续重"></a>知识点–指令：uniq 去连续重</h4><pre><code>    1.介绍
+        # 将连续的重复行压缩为一行
+        # 一般先 sort 排序
+    2.格式
+        # uniq [-ic] [&lt;file&gt;]
+    3.选项
+        # -i        -- 忽略大小写
+        # -c        -- 同时统计每一行的重复次数
+    4.范例
+        # last | cut -d &#39; &#39; -f 1 | sort | uniq -c       -- 作用，统计出每个用户的登录的总次数</code></pre>
+<h3 id="9-1-4-字符转换"><a href="#9-1-4-字符转换" class="headerlink" title="9.1.4 字符转换"></a>9.1.4 字符转换</h3><h4 id="知识点–指令：expand，unexpand，转换空白和制表符"><a href="#知识点–指令：expand，unexpand，转换空白和制表符" class="headerlink" title="知识点–指令：expand，unexpand，转换空白和制表符"></a>知识点–指令：expand，unexpand，转换空白和制表符</h4><pre><code>    1.格式
+        # expand [-t &lt;N&gt;] &lt;input&gt;       -- 将制表符转换为空白
+        # unexpand [-t &lt;N&gt;] &lt;input&gt;     -- 将空白转换为制表符
+    2.选项
+        # -t &lt;N&gt;        -- 指定空格和制表符之间的数量关系</code></pre>
+<h4 id="知识点–指令：dos2unix，unix2dox"><a href="#知识点–指令：dos2unix，unix2dox" class="headerlink" title="知识点–指令：dos2unix，unix2dox"></a>知识点–指令：dos2unix，unix2dox</h4><pre><code>    1.介绍
+        # Unix 字符和 Windows 字符之间的转换
+        # 默认直接修改原始文件，可以通过选项来将修改保存到新的文件
+        # 断行符
+            - Linux 和 Windows 的断行符的不同
+            - Windows 的断行符为 ^M$，CR 和 LF
+            - Linux 的断行符为 $，LF
+            - 使用 file 指令查看 dos 方式的文件，会有 with CRLF line terminators 的提示
+            - DOS 与 Linux 除了断行符，还有其他一些字符的定义不同
+    2.格式
+        # dos2unix/unix2dos [-k] &lt;input&gt;
+        # dos2unix/unix2dos [-n] &lt;input&gt; &lt;newfile&gt;
+    3.选项
+        # -k            -- 保留原始文件的 mtime
+        # -n            -- 保留原始文件，将转换后的内容输出到新文件
+    4.范例
+        # dos2unix -n &lt;old&gt; &lt;new&gt;       -- 保留原始文件再进行转换</code></pre>
+<h4 id="知识点–指令：tr，删除或替换一段信息流当中的文字"><a href="#知识点–指令：tr，删除或替换一段信息流当中的文字" class="headerlink" title="知识点–指令：tr，删除或替换一段信息流当中的文字"></a>知识点–指令：tr，删除或替换一段信息流当中的文字</h4><pre><code>    1.介绍
+        # 只能处理信息流
+        # 处理文本需要使用 STDIN
+    2.格式
+        # tr [-d] &lt;string&gt;
+        # tr [-s] &lt;string_1&gt; &lt;string_2&gt;
+    3.选项
+        # -d        -- 删除字符串
+        # -s        -- 替换字符串，用法暂时不明
+    4.范例
+        # last | tr &#39;[a-z]&#39; &#39;[A-Z]&#39;             -- 将所有的小写变成大写字符
+        # cat /etc/passwd | tr -d &#39;:&#39;           -- 将冒号 : 删除
+        # cat ~/passwd | tr -d &#39;\r&#39; &gt; ~/passwd  -- 将 dos 断行符 ^M 删除
+        # tr -d &#39;hello&#39; &lt; 1.txt                 -- 将文件中的 &#39;hello&#39; 都删除</code></pre>
+<h3 id="9-1-5-echo"><a href="#9-1-5-echo" class="headerlink" title="9.1.5 echo"></a>9.1.5 echo</h3><h4 id="知识点–指令：echo"><a href="#知识点–指令：echo" class="headerlink" title="知识点–指令：echo"></a>知识点–指令：echo</h4><pre><code>    1.介绍
+    2.格式
+        # echo [-en] &lt;string&gt;
+        # echo $&#123;&lt;var)name&gt;&#125;        -- 查看变量
+    3.选项
+        # -e                    -- 可以接受格式字符，如 \t
+        # -n                    -- 不进行换行
+    4.例子
+        # echo &quot;Hello World&quot; &gt; tty1
+        # echo -e &quot; Hello World \n &quot;</code></pre>
+<h4 id="知识点–指令：printf-打印"><a href="#知识点–指令：printf-打印" class="headerlink" title="知识点–指令：printf 打印"></a>知识点–指令：printf 打印</h4><pre><code>    1.介绍
+        # 常常用在 shell script 中
+        # 类似 C 语言的 print 功能
+    2.格式
+        # printf [&#39;&lt;format_chars&gt;&#39;] &lt;input&gt;[ ...]
+    3.格式字符
+        # \a        -- 警告声音输出
+        # \b        -- 退格 backspace
+        # \f        -- 清除屏幕 form feed
+        # \n        -- Enter
+        # \r        -- Return
+        # \t        -- 水平制表符
+        # \v        -- 垂直制表符
+        # \&lt;NNN&gt;    -- 输出 ASCII 字符，N 为八进制数
+        # \x&lt;NN&gt;    -- 输出 ASCII 字符，N 为十六进制数
+        # %%            -- 输出 %
+        # %&lt;N&gt;s         -- 替换为字符，s 表示 string，n 代表字符宽度，省略 n 则表示不固定长度的字符串
+        # %&lt;N&gt;i         -- 替换为整数，i 表示 integer，n 代表整数位数
+        # %&lt;N&gt;.&lt;N&gt;f     -- 替换为浮点数，f 代表浮点 floating
+    4.&lt;input&gt;
+        # 通常使用变量
+        # 如果已经指定格式，但缺少输入，则返回 0 或 null
+    5.范例
+        # printf &#39;%s\t %s\t&#39; $a $b
+        # printf &#39;%s\t %s\t %s\t %s\t %s\t \n&#39; $(cat printf.txt)</code></pre>
+<h3 id="9-1-6-sed"><a href="#9-1-6-sed" class="headerlink" title="9.1.6 sed"></a>9.1.6 sed</h3><h4 id="知识点–指令：sed-以行为单位进行文本处理"><a href="#知识点–指令：sed-以行为单位进行文本处理" class="headerlink" title="知识点–指令：sed 以行为单位进行文本处理"></a>知识点–指令：sed 以行为单位进行文本处理</h4><pre><code>    1.介绍
+        # 对 STDOUT 或文件进行删除行、新增行、截取行、替换等操作
+    2.格式
+        # sed [-nefr] &#39;&lt;addresses&gt;&lt;operation&gt;&#39; &lt;input&gt;
+    3.&lt;addresses&gt; 操作行
+        # &lt;NULL&gt;            -- 对全文进行操作
+        # &lt;N&gt;               -- 对第 N 行进行操作
+        # &lt;N&gt;~&lt;step&gt;        -- 对第 N 行以及之后按照步长相加的每一行进行操作
+        # 1,&lt;N&gt;             -- 对从第一行到第 N 行进行操作
+        # &lt;N&gt;,$             -- 对从第 N 行到最后一行进行操作
+        # &lt;N1&gt;,&lt;N2&gt;         -- 对第 N1 到 N2 行进行操作
+        # &lt;N&gt;,+&lt;M&gt;          -- 对第 N 行到第 N+M 行进行操作
+        # &lt;N&gt;,~&lt;M&gt;          -- 对第 N 行到最近一个 M 的倍数的行进行操作，如 197,~100 实际对 197、198、199、200 行进行操作
+        # /&lt;regex&gt;/         -- 对符合正则表达式的行进行操作
+        # \&lt;c&gt;&lt;regex&gt;&lt;c&gt;    -- 对符合正则表达式的行进行操作，&lt;c&gt; 可以是任意字符
+    4.&lt;operation&gt; 动作
+        # i &lt;text&gt;      -- 插入文本，Zero-or-One address commands，文本会插入到每一行上方新增一行
+        # a &lt;text&gt;      -- 追加文本，Zero-or-One address commands，文本会插入到每一行下方新增一行
+        # c &lt;text&gt;      -- 行内容替换，address-ranges command，用文本替换选择的行
+        # d             -- 删除行
+        # p             -- 输出到屏幕，通常配合 -n 使用
+        # /&lt;string&gt;/d                               -- 搜索内容再删除行，行中如果包含指定的字符就会将整行删除
+        # s/&lt;old_str&gt;/&lt;new_str&gt;/g                   -- 字符内容替换，用 new_str 替换 old_str，通常字符内容替换常配合正则表达式使用
+        # &#123;&lt;operation_1&gt;;&lt;operation_2&gt;[; ...]&#125;
+            - 操作集
+            - 一条 sed 命令同时执行多个操作，多个操作之间使用 ; 间隔
+            - 一条 sed 命令指定对一个行范围进行操作
+            - 操作集只能包含 address-ranges command
+    5.选项
+        # -n            -- 安静模式 slient，只显示 sed 处理过的行
+        # -e &lt;script&gt;
+        # -f &lt;script_file&gt;
+        # -r            -- 支持延伸正则表达式
+        # -i            -- 直接修改文件内容
+    6.范例
+        # cat /etc/passwd | sed &#39;2,5d&#39;      -- 删除 2-5 行
+        # cat /etc/passwd | sed -n &#39;10,20p&#39; -- 将第 10 行到第 20 行输出到屏幕
+        # ifconfig eth0 | grep &#39;inet[^6]&#39;| sed &#39;&#123;s/^.*inet *//g;s/ *netmask.*$//g&#125;&#39;     -- 通过 ifconfig 获得 IP 地址
+        # cat /etc/man_db.conf | sed &#39;&#123;/^#/d;/^[[:blank:]]*$/d&#125;&#39;                        -- 删除注释，删除空行</code></pre>
+<h2 id="9-2-其他文本处理工具"><a href="#9-2-其他文本处理工具" class="headerlink" title="9.2 其他文本处理工具"></a>9.2 其他文本处理工具</h2><h3 id="9-2-1-diff"><a href="#9-2-1-diff" class="headerlink" title="9.2.1 diff"></a>9.2.1 diff</h3><h4 id="知识点–指令：diff"><a href="#知识点–指令：diff" class="headerlink" title="知识点–指令：diff"></a>知识点–指令：diff</h4><pre><code>    1.介绍
+        # 以行为单位，对比两个文件之间的差异
+        # 对比两个目录中的文件差异
+        # 返回值，&lt;to_file&gt; 相比于 &lt;from_file&gt; 做了哪些变化
+    2.格式
+        # diff [-bBi] &lt;from_file&gt; &lt;to_file&gt;
+        # diff &lt;from_dir&gt; &lt;to_dir&gt;
+    3.&lt;from_file&gt; &lt;to_file&gt;
+        # &lt;from_file&gt;   ，文件对比的原始文件名
+        # &lt;to_file&gt;     ，文件对比的目标文件名
+        # &lt;from_file&gt; 和 &lt;to_file&gt; 都可以用 - 取代，表示接收 STDOUT
+    4.选项
+        # -b        -- 忽略一行当中，仅有多个空白的差异，例如 &quot;about me&quot; 与 &quot;about     me&quot; 视为相同
+        # -B        -- 忽略空白行
+        # -i        -- 忽略大小写</code></pre>
+<h4 id="知识点–指令：patch"><a href="#知识点–指令：patch" class="headerlink" title="知识点–指令：patch"></a>知识点–指令：patch</h4><pre><code>    1.介绍
+        # diff 制作补丁文件
+        # patch 利用补丁文件进行升级或降级
+        # 习惯上补丁文件扩展名一般为 .patch
+    2.格式
+        # patch -p&lt;N&gt; &lt; &lt;patch_file&gt;        -- 更新   
+        # patch -R -p&lt;N&gt; &lt; &lt;patch_file&gt;     -- 还原
+    3.选项
+        # -p&lt;N&gt;，N 表示后面可以接取消几层目录
+        # -R，代表还原，将新的文件还原成原来旧的版本
+    4.范例
+        # diff -Naur passwd.old passwd.new &gt; passwd.patch   -- 制作补丁文件 patch_file
+        # patch -p0 &lt; passwd.patch                          -- 利用 patch_file 进行升级
+        # patch -R -p0 &lt; passwd.patch                       -- 利用 patch_file 进行还原</code></pre>
+<h4 id="知识点–操作：利用-patch-file-进行升级-tarball-软件"><a href="#知识点–操作：利用-patch-file-进行升级-tarball-软件" class="headerlink" title="知识点–操作：利用 patch_file 进行升级 tarball 软件"></a>知识点–操作：利用 patch_file 进行升级 tarball 软件</h4><pre><code>    1.操作
+        # 下载 patch_file
+        # 利用 patch_file 文件更新原始码
+        # 重新编译原始码，编译前最好 make clean 一下目标文件</code></pre>
+<h4 id="知识点–指令：cmp，按字节对比两个文件"><a href="#知识点–指令：cmp，按字节对比两个文件" class="headerlink" title="知识点–指令：cmp，按字节对比两个文件"></a>知识点–指令：cmp，按字节对比两个文件</h4><pre><code>    1.介绍
+        # 没有 diff 好用
+        # cmp 比 diff 的优点，是 cmp 可以对比两个 binary 文件
+    2.格式
+        # cmp [-lbi] &lt;file_1&gt; &lt;file_2&gt; [&lt;skip&gt; [&lt;skip2&gt;]]
+        # 
+    3.选项
+        # -l            -- 将所有的不同点都打印出来，因为 cmp 默认仅会输出第一个发现的不同点
+        # -b            -- 同时将每个字节的值所代表的字符打印出来
+        # -n &lt;limit&gt;    -- 最多比较 &lt;limit&gt; 个字节
+        # -s            -- 不返回对比信息，只需要获得命令的状态码返回值
+        # -i            -- 指定跳过的字节，与指令末尾的 skip 功1能相同
+            -i=&lt;skip&gt;               -- 跳过开始的 n 个字节
+            -i=&lt;skip1&gt;:&lt;skip2&gt;      -- file1 跳过开始的 n 个字节，file2 跳过开始的 m 个字节
+    4.返回值
+        # 字节序号，file_1 的值，file_2 的值
+        # cmp: EOF on &lt;file_n&gt;，第 n 个文件已经结束，而另一个文件还未结束</code></pre>
+<h3 id="9-3-awk"><a href="#9-3-awk" class="headerlink" title="9.3 awk"></a>9.3 awk</h3><h4 id="知识点–指令：awk，以列为单位进行文本处理"><a href="#知识点–指令：awk，以列为单位进行文本处理" class="headerlink" title="知识点–指令：awk，以列为单位进行文本处理"></a>知识点–指令：awk，以列为单位进行文本处理</h4><pre><code>    1.用法
+        # awk &#39;条件类型1&#123;动作1&#125; 条件类型2&#123;动作2&#125; ...&#39; filename
+        # awk 主要是处理&#39;每一列的内容&#39;，默认的栏位的分隔符号为空格键或制表符 [tab]
+        # awk 中后续的所有动作都要用单引号 &#39; 括住，并且单引号是 awk 的固定用法，所以如果动作里面需要用到引号就只能是双引号
+            并且双引号还不能嵌套，只能从前向后依次成对出现
+        # 如果动作前没有加条件，则代表将对资料中所有内容进行此动作
+    2.内建变量，awk 中有内建变量
+        # 内建变量，除了列号，其他的如 NR，使用时不需要加 $ 号
+        # $&lt;N&gt;      -- 每一列的变量名称，$1 就是第一列，$2 就是第二列
+        # NF，内容为文件总共有多少列
+        # NR，代指目前 awk 所处理的是第几&#39;行&#39;资料
+        # FS        -- 指定列分隔符，默认是空白键
+    3.awk 的逻辑运算字符
+        # &gt; ，大于
+        # &lt; ，小于
+        # &gt;=    ，大于或等于
+        # &lt;=    ，小于或等于
+        # ==    ，等于
+        # !=    不等于
+    4.awk 的条件判断，也可以使用 if 语句
+    5.awk 的条件变量，BEGIN，设定动作从第一行就开始执行，如果不加，在读取第一行的时候，那些变量 $1, $2 默认还是以空白键为分隔
+    6.awk 的动作，如果一个动作内包含多个指令，则两个指令之间可以用分号间隔，或者跳脱回车也可以
+    7.awk 用 printf 动作来列印，默认是不会断行的，所以 printf 最后要加上 \n 来断行
+    7.例子
+        # last | \
+            &gt; awk &#39;&#123;print $1 &quot;\t&quot; $3&#125;&#39;
+        # cat /etc/passwd | \
+            &gt; awk &#39;BEGIN &#123;FS=&quot;:&quot;&#125; $3 &lt; 10 &#123;print $1 &quot;\t &quot; $3&#125;&#39;
+            - 重点在 BEGIN ，第一个动作是专门给 BEGIN 用的，将分隔符设定为冒号
+        # cat pay.txt | \
+            &gt; awk &#39;NR==1&#123;printf &quot;%10s %10s %10s %10s %10s\n&quot;,$1,$2,$3,$4,&quot;Total&quot; &#125;
+            &gt; NR&gt;=2&#123;total = $2 + $3 + $4 ; printf &quot;%10s %10d %10d %10d %10.2f\n&quot;, $1, $2, $3, $4, total&#125;&#39;，重点在那个分号上，用分号来间隔动作
+        # cat pay.txt | \ 
+            &gt; awk &#39;&#123;if(NR==1) printf &quot;%10s %10s %10s %10s %10s\n&quot;,$1,$2,$3,$4,&quot;Total &quot;&#125; 
+            &gt; NR&gt;=2&#123;total = $2 + $3 + $4 
+            &gt; printf &quot;%10s %10d %10d %10d %10.2f\n&quot;, $1, $2, $3, $4, total&#125;&#39;
+            - 与上一个例子相比，最大的不同就是判断改成用 if 语句来判断了</code></pre>
+<hr>
+<h1 id="Chapter-10-用户和组"><a href="#Chapter-10-用户和组" class="headerlink" title="Chapter_10_用户和组"></a>Chapter_10_用户和组</h1><hr>
+<h1 id="Chapter-11-进程"><a href="#Chapter-11-进程" class="headerlink" title="Chapter_11_进程"></a>Chapter_11_进程</h1><hr>
+<h1 id="Chapter-12-网络"><a href="#Chapter-12-网络" class="headerlink" title="Chapter_12_网络"></a>Chapter_12_网络</h1><h2 id="12-1-hostname"><a href="#12-1-hostname" class="headerlink" title="12.1 hostname"></a>12.1 hostname</h2><h3 id="12-1-1-hostname-介绍"><a href="#12-1-1-hostname-介绍" class="headerlink" title="12.1.1 hostname 介绍"></a>12.1.1 hostname 介绍</h3><h4 id="知识点–概念：hostname-主机名"><a href="#知识点–概念：hostname-主机名" class="headerlink" title="知识点–概念：hostname 主机名"></a>知识点–概念：hostname 主机名</h4><pre><code>    X.相关文件
+        # /etc/hosts            -- 记录其他主机名，格式，&lt;ip_addr&gt;    &lt;FQDN&gt;    &lt;hostname&gt;
+        # /etc/hostname         -- 记录本机主机名
+        # C:\WINDOWS\system32\drivers\etc\hosts         -- windows 记录主机名</code></pre>
+<h4 id="知识点–指令：hostname"><a href="#知识点–指令：hostname" class="headerlink" title="知识点–指令：hostname"></a>知识点–指令：hostname</h4><pre><code>    1.介绍
+    2.常用
+        # hostname              -- 查看本机主机名</code></pre>
+<h4 id="知识点–指令；hostmanectl"><a href="#知识点–指令；hostmanectl" class="headerlink" title="知识点–指令；hostmanectl"></a>知识点–指令；hostmanectl</h4><pre><code>    1.介绍
+    2.常用
+        # hostnamectl set-hostname &lt;hostname&gt;       -- 同时修改当前内核中的 hostname 和 /etc/hostname</code></pre>
+<hr>
+<h1 id="Chapter-13-目录和文件"><a href="#Chapter-13-目录和文件" class="headerlink" title="Chapter_13_目录和文件"></a>Chapter_13_目录和文件</h1><h2 id="13-1-目录基本命令"><a href="#13-1-目录基本命令" class="headerlink" title="13.1 目录基本命令"></a>13.1 目录基本命令</h2><h3 id="13-1-1-目录基本命令"><a href="#13-1-1-目录基本命令" class="headerlink" title="13.1.1 目录基本命令"></a>13.1.1 目录基本命令</h3><h4 id="知识点–概念：目录操作符"><a href="#知识点–概念：目录操作符" class="headerlink" title="知识点–概念：目录操作符"></a>知识点–概念：目录操作符</h4><pre><code>    1..，./，当前目录
+    2...，../，上一层目录
+    3.~，家目录
+    4.-，之前的目录
+    5.~&lt;user&gt;，用户 user 的家目录</code></pre>
+<h4 id="知识点–概念：目录命令"><a href="#知识点–概念：目录命令" class="headerlink" title="知识点–概念：目录命令"></a>知识点–概念：目录命令</h4><pre><code>    1.cd，Change Directory
+    2.pwd，Print Working Directory
+        # pwd -P        ，对于连接，显示真实的路径
+    3.mkdir
+        # mkdir -m &lt;权限&gt; &lt;dir_name&gt;    -- 创建目录时设定权限，受 umask 的影响
+            - mkdir -m 711 &lt;dir&gt;        
+        # mkdir -p &lt;dir_name&gt;            -- 递归创建目录
+    4.rmdir，删除一个空目录，仅能删除空目录，比较不危险
+        # rmdir [-p] &lt;dir&gt;
+    5.basename 和 dirname
+        # basename 从绝对路径中取出文件名
+        # dirname 从绝对路径中取出目录名
+        # basename  /etc/sysconfig/network-scripts/ifcfg-eth0，输出为 ifcfg-eth0
+        # dirname /etc/sysconfig/network-scripts/ifcfg-eth0，输出为 /etc/sysconfig/network-scripts</code></pre>
+<h3 id="13-1-2-ls"><a href="#13-1-2-ls" class="headerlink" title="13.1.2 ls"></a>13.1.2 ls</h3><h4 id="知识点–概念：ls-l-的输出信息"><a href="#知识点–概念：ls-l-的输出信息" class="headerlink" title="知识点–概念：ls -l 的输出信息"></a>知识点–概念：ls -l 的输出信息</h4><pre><code>    1.输出信息
+        # 权限
+        # inode 连接数(与 hardlink 有关)
+        # owner
+        # group
+        # 文件大小
+            - 对于设备文件，文件大小是主要代码和次要代码
+        # mtime
+        # 文件名
+    2.文件类型
+        # d，目录
+        # -，文件
+        # l，符号链接
+        # b，block 设备
+        # c，字符串设备
+    3.total
+        # 某个目录下直接包含的所有文件的总大小，
+        # 不包括子目录里的文件</code></pre>
+<h4 id="知识点–指令：ls"><a href="#知识点–指令：ls" class="headerlink" title="知识点–指令：ls"></a>知识点–指令：ls</h4><pre><code>    1.介绍
+        # 文件或目录名中可以使用 wildcard
+    2.格式
+        # ls [-aAdfFhilnrRSt] &lt;input&gt;[ ...]
+        # ls [--color=&#123;never，auto，always&#125;] &lt;input&gt;[ ...]
+        # ls [--full-time] &lt;input&gt;[ ...]
+    3.选项
+        # -a
+        # -d
+        # -h
+        # -l
+        # -A        -- 与 -a 差不多，只是不显示 . 与 .. 这两个目录
+        # -F        -- 添加额外信息，展示文件类型
+            *            -- 代表可执行文件
+            /            -- 代表目录
+            =            -- 代表 socket 文件
+            |            -- 代表 FIFO 文件
+        # -i        -- 列出 inode 号码
+        # -n        -- 列出 UID 与 GID 而非用户和组名
+        # -R        -- 连同子目录里的内容一起列出来
+        # -u        -- 列出 atime，相当于 --time=atime
+        # -c        -- 列出 ctime，相当于 --time=ctime
+        # -r        -- 反向排序
+        # -S        -- 按文件大小降序排列
+        # -t        -- 按时间降序排序
+        # -f        -- 不进行排序，ls 默认会以文件名排序
+        # -Z        -- 查看文件的安全性文本 SELinux 
+        # --color=    -- 设置显示颜色的方式
+            never        -- 不要依据文件特性给予颜色显示
+            always        -- 显示颜色
+            auto        -- 由系统判断颜色
+        # --full-time        -- 输出长时间模式
+    4.默认颜色
+        # 白色，普通文件
+        # 蓝色，目录
+        # 绿色，可执行文件，拥有 x 权限的文件
+        # 红色，压缩文件
+        # 黄色，设备文件
+        # 浅蓝色，符号链接
+    5.变量
+        # LS_COLORS，设置 ls 命令的颜色</code></pre>
+<h2 id="13-2-文件"><a href="#13-2-文件" class="headerlink" title="13.2 文件"></a>13.2 文件</h2><h3 id="13-2-1-文件"><a href="#13-2-1-文件" class="headerlink" title="13.2.1 文件"></a>13.2.1 文件</h3><h4 id="知识点–概念：文件类型"><a href="#知识点–概念：文件类型" class="headerlink" title="知识点–概念：文件类型"></a>知识点–概念：文件类型</h4><pre><code>    1.-，普通文件
+        # 正规文件，regular file
+        # 纯文字档，ASCII
+        # 二进制程序文件，binary
+        # 资料文件 data，例如 /var/log/wtmp
+    2.d，目录
+    3.l，链接
+    4.d，block 设备
+    5.c，character 设备
+    6.s，socket 文件
+    7.p，管道文件，FIFO，pipe</code></pre>
+<h4 id="知识点–概念：文件名"><a href="#知识点–概念：文件名" class="headerlink" title="知识点–概念：文件名"></a>知识点–概念：文件名</h4><pre><code>    1.常用的副文件名
+        # .*.sh                                    -- 脚本
+        # .*Z，*.tar，*.tar.gz，*.zip，*.tgz    -- 打包或压缩文件
+        # .*.html，*.php                        -- 网页文件
+    2.文件名限制
+        # Ext2/Ext3/Ext4/xfs 文件系统里的情况
+        # 最大文件名为 255 bytes，相当于 255 个 ASCII 字符或 128 个中文
+    3.文件名不能使用的字符
+        # *
+        # ?
+        # &gt;
+        # &lt;
+        # ;
+        # &amp;
+        # !
+        # |
+        # \
+        # &#39;
+        # &quot;
+        # `
+        # ( )
+        # [ ]
+        # &#123; &#125;
+    4.文件名尽量不要用在开头的字符
+        # - 
+        # +
+    5.文件重名
+        # 文件名不会记录文件类型，只是用作索引
+        # 同一目录下，不管文件类型是否相同，不会出现相同的文件名
+    6.绝对路径和相对路径
+        # 绝对路径 absolute path
+        # 相对路径 relative path</code></pre>
+<h3 id="13-2-2-文件基本指令"><a href="#13-2-2-文件基本指令" class="headerlink" title="13.2.2 文件基本指令"></a>13.2.2 文件基本指令</h3><h4 id="知识点–指令：cp"><a href="#知识点–指令：cp" class="headerlink" title="知识点–指令：cp"></a>知识点–指令：cp</h4><pre><code>    1.介绍
+        # 复制
+        # 创建符号连接
+    2.格式
+        # cp [-adfilprsu] &lt;source&gt; &lt;destination&gt;
+        # cp [options] &lt;source&gt;[ ...] &lt;directory&gt;
+    3.选项
+        # -f
+        # -r    -- 递归复制
+        # -i    -- 询问模式，覆盖前先询问，默认
+        # -l    -- 创建硬连接
+        # -s    -- 创建符号连接，来源必须要写绝对路径
+        # -d    -- 对于连接，仅复制连接，不复制实际文件
+        # -u    -- 更新，destination 比 source 旧，或 destination 不存在
+        # -a    -- 相当于 -dr --preserve=all，连同隐藏属性和 SELinux 设置一起复制
+        # -p    -- 保留文件的属性（权限、用户、时间），默认情况为复制时这些属性会改变
+        # --preserve=all        -- 保留文件的属性（权限、用户、时间）、SELinux 属性、links、xattr 等属性
+    4.默认情况
+        # 复制时会改变权限/属性/时间等信息，可以用 -a 来避免
+        # 对于符号链接，是复制所连接到的文件，可以用 -d 来只复制 link file</code></pre>
+<h4 id="知识点–指令：rm"><a href="#知识点–指令：rm" class="headerlink" title="知识点–指令：rm"></a>知识点–指令：rm</h4><pre><code>    1.介绍
+        # root 在 rm 过程中，按下 ctrl+c 可以取消 rm 过程
+    2.格式
+        # rm [-fir] &lt;file&gt;[ ...]
+    3.选项
+        # -f
+        # -i    -- 询问模式
+        # -v    -- 超详细询问模式，比 -i 更罗嗦，删目录会一个文件一个文件的确认
+        # -r    -- 删除目录</code></pre>
+<h4 id="知识点–指令：mv"><a href="#知识点–指令：mv" class="headerlink" title="知识点–指令：mv"></a>知识点–指令：mv</h4><pre><code>    1.介绍
+    2.格式
+        # mv [-fiu] &lt;source&gt; &lt;destination&gt;
+        # mv [options] &lt;source&gt;[ ...] &lt;directory&gt;
+    3.选项
+        # -f
+        # -i    -- 询问模式，覆盖前先询问，默认
+        # -u    -- 更新，destination 比 source 旧，或 destination 不存在</code></pre>
+<h4 id="知识点–指令：file"><a href="#知识点–指令：file" class="headerlink" title="知识点–指令：file"></a>知识点–指令：file</h4><pre><code>    1.介绍
+        # 查看文件类型
+        # 查看压缩文件的压缩方式
+    2.格式
+        # file &lt;filename&gt;
+    3.输出信息
+        # ELF 64-bit LSB executable        -- 表示文件是 binary program
+        # text executable                -- 表示是可执行脚本
+        # share libs                    -- 使用了动态函数库</code></pre>
+<h3 id="13-2-3-查找文件"><a href="#13-2-3-查找文件" class="headerlink" title="13.2.3 查找文件"></a>13.2.3 查找文件</h3><h4 id="知识点–指令：locate"><a href="#知识点–指令：locate" class="headerlink" title="知识点–指令：locate"></a>知识点–指令：locate</h4><pre><code>    1.介绍
+        # 安装，yum install mlocate
+        # locate 数据库，/var/lib/mlocate/mlocate.db
+        # locate 数据库更新，updatedb
+        # locate 数据库配置文件，/etc/updatedb.conf
+    2.格式
+        # locate -S                        -- 查看 locate 数据库的信息
+        # locate [-iclr] &lt;pattern&gt;
+    3.选项
+        # -i        -- 忽略大小写
+        # -c        -- 不输出文件名，仅计算找到的文件数量
+        # -l &lt;N&gt;    -- 仅输出几行
+        # -r        -- 支持正则表达式
+    4.例子
+        # locate &lt;pattern&gt; | xargs ls -ld
+        # ls -ld $(locate &lt;pattern&gt;)</code></pre>
+<h4 id="知识点–指令：find"><a href="#知识点–指令：find" class="headerlink" title="知识点–指令：find"></a>知识点–指令：find</h4><pre><code>    1.介绍
+        # 超级强大的搜索工具
+        # 艹硬盘式搜索
+        # 搜索完了还能再接着干其他事，实际其他事可以扔给 bash 内置或者 xargs 来干
+        # 默认自动搜索次级目录
+        # 支持 wildcard，不支持正则表达式
+    2.格式
+        # find [&lt;path&gt;[ ...]] [&lt;option&gt;] [&lt;action&gt;]
+        # [&lt;option&gt;]
+            与时间有关的选项
+            与用户或组有关的选项
+            与文件名、文件类型、文件权限、文件大小有关的选项
+    3.&lt;path&gt;
+        # 规定搜索的范围
+        # 默认为当前目录及所有子目录
+        # 如果 &lt;path&gt; 是 link，则 &lt;path&gt;/ 代表所指向的目录
+            - 如 /bin/，就是搜索 /ust/bin
+    4.选项，与时间有关
+        # -newer &lt;file_1&gt;                -- 查找比 file_1 还要新的文件
+        # -atime、-ctime、-mtime
+            - 以 -mtime 说明指定时间的方式，更形象可以查看图片 06-05-01
+            -mtime &lt;N&gt;        -- mtime 的范围在 N 天之前的一天之内
+            -mtime +&lt;N&gt;        -- mtime 的范围在 N 天之前，不包含第 N 天本身
+            -mtime -&lt;N&gt;        -- mtime 的范围在现在到第 N 天以内，不包含第 N 天本身
+            -mtine 0        -- mtime 的范围在 24 小时内
+    5.选项，与用户或组有关
+        # -uid &lt;N&gt;            -- 查找 UID 为 N 的文件
+        # -gid &lt;N&gt;            -- 查找 GID 为 N 的文件
+        # -user &lt;username&gt;        -- 查找 UID 为 &lt;username&gt; 的文件
+        # -group &lt;groupname&gt;    -- 查找 GID 为 &lt;groupname&gt; 的文件
+        # -nouser                -- 查找 UID 没有记录在 /etc/passwd 的文件，通常为被删除的用户的残留文件
+        # -nogroup                -- 查找 GID 没有记录在 /etc/group 的文件，通常为被删除的组的残留文件，或自行安装软件时软件自带的组
+    6.选项，与文件名、文件类型、文件权限、文件大小有关
+        # -name &lt;filename&gt;        -- 查找文件名称为 &lt;filename&gt; 的文件，要求完全匹配，可以使用 wildcard
+        # -type &lt;type&gt;            -- 查找文件类型为 &lt;type&gt; 的文件
+            -type f                    -- 查找普通文件
+            -type d                    -- 查找目录
+            -type b                    -- 查找 block 设备
+            -type c                    -- 查找字符设备
+            -type l                    -- 查找 link
+            -type s                    -- 查找 socket
+            -type p                    -- 查找 fifo
+        # -size [+-]&lt;size&gt;        -- 指定文件大小
+            -size +&lt;size&gt;            -- 查找比 &lt;size&gt; 大的文件
+            -size -&lt;size&gt;            -- 查找比 &lt;size&gt; 小的文件
+        # -empty                -- 查找空文件、空目录
+        # -perm [-/]&lt;mode&gt;        -- 指定文件的权限，&lt;mode&gt; 为数字形式的权限，可以是 3 为，也可以是包含特殊权限的 4 为
+            -perm &lt;mode&gt;            -- 查找权限恰好为 &lt;mode&gt; 的文件
+            -perm -&lt;mode&gt;            -- 查找权限包含 &lt;mode&gt; 的文件
+            -perm /&lt;mode&gt;            -- 查找权限包含 &lt;mode&gt; 中任意一位所指定的任意权限的文件
+                相当于对权限进行 or 逻辑的搜索
+                例如，-perm 700，则 600、500、400、200、100 都会被列出来，并且 777、655、111 等也都会被搜索出来
+    7.&lt;action&gt; 额外进行的动作
+        # 标准格式
+            -exec &lt;command&gt; &#123;&#125; \;
+        # &lt;command&gt;         -- 其他指令，例如 ls -ld
+        # &#123;&#125;                -- 作为前面 find 的搜索结果的标记
+        # -exec                -- 关键字，标记 find 额外动作的开始
+        # \;                -- 关键字，标记 find 额外动作的结束
+    8.其他选项
+        # -print，将结果列印到屏幕上，默认设置
+    9.范例
+        # find / -name *passwd*        -- 搜索文件名中包含 passwd 的文件
+        # find / -name passwd*        -- 搜索文件名以 passwd 开头的文件
+        # find / -name *passwd        -- 搜索文件名以 passwd 结尾的文件
+        # find / -mtime 0                -- 搜索最近 24 小时内有所变动的文件
+        # find /usr/bin /usr/sbin -perm /6000 -size +50k -exec ls -l &#123;&#125; \ ;</code></pre>
+<h3 id="13-2-4-连接"><a href="#13-2-4-连接" class="headerlink" title="13.2.4 连接"></a>13.2.4 连接</h3><h4 id="知识点–概念：硬连接-Hard-Link"><a href="#知识点–概念：硬连接-Hard-Link" class="headerlink" title="知识点–概念：硬连接 Hard Link"></a>知识点–概念：硬连接 Hard Link</h4><pre><code>    1.介绍
+        # 一个文件名就是目录 block 中的一条记录
+        # 硬连接就是多个文件名指向同一个 inode
+        # ls 显示的 inode 连接数，就是指向了这个文件的 inode 的目录中的记录的数量
+    2.硬连接的优点
+        # 删除硬连接，不会删除文件，只是删除目录 block 中的记录
+    3.硬连接的限制
+        # 不能跨 Filesystem
+        # 不能指向目录</code></pre>
+<h4 id="知识点–概念：符号链接-Symbolic-Link"><a href="#知识点–概念：符号链接-Symbolic-Link" class="headerlink" title="知识点–概念：符号链接 Symbolic Link"></a>知识点–概念：符号链接 Symbolic Link</h4><pre><code>    1.介绍
+        # 新建一个独立的文件，其 block 中记录了所指向的文件的文件名，即文件在目录 block 中的记录
+        # 源文件被删除之后，符号连接会失效
+        # 符号链接文件的大小，就是源文件的地址的长度，一个字符一个字节
+    2.符号链接工作流程
+        # 指向符号链接 inode 
+        # 指向符号链接 block
+        # 指向目录的 inode
+        # 指向目录的 block
+        # 指向文件的 inode
+        # 指向文件的 block </code></pre>
+<h4 id="知识点–指令：ln，创建符号连接或硬连接"><a href="#知识点–指令：ln，创建符号连接或硬连接" class="headerlink" title="知识点–指令：ln，创建符号连接或硬连接"></a>知识点–指令：ln，创建符号连接或硬连接</h4><pre><code>    1.格式
+        # ln [-sf] &lt;source&gt; &lt;destination&gt;
+    2.选项
+        # 无选项        -- 建立硬连接
+        # -s            -- 建立符号连接
+        # -f            -- 强制</code></pre>
+<h2 id="13-3-权限和属性"><a href="#13-3-权限和属性" class="headerlink" title="13.3 权限和属性"></a>13.3 权限和属性</h2><h3 id="13-3-1-属性"><a href="#13-3-1-属性" class="headerlink" title="13.3.1 属性"></a>13.3.1 属性</h3><h4 id="知识点–概念：文件属性"><a href="#知识点–概念：文件属性" class="headerlink" title="知识点–概念：文件属性"></a>知识点–概念：文件属性</h4><pre><code>    1.mtime
+        # modification time
+        # 文件的修改时间
+        # 当该文件的&#39;内容资料&#39;变更时，就会更新 mtime
+        # 内容资料指的是文件的内容，不涉及属性或权限变更
+    2.atime
+        # access time
+        # 文件的访问时间
+        # 当该文件的内容被取用时，就会更新 atime，例如被人用 cat 查看了
+    3.ctime
+        # status time
+        # 文件的状态改变时间
+        # 权限与属性被更改了就更新这个时间</code></pre>
+<h4 id="知识点–指令：touch"><a href="#知识点–指令：touch" class="headerlink" title="知识点–指令：touch"></a>知识点–指令：touch</h4><pre><code>    1.介绍
+        # 创建新文件
+        # 修改文件时间
+    2.格式
+        #touch [-acdmt] &lt;filename&gt;
+        #touch $&#123;var1&#125;$&#123;var2&#125;            -- 用变量的方式建立文件，可以使用多个变量的组合
+    3.选项
+        # -a        -- 修改 atime
+        # -m        -- 修改 mtime 
+        # -c        -- 仅修改文件的时间，但若该文件不存在则不建立新文件
+        # -d &#39;date_string&#39;    -- 指定目标时间，格式为可读性字符串
+        # -t                -- 指定目标时间，格式为 YYYYMMDDhhmm
+    3.例子
+        # touch bashrc，新建文件或将文件时间修改为 now
+        # touch -d &quot;2 days ago&quot; bashrc
+        # touch -t 201406150202 bashrc</code></pre>
+<h3 id="13-3-2-权限"><a href="#13-3-2-权限" class="headerlink" title="13.3.2 权限"></a>13.3.2 权限</h3><h4 id="知识点–概念：umask"><a href="#知识点–概念：umask" class="headerlink" title="知识点–概念：umask"></a>知识点–概念：umask</h4><pre><code>    1.介绍
+        # 默认权限
+        # 新建目录或文件的权限
+        # 等于初始值二进制减去 umask，文件初始值为 666，目录初始值为 777
+        # root 默认 umask 是 022
+        # 普通用户默认 umask 是 002
+        # 在查看 umask 时，会发现实际是 4 位，最开始的 1 位与文件的特殊权限有关</code></pre>
+<h4 id="知识点–指令：umask，设定或查看-umask"><a href="#知识点–指令：umask，设定或查看-umask" class="headerlink" title="知识点–指令：umask，设定或查看 umask"></a>知识点–指令：umask，设定或查看 umask</h4><pre><code>    1.用法
+        # umask [-S] &lt;权限&gt;
+    2.选项
+        # -S    -- 以 rwx 的方式给出权限
+    3.例子
+        # umask 0022        -- 设定自己的 umask 为 0022</code></pre>
+<h4 id="知识点–概念：目录权限的意义"><a href="#知识点–概念：目录权限的意义" class="headerlink" title="知识点–概念：目录权限的意义"></a>知识点–概念：目录权限的意义</h4><pre><code>    1.r，获得目录下文件清单，tab 键补全文件名与此有关
+    2.w，对目录下的文件进行新建、删除、改名、移动
+    3.x，进入目录</code></pre>
+<h4 id="知识点–指令：chmod"><a href="#知识点–指令：chmod" class="headerlink" title="知识点–指令：chmod"></a>知识点–指令：chmod</h4><pre><code>    1.介绍
+        # 可以修改 SUID，SGID，SBIT 
+    2.格式
+        # chmod [-R] xyz &lt;file&gt;
+        # chmod [augo] [+-=] [rwx] &lt;file&gt;
+    3.选项
+        # -R        -- 进行递归修改
+        # a            -- 所有用户
+        # u            -- 文件拥有者
+        # g            -- 组用户
+        # o            -- 其他用户
+    4.范例
+        # chmod u=rwx go=rx &lt;file&gt;
+        # chmod a+w &lt;file&gt;
+        # chmod 744 &lt;flie&gt;</code></pre>
+<h4 id="知识点–指令：chown"><a href="#知识点–指令：chown" class="headerlink" title="知识点–指令：chown"></a>知识点–指令：chown</h4><pre><code>    1.介绍
+        # 改变文件拥有者以及拥有者组
+        # chgrp，改变文件的拥有者组
+    2.格式
+        # chown [-R] &lt;username&gt;:&lt;groupname&gt; &lt;file&gt;[ ...]
+        # chown [-R] &lt;username&gt; &lt;file&gt;[ ...]
+        # chown [-R] :&lt;groupname&gt; &lt;file&gt;[ ...]
+        # chgrp [-R] &lt;groupname&gt; &lt;file&gt;[ ...]
+    3.选项
+        # -R        -- 递归修改</code></pre>
+<h3 id="13-3-3-隐藏属性"><a href="#13-3-3-隐藏属性" class="headerlink" title="13.3.3 隐藏属性"></a>13.3.3 隐藏属性</h3><h4 id="知识点–概念：隐藏属性"><a href="#知识点–概念：隐藏属性" class="headerlink" title="知识点–概念：隐藏属性"></a>知识点–概念：隐藏属性</h4><pre><code>    1.仅在 Ext2/Ext3/Ext4 的文件系统上面才完全生效
+        # 其他的文件系统可能支持的不那么全
+        # xfs 文件系统仅支持 AadiS 而已</code></pre>
+<h4 id="知识点–指令：lsattr，显示文件的隐藏属性"><a href="#知识点–指令：lsattr，显示文件的隐藏属性" class="headerlink" title="知识点–指令：lsattr，显示文件的隐藏属性"></a>知识点–指令：lsattr，显示文件的隐藏属性</h4><pre><code>    1.用法
+        # lsattr [-adR]                    -- 查看当前目录下的所有文件
+        # lsattr [-adR] &lt;file|dir&gt;
+    2.选项
+        # -a        -- 同时显示隐藏文件
+        # -d        -- 仅列出文件或目录本身，不显示目录下的文件
+        # -R        -- 同时显示所有子目录以及子目录的文件</code></pre>
+<h4 id="知识点–指令：chattr，设定文件隐藏属性"><a href="#知识点–指令：chattr，设定文件隐藏属性" class="headerlink" title="知识点–指令：chattr，设定文件隐藏属性"></a>知识点–指令：chattr，设定文件隐藏属性</h4><pre><code>    1.介绍
+        # 具体是否可行还需要参考文件系统
+        # 很多设定值只有 root 才能设定
+        # 比较常用的是 a 与 i 两个属性
+    2.格式
+        # chattr [+-=][ASacdistu] &lt;file|dir&gt;
+    3.选项
+        # +        -- 增加某一个设定，其他原本存在设定不动
+        # -        -- 移除某一个设定，其他原本存在设定不动
+        # =        -- 设定一定，且仅有后面接的参数
+    4.各个属性说明
+        # A，不得修改 atime
+            - 可避免 I/O 较慢的机器过度的存取硬盘
+            - 目前建议使用文件系统挂载参数处理这个项目
+        # S，强制对文件的任何修改都要同步写入要硬盘中
+            - 相当于每一步修改后立刻 syns
+        # a，文件的内容只能增加，不能删除也不能修改内容
+            - 只有root 才能设定这属性
+        # c，文件在储存时，将会先进行压缩后再储存
+            - 文件在被读取时，也会先解压缩再读取
+            - 对于大文件比较有利
+        # d，当 dump 程序被执行的时候，设定 d 属性将可使该文件（或目录）不会被 dump 备份
+        # i，可以让一个文件，不能被删除、改名、设定连结，也无法写入或新增内容
+            - 在安全性上比较重要的一个属性
+            - 只有 root 能设定此属性
+        # s，设定如果这个文件被删除，他将会被完全的移除出这个硬盘空间
+            - 所以如果误删了，就完全无法救回来了
+        # u，与 s 相反的功能
+            - 当文件设定了 u 属性，那么如果该文件被删除了，则文件内容其实还存在硬盘中
+             可以使用来救援该文件
+    5.范例
+        # chattr +i &lt;file&gt;        -- 给文件加上 i 属性</code></pre>
+<h3 id="13-3-4-特殊权限"><a href="#13-3-4-特殊权限" class="headerlink" title="13.3.4 特殊权限"></a>13.3.4 特殊权限</h3><h4 id="知识点–概念：文件和目录的特殊权限"><a href="#知识点–概念：文件和目录的特殊权限" class="headerlink" title="知识点–概念：文件和目录的特殊权限"></a>知识点–概念：文件和目录的特殊权限</h4><pre><code>    1.特殊权限有三个
+        # SUID
+        # SGID
+        # SBIT
+    2.文件的特殊权限设定后，若正常可使用，应该是小写字母
+        # 如果出现大写字母，则代表权限条件不足
+        # 例如设置了 SUID，但执行者没有对程序的 x 权限，此时 SUID 就会是大写的 S
+        # 这种情况下，虽然设置了特殊权限，但特殊权限其实不起作用</code></pre>
+<h4 id="知识点–概念：SUID"><a href="#知识点–概念：SUID" class="headerlink" title="知识点–概念：SUID"></a>知识点–概念：SUID</h4><pre><code>    1.Set UID
+        # 仅对二进制程序文件有效，对 shell script 没用
+        # 在二进制程序文件的拥有者的 x 权限出现 s 标志，称为 Set UID
+        # 作用
+            - 非程序的拥有者执行该程序时，能获得该程序拥有者的权限
+            - 程序的运行时间结束后，执行者的权限又恢复为原来的状态
+            - 执行者要拥有程序的 x 权限
+    2.范例
+        # 普通用户利用 passwd 来修改自己的密码
+            - 正常情况下，普通用户无权修改 /etc/passwd、/etc/shadow 这几个文件
+            - 但 passwd 设置了 SUID
+            - 那么普通用户使用 passwd 指令时，就可以修改这几个文件了
+            - 当 passwd 指令执行结束，普通用户的权限又恢复到原来的状态了</code></pre>
+<h4 id="知识点–概念：SGID"><a href="#知识点–概念：SGID" class="headerlink" title="知识点–概念：SGID"></a>知识点–概念：SGID</h4><pre><code>    1.Set GID
+        # 可以针对文件或目录来设定
+        # 在文件组拥有者的 x 权限出现 s 标志，称为 Set GID
+        # 程序文件 set UID 作用
+            - 执行者在执行的过程中将会获得该程序组群的支持
+            - 执行者要拥有该程序的 x 权限
+        # 目录 set UID 作用
+            - 用户若对于此目录具有 r 与 x 的权限时，该用户能够进入此目录
+            - 用户在此目录下的有效组群 effective group将会变成该目录的组群
+            - 当用户离开此目录时，其有效组群又恢复正常
+    2.用途
+        # 主要用在软件开发，让开发人员不用反复切换自己的主要组
+        # 普通情况
+            - 用户在某目录中建立的文件，必须切换适当的组群身份
+            - 否则其他相关人员没法查看和修改，因为组群不同，要么就是所有人都能看和修改
+        # set gid
+            - 则用户在此文件下新建的文件，会自动的设置为目录的组拥有者</code></pre>
+<h4 id="知识点–概念：SBIT，Sticky-Bit"><a href="#知识点–概念：SBIT，Sticky-Bit" class="headerlink" title="知识点–概念：SBIT，Sticky Bit"></a>知识点–概念：SBIT，Sticky Bit</h4><pre><code>    1.other 权限的 x 位置上出现 t
+    2.只针对目录有效，对于文件已经没有效果了
+    3.若目录设定了 SBIT
+        # 当用户对于此目录具有 w，x 权限，亦即具有新建文件或修改文件的能力时
+        # 用户在该目录下建立文件或目录时，仅有自己与 root 才有权力删除该文件</code></pre>
+<h4 id="知识点–操作：设置-SUID-SGID-SBIT，使用-chmod"><a href="#知识点–操作：设置-SUID-SGID-SBIT，使用-chmod" class="headerlink" title="知识点–操作：设置 SUID/SGID/SBIT，使用 chmod"></a>知识点–操作：设置 SUID/SGID/SBIT，使用 chmod</h4><pre><code>    1.chmod 4755 filename
+    2.chmod g+s，o+t filename
+    3.数字表示特殊权限
+        # 4 为 SUID
+        # 2 为 SGID
+        # 1 为 SBIT</code></pre>
+<hr>
+<h1 id="Chapter-14-磁盘和分区"><a href="#Chapter-14-磁盘和分区" class="headerlink" title="Chapter_14_磁盘和分区"></a>Chapter_14_磁盘和分区</h1><h2 id="14-1"><a href="#14-1" class="headerlink" title="14.1"></a>14.1</h2><h3 id="14-1-1-分区"><a href="#14-1-1-分区" class="headerlink" title="14.1.1 分区"></a>14.1.1 分区</h3><h4 id="知识点–概念：MBR-Master-Boot-Record"><a href="#知识点–概念：MBR-Master-Boot-Record" class="headerlink" title="知识点–概念：MBR Master Boot Record"></a>知识点–概念：MBR Master Boot Record</h4><pre><code>    1.图片
+        # 02-02-03 MBR 硬盘分区方式
+    2.零扇区
+        # 硬盘第一个扇区，512B
+        # 存放主引导记录和分区表
+            - 主引导记录，MBR，446B，存放开机管理程序 boot loader
+            - 分区表，partition table，64B，存放硬盘的分区情况，每个分区 16 B
+            - 最后两个字节是引导标示，2B
+    3.MBR 最多支持 4 个分区
+        # 3 个主分区 Primary partition
+            - 主分区的号码为 1 2 3
+        # 1 个扩展分区 Extended partition
+            - 扩展分区的号码 4
+        # MBR 划分分区的最小单位为 Cylinder，不过现在好像也能用 Sector 了
+    4.逻辑分区
+        # 扩展分区上可以划分逻辑分区，logical partition，号码从 5 开始
+        # 逻辑分区以前最多能划分 63 个，好像现在能增多了
+    5.MBR 的缺点
+        # 硬盘容量不能超过 2.2T，因为分区表中用 4B 记录分区终止位置，2^32*512B=2TB
+        # 只有零扇区记录引导区块，若零扇区被破坏后，经常无法或很难救援
+        # MBR 内的存放开机管理程序的区块仅 446B，无法容纳较多的程序码</code></pre>
+<h4 id="知识点–概念：GPT-GUID-partition-table"><a href="#知识点–概念：GPT-GUID-partition-table" class="headerlink" title="知识点–概念：GPT GUID partition table"></a>知识点–概念：GPT GUID partition table</h4><pre><code>    1.图片
+        # 02-02-07 GPT 硬盘分区方式
+    2.LBA Logical Block Address
+        # GPT 使用 LBA 记录分区信息
+        # LBA 默认 512B
+    3.LBA 0
+        # MBR 相容区块
+        # 与 MBA 模式相似
+        # 前 446B 存放开机管理程序
+        # 后 64B 存放了一个特殊的标志，表示这是一个 GPT 硬盘
+        # 不懂这个特殊标志的硬盘管理程序，就没法处理此硬盘
+    4.LBA 1
+        # GPT 头
+        # 记录了分区表的位置和大小
+        # 记录了备份分区表的位置
+        # 记录了分区表的检验机制码 CRC32
+            - 操作系统通过检验机制码，检查分区表是否有错误
+            - 如果有错误，还通过这个记录区来获得备份分区表，用以恢复
+    5.LBA 2-33
+        # 实际存放分区信息的位置
+        # 每个 LBA 可以存放 4 个分区信息
+            - 共 32 个 LBA 存放分区信息
+            - 故 GPT 最多可以有 128 个分区
+        # 每个分区信息可以用 128B
+            - 每个分区信息除了识别码和相关信息外，可以用 64bit 来记录开始/结束的磁区号码
+            - 所以理论上，GPT 分区最大为 2^64*512B = 8ZB
+    6.LBA -2 到 -33
+        # 每一个 LBA &lt;N&gt; 的备份
+    7.LBA -1
+        # LBA 1 的备份
+    8.GPT 的缺点
+        # 并不是所有的软件都能认识 GPT，如 fdisk
+        # 并不是所有的开机引导程序都认识 GPT，如 Grub1
+            - grub2 可以识别 GPT
+            - 如果非要用 Grub1，则需要添加 bios boot 分区</code></pre>
+<h4 id="知识点–指令：partprobe-手动更新-Linux-Kernel-的分区表"><a href="#知识点–指令：partprobe-手动更新-Linux-Kernel-的分区表" class="headerlink" title="知识点–指令：partprobe 手动更新 Linux Kernel 的分区表"></a>知识点–指令：partprobe 手动更新 Linux Kernel 的分区表</h4><pre><code>    1.介绍
+        # 硬盘中，如果已经有文件系统被挂载了，则新建的分区不会立刻被 Kernel 抓到，需要手动更新
+        # /proc/partitions，Kernel 的分区记录
+    2.格式
+        # partprobe [-s]
+    3.选项
+        # -s        -- 显示识别到的分区表</code></pre>
+<h3 id="14-1-2-fdisk"><a href="#14-1-2-fdisk" class="headerlink" title="14.1.2 fdisk"></a>14.1.2 fdisk</h3><h4 id="知识点–指令：fdisk"><a href="#知识点–指令：fdisk" class="headerlink" title="知识点–指令：fdisk"></a>知识点–指令：fdisk</h4><pre><code>    1.格式
+        # fdisk -l [&lt;device_name&gt;]
+        # fdisk &lt;device_name&gt;
+            - d     -- 删除分区
+            - n     -- 新建分区
+            - l     -- 查看支持的文件系统种类和变化
+            - p     -- 查看现在的分区表
+            - w     -- 保存修改
+            - q     -- 退出</code></pre>
+<h3 id="14-1-3-parted"><a href="#14-1-3-parted" class="headerlink" title="14.1.3 parted"></a>14.1.3 parted</h3><h4 id="知识点–指令：parted"><a href="#知识点–指令：parted" class="headerlink" title="知识点–指令：parted"></a>知识点–指令：parted</h4><pre><code>    1.介绍
+        # 可以互动模式，也可以直接命令行
+        # 适合于写脚本
+        # mkpart 指令需要先 mklabel
+    2.格式
+        # parted -l                                     -- 查看所有的分区
+        # parted &lt;device&gt;                               -- 进入互动模式
+        # parted &lt;device&gt; &lt;command&gt; &lt;argument&gt;[ ...]
+    3.&lt;command&gt;
+        # help &lt;command&gt;            -- 查看命令帮助
+        # mklabel gpt               -- 新建分区表
+        # mkpart                    -- 新建分区
+            - mkpart &lt;part-type&gt; &lt;start&gt; &lt;end&gt;      -- MBR 分区表新建分区，&lt;part-type&gt; 为 [primary|logical|extended]
+            - mkpaart &lt;part-label&gt; &lt;start&gt; &lt;end&gt;    -- GPT 分区表新建分区，&lt;start&gt; 建议写 1M，align 问题，&lt;end&gt; 建议用百分比
+        # print                     -- 查看分区表信息
+            - print devices
+            - print free
+            - print all
+        # resizepart &lt;N&gt; &lt;end&gt;      -- 调整第 N 个分区的大小
+        # rm &lt;N&gt;                    -- 删除第 N 个分区
+    4.范例
+        # /dev/vdc 建立分区，用光全部容量
+            - parted /dev/vdc mklabel gpt
+            - parted /dev/vdc mkpart &lt;part-label&gt; 1M 100%</code></pre>
+<h2 id="14-2-SWAP"><a href="#14-2-SWAP" class="headerlink" title="14.2 SWAP"></a>14.2 SWAP</h2><hr>
+<h1 id="Chapter-15-文件系统"><a href="#Chapter-15-文件系统" class="headerlink" title="Chapter_15_文件系统"></a>Chapter_15_文件系统</h1><h2 id="15-1-mount"><a href="#15-1-mount" class="headerlink" title="15.1 mount"></a>15.1 mount</h2><h2 id="15-2-EXT"><a href="#15-2-EXT" class="headerlink" title="15.2 EXT"></a>15.2 EXT</h2><h3 id="15-2-1-索引式文件系统"><a href="#15-2-1-索引式文件系统" class="headerlink" title="15.2.1 索引式文件系统"></a>15.2.1 索引式文件系统</h3><h4 id="知识点–概念：索引式文件系统，superblock，inode，block"><a href="#知识点–概念：索引式文件系统，superblock，inode，block" class="headerlink" title="知识点–概念：索引式文件系统，superblock，inode，block"></a>知识点–概念：索引式文件系统，superblock，inode，block</h4><pre><code>    1.索引式文件系统
+        # 索引式文件系统的结构，图片 07-01-01
+        # FAT 式文件系统的结构，图片 07-01-02
+    2.superblock
+    3.block
+        # 每个 block 都有编号，大小为 4B 
+        # 大小有 1K、2K、4K 等，通常使用 4K
+        # 原则上，block 的大小与数量在格式化后便无法改变
+        # 一个 block 只能放一个文件的内容
+    4.inode
+        # 一个文件与一个 inode 一一对应
+        # 系统读取文件时，先找到 inode，根据 inode 分析权限，符合权限才进一步读取 block 的内容
+        # inode 里并不记录文件名，文件名被保存在目录的 block 中
+        # inode 记录的内容
+            - 权限 rwx
+            - 拥有者与拥有者组
+            - 大小
+            - mtime、atime、ctime
+            - SUID、SGID、SBIT
+            - block id
+        # inode 记录 block 号码的方式
+            - inode 记录一个 block 号码要花掉 4B，故 ext2 最多支持 2^32 = 4G 个 block 
+            - inode 记录 block 号码的区域定义为 12 个直接，1 个间接，1 个双间接，1 个三间接
+            - 12 个直接指向 12 个存放文件数据的 block
+            - 1 个间接指向 1 个 block，最后指向存放文件数据的 block
+            - 1 个双间接指向 1 个双间接 block，再指向 block，最后指向存放文件数据的 block
+            - 1 个三间接指向 1 个三间接 block，再指向 block，再指向 block 号码，最后指向存放文件数据的 block
+            - 例如，block 为 1KB，则一个文件最大为 (12 + (1024/4) + (1024/4)^2 + (1024/4)^3)*1KB = 16GB
+    5.目录的 inode 和 block
+        # inode 记录目录的权限、属性、block id
+        # block 记录所有文件的文件名和 inode 列表
+        # 一个目录下的所有文件均不能重名
+        # 读取文件的流程
+            - 目录的 inode
+            - 目录的 block
+            - 文件的 inode
+            - 文件的 block</code></pre>
+<h3 id="15-2-2-日志式文件系统"><a href="#15-2-2-日志式文件系统" class="headerlink" title="15.2.2 日志式文件系统"></a>15.2.2 日志式文件系统</h3><h3 id="15-2-3-查看文件系统"><a href="#15-2-3-查看文件系统" class="headerlink" title="15.2.3 查看文件系统"></a>15.2.3 查看文件系统</h3><h4 id="知识点–指令：df"><a href="#知识点–指令：df" class="headerlink" title="知识点–指令：df"></a>知识点–指令：df</h4><pre><code>    1.介绍
+        # 查看文件或目录所在的文件系统的磁盘使用量
+        # 只能查看已挂载的文件系统
+    2.格式
+        # df [-a]                       -- 查看所有的文件系统
+        # df [-ahikHTm] [&lt;dir|file&gt;]
+    3.选项
+        # -k            -- 以 KB 显示
+        # -m            -- 以 MB 显示
+        # -h            -- 以较易阅读的单位显示，按照 1024 进位
+        # -H            -- 以较易阅读的单位显示，按照 1000 进位
+        # -T            -- 同时显示文件系统的类型
+        # -i            -- 不用硬盘容量，而以 inode 的数量来显示</code></pre>
+<h4 id="知识点–指令：du"><a href="#知识点–指令：du" class="headerlink" title="知识点–指令：du"></a>知识点–指令：du</h4><pre><code>    1.介绍
+        # 查看文件的磁盘使用量
+        # 查看目录下所有文件的磁盘使用量
+        # 查看文件系统的磁盘使用量
+        # 直接艹硬盘找文件
+    2.格式
+        # du [-ahsSkm] [--max-depth=N] &lt;dir|file&gt;
+    3.选项
+        # -a                    -- 列出所有的文件与目录容量，因为默认仅统计目录底下的文件量而已
+        # -h                    -- 以较易阅读的单位显示
+        # -s                    -- 只统计指定目录的总磁盘占用量
+        # -S                    -- 只统计指定目录的总磁盘占用率各一级子目录的总磁盘占用量
+        # -k                    -- 以 KB 显示
+        # -m                    -- 以 MB 显示
+        # --max-depth=N         -- 指定子目录的级别
+    4.范例
+        # du -sh /boot      -- 查看 /boot 目录的磁盘占用量
+        # du -Sh /boot      -- 查看 /boot 目录的磁盘占用量，以及 /boot 下所有一级子目录的磁盘占用量</code></pre>
+<h4 id="知识点–指令：blkid"><a href="#知识点–指令：blkid" class="headerlink" title="知识点–指令：blkid"></a>知识点–指令：blkid</h4><pre><code>    1.介绍
+        # 列出设备的 UUID
+    2.格式
+        # blkid </code></pre>
+<h4 id="知识点–指令：lsblk"><a href="#知识点–指令：lsblk" class="headerlink" title="知识点–指令：lsblk"></a>知识点–指令：lsblk</h4><pre><code>    1.介绍
+        # 查看所有的文件系统，包括没有挂载的文件系统
+    2.格式
+        # lsblk [-dfimpt] [&lt;device&gt;]
+    3.选项
+        # -d        -- 仅查看硬盘本身，不查看硬盘上的分区
+        # -f        -- 显示文件系统的类型
+        # -i        -- 使用 ASCII 字符输出，不要使用复杂的编码，在某些环境如果输出不正常会很有用
+        # -m        -- 同时输出该设备在 /dev 底下的 rwx 权限
+        # -p        -- 列出该设备的完整文件名，而不是仅列出最后的名字而已
+        # -t        -- 列出该硬盘设备的详细资料，包括硬盘队列排队机制、预读写的资料量大小等
+    4.输出信息
+        # NAME          -- 设备的文件名
+        # MAJ:MIN       -- 主要设备代码，次要设备代码
+        # RM            -- 是否为可卸载设备 removable device，如光盘、USB 硬盘等等
+        # SIZE          -- 容量
+        # RO            -- 是否为只读设备
+        # TYPE          -- 硬盘 disk，分区 partition，只读内存 rom
+        # MOUTPOINT     -- 挂载点</code></pre>
+<h3 id="15-2-3-ext4"><a href="#15-2-3-ext4" class="headerlink" title="15.2.3 ext4"></a>15.2.3 ext4</h3><h4 id="知识点–概念：ext4-文件系统的结构"><a href="#知识点–概念：ext4-文件系统的结构" class="headerlink" title="知识点–概念：ext4 文件系统的结构"></a>知识点–概念：ext4 文件系统的结构</h4><pre><code>    1.ext4 文件系统特点
+        # 在格式化时就规划好全部的 inode 与 block
+            - 重新格式化、resize 文件系统会改变 inode 和 block 分布
+    2.ext4 文件系统结构
+        # 图片 07-01-03
+        # 开头一个 boot sector
+        # 后面多个 block group
+    3.boot sector
+        # boot sector 里可以安装 boot loader
+    4.block group
+        # 每个 block group 都有独立的 inode/block/superblock 系统
+        # block group 从前往后，分为六部分
+            - superblock
+                - 大小通常为 1024 byte
+                - Block Group 0 存放主 superblock
+                - Block Group N 不一定有 superblock，如果有的话则是作为主 superblock 的备份
+            - filesystem description
+                - 叫 Block Group Description 更合适
+                - 记录本 block group 的开始与结束的 block 号码
+                - 记录本 block group 的每个区段 superblock、bitmap、inodemap、data block 的开始和结束 block 号码
+            - block bitmap
+            - inode bitmap
+            - inode table
+            - data blocks</code></pre>
+<h3 id="15-2-4-查看-ext4-文件系统"><a href="#15-2-4-查看-ext4-文件系统" class="headerlink" title="15.2.4 查看 ext4 文件系统"></a>15.2.4 查看 ext4 文件系统</h3><h4 id="知识点–指令：dumpe2fs，查看-Ext4-文件系统的信息"><a href="#知识点–指令：dumpe2fs，查看-Ext4-文件系统的信息" class="headerlink" title="知识点–指令：dumpe2fs，查看 Ext4 文件系统的信息"></a>知识点–指令：dumpe2fs，查看 Ext4 文件系统的信息</h4><pre><code>    1.介绍
+    2.格式
+        # dumpe2fs [-bh] &lt;partition&gt;
+    3.选项
+        # -b        -- 仅列出保留为坏轨的部分
+        # -h        -- 仅查看 superblock 的信息</code></pre>
+<h2 id="15-3-XFS"><a href="#15-3-XFS" class="headerlink" title="15.3 XFS"></a>15.3 XFS</h2><h3 id="15-3-X-mkfs-xfs"><a href="#15-3-X-mkfs-xfs" class="headerlink" title="15.3.X mkfs.xfs"></a>15.3.X mkfs.xfs</h3><h4 id="知识点–指令：mkfs-xfs"><a href="#知识点–指令：mkfs-xfs" class="headerlink" title="知识点–指令：mkfs.xfs"></a>知识点–指令：mkfs.xfs</h4><pre><code>    1.介绍
+    2.格式
+        # mkfs.xfs [-b &lt;block_size&gt;] [-d parms] [-i &lt;parms&gt;] [-l parms] [-L label] [-f] [-r parms] &lt;partition_name&gt;
+    3.选项
+        # -b        -- 指定 block 的大小，范围为 512B 到 64k，linux 的限制为 4k
+        # -d        -- 后面接的是重要的 data section 的相关参数值，主要的值有
+            agcount=数值，设定需要几个储存组群的意思（AG），通常与 CPU 有关，建议 CPU 有几个 core ，就设几个 AG
+            agsize=数值 ，每个 AG 设定为多少容量的意思，通常 agcount/agsize 只选一个设定即可
+            file        ，指的是格式化的设备是个文件而不是个设备的意思，例如用文件虚拟硬盘，或 loop 设备
+            size=数值   ，设定整个 data section 的容量，亦即你可以不将全部的设备容量用完的意思
+            su=数值     ，当有 RAID 时，那个 stripe 数值的意思，与底下的 sw 搭配使用
+            sw=数值     ，当有 RAID 时，用于储存资料的硬盘数量，须扣除备份碟与备用碟，如 raid5 要减一
+            sunit=数值  ，swidth，与 su 相当，不过单位使用的是几个 sector（512bytes大小）的意思
+            swidth=数值 ，就是 su*sw 的数值，但是以几个 sector（512bytes大小）来设定
+        #-f，强制格式化，常用来对文件格式化
+        # -i &lt;parms&gt;        -- 指定 inode 的参数
+            - size=&lt;size&gt;       -- 指定 inode 的大小，最小值 256B，最大值 2k，默认 256B
+        #-l，与 log section 有关的设置
+            internal=[0|1]  ，log 设备是否为内建，默认为 1 内建，0 为使用外部设备，如果要用外部设备，要再加上 logdev 参数
+            logdev=device   ，log 设备放在为后面接的那个设备上，需设定 internal=0 才可
+            size=数值     ，指定这块登录区的容量，通常最小得要有 512 个 block，大约 2M 以上才行
+        #-L，设定这个文件系统的标头名称 Label name 
+        #-r，指定 realtime section 的相关设定值，常见的有
+            extsize=数值，就是那个重要的 extent 数值，一般不须设定，但有 RAID 时，最好设定与 swidth 的数值相同较佳，最小为 4K 最大为 1G</code></pre>
+<hr>
+<h1 id="Chapter-16-LVM"><a href="#Chapter-16-LVM" class="headerlink" title="Chapter_16_LVM"></a>Chapter_16_LVM</h1><h2 id="16-1-LVM"><a href="#16-1-LVM" class="headerlink" title="16.1 LVM"></a>16.1 LVM</h2><h3 id="16-1-1-LVM"><a href="#16-1-1-LVM" class="headerlink" title="16.1.1 LVM"></a>16.1.1 LVM</h3><h4 id="知识点–概念：LVM，Logical-Volume-Manager"><a href="#知识点–概念：LVM，Logical-Volume-Manager" class="headerlink" title="知识点–概念：LVM，Logical Volume Manager"></a>知识点–概念：LVM，Logical Volume Manager</h4><pre><code>    1.LVM 结构
+        # PE，Physical Extent，LVM 最小储存区，由固定数量的连续 block 组成
+        # PV，Physical Volume，LVM 的最底层，将一个 partition 或一个 Disk 创建为一个 PV
+        # VG，Volume Group，将多个 PV 整合成一个 VG
+        # LV，Logical Volume，从 VG 中切割出 LV，设备名 /dev/&lt;vgname&gt;/&lt;lvname&gt;
+        # 在 LV 上建立文件系统
+    2.LVM 的优点
+        # 弹性调整文件系统的大小
+            - 在 LV 上建立文件系统
+            - 调整 LV 大小通过增减 PE 实现
+            - 调整 LV 大小可以在线进行，不需要 umount
+            - EXT 既能扩大，也能缩小
+            - XFS 只能扩大
+            - 扩大文件系统，是采用增加 block group 的方式进行的，即并不是重新格式化，而只是对新增的部分进行格式化
+    3.LVM2
+        # LVM 的最新版为 LVM2，可以 yum 安装
+        # 32-bit 系统，一个 LV 最多能含有 65534 个 PE，LVM1 格式
+        # CentOS 6.x 以后，由于直接使用 LVM2，以及系统转为 64 位，因此这个限制已经不存在了</code></pre>
+<h4 id="知识点–概念：LVM-的两种硬盘使用的机制"><a href="#知识点–概念：LVM-的两种硬盘使用的机制" class="headerlink" title="知识点–概念：LVM 的两种硬盘使用的机制"></a>知识点–概念：LVM 的两种硬盘使用的机制</h4><pre><code>    1.线性模式 linear
+        # LVM 的默认模式
+        # 线性模式的工作方式
+            - 按顺序依次使用 PV
+            - 一个 PV 的空间用完后，才使用另一个 PV
+        # 因为使用 LVM 的目的主要是实现一个可以弹性调整空间的文件系统，而不是建立一个效能为主的硬盘，效能可以使用 RAID 来做到
+    2.交错模式 triped
+        # 有点像 RAID 0，理论上，读写的效能会比较好，但文件的安全性会差很多
+        # 交错模式的工作方式
+            - 同时向所有的 PV 写入</code></pre>
+<h4 id="知识点–概念：做-LV-时，将-partition-或-disk-的-system-ID-改成-Linux-LVM-的-8E"><a href="#知识点–概念：做-LV-时，将-partition-或-disk-的-system-ID-改成-Linux-LVM-的-8E" class="headerlink" title="知识点–概念：做 LV 时，将 partition 或 disk 的 system ID 改成 Linux LVM 的 8E"></a>知识点–概念：做 LV 时，将 partition 或 disk 的 system ID 改成 Linux LVM 的 8E</h4><pre><code>    1.其实 system ID 不改变也没关系，只是为了让我们管理员清楚知道该 partition 是用来做 LV 了</code></pre>
+<h4 id="知识点–概念：LVM-的指令体系"><a href="#知识点–概念：LVM-的指令体系" class="headerlink" title="知识点–概念：LVM 的指令体系"></a>知识点–概念：LVM 的指令体系</h4><pre><code>    1.PV 阶段
+        # /usr/sbin/pvcreate        -- 将某个 partition 或者 disk 创建为 PV
+        # /usr/sbin/pvchange
+        # /usr/sbin/pvck
+        # /usr/sbin/pvdisplay       -- 显示某个 PV 的信息
+        # /usr/sbin/pvmove
+        # /usr/sbin/pvremove        -- 删除 PV，将其恢复为普通的 partition
+        # /usr/sbin/pvresize
+        # /usr/sbin/pvs             -- 查看 OS 整体的 PV 信息
+        # /usr/sbin/pvscan          -- 查询当前 OS 的 PV
+    2.VG 阶段
+        # /usr/sbin/vgcreate        -- 创建 VG
+        # /usr/sbin/vgcfgbackup
+        # /usr/sbin/vgcfgrestore
+        # /usr/sbin/vgchange        -- 修改 VG 的属性
+        # /usr/sbin/vgck
+        # /usr/sbin/vgconvert
+        # /usr/sbin/vgdisplay       -- 查看某个 VG 的信息
+        # /usr/sbin/vgexport
+        # /usr/sbin/vgextend        -- 向 VG 增加 PV
+        # /usr/sbin/vgimport
+        # /usr/sbin/vgimportclone
+        # /usr/sbin/vgmerge
+        # /usr/sbin/vgmknodes
+        # /usr/sbin/vgreduce        -- 从 VG 中移除 PV
+        # /usr/sbin/vgremove        -- 删除 VG 
+        # /usr/sbin/vgrename
+        # /usr/sbin/vgs             -- 查看 OS 整体的 VG 信息
+        # /usr/sbin/vgscan          -- 查询当前 OS 的 VG
+        # /usr/sbin/vgsplit
+    3.LV 阶段
+        # /usr/sbin/lvchange
+        # /usr/sbin/lvconvert
+        # /usr/sbin/lvcreate        -- 建立 LV
+        # /usr/sbin/lvdisplay       -- 查看某个 LV 的信息
+        # /usr/sbin/lvextend        -- 扩大 LV
+        # /usr/sbin/lvm
+        # /usr/sbin/lvmconf
+        # /usr/sbin/lvmconfig
+        # /usr/sbin/lvmdiskscan
+        # /usr/sbin/lvmdump
+        # /usr/sbin/lvmetad
+        # /usr/sbin/lvmpolld
+        # /usr/sbin/lvmsadc
+        # /usr/sbin/lvmsar
+        # /usr/sbin/lvreduce        -- 缩小 LV
+        # /usr/sbin/lvremove        -- 删除 LV
+        # /usr/sbin/lvrename
+        # /usr/sbin/lvresize        -- 调整 LV 的大小
+        # /usr/sbin/lvs             -- 查看 OS 整体的 LV 信息
+        # /usr/sbin/lvscan          -- 查询当前 OS 的 LV</code></pre>
+<h2 id="16-2-PV"><a href="#16-2-PV" class="headerlink" title="16.2 PV"></a>16.2 PV</h2><h3 id="16-2-1"><a href="#16-2-1" class="headerlink" title="16.2.1"></a>16.2.1</h3><h4 id="知识点–指令：pvscan，搜索目前系统里面有无-PV"><a href="#知识点–指令：pvscan，搜索目前系统里面有无-PV" class="headerlink" title="知识点–指令：pvscan，搜索目前系统里面有无 PV"></a>知识点–指令：pvscan，搜索目前系统里面有无 PV</h4><h4 id="知识点–指令：pvcreate，将某个-partition-或者-disk-变成-PV，用法-pvcreate-dev-paritionname"><a href="#知识点–指令：pvcreate，将某个-partition-或者-disk-变成-PV，用法-pvcreate-dev-paritionname" class="headerlink" title="知识点–指令：pvcreate，将某个 partition 或者 disk 变成 PV，用法 pvcreate /dev/paritionname"></a>知识点–指令：pvcreate，将某个 partition 或者 disk 变成 PV，用法 pvcreate /dev/paritionname</h4><h4 id="知识点–指令：pvdisplay，显示某个-PV-的信息，用法-pvdisplay-dev-partitionname"><a href="#知识点–指令：pvdisplay，显示某个-PV-的信息，用法-pvdisplay-dev-partitionname" class="headerlink" title="知识点–指令：pvdisplay，显示某个 PV 的信息，用法 pvdisplay /dev/partitionname"></a>知识点–指令：pvdisplay，显示某个 PV 的信息，用法 pvdisplay /dev/partitionname</h4><h4 id="知识点–指令：pvremove，将某个-PV-恢复为普通的-partition，用法-pvremove-dev-partitionname"><a href="#知识点–指令：pvremove，将某个-PV-恢复为普通的-partition，用法-pvremove-dev-partitionname" class="headerlink" title="知识点–指令：pvremove，将某个 PV 恢复为普通的 partition，用法 pvremove /dev/partitionname"></a>知识点–指令：pvremove，将某个 PV 恢复为普通的 partition，用法 pvremove /dev/partitionname</h4><h2 id="16-3-VG"><a href="#16-3-VG" class="headerlink" title="16.3 VG"></a>16.3 VG</h2><h3 id="16-3-1"><a href="#16-3-1" class="headerlink" title="16.3.1"></a>16.3.1</h3><h4 id="知识点–指令：vgcreate，建立一个-VG"><a href="#知识点–指令：vgcreate，建立一个-VG" class="headerlink" title="知识点–指令：vgcreate，建立一个 VG"></a>知识点–指令：vgcreate，建立一个 VG</h4><pre><code>    1.用法
+        #vgcreate [-s N[mgt]] VG名称 PV名称
+    2.选项
+        #-s，后面接 PE 的大小 (size) ，单位可以是 m, g, t (大小写均可)
+        #VG 名称，由自己进行编一个名字
+    3.例子
+        #vgcreate -s 16M vbirdvg /dev/sda&#123;5,6,7&#125;</code></pre>
+<h4 id="知识点–指令：vgscan，搜索系统上面是否有-VG-存在"><a href="#知识点–指令：vgscan，搜索系统上面是否有-VG-存在" class="headerlink" title="知识点–指令：vgscan，搜索系统上面是否有 VG 存在"></a>知识点–指令：vgscan，搜索系统上面是否有 VG 存在</h4><h4 id="知识点–指令：vgdisplay，显示某个-VG-的信息，用法-vgdisplay-VGname"><a href="#知识点–指令：vgdisplay，显示某个-VG-的信息，用法-vgdisplay-VGname" class="headerlink" title="知识点–指令：vgdisplay，显示某个 VG 的信息，用法 vgdisplay VGname"></a>知识点–指令：vgdisplay，显示某个 VG 的信息，用法 vgdisplay VGname</h4><h4 id="知识点–指令：vgextend，给-VG-增加-PV，用法-vgextend-VGname-PVname"><a href="#知识点–指令：vgextend，给-VG-增加-PV，用法-vgextend-VGname-PVname" class="headerlink" title="知识点–指令：vgextend，给 VG 增加 PV，用法 vgextend VGname PVname"></a>知识点–指令：vgextend，给 VG 增加 PV，用法 vgextend VGname PVname</h4><h4 id="知识点–指令：vgreduce，在-VG-内移除-PV，"><a href="#知识点–指令：vgreduce，在-VG-内移除-PV，" class="headerlink" title="知识点–指令：vgreduce，在 VG 内移除 PV，"></a>知识点–指令：vgreduce，在 VG 内移除 PV，</h4><h4 id="知识点–指令：vgchange，设定-VG-是否启动-active"><a href="#知识点–指令：vgchange，设定-VG-是否启动-active" class="headerlink" title="知识点–指令：vgchange，设定 VG 是否启动 (active)"></a>知识点–指令：vgchange，设定 VG 是否启动 (active)</h4><h4 id="知识点–指令：vgremove，删除一个-VG"><a href="#知识点–指令：vgremove，删除一个-VG" class="headerlink" title="知识点–指令：vgremove，删除一个 VG"></a>知识点–指令：vgremove，删除一个 VG</h4><h2 id="16-4-LV"><a href="#16-4-LV" class="headerlink" title="16.4 LV"></a>16.4 LV</h2><h3 id="16-4-1"><a href="#16-4-1" class="headerlink" title="16.4.1"></a>16.4.1</h3><h4 id="知识点–指令：lvcreate，建立-LV"><a href="#知识点–指令：lvcreate，建立-LV" class="headerlink" title="知识点–指令：lvcreate，建立 LV"></a>知识点–指令：lvcreate，建立 LV</h4><pre><code>    1.用法
+        #lvcreate [-L N[mgt]] [-n LVname] VGname
+        #lvcreate [-l N] [-n LVname] VGname
+        #lvcreate -L N -T VGname/thinpoolname                   ，建立 thin pool
+        #lvcreate -V N -T VGname/thinpoolname -n thinVolumename ，从 thin pool 中建立 thin Volume
+        #lvcreate -s -L N -n snapshotname /dev/VGname/LVname    ，对指定的 LV 建立快照
+    2.选项
+        #-L，后面接容量，容量的单位可以是 M,G,T 等
+            由于容量的最小单位为 PE，因此这个数量必须要是 PE 的倍数，若不相符，系统会自行计算最相近的容量
+        #-l，后面可以接 PE 的个数而不是数量，需要人脑计算 PE 数
+        #-n，后面接的就是 LV 的名字，名字自己指定
+        #-T，建立 thin pool，必须同时指明 VG 的名字和 thin pool 的名字
+        #-V，建立 thin Volume 时指定其宣告容量
+        #-s，建立快照</code></pre>
+<h4 id="知识点–指令：lvscan，查询系统上面的-LV"><a href="#知识点–指令：lvscan，查询系统上面的-LV" class="headerlink" title="知识点–指令：lvscan，查询系统上面的 LV"></a>知识点–指令：lvscan，查询系统上面的 LV</h4><h4 id="知识点–指令：lvdisplay，查看某个-LV-的信息，用法-lvdisplay-dev-VGname-LVname"><a href="#知识点–指令：lvdisplay，查看某个-LV-的信息，用法-lvdisplay-dev-VGname-LVname" class="headerlink" title="知识点–指令：lvdisplay，查看某个 LV 的信息，用法 lvdisplay /dev/VGname/LVname"></a>知识点–指令：lvdisplay，查看某个 LV 的信息，用法 lvdisplay /dev/VGname/LVname</h4><h4 id="知识点–指令：lvextend，在-LV-里面增加容量"><a href="#知识点–指令：lvextend，在-LV-里面增加容量" class="headerlink" title="知识点–指令：lvextend，在 LV 里面增加容量"></a>知识点–指令：lvextend，在 LV 里面增加容量</h4><h4 id="知识点–指令：lvreduce，在-LV-里面减少容量"><a href="#知识点–指令：lvreduce，在-LV-里面减少容量" class="headerlink" title="知识点–指令：lvreduce，在 LV 里面减少容量"></a>知识点–指令：lvreduce，在 LV 里面减少容量</h4><h4 id="知识点–指令：lvremove，删除一个-LV"><a href="#知识点–指令：lvremove，删除一个-LV" class="headerlink" title="知识点–指令：lvremove，删除一个 LV"></a>知识点–指令：lvremove，删除一个 LV</h4><h4 id="知识点–指令：lvresize，对-LV-进行容量大小的调整"><a href="#知识点–指令：lvresize，对-LV-进行容量大小的调整" class="headerlink" title="知识点–指令：lvresize，对 LV 进行容量大小的调整"></a>知识点–指令：lvresize，对 LV 进行容量大小的调整</h4><pre><code>    1.用法
+        #lvresize -[lL] +N /dev/VGname/LVname，扩大 LV
+        #lvresize -[lL] -N /dev/VGname/LVname，缩小 LV
+    2.选项
+        #-L，接容量，单位可以是 M,G,T 等
+        #-l，接 PE 的个数
+        #+N，扩大的数量
+        #-N，减小的数量</code></pre>
+<h4 id="知识点–指令：xfs-growfs，扩大-xfs-文件系统的容量"><a href="#知识点–指令：xfs-growfs，扩大-xfs-文件系统的容量" class="headerlink" title="知识点–指令：xfs_growfs，扩大 xfs 文件系统的容量"></a>知识点–指令：xfs_growfs，扩大 xfs 文件系统的容量</h4><pre><code>    1.用法
+        #xfs_growfs 挂载点，对于在 LV 上建立的文件系统，自动将文件系统扩大至整个 LV</code></pre>
+<h4 id="知识点–概念；LVM-thin-Volume，储存池-thin-pool"><a href="#知识点–概念；LVM-thin-Volume，储存池-thin-pool" class="headerlink" title="知识点–概念；LVM thin Volume，储存池 thin pool"></a>知识点–概念；LVM thin Volume，储存池 thin pool</h4><pre><code>    1.thin pool，存储池，一种特殊的 LV
+    2.LVM thin Volume，一种特殊的 LV，从存储池中生成，可以动态根据使用情况，用到多少，就从存储池中获取多少容量
+        #宣告容量，在建立 thin Volume 时设定，表示对外宣称的容量，但实际占用的硬盘容量取决于使用量
+        #实际容量，thin Volume 实际占用的硬盘容量，当对硬盘的需求超过实际容量时会自动扩容，但不会超过宣告容量
+    3.从 thin pool 中分出的所有 thin Volume
+        #总宣告容量可以超过 thin pool 的实际大小
+        #总实际容量绝不能超过 thin pool 的实际大小，否则可能会有数据丢失的风险</code></pre>
+<h4 id="知识点–图片：14-03-03-LVM-的快照工作方式"><a href="#知识点–图片：14-03-03-LVM-的快照工作方式" class="headerlink" title="知识点–图片：14-03-03 LVM 的快照工作方式"></a>知识点–图片：14-03-03 LVM 的快照工作方式</h4><h4 id="知识点–概念：快照-snapshot"><a href="#知识点–概念：快照-snapshot" class="headerlink" title="知识点–概念：快照 snapshot"></a>知识点–概念：快照 snapshot</h4><pre><code>    1.快照与普通备份的区别，快照只备份修改过的数据
+        #当有资料变动了，则将原始资料搬移到快照区，而修改写入到数据区
+        #快照与数据区共享没有修改过的数据区
+    2.快照与被快照的 LV 必须放在一个 VG 中
+    3.快照与被快照的 LV 在文件系统层面的参数完全相同，包括 UUID
+        #所以如果要挂载 xfs 文件系统的快照，要加上 nouuid 的选项，因为 xfs 不允许挂载相同 UUID 的文件系统
+    4.鸟哥利用快照恢复的方法，个人不太赞同
+        #先将快照利用 xfsdump 做成一个备份
+        #再将 LV 和快照都卸载，并删除快照
+        #对 LV 格式化，之后挂载
+        #利用之前 xfsdump 做的备份，使用 xfsrestore 来恢复
+    5.快照的另一个比较好用的功能，测试机
+        #将原始 LV 当做备份，将快照当做测试机
+        #所有操作和修改，都在快照里进行
+        #如果测试机有问题，删除快照即可
+        #如果需要新建一个测试机，就再新建一个快照即可</code></pre>
+<hr>
+<h1 id="Chapter-17-定时任务"><a href="#Chapter-17-定时任务" class="headerlink" title="Chapter_17_定时任务"></a>Chapter_17_定时任务</h1><hr>
+<h1 id="Chapter-18-压缩和解压缩"><a href="#Chapter-18-压缩和解压缩" class="headerlink" title="Chapter_18_压缩和解压缩"></a>Chapter_18_压缩和解压缩</h1><hr>
+<h1 id="Chapter-19-基本操作命令"><a href="#Chapter-19-基本操作命令" class="headerlink" title="Chapter_19_基本操作命令"></a>Chapter_19_基本操作命令</h1><hr>
+<h1 id="Chapter-20-SELinux"><a href="#Chapter-20-SELinux" class="headerlink" title="Chapter_20_SELinux"></a>Chapter_20_SELinux</h1><hr>
+<h1 id="Chapter-21-图形化界面"><a href="#Chapter-21-图形化界面" class="headerlink" title="Chapter_21_图形化界面"></a>Chapter_21_图形化界面</h1><hr>
+<h1 id="Chapter-22-光盘"><a href="#Chapter-22-光盘" class="headerlink" title="Chapter_22_光盘"></a>Chapter_22_光盘</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/01/Blog_01_Linux/" data-id="cklnrtq3400007kvx1awu48c1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/01/Blog_17_Oracle_Database/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Blog_17_Oracle_Database
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/01/Blog_00_Miscellaneous/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Blog_00_Miscellaneous</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/01/Blog_99_Test/">Blog_99_test</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_18_MySql_Database/">Blog_18_MySql_Database</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_17_Oracle_Database/">Blog_17_Oracle_Database</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_01_Linux/">Blog_01_Linux</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_00_Miscellaneous/">Blog_00_Miscellaneous</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
