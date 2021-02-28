@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Blog_02_LinuxMan | 86jiangyuliang_PKM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Linux Man 整理和翻译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog_02_LinuxMan">
+<meta property="og:url" content="http://example.com/2020/11/01/Blog_02_LinuxMan/index.html">
+<meta property="og:site_name" content="86jiangyuliang_PKM">
+<meta property="og:description" content="Linux Man 整理和翻译">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-31T16:02:00.000Z">
+<meta property="article:modified_time" content="2021-02-28T13:19:00.115Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="86jiangyuliang_PKM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">86jiangyuliang_PKM</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Blog_02_LinuxMan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/01/Blog_02_LinuxMan/" class="article-date">
+  <time datetime="2020-10-31T16:02:00.000Z" itemprop="datePublished">2020-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Blog_02_LinuxMan
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>知识点–概念，指令，配置<br>知识点–脚本  </p>
+<hr>
+<p>Chapter_01_MAN<br>Chapter_02_SSH<br>Chapter_03_软件管理<br>Chapter_04_Service_和_Deamon<br>Chapter_05_Linux_Booting_和_Driver<br>Chapter_06_VIM<br>Chapter_07_Bash<br>Chapter_08_Bash_Sript<br>Chapter_09<br>Chapter_10_用户和组<br>Chapter_11_进程<br>Chapter_12_网络<br>Chapter_13_目录和文件<br>Chapter_14_磁盘和分区<br>Chapter_15_文件系统<br>Chapter_16_LVM<br>Chapter_17_定时任务<br>Chapter_18_压缩和解压缩<br>Chapter_19_基本操作命令<br>Chapter_20_SELinux<br>Chapter_21_图形化界面  </p>
+<hr>
+<h1 id="Chapter-12-网络"><a href="#Chapter-12-网络" class="headerlink" title="Chapter_12_网络"></a>Chapter_12_网络</h1><h2 id="12-1-基本网络指令"><a href="#12-1-基本网络指令" class="headerlink" title="12.1 基本网络指令"></a>12.1 基本网络指令</h2><h3 id="man-ping-8-7"><a href="#man-ping-8-7" class="headerlink" title="man_ping_8_7"></a>man_ping_8_7</h3><pre><code>PING(8)
+----------
+NAME
+SYNOPSIS
+DESCRIPTION
+OPTIONS
+ICMP PACKET DETAILS
+DUPLICATE AND DAMAGED PACKETS
+TRYING DIFFERENT DATA PATTERNS
+TTL DETAILS
+OTHERS
+----------
+NAME
+        ping - send ICMP ECHO_REQUEST to network hosts
+
+SYNOPSIS
+        ping [&lt;option&gt;] &lt;destination&gt;
+
+        &lt;option&gt;
+            [-aAbBdDfhLnOqrRUvV46]
+            [-c &lt;count&gt;]
+            [-F &lt;flow_label&gt;]
+            [-i &lt;interval&gt;]
+            [-I &lt;interface&gt;]
+            [-l &lt;preload&gt;]
+            [-m &lt;mark&gt;]
+            [-M &lt;pmtudisc_option&gt;]
+            [-N &lt;nodeinfo_option&gt;]
+            [-w &lt;deadline&gt;]
+            [-W &lt;timeout&gt;]
+            [-p &lt;pattern&gt;]
+            [-Q &lt;tos&gt;]
+            [-s &lt;packetsize&gt;]
+            [-S &lt;sndbuf&gt;]
+            [-t &lt;ttl&gt;]
+            [-T &lt;timestamp_option&gt;]
+            [hop ...]
+
+DESCRIPTION
+        ping uses the ICMP protocol&#39;s mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway.
+        ECHO_REQUEST datagrams (&#39;&#39;pings&#39;&#39;) have an IP and ICMP header, followed by a struct timeval and then an arbitrary number of &#39;&#39;pad&#39;&#39; bytes used to fill out the packet.
+
+        ping works with both IPv4 and IPv6. Using only one of them explicitly can be enforced by specifying -4 or -6.
+
+        ping can also send IPv6 Node Information Queries (RFC4620).
+        Intermediate hops may not be allowed, because IPv6 source routing was deprecated (RFC5095).
+
+OPTIONS
+        -4
+            Use IPv4 only.
+
+        -6
+            Use IPv6 only.
+
+        -a
+            Audible ping.
+
+        -A
+            Adaptive ping.
+            Interpacket interval adapts to round-trip time, so that effectively not more than one (or more, if preload is set) unanswered probe is present in the network.
+            Minimal interval is 200msec for not super-user.
+            On networks with low rtt this mode is essentially equivalent to flood mode.
+
+        -b
+            Allow pinging a broadcast address.
+
+        -B
+            Do not allow ping to change source address of probes.
+            The address is bound to one selected when ping starts.
+
+        -c &lt;count&gt;
+            Stop after sending count ECHO_REQUEST packets.
+            With deadline option, ping waits for count ECHO_REPLY packets, until the timeout expires.
+
+        -d
+            Set the SO_DEBUG option on the socket being used.
+            Essentially, this socket option is not used by Linux kernel.
+
+        -D
+            Print timestamp (unix time + microseconds as in gettimeofday) before each line.
+
+        -f
+            Flood ping.
+            For every ECHO_REQUEST sent a period &#39;&#39;.&#39;&#39; is printed, while for ever ECHO_REPLY received a backspace is printed.
+            This provides a rapid display of how many packets are being dropped.
+            If interval is not given, it sets interval to zero and outputs packets as fast as they come back or one hundred times per second, whichever is more.
+            Only the super-user may use this option with zero interval.
+
+        -F &lt;flow_label&gt;
+            IPv6 only.
+            Allocate and set 20 bit flow label (in hex) on echo request packets.
+            If value is zero, kernel allocates random flow label.
+
+        -h
+            Show help.
+
+        -i &lt;interval&gt;
+            Wait interval seconds between sending each packet.
+            The default is to wait for one second between each packet normally, or not to wait in flood mode.
+            Only super-user may set interval to values less 0.2 seconds.
+
+        -I &lt;interface&gt;
+            interface is either an address, or an interface name.
+            If interface is an address, it sets source address to specified interface address.
+            If interface is an interface name, it sets source interface to specified interface.
+            For IPv6, when doing ping to a link-local scope address, link specification (by the &#39;%&#39;-notation in destination, or by this option) is required.
+
+        -l &lt;preload&gt;
+            If preload is specified, ping sends that many packets not waiting for reply.
+            Only the super-user may select preload more than 3.
+
+        -L
+            Suppress loopback of multicast packets.
+            This flag only applies if the ping destination is a multicast address.
+
+        -m &lt;mark&gt;
+            use mark to tag the packets going out.
+            This is useful for variety of reasons within the kernel such as using policy routing to select specific outbound processing.
+
+        -M &lt;pmtudisc_opt&gt;
+            Select Path MTU Discovery strategy.
+            pmtudisc_option may be: 
+                do    - prohibit fragmentation, even local one
+                want  - do PMTU discovery, fragment locally when packet size is large
+                dont  - do not set DF flag
+
+        -N &lt;nodeinfo_option&gt;
+            IPv6 only.
+            Send ICMPv6 Node Information Queries (RFC4620), instead of Echo Request.
+            CAP_NET_RAW capability is required.
+            nodeinfo_option may be:
+                help    - Show help for NI support.
+                name    - Queries for Node Names.
+                ipv6    - Queries for IPv6 Addresses. There are several IPv6 specific flags:
+                            ipv6-global     -   Request IPv6 global-scope addresses.
+                            ipv6-sitelocal  - Request IPv6 site-local addresses.
+                            ipv6-linklocal  - Request IPv6 link-local addresses.
+                            ipv6-all        - Request IPv6 addresses on other interfaces.
+                ipv4    - Queries for IPv4 Addresses. There is one IPv4 specific flag:
+                            ipv4-all        - Request IPv4 addresses on other interfaces.
+                subject-ipv6=ipv6addr   - IPv6 subject address.
+                subject-ipv4=ipv4addr   - IPv4 subject address.
+                subject-name=nodename   - Subject name. If it contains more than one dot, fully-qualified domain name is assumed.
+                subject-fqdn=nodename   - Subject name. Fully-qualified domain name is always assumed.
+
+        -n
+            Numeric output only.
+            No attempt will be made to lookup symbolic names for host addresses.
+
+        -O
+            Report outstanding ICMP ECHO reply before sending next packet.
+            This is useful together with the timestamp -D to log output to a diagnostic file and search for missing answers.
+
+        -p &lt;pattern&gt;
+            You may specify up to 16 &#39;&#39;pad&#39;&#39; bytes to fill out the packet you send.
+            This is useful for diagnosing data-dependent problems in a network.
+            For example, -p ff will cause the sent packet to be filled with all ones.
+
+        -q
+            Quiet output.
+            Nothing is displayed except the summary lines at startup time and when finished.
+
+        -Q &lt;tos&gt;
+            Set Quality of Service -related bits in ICMP datagrams. 
+            &lt;tos&gt; can be decimal (ping only) or hex number.
+
+            In RFC2474, these fields are interpreted as 8-bit Differentiated Services (DS), consisting of:
+                    bits 0-1 (2 lowest bits) of separate data
+                    bits 2-7 (highest 6 bits) of Differentiated Services Codepoint (DSCP).
+            In RFC2481 and RFC3168, bits 0-1 are used for ECN.
+
+            Historically (RFC1349, obsoleted by RFC2474), these were interpreted as:
+                    bit 0 (lowest bit) for reserved (currently being redefined as congestion control)
+                    bits 1-4 for Type of Service
+                    bits 5-7 (highest bits) for Precedence.
+
+        -r
+            Bypass the normal routing tables and send directly to a host on an attached interface.
+            If the host is not on a directly-attached network, an error is returned.
+            This option can be used to ping a local host through an interface that has no route through it provided the option -I is also used.
+
+        -R
+            ping only.
+            Record route.
+            Includes the RECORD_ROUTE option in the ECHO_REQUEST packet and displays the route buffer on returned packets.
+            Note that the IP header is only large enough for nine such routes.
+            Many hosts ignore or discard this option.
+
+        -s &lt;packetsize&gt;
+            Specifies the number of data bytes to be sent.
+            The default is 56, which translates into 64 ICMP data bytes when combined with the 8 bytes of ICMP header data.
+
+        -S &lt;sndbuf&gt;
+            Set socket sndbuf.
+            If not specified, it is selected to buffer not more than one packet.
+
+        -t &lt;ttl&gt;
+            ping only.
+            Set the IP Time to Live.
+
+        -T &lt;timestamp_option&gt;
+            Set special IP timestamp options.
+            &lt;timestamp_option&gt; may be:
+                    tsonly     - only timestamps
+                    tsandaddr  - timestamps and addresses
+                    tsprespec &lt;host1&gt; [&lt;host2&gt; [&lt;host3&gt; [&lt;host4&gt;]]]     - timestamp prespecified hops
+
+        -U
+            Print full user-to-user latency (the old behaviour).
+            Normally ping prints network round trip time, which can be different f.e. due to DNS failures.
+
+        -v
+            Verbose output.
+
+        -V
+            Show version and exit.
+
+        -w &lt;deadline&gt;
+            Specify a timeout, in seconds, before ping exits regardless of how many packets have been sent or received.
+            In this case ping does not stop after count packet are sent, it waits either for deadline expire or until count probes are answered or for some error notification from network.
+
+        -W &lt;timeout&gt;
+            Time to wait for a response, in seconds.
+            The option affects only timeout in absence of any responses, otherwise ping waits for two RTTs.
+
+        When using ping for fault isolation, it should first be run on the local host, to verify that the local network interface is up and running.
+        Then, hosts and gateways further and further away should be &#39;&#39;pinged&#39;&#39;.
+        Round-trip times and packet loss statistics are computed.
+        If duplicate packets are received, they are not included in the packet loss calculation, although the round trip time of these packets is used in calculating the minimum/average/maximum round-trip time numbers.
+        When the specified number of packets have been sent (and received) or if the program is terminated with a SIGINT, a brief summary is displayed.
+        Shorter current statistics can be obtained without termination of process with signal SIGQUIT.
+
+        If ping does not receive any reply packets at all it will exit with code 1.
+        If a packet count and deadline are both specified, and fewer than count packets are received by the time the deadline has arrived, it will also exit with code 1.
+        On other error it exits with code 2.
+        Otherwise it exits with code 0.
+        This makes it possible to use the exit code to see if a host is alive or not.
+
+        This program is intended for use in network testing, measurement and management.
+        Because of the load it can impose on the network, it is unwise to use ping during normal operations or from automated scripts.
+
+ICMP PACKET DETAILS
+        An IP header without options is 20 bytes.
+        An ICMP ECHO_REQUEST packet contains an additional 8 bytes worth of ICMP header followed by an arbitrary amount of data.
+        When a packetsize is given, this indicated the size of this extra piece of data (the default is 56).
+        Thus the amount of data received inside of an IP packet of type ICMP ECHO_REPLY will always be 8 bytes more than the requested data space (the ICMP header).
+
+        If the data space is at least of size of struct timeval ping uses the beginning bytes of this space to include a timestamp which it uses in the computation of round trip times.
+        If the data space is shorter, no round trip times are given.
+
+DUPLICATE AND DAMAGED PACKETS
+        ping will report duplicate and damaged packets.
+        Duplicate packets should never occur, and seem to be caused by inappropriate link-level retransmissions.
+        Duplicates may occur in many situations and are rarely (if ever) a good sign, although the presence of low levels of duplicates may not always be cause for alarm.
+
+        Damaged packets are obviously serious cause for alarm and often indicate broken hardware somewhere in the ping packet&#39;s path (in the network or in the hosts).
+
+TRYING DIFFERENT DATA PATTERNS
+        The (inter)network layer should never treat packets differently depending on the data contained in the data portion.
+        Unfortunately, data-dependent problems have been known to sneak into networks and remain undetected for long periods of time.
+        In many cases the particular pattern that will have problems is something that doesn&#39;t have sufficient &#39;&#39;transitions&#39;&#39;, such as all ones or all zeros, or a pattern right at the edge, such as almost all zeros.
+        It isn&#39;t necessarily enough to specify a data pattern of all zeros (for example) on the command line because the pattern that is of interest is at the data link level, and the relationship between what you type and what the controllers transmit can be complicated.
+
+        This means that if you have a data-dependent problem you will probably have to do a lot of testing to find it.
+        If you are lucky, you may manage to find a file that either can&#39;t be sent across your network or that takes much longer to transfer than other similar length files.
+        You can then examine this file for repeated patterns that you can test using the -p option of ping.
+
+TTL DETAILS
+        The TTL value of an IP packet represents the maximum number of IP routers that the packet can go through before being thrown away.
+        In current practice you can expect each router in the Internet to decrement the TTL field by exactly one.
+
+        The TCP/IP specification states that the TTL field for TCP packets should be set to 60, but many systems use smaller values (4.3 BSD uses 30, 4.2 used 15).
+
+        The maximum possible value of this field is 255, and most Unix systems set the TTL field of ICMP ECHO_REQUEST packets to 255.
+        This is why you will find you can &#39;&#39;ping&#39;&#39; some hosts, but not reach them with telnet(1) or ftp(1).
+
+        In normal operation ping prints the TTL value from the packet it receives.
+        When a remote system receives a ping packet, it can do one of three things with the TTL field in its response:
+
+                Not change it; this is what Berkeley Unix systems did before the 4.3BSD Tahoe release.
+                In this case the TTL value in the received packet will be 255 minus the number of routers in the round-trip path.
+
+                Set it to 255; this is what current Berkeley Unix systems do.
+                In this case the TTL value in the received packet will be 255 minus the number of routers in the path from the remote system to the pinging host.
+
+                Set it to some other value. Some machines use the same value for ICMP packets that they use for TCP packets, for example either 30 or 60.
+                Others may use completely wild values.
+
+OTHERS
+
+    BUGS
+        Many Hosts and Gateways ignore the RECORD_ROUTE option.
+
+        The maximum IP header length is too small for options like RECORD_ROUTE to be completely useful.
+        There&#39;s not much that can be done about this, however.
+
+        Flood pinging is not recommended in general, and flood pinging the broadcast address should only be done under very controlled conditions.
+
+    SEE ALSO
+        netstat(1), ifconfig(8).
+
+    HISTORY
+        The ping command appeared in 4.3BSD.
+
+        The version described here is its descendant specific to Linux.
+
+        As of version s20150815, the ping6 binary doesn&#39;t exist anymore.
+        It has been merged into ping.
+        Creating a symlink named ping6 pointing to ping will result in the same funcionality as before.
+
+    SECURITY
+        ping requires CAP_NET_RAW capability to be executed in the following cases:
+                1) if the program is used for non-echo queries (See -N option)
+                2) if kernel does not support non-raw ICMP sockets
+                3) if the user is not allowed to create an ICMP echo socket.
+
+        The program may be used as set-uid root.
+
+    AVAILABILITY
+        ping is part of iputils package and the latest versions are available in source form at http://www.skbuff.net/iputils/iputils-current.tar.bz2.</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/01/Blog_02_LinuxMan/" data-id="cklp6k02s000028vxbct6h809" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/01/Blog_17_Oracle_Database/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Blog_17_Oracle_Database
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/01/Blog_01_Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Blog_01_Linux</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/01/Blog_99_Test/">Blog_99_test</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_18_MySql_Database/">Blog_18_MySql_Database</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_17_Oracle_Database/">Blog_17_Oracle_Database</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_02_LinuxMan/">Blog_02_LinuxMan</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_01_Linux/">Blog_01_Linux</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/01/Blog_00_Miscellaneous/">Blog_00_Miscellaneous</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
