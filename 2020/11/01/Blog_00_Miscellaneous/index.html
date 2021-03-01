@@ -15,7 +15,7 @@
 <meta property="og:description" content="杂，各种内容">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-28T13:49:53.580Z">
+<meta property="article:modified_time" content="2021-03-01T13:38:18.517Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -125,9 +125,37 @@
         # 尖括号 &lt;&gt;，表示手动输入内容  
         # 箭头 &lt;== ，表示行级注释  
     4. 表格
-        # 使用 &lt;p&gt; &lt;/p&gt; 实现表格内换行</code></pre>
-<h4 id="知识点：Blog-01-Linux-和-Blog-02-LinuxMan-的规则"><a href="#知识点：Blog-01-Linux-和-Blog-02-LinuxMan-的规则" class="headerlink" title="知识点：Blog_01_Linux 和 Blog_02_LinuxMan 的规则"></a>知识点：Blog_01_Linux 和 Blog_02_LinuxMan 的规则</h4><pre><code>    1. 
-    2. Blog_02_LinuxMan
+        # 使用 &lt;p&gt; &lt;/p&gt; 实现表格内换行
+    5. 符号
+        # 知识点正文允许使用的符号
+            - ，
+            - 、</code></pre>
+<h4 id="知识点：Blog-01-Linux-的笔记规则"><a href="#知识点：Blog-01-Linux-的笔记规则" class="headerlink" title="知识点：Blog_01_Linux 的笔记规则"></a>知识点：Blog_01_Linux 的笔记规则</h4><pre><code>    1. 内容分类
+        # 章，取决于功能
+        # 节，取决于包
+            - 具有近似功能的多个包，可以放在同一节中
+            - 包的介绍直接放在节中
+        # 目，取决于具体文件，如指令、配置文件
+        # 特别说明
+            - 两个基础巨型包，coreutils 和 util-linux，其中的内容整合到相应的功能中，不组合到一起，仅在知识点中标注来源包即可
+            - Bash 的内置命令，内容整合到相应的功能章节，不组合到一起，仅在知识点中标注来源于 Bash build-in
+    2. 指令知识点的格式
+        # 知识点标题中需要对指令进行简略描述
+        # 1 为介绍 Description
+        # 2 为常用用法 Usage
+        # 3 为指令格式 Synopsis
+            - 如果有多个指令格式，则每种指令格式占用一行
+        # 4 为选项 Operation
+            - 选项的功能说明，全部使用行级注释
+        # 5+ 为分类选项
+            - 在作为选项过多时，按照功能进行的对选项的分类
+        # N 为范例 Example
+            - 只有最后一项可以作为范例
+            - 范例必须加行级注释，哪怕是废话
+        # 行级注释
+            - 子层的行级注释要比父层的行级注释多两个 tab
+            - 上下文的行级注释，相同的层级的尽量拥有相同的 tab</code></pre>
+<h4 id="知识点：Blog-02-LinuxMan-的笔记规则"><a href="#知识点：Blog-02-LinuxMan-的笔记规则" class="headerlink" title="知识点：Blog_02_LinuxMan 的笔记规则"></a>知识点：Blog_02_LinuxMan 的笔记规则</h4><pre><code>    2. Blog_02_LinuxMan
         # 需与 Blog_01_Linux 的内容对应
     3. 编写建议
         # 先对 Blog_01_Linux 制作规划
@@ -787,7 +815,7 @@
 <tr>
 <td align="left">来自邮寄名单的邮件</td>
 <td align="left">list:</td>
-<td align="center">示例：list:<a href="mailto:&#x69;&#110;&#x66;&#111;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;">&#x69;&#110;&#x66;&#111;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;</a></td>
+<td align="center">示例：list:<a href="mailto:&#x69;&#x6e;&#x66;&#x6f;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;</a></td>
 </tr>
 <tr>
 <td align="left">包含特定颜色图标的邮件</td>
@@ -797,7 +825,7 @@
 <tr>
 <td align="left">按电子邮件搜索已发送的邮件</td>
 <td align="left">deliveredto:</td>
-<td align="center">示例：deliveredto:<a href="mailto:&#117;&#x73;&#x65;&#114;&#x6e;&#97;&#x6d;&#x65;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#117;&#x73;&#x65;&#114;&#x6e;&#97;&#x6d;&#x65;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a></td>
+<td align="center">示例：deliveredto:<a href="mailto:&#x75;&#115;&#x65;&#114;&#110;&#97;&#x6d;&#101;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x75;&#115;&#x65;&#114;&#110;&#97;&#x6d;&#101;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a></td>
 </tr>
 <tr>
 <td align="left">特定类别中的邮件</td>
@@ -807,7 +835,7 @@
 <tr>
 <td align="left">包含特定 message-id 标头的邮件</td>
 <td align="left">Rfc822msgid:</td>
-<td align="center">示例：rfc822msgid:<a href="mailto:&#50;&#48;&#48;&#53;&#48;&#x33;&#x32;&#57;&#x32;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#99;&#111;&#109;">&#50;&#48;&#48;&#53;&#48;&#x33;&#x32;&#57;&#x32;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#99;&#111;&#109;</a></td>
+<td align="center">示例：rfc822msgid:<a href="mailto:&#x32;&#48;&#48;&#53;&#x30;&#x33;&#50;&#57;&#50;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">&#x32;&#48;&#48;&#53;&#x30;&#x33;&#50;&#57;&#50;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a></td>
 </tr>
 <tr>
 <td align="left">含有或不含标签的邮件</td>
