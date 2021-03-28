@@ -15,7 +15,7 @@
 <meta property="og:description" content="Linux 笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-31T16:01:00.000Z">
-<meta property="article:modified_time" content="2021-03-28T10:21:14.277Z">
+<meta property="article:modified_time" content="2021-03-28T10:23:42.414Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -533,22 +533,22 @@
             - 对比远程 repo 和 local，查看是否有更新的包
         # reposync 通过调用 yum 实现功能，因而没有自己的配置文件
     2. 常用用法 Usage
-        # reposync -p /var/repos/updates --repoid=updates        &lt;== 对 updates repo 进行同步，将包下载到指定的位置
+        # reposync -p /var/repos/updates --repoid=updates       &lt;== 对 updates repo 进行同步，将包下载到指定的位置
         # reposync -n -p /var/repos/updates --repoid=updates    &lt;== 对 updates repo 进行同步，将包下载到指定的位置，只下载最新的包
-        # reposync -d -n -p /var/repos/updates --repoid=updates    &lt;== 对 updates repo 进行同步，将包下载到指定的位置，只下载最新的包，删除没有的包
+        # reposync -d -n -p /var/repos/updates --repoid=updates &lt;== 对 updates repo 进行同步，将包下载到指定的位置，只下载最新的包，删除没有的包
     3. 指令格式 Synopsis
         # reposync [&lt;options&gt;]
     4. 选项 Options
         # -h, --help                                    &lt;== 显示帮助
-        # -c &lt;config_file&gt;, --config=&lt;config_file&gt;        &lt;== 让 yum 使用指定的配置文件，而不是默认的配置文件
-        # -a &lt;arch&gt;, --arch=&lt;arch&gt;                        &lt;== 让 yum 下载指定的架构的包，而不是当前的主机的架构
-        # --source                                        &lt;== 同时下载源码包
+        # -c &lt;config_file&gt;, --config=&lt;config_file&gt;      &lt;== 让 yum 使用指定的配置文件，而不是默认的配置文件
+        # -a &lt;arch&gt;, --arch=&lt;arch&gt;                      &lt;== 让 yum 下载指定的架构的包，而不是当前的主机的架构
+        # --source                                      &lt;== 同时下载源码包
         # -r &lt;repoid&gt;, --repoid=&lt;repoid&gt;                &lt;== 指定要同步的 repo 的 id，如果不指定，则同步所有已经 enabled 的 repo
-        # -e &lt;cachedir&gt;, --cachedir &lt;cachedir&gt;            &lt;== 指定存放 metadata 的缓存目录
-        # -d, --delete                                    &lt;== 从 local 中删除远程 repo 中已经不存在的包
-        # -p &lt;destdir&gt;, --download_path=&lt;destdir&gt;        &lt;== 指定包的下载路径，默认为 current directory
+        # -e &lt;cachedir&gt;, --cachedir &lt;cachedir&gt;          &lt;== 指定存放 metadata 的缓存目录
+        # -d, --delete                                  &lt;== 从 local 中删除远程 repo 中已经不存在的包
+        # -p &lt;destdir&gt;, --download_path=&lt;destdir&gt;       &lt;== 指定包的下载路径，默认为 current directory
         # -u, --urls                                    &lt;== 仅显示准备下载的包的 url，并不实际下载
-        # -n, --newest-only                                &lt;== 仅下载最新的包</code></pre>
+        # -n, --newest-only                             &lt;== 仅下载最新的包</code></pre>
 <h2 id="3-5-repo"><a href="#3-5-repo" class="headerlink" title="3.5 repo"></a>3.5 repo</h2><h3 id="3-5-1-repo-介绍"><a href="#3-5-1-repo-介绍" class="headerlink" title="3.5.1 repo 介绍"></a>3.5.1 repo 介绍</h3><h4 id="知识点–包：epel-release-包"><a href="#知识点–包：epel-release-包" class="headerlink" title="知识点–包：epel-release 包"></a>知识点–包：epel-release 包</h4><h4 id="知识点–包：elrepo-release-包"><a href="#知识点–包：elrepo-release-包" class="headerlink" title="知识点–包：elrepo-release 包"></a>知识点–包：elrepo-release 包</h4><h3 id="3-5-2-createrepo-指令"><a href="#3-5-2-createrepo-指令" class="headerlink" title="3.5.2 createrepo 指令"></a>3.5.2 createrepo 指令</h3><h4 id="知识点–包：createrepo-包"><a href="#知识点–包：createrepo-包" class="headerlink" title="知识点–包：createrepo 包"></a>知识点–包：createrepo 包</h4><h2 id="3-6-dnf"><a href="#3-6-dnf" class="headerlink" title="3.6 dnf"></a>3.6 dnf</h2><h3 id="知识点–包：dnf"><a href="#知识点–包：dnf" class="headerlink" title="知识点–包：dnf"></a>知识点–包：dnf</h3><pre><code>    1. 指令文件
         # /usr/bin/dnf
     2. 帮助文件
