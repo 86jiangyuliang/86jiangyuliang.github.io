@@ -15,7 +15,7 @@
 <meta property="og:description" content="Linux Man 整理和翻译">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-31T16:02:00.000Z">
-<meta property="article:modified_time" content="2021-03-14T13:37:19.782Z">
+<meta property="article:modified_time" content="2021-03-28T10:21:40.694Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -88,7 +88,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="MAN"><a href="#MAN" class="headerlink" title="MAN  "></a>MAN  </h2><p>Chapter_01_MAN<br>Chapter_02_SSH<br>Chapter_03_软件管理<br>|—-<strong>3.2 rpm</strong><br>|——–<strong>3.2.1 rpm</strong><br>|—-<strong>3.3 yum</strong><br>|——–<strong>3.3.1 yum</strong><br>|——–<strong>3.3.2 yum.conf</strong><br>Chapter_04_Service_和_Deamon<br>Chapter_05_Linux_Booting_和_Driver<br>Chapter_06_VIM<br>Chapter_07_Bash<br>Chapter_08_Bash_Sript<br>Chapter_09_文本处理<br>Chapter_10_用户和组<br>Chapter_11_进程<br>Chapter_12_网络<br>Chapter_13_目录和文件<br>Chapter_14_磁盘和分区<br>Chapter_15_文件系统<br>Chapter_16_LVM<br>Chapter_17_定时任务<br>Chapter_18_压缩和解压缩<br>Chapter_19_基本操作命令<br>Chapter_20_SELinux<br>Chapter_21_图形化界面<br>Chapter_22_光盘    </p>
+        <h2 id="MAN"><a href="#MAN" class="headerlink" title="MAN  "></a>MAN  </h2><p>Chapter_01_MAN<br>Chapter_02_SSH<br>Chapter_03_软件管理<br>|—-<strong>3.2 rpm</strong><br>|——–<strong>3.2.1 rpm</strong><br>|—-<strong>3.3 yum</strong><br>|——–<strong>3.3.1 yum</strong><br>|——–3.3.2 <u>yum.conf</u><br>|—-3.4 yum-utils<br>|——–3.4.1 <u>reposync</u><br>|—-3.5 repo<br>|——–3.5.2 <u>createrepo</u><br>|—-3.6 dnf<br>|——–3.6.1 dnf<br>|—-3.7 SRPM<br>Chapter_04_Service_和_Deamon<br>Chapter_05_Linux_Booting_和_Driver<br>Chapter_06_VIM<br>Chapter_07_Bash<br>Chapter_08_Bash_Sript<br>Chapter_09_文本处理<br>Chapter_10_用户和组<br>Chapter_11_进程<br>Chapter_12_网络<br>Chapter_13_目录和文件<br>Chapter_14_磁盘和分区<br>Chapter_15_文件系统<br>Chapter_16_LVM<br>Chapter_17_定时任务<br>Chapter_18_压缩和解压缩<br>Chapter_19_基本操作命令<br>Chapter_20_SELinux<br>Chapter_21_图形化界面<br>Chapter_22_光盘    </p>
 <hr>
 <h1 id="Chapter-03-软件管理"><a href="#Chapter-03-软件管理" class="headerlink" title="Chapter_03_软件管理"></a>Chapter_03_软件管理</h1><h2 id="3-2-rpm"><a href="#3-2-rpm" class="headerlink" title="3.2 rpm"></a>3.2 rpm</h2><h3 id="3-2-1-rpm"><a href="#3-2-1-rpm" class="headerlink" title="3.2.1 rpm"></a>3.2.1 rpm</h3><h4 id="MAN-rpm-8-Centos7"><a href="#MAN-rpm-8-Centos7" class="headerlink" title="MAN_rpm_(8)_(Centos7)"></a>MAN_rpm_(8)_(Centos7)</h4><pre><code>    RPM(8)
     ----------
@@ -3076,7 +3076,155 @@
         AUTHER
 
             Seth Vidal</code></pre>
-<hr>
+<h2 id="3-4-yum-tuils"><a href="#3-4-yum-tuils" class="headerlink" title="3.4 yum-tuils"></a>3.4 yum-tuils</h2><h3 id="3-4-1-reposync-指令"><a href="#3-4-1-reposync-指令" class="headerlink" title="3.4.1 reposync 指令"></a>3.4.1 reposync 指令</h3><h4 id="MAN-reposync-1-Centos7"><a href="#MAN-reposync-1-Centos7" class="headerlink" title="MAN_reposync_(1)_(Centos7)"></a>MAN_reposync_(1)_(Centos7)</h4><pre><code>    reposync(1)
+    ----------
+    NAME
+    SYNOPSIS
+    DESCRIPTION
+    OPTIONS
+    EXAMPLES
+    FILES
+    OTHERS
+        SEE ALSO
+        AUTHORS
+        BUGS
+    ----------
+    NAME
+
+            reposync - synchronize yum repositories to a local directory
+            reposync 可以将 yum repo 同步到本地
+
+    SYNOPSIS
+
+            reposync [&lt;options&gt;]
+
+    DESCRIPTION
+
+            reposync is used to synchronize a remote yum repository to a local directory, using yum to retrieve the packages.
+            reposync 可以将远程的 yum repo 同步到本地
+            reposync 使用 yum 来查询包
+
+    OPTIONS
+
+            -h, --help
+
+                    Display a help message, and then quit.
+                    显示帮助
+
+            -c &lt;config_file&gt;, --config=&lt;config_file&gt;
+                    Config file to use (defaults to /etc/yum.conf).
+                    让 yum 使用指定的配置文件，而不是默认的配置文件
+
+            -a &lt;arch&gt;, --arch=&lt;arch&gt;
+                    Act as if running the specified arch (default: current arch, note: does not override $releasever. x86_64 is a superset for i*86.).
+                    让 yum 下载指定的架构的包，而不是当前的主机的架构
+
+            --source
+                    Also download .src.rpm files.
+                    同时下载源码包
+
+            -r &lt;repoid&gt;, --repoid=&lt;repoid&gt;
+                    Specify repo ids to query, can be specified multiple times (default is all enabled).
+                    仅同步指定的 repo
+                    如果不指定，则同步所有已经 enabled 的 repo
+
+            -e &lt;cachedir&gt;, --cachedir &lt;cachedir&gt;
+                    Directory in which to store metadata.
+                    指定存放 metadata 的缓存目录
+
+            -t, --tempcache
+                    Use a temp dir for storing/accessing yum-cache.
+
+            -d, --delete
+                    Delete local packages no longer present in repository.
+                    从 local 中删除远程 repo 中已经不存在的包
+
+            -p &lt;destdir&gt;, --download_path=&lt;destdir&gt;
+                    Path to download packages to: defaults to current directory.
+                    指定包的下载路径，默认为 current directory
+
+            --norepopath
+                    Don&#39;t add the reponame to the download path.
+                    Can only be used when syncing a single repository (default is to add the reponame).
+
+            -g, --gpgcheck
+                    Remove packages that fail GPG signature checking after downloading.
+                    exit status is &#39;1&#39; if at least one package was removed.
+
+            -u, --urls
+                    Just list urls of what would be downloaded, don&#39;t download.
+                    仅显示准备下载的包的 url，并不实际下载
+
+            -l, --plugins
+                    Enable yum plugin support.
+
+            -m, --downloadcomps
+                    Also download comps.xml.
+
+            --download-metadata
+                    Download all the non-default metadata.
+
+            -n, --newest-only
+                    Download only newest packages per-repo.
+                    仅下载最新的包
+
+            -q, --quiet
+                    Output as little information as possible.
+
+            --allow-path-traversal
+                    Allow packages stored outside their repo directory to be synced.
+                    These are packages that are referenced in metadata by using absolute paths or up-level &quot;..&quot; symbols, and are normally skipped by reposync for security reasons.
+
+                    CAUTION: Using this option has potential security implications since, by providing malicious repodata, an attacker could make reposync write to arbitrary locations on the file system that are accessible by the user running it.
+
+    EXAMPLES
+
+            Sync all packages from the &#39;updates&#39; repo to the current directory:
+
+                    reposync --repoid=updates
+
+            Sync only the newest packages from the &#39;updates&#39; repo to the current directory:
+
+                    reposync -n --repoid=updates
+
+            Sync packages from the &#39;updates&#39; and &#39;extras&#39; repos to the current directory:
+
+                    reposync --repoid=updates --repoid=extras
+
+            Sync all packages from the &#39;updates&#39; repo to the repos directory:
+
+                    reposync -p repos --repoid=updates
+
+            Sync all packages from the &#39;updates&#39; repo to the repos directory excluding x86_64 arch.
+            Edit /etc/yum.conf adding option exclude=*.x86_64.
+            Then:
+
+                    reposync -p repos --repoid=updates
+
+    FILES
+            reposync uses the yum libraries for retrieving information and packages.
+            If no configuration file is specified, the default yum configuration will be used.
+
+            /etc/yum.conf
+            /etc/yum/repos.d/
+
+    OTHERS
+
+        SEE ALSO
+
+            yum.conf (5)
+            http://yum.baseurl.org/
+
+        AUTHORS
+
+            See the Authors file included with this program.
+
+
+        BUGS
+
+            There are of course no bugs, but should you find any, you should first consult the FAQ section on http://yum.baseurl.org/wiki/Faq and if unsuccessful in finding a resolution contact the mailing list: yum-devel@lists.baseurl.org.
+            To file a bug use http://bugzilla.redhat.com for Fedora/RHEL/Centos    related    bugs and http://yum.baseurl.org/report for all other bugs.</code></pre>
+<h2 id="3-5-repo"><a href="#3-5-repo" class="headerlink" title="3.5 repo"></a>3.5 repo</h2><h3 id="3-5-2-createrepo-指令"><a href="#3-5-2-createrepo-指令" class="headerlink" title="3.5.2 createrepo 指令"></a>3.5.2 createrepo 指令</h3><h4 id="MAN-yum-8-Centos7-1"><a href="#MAN-yum-8-Centos7-1" class="headerlink" title="MAN_yum_(8)_(Centos7)"></a>MAN_yum_(8)_(Centos7)</h4><h2 id="3-6-dnf"><a href="#3-6-dnf" class="headerlink" title="3.6 dnf"></a>3.6 dnf</h2><h3 id="3-5-2-createrepo-指令-1"><a href="#3-5-2-createrepo-指令-1" class="headerlink" title="3.5.2 createrepo 指令"></a>3.5.2 createrepo 指令</h3><h4 id="MAN-yum-8-Centos7-2"><a href="#MAN-yum-8-Centos7-2" class="headerlink" title="MAN_yum_(8)_(Centos7)"></a>MAN_yum_(8)_(Centos7)</h4><h2 id="3-7-SRPM"><a href="#3-7-SRPM" class="headerlink" title="3.7 SRPM"></a>3.7 SRPM</h2><hr>
 <h1 id="Chapter-12-网络"><a href="#Chapter-12-网络" class="headerlink" title="Chapter_12_网络"></a>Chapter_12_网络</h1><h2 id="12-1-基本网络指令"><a href="#12-1-基本网络指令" class="headerlink" title="12.1 基本网络指令"></a>12.1 基本网络指令</h2><h3 id="12-1-1-ping"><a href="#12-1-1-ping" class="headerlink" title="12.1.1 ping"></a>12.1.1 ping</h3><h4 id="MAN-ping-8-Centos7"><a href="#MAN-ping-8-Centos7" class="headerlink" title="MAN_ping_(8)_(Centos7)"></a>MAN_ping_(8)_(Centos7)</h4><pre><code>    PING(8)
     ----------
     NAME
