@@ -5,13 +5,17 @@
   
 
   
-  <title>Archives | 86jiangyuliang_PKM</title>
+  <title>Blog_21_Windows | 86jiangyuliang_PKM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="86jiangyuliang_PKM">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="WINDOWS 知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog_21_Windows">
+<meta property="og:url" content="http://example.com/2020/11/01/Blog_21_Windows/index.html">
 <meta property="og:site_name" content="86jiangyuliang_PKM">
+<meta property="og:description" content="WINDOWS 知识点">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-31T16:21:00.000Z">
+<meta property="article:modified_time" content="2021-05-09T13:58:20.271Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,154 +66,80 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_99_Test/" class="archive-article-date">
-  <time datetime="2020-10-31T17:33:00.000Z" itemprop="datePublished">Nov 1</time>
+        <section id="main"><article id="post-Blog_21_Windows" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/01/Blog_21_Windows/" class="article-date">
+  <time datetime="2020-10-31T16:21:00.000Z" itemprop="datePublished">2020-11-01</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_99_Test/">Blog_99_test</a>
+    <h1 class="article-title" itemprop="name">
+      Blog_21_Windows
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_21_Windows/" class="archive-article-date">
-  <time datetime="2020-10-31T16:21:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_21_Windows/">Blog_21_Windows</a>
-    </h1>
-  
+        <h4 id="知识点：windows-hosts-文件"><a href="#知识点：windows-hosts-文件" class="headerlink" title="知识点：windows hosts 文件"></a>知识点：windows hosts 文件</h4><pre><code>    1. C:\Windows\System32\drivers\etc\hosts</code></pre>
+<h4 id="知识点：windows-scp"><a href="#知识点：windows-scp" class="headerlink" title="知识点：windows scp"></a>知识点：windows scp</h4><pre><code>    1. 介绍
+        # 都只能在 windows 上执行命令
+        # 推荐使用 cmd 而不是 powershell，因为可以使用 windows 变量
+    1. windows to linux
+        # scp %HOMEPATH%\Desktop\1.txt root@&lt;hostname&gt;:~
+    2. linux to windows
+        # scp root@~/1.txt %HOMEPATH%\Desktop
+            - 复制到桌面</code></pre>
+<h4 id="知识点：windows-常用变量"><a href="#知识点：windows-常用变量" class="headerlink" title="知识点：windows 常用变量"></a>知识点：windows 常用变量</h4><pre><code>    1. 介绍
+        # 网址
+            - http://www.wilsonmar.com/1envvars.htm    
+        # 使用和查看
+            - 只能在 cmd 中使用，不能在 powershell 中使用
+            - 使用 echo 查看变量的值</code></pre>
+<h4 id="知识点：windows-查看文件的-MD5-SHA1-SHA256-校验值"><a href="#知识点：windows-查看文件的-MD5-SHA1-SHA256-校验值" class="headerlink" title="知识点：windows 查看文件的 MD5 SHA1 SHA256 校验值"></a>知识点：windows 查看文件的 MD5 SHA1 SHA256 校验值</h4><pre><code>    1. 命令格式
+        # certutil -hashfile File_Name MD5  
+        # certutil -hashfile File_Name SHA1  
+        # certutil -hashfile File_Name SHA256  </code></pre>
+<h4 id="知识点：windows-修改网络属于公共网络或者专用网络"><a href="#知识点：windows-修改网络属于公共网络或者专用网络" class="headerlink" title="知识点：windows 修改网络属于公共网络或者专用网络"></a>知识点：windows 修改网络属于公共网络或者专用网络</h4><pre><code>    1. http://www.xitongcheng.com/jiaocheng/win10_article_52516.html</code></pre>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_18_MySql_Database/" class="archive-article-date">
-  <time datetime="2020-10-31T16:18:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_18_MySql_Database/">Blog_18_MySql_Database</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_17_Oracle_Database/" class="archive-article-date">
-  <time datetime="2020-10-31T16:17:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/01/Blog_21_Windows/" data-id="ckoh8sf2f0000rwvxf4908ba9" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_17_Oracle_Database/">Blog_17_Oracle_Database</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_02_LinuxMan/" class="archive-article-date">
-  <time datetime="2020-10-31T16:02:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_02_LinuxMan/">Blog_02_LinuxMan</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_01_Linux/" class="archive-article-date">
-  <time datetime="2020-10-31T16:01:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_01_Linux/">Blog_01_Linux</a>
-    </h1>
+    <a href="/2020/11/01/Blog_99_Test/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Blog_99_test
+        
+      </div>
+    </a>
   
+  
+    <a href="/2020/11/01/Blog_18_MySql_Database/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Blog_18_MySql_Database</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/01/Blog_00_Miscellaneous/" class="archive-article-date">
-  <time datetime="2020-10-31T16:00:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/Blog_00_Miscellaneous/">Blog_00_Miscellaneous</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
