@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","width":500,"display":"always","padding":1,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog21-hadoop">
+<meta property="og:url" content="http://example.com/2000/01/01/Blog21-hadoop/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="hadoop">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="1999-12-31T16:00:21.000Z">
+<meta property="article:modified_time" content="2023-09-09T07:52:41.283Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2000/01/01/Blog21-hadoop/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2000/01/01/Blog21-hadoop/","path":"2000/01/01/Blog21-hadoop/","title":"Blog21-hadoop"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Blog21-hadoop | Hexo</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Blog21-hadoop"><span class="nav-text">Blog21-hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9"><span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AA%E6%95%B4%E7%90%86"><span class="nav-text">未整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HADOOP-HOME-%E5%8F%98%E9%87%8F"><span class="nav-text">HADOOP_HOME 变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce"><span class="nav-text">MapReduce</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter01-Hadoop-%E5%9F%BA%E7%A1%80"><span class="nav-text">Chapter01 Hadoop 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Hadoop-%E7%AE%80%E4%BB%8B"><span class="nav-text">1.1 Hadoop 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9Ahadoop-%E4%BB%8B%E7%BB%8D"><span class="nav-text">知识点：hadoop 介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Hadoop-%E9%83%A8%E7%BD%B2"><span class="nav-text">1.2 Hadoop 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9A%E9%83%A8%E7%BD%B2-hadoop-1-2-1-%E5%85%AB%E6%96%97%E7%89%88"><span class="nav-text">知识点：部署 hadoop 1.2.1 八斗版</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter02-HDFS"><span class="nav-text">Chapter02 HDFS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-HDFS-%E4%BB%8B%E7%BB%8D"><span class="nav-text">2.1 HDFS 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9AHDFS-%E4%BB%8B%E7%BB%8D"><span class="nav-text">知识点：HDFS 介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-HDFS-%E4%BD%93%E7%B3%BB"><span class="nav-text">2.2 HDFS 体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-HDFS-%E9%85%8D%E7%BD%AE"><span class="nav-text">2.3 HDFS 配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter03-MapReduce"><span class="nav-text">Chapter03 MapReduce</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-MapReduce-%E4%BB%8B%E7%BB%8D"><span class="nav-text">3.1 MapReduce 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9A%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF"><span class="nav-text">知识点：海量数据处理技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9AMapReduce-%E4%BB%8B%E7%BB%8D"><span class="nav-text">知识点：MapReduce 介绍</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter04-Yarn"><span class="nav-text">Chapter04 Yarn</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter05-Hbase"><span class="nav-text">Chapter05 Hbase</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter06-Hive"><span class="nav-text">Chapter06 Hive</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter07-Zookeeper"><span class="nav-text">Chapter07 Zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-Zookeeper-%E6%A6%82%E8%BF%B0"><span class="nav-text">7.1 Zookeeper 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9AZookeeper-%E7%AE%80%E4%BB%8B"><span class="nav-text">知识点：Zookeeper 简介</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter08-Kafka"><span class="nav-text">Chapter08 Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter09-Storm"><span class="nav-text">Chapter09 Storm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter10-Spark"><span class="nav-text">Chapter10 Spark</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter11-SparkStreaming"><span class="nav-text">Chapter11 SparkStreaming</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter12-ceph"><span class="nav-text">Chapter12 ceph</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter12-Flume"><span class="nav-text">Chapter12 Flume</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2000/01/01/Blog21-hadoop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Blog21-hadoop | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Blog21-hadoop
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2000-01-01 00:00:21" itemprop="dateCreated datePublished" datetime="2000-01-01T00:00:21+08:00">2000-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-09 15:52:41" itemprop="dateModified" datetime="2023-09-09T15:52:41+08:00">2023-09-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <hr>
+<h1 id="Blog21-hadoop"><a href="#Blog21-hadoop" class="headerlink" title="Blog21-hadoop"></a>Blog21-hadoop</h1><p><a href="#Chapter01-Hadoop-%E5%9F%BA%E7%A1%80"><strong>Chapter01 Hadoop 基础</strong></a></p>
+<ul>
+<li><a href="#1-1-Hadoop-%E7%AE%80%E4%BB%8B">1.1 Hadoop 简介</a></li>
+<li><a href="#1-2-Hadoop-%E9%83%A8%E7%BD%B2">1.2 Hadoop 部署</a></li>
+</ul>
+<p><a href="#Chapter02-HDFS"><strong>Chapter02 HDFS</strong></a></p>
+<ul>
+<li><a href="#2-1-HDFS-%E4%BB%8B%E7%BB%8D">2.1 HDFS 介绍</a></li>
+<li><a href="#2-2-HDFS-%E4%BD%93%E7%B3%BB">2.2 HDFS 体系</a></li>
+<li><a href="#2-3-HDFS-%E9%85%8D%E7%BD%AE">2.3 HDFS 配置</a></li>
+</ul>
+<p><a href="#Chapter03-MapReduce"><strong>Chapter03 MapReduce</strong></a></p>
+<ul>
+<li><a href="#3-1-MapReduce-%E4%BB%8B%E7%BB%8D">3.1 MapReduce 介绍</a></li>
+</ul>
+<p><a href="#Chapter04-Yarn"><strong>Chapter04 Yarn</strong></a></p>
+<p><a href="#Chapter05-Hbase"><strong>Chapter05 Hbase</strong></a></p>
+<p><a href="#Chapter06-Hive"><strong>Chapter06 Hive</strong></a></p>
+<p><a href="#Chapter07-Zookeeper"><strong>Chapter7 Zookeeper</strong></a></p>
+<ul>
+<li><a href="#7-1-Zookeeper-%E6%A6%82%E8%BF%B0">7.1 Zookeeper 概述</a></li>
+</ul>
+<p><a href="#Chapter08-Kafka"><strong>Chapter08 Kafka</strong></a></p>
+<p><a href="#Chapter09-Storm"><strong>Chapter09 Storm</strong></a></p>
+<p><a href="#Chapter10-Spark"><strong>Chapter10 Spark</strong></a></p>
+<p><a href="#Chapter11-SparkStreaming"><strong>Chapter11 SparkStreaming</strong></a></p>
+<p><a href="#Chapter12-ceph"><strong>Chapter12 ceph</strong></a></p>
+<p><a href="#Chapter12-Flume"><strong>Chapter12 Flume</strong></a></p>
+<hr>
+<h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><ol>
+<li>Hadoop</li>
+</ol>
+<ul>
+<li>官网 <a target="_blank" rel="noopener" href="https://hadoop.apache.org/">https://hadoop.apache.org/</a></li>
+<li>当前文档 <a target="_blank" rel="noopener" href="https://hadoop.apache.org/docs/stable/">https://hadoop.apache.org/docs/stable/</a></li>
+<li>历史文档 <a target="_blank" rel="noopener" href="https://hadoop.apache.org/docs/">https://hadoop.apache.org/docs/</a></li>
+</ul>
+<ol start="2">
+<li>Hbase</li>
+</ol>
+<ul>
+<li>官网 <a target="_blank" rel="noopener" href="https://hbase.apache.org/">https://hbase.apache.org/</a></li>
+<li>手册 <a target="_blank" rel="noopener" href="https://hbase.apache.org/book.html">https://hbase.apache.org/book.html</a></li>
+</ul>
+<ol start="3">
+<li>Hive</li>
+</ol>
+<ul>
+<li>官网 <a target="_blank" rel="noopener" href="https://hive.apache.org/">https://hive.apache.org/</a></li>
+<li>手册 <a target="_blank" rel="noopener" href="https://cwiki.apache.org/confluence/display/Hive/">https://cwiki.apache.org/confluence/display/Hive/</a></li>
+<li>语言 <a target="_blank" rel="noopener" href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual">https://cwiki.apache.org/confluence/display/Hive/LanguageManual</a></li>
+</ul>
+<hr>
+<h2 id="未整理"><a href="#未整理" class="headerlink" title="未整理"></a>未整理</h2><h3 id="HADOOP-HOME-变量"><a href="#HADOOP-HOME-变量" class="headerlink" title="HADOOP_HOME 变量"></a>HADOOP_HOME 变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* hadoop 启动时报 HADOOP_HOME 变量已经被遗弃的警告（已解决）</span><br><span class="line"></span><br><span class="line">* 原因</span><br><span class="line">  - hadoop 从 1.x 版本开始，不再使用 HADOOP_HOME 变量，而使用 HADOOP_PREFIX</span><br><span class="line">  - 但在 Pig 和 Hive 中还会使用到 HADOOP_HOME 变量，建议还是保留</span><br><span class="line"></span><br><span class="line">* 解决办法</span><br><span class="line">  - 第一种，直接用 HADOOP_PERFIX 代替 HADOOP_HOME</span><br><span class="line">  - 第二种，在 hadoop-env.sh 中加入 export HADOOP_HOME_WARN_SUPPRESS=1</span><br><span class="line"></span><br><span class="line">* 网上知识来源</span><br><span class="line">  - https://blog.csdn.net/jsj568261496/article/details/10175209</span><br></pre></td></tr></table></figure>
+
+<h3 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h3><ul>
+<li><p>InputFormat</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. InputFormat 的实现是由 hadoop 实现还是由人工实现？</span><br><span class="line">  - 如果是有 hadoop 实现，是否可以人工对其进行修改，以实现一些个性化功能</span><br><span class="line"></span><br><span class="line">2. InputFormat 对 InputData 的切分，是以指针或元数据的方式，还是以复制的方式？</span><br><span class="line">  - 猜，应该是以指针或元数据的方式</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>map</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 是否是由 JobTracker 启动 mapper 进程？</span><br><span class="line"></span><br><span class="line">2. map 与 mapper 之间的关系？</span><br><span class="line">  - 猜，map 应当是将 mapper 作为回调函数的一个进程</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mapper</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. mapper 作为函数，是被哪个进程来调用？</span><br><span class="line">  - 是 hdfs 的 datanode ？</span><br><span class="line">  - 还是 MapReduce 的进程？</span><br><span class="line">  - 还是 mapper 独立被作为进程运行？</span><br><span class="line"></span><br><span class="line">2. mapper 产生的中间数据，叫什么名字？</span><br><span class="line"></span><br><span class="line">3. mapper 应该隐含一条逻辑，即 InputData 与中间数据，是一对一或一对多的关系？</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>spill</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. spill 过程中，dump 到磁盘的 tmp 文件，叫什么名字？</span><br><span class="line"></span><br><span class="line">2. spill 的过程由谁来实现？是 JobTracker 还是 map？</span><br><span class="line">  - 猜，应该是 map </span><br><span class="line"></span><br><span class="line">3. 在设计 hadoop 集群时，应当为 spill 预留多少硬盘空间？</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>partition</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. partition 和 partition-id 是如何确定的？</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reduce</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. reduce 的 copy 过程，是由什么进程负责的？</span><br><span class="line"></span><br><span class="line">2. copy 过程是否使用的 ssh ？</span><br><span class="line"></span><br><span class="line">3. hadoop 2.0 中，map 过程和 reduce 的过程是同步的，即 map 过程结束后，才轮到 reduce 过程</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li><strong>不整理</strong></li>
+</ol>
+<hr>
+<h1 id="Chapter01-Hadoop-基础"><a href="#Chapter01-Hadoop-基础" class="headerlink" title="Chapter01 Hadoop 基础"></a>Chapter01 Hadoop 基础</h1><hr>
+<h2 id="1-1-Hadoop-简介"><a href="#1-1-Hadoop-简介" class="headerlink" title="1.1 Hadoop 简介"></a>1.1 Hadoop 简介</h2><hr>
+<h3 id="知识点：hadoop-介绍"><a href="#知识点：hadoop-介绍" class="headerlink" title="知识点：hadoop 介绍"></a>知识点：hadoop 介绍</h3><ol>
+<li><strong>介绍</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">* hadoop 使用 java 开发</span><br><span class="line"></span><br><span class="line">* hadoop 生态</span><br><span class="line">  - HDFS</span><br><span class="line">  - MapReduce</span><br><span class="line">  - Hbase</span><br><span class="line">  - Hive</span><br><span class="line">  - Storm</span><br><span class="line">  - Spark</span><br><span class="line">  - SparkStreaming</span><br><span class="line">  - Zookeeper</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h2 id="1-2-Hadoop-部署"><a href="#1-2-Hadoop-部署" class="headerlink" title="1.2 Hadoop 部署"></a>1.2 Hadoop 部署</h2><hr>
+<h3 id="知识点：部署-hadoop-1-2-1-八斗版"><a href="#知识点：部署-hadoop-1-2-1-八斗版" class="headerlink" title="知识点：部署 hadoop 1.2.1 八斗版"></a>知识点：部署 hadoop 1.2.1 八斗版</h3><ol>
+<li><strong>规划</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 主节点</span><br><span class="line">  - node01</span><br><span class="line"></span><br><span class="line">* 从节点</span><br><span class="line">  - node02</span><br><span class="line">  - node03</span><br></pre></td></tr></table></figure></li>
+<li><strong>环境准备</strong></li>
+</ol>
+<ul>
+<li>安装基础软件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br><span class="line"></span><br><span class="line">yum -y install \</span><br><span class="line">vim redhat-lsb bash-completion mlocate man-pages man-db \</span><br><span class="line">net-tools dos2unix unix2dos kernel-devel kernel-headers \</span><br><span class="line">zip lrzsz chrony python3 sshpass rlwrap bind-utils</span><br><span class="line"></span><br><span class="line">yum -y groups install Development\ Tools</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>安装 jdk<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf jdk-8u371-linux-x64.tar.gz -C /usr/local/</span><br><span class="line"></span><br><span class="line">cd /usr/local</span><br><span class="line">ln -s jdk1.8.0_371/ jdk</span><br><span class="line"></span><br><span class="line">echo &gt;&gt; /etc/profile</span><br><span class="line">echo &#x27;# java&#x27; &gt;&gt; /etc/profile</span><br><span class="line">echo &#x27;export JAVA_HOME=/usr/local/jdk&#x27; &gt;&gt; /etc/profile</span><br><span class="line">echo &#x27;export CLASSPATH=.:$JAVA_HOME/lib&#x27; &gt;&gt; /etc/profile</span><br><span class="line">echo &#x27;export PATH=$JAVA_HOME/bin:$PATH&#x27; &gt;&gt; /etc/profile</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>修改 hosts 文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br><span class="line">  192.168.174.101 node01</span><br><span class="line">  192.168.174.102 node02</span><br><span class="line">  192.168.174.103 node03</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>配置时间同步<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/chrony.conf</span><br><span class="line">  server ntp.ctyun.cn     ibrust</span><br><span class="line">  server ntp1.aliyun.com  ibrust</span><br><span class="line">  server ntp2.aliyun.com  ibrust</span><br><span class="line">  server time1.tencentyun.com ibrust</span><br><span class="line">  server time2.tencentyun.com ibrust</span><br><span class="line"></span><br><span class="line">systemctl stop  chronyd</span><br><span class="line">systemctl start chronyd</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>配置互信<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -N &#x27;&#x27; -f ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">sshpass -p &#x27;123456&#x27; ssh-copy-id -o StrictHostKeyChecking=no node01</span><br><span class="line">sshpass -p &#x27;123456&#x27; ssh-copy-id -o StrictHostKeyChecking=no node02</span><br><span class="line">sshpass -p &#x27;123456&#x27; ssh-copy-id -o StrictHostKeyChecking=no node03</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>解压 hadoop-1.2.1 安装包<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf hadoop-1.2.1-bin.tar.gz -C /usr/local/</span><br><span class="line"></span><br><span class="line">cd /usr/local/</span><br><span class="line">ln -s hadoop-1.2.1 hadoop</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>创建目录<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/hadoop/tmp</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>其他操作<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">关闭 firewalld</span><br><span class="line">关闭 selinux</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li><strong>修改配置</strong></li>
+</ol>
+<ul>
+<li>编辑配置文件 masters<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">vim conf/masters</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node01</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>编辑配置文件 slaves<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">vim conf/slaves</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node02</span><br><span class="line">node03</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>编辑配置文件 core-site.xml<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">vim conf/core-site.xml</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定 tmp 目录的位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>/data/hadoop/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 指定 namenode 的 url --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.default.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://node01:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>编辑配置文件 mapred-site.xml<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">vim conf/mapred-site.xml</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定 JobTracker 的 url --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapred.job.tracker<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>http://node01:9001<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>编辑配置文件 hdfs-site.xml<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">vim conf/hdfs-site.xml</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 指定 hdfs 的副本数 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>2<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>修改脚本文件 hadoop-env.sh<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">vim conf/hadoop-env.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=&#x27;/usr/local/jdk&#x27;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>同步配置<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">scp -r /usr/local/hadoop-1.2.1 node02:/usr/local/</span><br><span class="line">scp -r /usr/local/hadoop-1.2.1 node03:/usr/local/</span><br><span class="line"></span><br><span class="line">cd /usr/local</span><br><span class="line">ln -s hadoop-1.2.1 hadoop</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="4">
+<li><strong>启动集群</strong></li>
+</ol>
+<ul>
+<li>初始化 NameNode，在 master 上执行<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">./bin/hadoop namenode -format</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>启动集群，在 master 上执行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/hadoop</span><br><span class="line">./bin/start-all.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li><strong>验证</strong></li>
+</ol>
+<ul>
+<li>验证进程<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> master</span></span><br><span class="line">[root@node01 hadoop]# jps</span><br><span class="line">1720 SecondaryNameNode</span><br><span class="line">1560 NameNode</span><br><span class="line">1946 Jps</span><br><span class="line">1821 JobTracker</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> slave</span></span><br><span class="line">[root@node01 local]# jps</span><br><span class="line">1636 Jps</span><br><span class="line">1464 DataNode</span><br><span class="line">1550 TaskTracker</span><br></pre></td></tr></table></figure></li>
+<li>验证 hdfs<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 hadoop]# cd /usr/local/hadoop</span><br><span class="line">[root@node01 hadoop]# ./bin/hadoop fs -mkdir /test</span><br><span class="line">[root@node01 hadoop]# ./bin/hadoop fs -ls /</span><br><span class="line">Found 2 items</span><br><span class="line">drwxr-xr-x   - root supergroup          0 2023-07-07 15:26 /data</span><br><span class="line">drwxr-xr-x   - root supergroup          0 2023-07-07 15:29 /test</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>验证页面<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* NameNode 监控页面</span><br><span class="line">  - http://node01:50070/dfshealth.jsp</span><br><span class="line"></span><br><span class="line">* SecondaryNameNode 监控页面</span><br><span class="line">  - http://node01:50090/status.jsp</span><br><span class="line"></span><br><span class="line">* DataNode 监控页面</span><br><span class="line">  - http://node02:50075/</span><br><span class="line">  - http://node03:50075/</span><br><span class="line"></span><br><span class="line">* JobTracker 监控页面</span><br><span class="line">  - http://node01:50030/jobtracker.jsp</span><br><span class="line"></span><br><span class="line">* TaskTracker 监控页面</span><br><span class="line">  - http://node02:50060/tasktracker.jsp</span><br><span class="line">  - http://node03:50060/tasktracker.jsp</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="6">
+<li><strong>停止集群</strong><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在 master 上执行</span></span><br><span class="line">cd /usr/local/hadoop</span><br><span class="line">./bin/stop-all.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="Chapter02-HDFS"><a href="#Chapter02-HDFS" class="headerlink" title="Chapter02 HDFS"></a>Chapter02 HDFS</h1><hr>
+<h2 id="2-1-HDFS-介绍"><a href="#2-1-HDFS-介绍" class="headerlink" title="2.1 HDFS 介绍"></a>2.1 HDFS 介绍</h2><hr>
+<h3 id="知识点：HDFS-介绍"><a href="#知识点：HDFS-介绍" class="headerlink" title="知识点：HDFS 介绍"></a>知识点：HDFS 介绍</h3><ol>
+<li><strong>介绍</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NameNode 使用 9000 端口</span><br></pre></td></tr></table></figure></li>
+<li><strong>工作流程</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* client --&gt; master，提交申请</span><br><span class="line"></span><br><span class="line">* master 查询元数据</span><br><span class="line"></span><br><span class="line">* master --&gt; client，返回 slave 信息和数据信息</span><br><span class="line"></span><br><span class="line">* client --&gt; slave，请求数据</span><br><span class="line"></span><br><span class="line">* slave --&gt; client，返回数据</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h2 id="2-2-HDFS-体系"><a href="#2-2-HDFS-体系" class="headerlink" title="2.2 HDFS 体系"></a>2.2 HDFS 体系</h2><hr>
+<h2 id="2-3-HDFS-配置"><a href="#2-3-HDFS-配置" class="headerlink" title="2.3 HDFS 配置"></a>2.3 HDFS 配置</h2><hr>
+<h1 id="Chapter03-MapReduce"><a href="#Chapter03-MapReduce" class="headerlink" title="Chapter03 MapReduce"></a>Chapter03 MapReduce</h1><hr>
+<h2 id="3-1-MapReduce-介绍"><a href="#3-1-MapReduce-介绍" class="headerlink" title="3.1 MapReduce 介绍"></a>3.1 MapReduce 介绍</h2><hr>
+<h3 id="知识点：海量数据处理技术"><a href="#知识点：海量数据处理技术" class="headerlink" title="知识点：海量数据处理技术"></a>知识点：海量数据处理技术</h3><ol>
+<li><strong>传统海量数据处理技术</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 普通哈希 hash</span><br><span class="line">  - 标识，也称为种子</span><br><span class="line">  - 对标识做哈希，例如 mod，得到桶标识</span><br><span class="line">  - 根据桶标识，将数据发往对应的桶</span><br><span class="line">  - 要求种子要具有随机性，并且最好是均匀分布，例如 cookie、请求时间等</span><br><span class="line"></span><br><span class="line">* 一致性哈希 consistent hashing</span><br></pre></td></tr></table></figure></li>
+<li><strong>强一致性和弱一致性</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 强一致性</span><br><span class="line">  - 一份数据，在所有的节点都就绪后，才能对外提供服务</span><br><span class="line"></span><br><span class="line">* 弱一致性</span><br><span class="line">  - 一份主机，只要在某台节点上就绪了，此节点即可对外提供服务，未就绪的节点暂不提供服务，等待数据就绪</span><br><span class="line">  - 弱一致性相比强一致性，提供服务的速度更快，但存在数据丢失、单机故障的风险</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="知识点：MapReduce-介绍"><a href="#知识点：MapReduce-介绍" class="headerlink" title="知识点：MapReduce 介绍"></a>知识点：MapReduce 介绍</h3><ol>
+<li><strong>介绍</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 介绍</span><br><span class="line">  - hadoop 生态中的一个技术框架</span><br><span class="line">  - 并发计算，海量数据处理，分布式计算框架</span><br><span class="line"></span><br><span class="line">* 内容</span><br><span class="line">  - 作业调度 =&gt; 作业队列、资源分配</span><br><span class="line">  - 容错</span><br><span class="line">  - 机器间通信</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="Chapter04-Yarn"><a href="#Chapter04-Yarn" class="headerlink" title="Chapter04 Yarn"></a>Chapter04 Yarn</h1><hr>
+<h1 id="Chapter05-Hbase"><a href="#Chapter05-Hbase" class="headerlink" title="Chapter05 Hbase"></a>Chapter05 Hbase</h1><hr>
+<h1 id="Chapter06-Hive"><a href="#Chapter06-Hive" class="headerlink" title="Chapter06 Hive"></a>Chapter06 Hive</h1><hr>
+<h1 id="Chapter07-Zookeeper"><a href="#Chapter07-Zookeeper" class="headerlink" title="Chapter07 Zookeeper"></a>Chapter07 Zookeeper</h1><hr>
+<h2 id="7-1-Zookeeper-概述"><a href="#7-1-Zookeeper-概述" class="headerlink" title="7.1 Zookeeper 概述"></a>7.1 Zookeeper 概述</h2><hr>
+<h3 id="知识点：Zookeeper-简介"><a href="#知识点：Zookeeper-简介" class="headerlink" title="知识点：Zookeeper 简介"></a>知识点：Zookeeper 简介</h3><ol>
+<li><strong>介绍</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* Zookeeper</span><br><span class="line">  - 分布式锁服务</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="Chapter08-Kafka"><a href="#Chapter08-Kafka" class="headerlink" title="Chapter08 Kafka"></a>Chapter08 Kafka</h1><hr>
+<h1 id="Chapter09-Storm"><a href="#Chapter09-Storm" class="headerlink" title="Chapter09 Storm"></a>Chapter09 Storm</h1><hr>
+<h1 id="Chapter10-Spark"><a href="#Chapter10-Spark" class="headerlink" title="Chapter10 Spark"></a>Chapter10 Spark</h1><hr>
+<h1 id="Chapter11-SparkStreaming"><a href="#Chapter11-SparkStreaming" class="headerlink" title="Chapter11 SparkStreaming"></a>Chapter11 SparkStreaming</h1><hr>
+<h1 id="Chapter12-ceph"><a href="#Chapter12-ceph" class="headerlink" title="Chapter12 ceph"></a>Chapter12 ceph</h1><hr>
+<h1 id="Chapter12-Flume"><a href="#Chapter12-Flume" class="headerlink" title="Chapter12 Flume"></a>Chapter12 Flume</h1>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2000/01/01/Blog14-oracle/" rel="prev" title="Blog14-oracle">
+                  <i class="fa fa-chevron-left"></i> Blog14-oracle
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2000/01/01/Blog31-docker/" rel="next" title="Blog31-docker">
+                  Blog31-docker <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2000 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"tags":"none","cdn":"//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
